@@ -1,12 +1,12 @@
 import React from "react";
 import "./Photo.css";
 
-const Photos = () => {
+const Photo = () => {
   return (
-    <div className="Photos">
-      <p>Photos</p>
+    <div className="Photo">
+      <p>Photo</p>
     </div>
   );
 };
 
-export default Photos;
+export default Photo;
