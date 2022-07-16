@@ -1,4 +1,5 @@
 import React from "react";
+import "./Metadata.css";
 
 const Metadata = () => {
   return (

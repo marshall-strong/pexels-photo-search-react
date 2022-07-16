@@ -1,4 +1,5 @@
 import React from "react";
+import "./Component.css";
 
 const Search = () => {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Photo.css";
 
 const Photos = () => {
   return (

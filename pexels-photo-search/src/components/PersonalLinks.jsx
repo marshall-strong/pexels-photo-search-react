@@ -1,4 +1,5 @@
 import React from "react";
+import "./PersonalLinks.css";
 
 const PersonalLinks = () => {
   return (

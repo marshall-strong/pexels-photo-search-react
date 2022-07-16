@@ -1,4 +1,5 @@
 import React from "react";
+import "./PexelsAPI.css";
 
 const PexelsAPI = () => {
   return (
