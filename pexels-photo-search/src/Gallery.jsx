@@ -4,8 +4,13 @@ import Photo from "./Photo";
 import Pagination from "./Pagination";
 
 const Gallery = () => {
-  const fetchCurated = async () => {
-    const url = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
+  const [displayedUrl, setDisplayedUrl] = useState(null);
+  
+  const [nextUrl, setNextUrl] = useState(
+    `https://api.pexels.com/v1/curated/?page=1&per_page=10`
+  );
+
+  const fetchPhotos = async (url) => {
     return fetch(url, {
       method: "GET",
       headers: {
@@ -16,9 +21,13 @@ const Gallery = () => {
       .then((response) => {
         if (!response.ok) {
           throw new Error(`response is not okay.`);
+        } else {
+          setDisplayedUrl(url);
+          setNextUrl(null);
+          console.log(response);
+          return response.json();
         }
-        console.log(response);
-        return response.json();
+        
       })
       .then((body) => {
         console.log(body);
@@ -32,12 +41,17 @@ const Gallery = () => {
   const [response, setResponse] = useState(null);
 
   useEffect(() => {
-    fetchCurated()
-      .then((res) => {
-        setResponse(res);
-      })
-      .catch((e) => console.log(e.message));
-  }, []);
+    if (
+      (!displayedUrl && nextUrl) ||
+      (displayedUrl && nextUrl && (displayedUrl !== nextUrl))
+    ) {
+      fetchPhotos(nextUrl)
+        .then((response) => {
+          setResponse(response);
+        })
+        .catch((e) => console.log(e.message));
+    }
+  }, [displayedUrl, nextUrl]);
 
   return (
     <div className="Gallery">
@@ -50,10 +64,11 @@ const Gallery = () => {
       ) : (
         <div className="paginationContainer">
           <Pagination
-            direction={"prev"}
+            prevOrNext={"prev"}
             currentPage={response.page}
-            nextPageUrl={response.next_page}
             prevPageUrl={response.prev_page}
+            nextPageUrl={response.next_page}
+            setNextUrl={setNextUrl}
           />
           <div className="galleryPhotos">
             <Photo photoData={response.photos[0]} />
@@ -68,10 +83,11 @@ const Gallery = () => {
             <Photo photoData={response.photos[9]} />
           </div>
           <Pagination
-            direction={"next"}
+            prevOrNext={"next"}
             currentPage={response.page}
-            nextPageUrl={response.next_page}
             prevPageUrl={response.prev_page}
+            nextPageUrl={response.next_page}
+            setNextUrl={setNextUrl}
           />
         </div>
       )}
