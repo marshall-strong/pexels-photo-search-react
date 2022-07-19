@@ -1,10 +1,23 @@
 import React from "react";
 import "./Photo.css";
+import logo from "./logo.svg";
 
-const Photo = () => {
+const Photo = ({ photoData }) => {
   return (
     <div className="Photo">
-      <p>Photo</p>
+      <div>
+        {!photoData ? (
+          <div>
+            <p>Loading...</p>
+            <img src={logo} />
+          </div>
+        ) : (
+          <div>
+            {console.log(photoData)}
+            <img src={photoData.src.medium} />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
