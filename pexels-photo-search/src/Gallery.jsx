@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Gallery.css";
 import Photo from "./Photo";
 import Pagination from "./Pagination";
+import SearchForPhotos from "./SearchForPhotos";
 
 const Gallery = () => {
   const [displayedUrl, setDisplayedUrl] = useState(null);
@@ -55,42 +56,47 @@ const Gallery = () => {
 
   return (
     <div className="Gallery">
-      {!response ? (
-        <p>Loading...</p>
-      ) : response.length === 0 ? (
-        <p>
-          <i>No results</i>
-        </p>
-      ) : (
-        <div className="paginationContainer">
-          <Pagination
-            prevOrNext={"prev"}
-            currentPage={response.page}
-            prevPageUrl={response.prev_page}
-            nextPageUrl={response.next_page}
-            setNextUrl={setNextUrl}
-          />
-          <div className="galleryPhotos">
-            <Photo photoData={response.photos[0]} />
-            <Photo photoData={response.photos[1]} />
-            <Photo photoData={response.photos[2]} />
-            <Photo photoData={response.photos[3]} />
-            <Photo photoData={response.photos[4]} />
-            <Photo photoData={response.photos[5]} />
-            <Photo photoData={response.photos[6]} />
-            <Photo photoData={response.photos[7]} />
-            <Photo photoData={response.photos[8]} />
-            <Photo photoData={response.photos[9]} />
+      <div className="SearchContainer">
+        <SearchForPhotos />
+      </div>
+      <div className="GalleryContainer">
+        {!response ? (
+          <p>Loading...</p>
+        ) : response.length === 0 ? (
+          <p>
+            <i>No results</i>
+          </p>
+        ) : (
+          <div className="paginationContainer">
+            <Pagination
+              prevOrNext={"prev"}
+              currentPage={response.page}
+              prevPageUrl={response.prev_page}
+              nextPageUrl={response.next_page}
+              setNextUrl={setNextUrl}
+            />
+            <div className="galleryPhotos">
+              <Photo photoData={response.photos[0]} />
+              <Photo photoData={response.photos[1]} />
+              <Photo photoData={response.photos[2]} />
+              <Photo photoData={response.photos[3]} />
+              <Photo photoData={response.photos[4]} />
+              <Photo photoData={response.photos[5]} />
+              <Photo photoData={response.photos[6]} />
+              <Photo photoData={response.photos[7]} />
+              <Photo photoData={response.photos[8]} />
+              <Photo photoData={response.photos[9]} />
+            </div>
+            <Pagination
+              prevOrNext={"next"}
+              currentPage={response.page}
+              prevPageUrl={response.prev_page}
+              nextPageUrl={response.next_page}
+              setNextUrl={setNextUrl}
+            />
           </div>
-          <Pagination
-            prevOrNext={"next"}
-            currentPage={response.page}
-            prevPageUrl={response.prev_page}
-            nextPageUrl={response.next_page}
-            setNextUrl={setNextUrl}
-          />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
