@@ -4,8 +4,11 @@ import Photo from "./Photo";
 import Pagination from "./Pagination";
 
 const Gallery = () => {
-  const fetchCurated = async () => {
-    const url = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
+  const [url, setUrl] = useState(
+    `https://api.pexels.com/v1/curated/?page=1&per_page=10`
+  );
+
+  const fetchPhotos = async (url) => {
     return fetch(url, {
       method: "GET",
       headers: {
@@ -32,12 +35,12 @@ const Gallery = () => {
   const [response, setResponse] = useState(null);
 
   useEffect(() => {
-    fetchCurated()
-      .then((res) => {
-        setResponse(res);
+    fetchPhotos(url)
+      .then((response) => {
+        setResponse(response);
       })
       .catch((e) => console.log(e.message));
-  }, []);
+  }, [url]);
 
   return (
     <div className="Gallery">
