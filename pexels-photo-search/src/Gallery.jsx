@@ -59,7 +59,7 @@ const Gallery = () => {
       <div className="SearchContainer">
         <SearchForPhotos />
       </div>
-      <div className="GalleryContainer">
+      <div className="galleryContainer">
         {!response ? (
           <p>Loading...</p>
         ) : response.length === 0 ? (
