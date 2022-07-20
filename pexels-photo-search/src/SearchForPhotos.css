@@ -1,4 +1,4 @@
-.Search {
+.SearchForPhotos {
   text-align: center;
   background-color: #51f827;
   display: flex;
@@ -7,4 +7,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%;
+}
+
+.SearchForPhotos > form#search-for-photos {
+  width: 75vw;
+}
+
+.SearchForPhotos > form#search-for-photos > input {
+  width: 50vw;
 }
