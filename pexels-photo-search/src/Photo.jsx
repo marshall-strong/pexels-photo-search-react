@@ -13,7 +13,6 @@ const Photo = ({ photoData }) => {
           </div>
         ) : (
           <div>
-            {console.log(photoData)}
             <img src={photoData.src.medium} />
           </div>
         )}
