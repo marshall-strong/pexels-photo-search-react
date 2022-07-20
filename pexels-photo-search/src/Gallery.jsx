@@ -57,7 +57,7 @@ const Gallery = () => {
   return (
     <div className="Gallery">
       <div className="SearchContainer">
-        <SearchForPhotos />
+        <SearchForPhotos setNextUrl={setNextUrl} />
       </div>
       <div className="galleryContainer">
         {!response ? (
