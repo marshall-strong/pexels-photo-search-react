@@ -3,33 +3,40 @@ import "./SearchForPhotos.css";
 
 const SearchForPhotos = ({ setNextUrl }) => {
   const searchForElephants = () =>
-    setNextUrl("https://api.pexels.com/v1/search?query=elephants&per_page=10");
+    setNextUrl(
+      "https://api.pexels.com/v1/search/?page=1&per_page=10&query=elephants"
+    );
 
-  const [userInput, setUserInput] = useState(null);
-  const [encodedURI, setEncodedURI] = useState(null);
+  const [userInput, setUserInput] = useState("");
+  const [encodedURI, setEncodedURI] = useState("");
 
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
-    const uri = `https://api.pexels.com/v1/search?query=${userInput}&per_page=10`;
+    const uri = `https://api.pexels.com/v1/search/?page=1&per_page=10&query=${userInput}`;
     const encoded = encodeURI(uri);
     setEncodedURI(encoded);
   };
 
-  const submitSearchRequest = () => setNextUrl(encodedURI);
+  const handleSubmit = (event) => {
+    setNextUrl(encodedURI);
+    console.log('search form submitted');
+  };
 
   return (
     <div className="SearchForPhotos">
       <p>Search for Photos</p>
-      <form id="search-for-photos">
+      <form onSubmit={handleSubmit} id="search-for-photos">
         <input
           type="text"
           value={userInput}
           onChange={handleUserInput}
           placeholder="Enter a topic to search Pexels for relevant photos (ex: 'elephants on parade')"
         />
-        {/* <input type="submit" value="Find Photos" /> */}
+        <button type="submit" hidden>
+          Search for Photos
+        </button>
       </form>
-      <button onClick={submitSearchRequest}>Search for Photos</button>
+      <button onClick={handleSubmit}>Search for Photos</button>
       <button onClick={searchForElephants}>Search for Elephants</button>
     </div>
   );
