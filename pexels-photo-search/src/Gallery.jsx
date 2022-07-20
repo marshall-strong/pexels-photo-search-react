@@ -11,7 +11,7 @@ const Gallery = () => {
     `https://api.pexels.com/v1/curated/?page=1&per_page=10`
   );
 
-  const fetchPhotos = async (url) => {
+  const fetchPhotos = (url) => {
     return fetch(url, {
       method: "GET",
       headers: {
