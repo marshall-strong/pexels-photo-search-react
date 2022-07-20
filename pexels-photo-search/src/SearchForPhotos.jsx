@@ -18,6 +18,7 @@ const SearchForPhotos = ({ setNextUrl }) => {
   };
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     setNextUrl(encodedURI);
     console.log('search form submitted');
   };
