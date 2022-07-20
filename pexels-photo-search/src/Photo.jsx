@@ -9,11 +9,11 @@ const Photo = ({ photoData }) => {
         {!photoData ? (
           <div>
             <p>Loading...</p>
-            <img src={logo} />
+            <img src={logo} alt="react logo"/>
           </div>
         ) : (
           <div>
-            <img src={photoData.src.medium} />
+            <img src={photoData.src.medium} alt="alt text"/>
           </div>
         )}
       </div>
