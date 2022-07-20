@@ -28,11 +28,6 @@ const Gallery = () => {
           console.log(response);
           return response.json();
         }
-        
-      })
-      .then((body) => {
-        console.log(body);
-        return body;
       })
       .catch((e) => {
         console.log(e.message);
