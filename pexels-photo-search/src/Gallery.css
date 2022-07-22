@@ -6,7 +6,6 @@
   justify-content: space-evenly;
   color: white;
   font-size: calc(10px + 2vmin);
-  text-align: center;
   width: 100%;
   min-height: 60vh;
   background-color: #409b1d;
@@ -18,7 +17,6 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  text-align: center;
   width: 100%;
   margin: 10px;
   background-color: #f8e91b;
