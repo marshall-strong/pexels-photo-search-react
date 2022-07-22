@@ -11,13 +11,7 @@
 
 .footerContent {
   background-color: #4da2e7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: calc(10px + 2vmin);
-  text-align: center;
+  
   width: 100%;
   position: fixed;
   bottom: 0;
