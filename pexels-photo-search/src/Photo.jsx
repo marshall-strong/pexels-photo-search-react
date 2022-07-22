@@ -16,7 +16,9 @@ const Photo = ({ photoData }) => {
       return (
         <div className="Photo">
           <div>
-            <img src={photoData.src.medium} alt="alt text" />
+              <a href={photoData.url}>
+                <img src={photoData.src.medium} alt="alt text" />
+              </a>
           </div>
         </div>
       );
