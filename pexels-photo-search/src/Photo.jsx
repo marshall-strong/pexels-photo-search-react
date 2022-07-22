@@ -6,9 +6,9 @@ const Photo = ({ photoData }) => {
   if (!photoData) {
       return (
         <div className="Photo">
-          <div>
+          <div className="loading">
             <p>Loading...</p>
-            <img src={logo} alt="react logo" />
+            <img src={logo} className="spinningLogo" alt="react logo" />
           </div>
         </div>
       );
@@ -16,7 +16,7 @@ const Photo = ({ photoData }) => {
       return (
         <div className="Photo">
           <div>
-            <a href={photoData.url} target="_blank" rel="noreferrer">
+            <a href={photoData.url} target="_blank" rel="noopener noreferrer">
               <img src={photoData.src.medium} alt="alt text" />
             </a>
           </div>
