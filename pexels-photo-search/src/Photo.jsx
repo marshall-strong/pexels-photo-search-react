@@ -16,9 +16,9 @@ const Photo = ({ photoData }) => {
       return (
         <div className="Photo">
           <div>
-              <a href={photoData.url}>
-                <img src={photoData.src.medium} alt="alt text" />
-              </a>
+            <a href={photoData.url} target="_blank" rel="noreferrer">
+              <img src={photoData.src.medium} alt="alt text" />
+            </a>
           </div>
         </div>
       );
