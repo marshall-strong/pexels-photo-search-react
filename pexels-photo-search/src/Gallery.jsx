@@ -10,7 +10,7 @@ const Gallery = () => {
   const [displayedUrl, setDisplayedUrl] = useState(null);
   const [nextUrl, setNextUrl] = useState(homepageURL);
   const [response, setResponse] = useState(null);
-  const [userInput, setUserInput] = useState(null);
+  const [userInput, setUserInput] = useState("");
 
   const fetchPhotos = (url) => {
     return fetch(url, {
