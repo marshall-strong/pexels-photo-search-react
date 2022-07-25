@@ -5,10 +5,10 @@ import Pagination from "./Pagination";
 import SearchForPhotos from "./SearchForPhotos";
 
 const Gallery = () => {
+  const homepageURL = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
+
   const [displayedUrl, setDisplayedUrl] = useState(null);
-  const [nextUrl, setNextUrl] = useState(
-    `https://api.pexels.com/v1/curated/?page=1&per_page=10`
-  );
+  const [nextUrl, setNextUrl] = useState(homepageURL);
   const [response, setResponse] = useState(null);
   const [userInput, setUserInput] = useState(null);
 
@@ -35,7 +35,6 @@ const Gallery = () => {
       });
   };
 
-
   useEffect(() => {
     if (
       (!displayedUrl && nextUrl) ||
@@ -49,18 +48,39 @@ const Gallery = () => {
     }
   }, [displayedUrl, nextUrl]);
 
+  const returnToHomepage = () => {
+    setNextUrl(homepageURL);
+    setUserInput("");
+  };
+
   return (
     <div className="Gallery">
       <div className="SearchContainer">
-        <SearchForPhotos setNextUrl={setNextUrl} userInput={userInput} setUserInput={setUserInput} />
+        <SearchForPhotos
+          setNextUrl={setNextUrl}
+          userInput={userInput}
+          setUserInput={setUserInput}
+        />
       </div>
       <div className="galleryContainer">
         {!response ? (
-          <p>Loading...</p>
-        ) : response.length === 0 ? (
-          <p>
-            <i>No results</i>
-          </p>
+          <div>
+            <p>Waiting on Pexels API response...</p>
+          </div>
+        ) : response.total_results <= 0 ? (
+          <div>
+            <p>
+              Your search - <b>{userInput}</b> - did not match any photos.
+            </p>
+            <p>
+              Suggestions:
+              <ul>Make sure all words are spelled correctly.</ul>
+              <ul>Try different keywords.</ul>
+              <ul>Try more general keywords.</ul>
+              <ul>Try fewer keywords.</ul>
+            </p>
+            <button onClick={returnToHomepage}>Return to Homepage</button>
+          </div>
         ) : (
           <div className="paginationContainer">
             <Pagination
