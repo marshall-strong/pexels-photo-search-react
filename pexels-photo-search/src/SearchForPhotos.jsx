@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchForPhotos.css";
 
-const SearchForPhotos = ({ setNextUrl, userInput, setUserInput }) => {
+const SearchForPhotos = ({ setNewUrl, userInput, setUserInput }) => {
   // const [userInput, setUserInput] = useState("");
   // const [encodedURI, setEncodedURI] = useState("");
   
@@ -15,12 +15,12 @@ const SearchForPhotos = ({ setNextUrl, userInput, setUserInput }) => {
     const uri = `https://api.pexels.com/v1/search/?page=1&per_page=10&query=${userInput}`;
     const encodedURI = encodeURI(uri);
     // setEncodedURI(encoded);
-    setNextUrl(encodedURI);
+    setNewUrl(encodedURI);
     console.log('search form submitted');
   };
 
   // const searchForElephants = () =>
-  //   setNextUrl(
+  //   setNewUrl(
   //     "https://api.pexels.com/v1/search/?page=1&per_page=10&query=elephants"
   //   );
 

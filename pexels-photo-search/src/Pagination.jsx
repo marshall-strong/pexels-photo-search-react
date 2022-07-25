@@ -30,10 +30,10 @@ const Pagination = ({
   currentPage,
   prevPageUrl,
   nextPageUrl,
-  setNextUrl,
+  setNewUrl,
 }) => {
-  const setPrevPageAsNextUrl = () => setNextUrl(prevPageUrl);
-  const setNextPageAsNextUrl = () => setNextUrl(nextPageUrl);
+  const setPrevPageAsNextUrl = () => setNewUrl(prevPageUrl);
+  const setNextPageAsNextUrl = () => setNewUrl(nextPageUrl);
 
   if (prevOrNext === "prev") {
     if (currentPage === 1) {

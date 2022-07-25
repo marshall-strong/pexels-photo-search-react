@@ -8,7 +8,7 @@ const Gallery = () => {
   const homepageURL = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
 
   const [displayedUrl, setDisplayedUrl] = useState(null);
-  const [nextUrl, setNextUrl] = useState(homepageURL);
+  const [newUrl, setNewUrl] = useState(homepageURL);
   const [response, setResponse] = useState(null);
   const [userInput, setUserInput] = useState("");
 
@@ -25,7 +25,7 @@ const Gallery = () => {
           throw new Error(`response is not okay.`);
         } else {
           setDisplayedUrl(url);
-          setNextUrl(null);
+          setNewUrl(null);
           console.log(response);
           return response.json();
         }
@@ -37,19 +37,19 @@ const Gallery = () => {
 
   useEffect(() => {
     if (
-      (!displayedUrl && nextUrl) ||
-      (displayedUrl && nextUrl && (displayedUrl !== nextUrl))
+      (!displayedUrl && newUrl) ||
+      (displayedUrl && newUrl && (displayedUrl !== newUrl))
     ) {
-      fetchPhotos(nextUrl)
+      fetchPhotos(newUrl)
         .then((response) => {
           setResponse(response);
         })
         .catch((e) => console.log(e.message));
     }
-  }, [displayedUrl, nextUrl]);
+  }, [displayedUrl, newUrl]);
 
   const returnToHomepage = () => {
-    setNextUrl(homepageURL);
+    setNewUrl(homepageURL);
     setUserInput("");
   };
 
@@ -57,7 +57,7 @@ const Gallery = () => {
     <div className="Gallery">
       <div className="SearchContainer">
         <SearchForPhotos
-          setNextUrl={setNextUrl}
+          setNewUrl={setNewUrl}
           userInput={userInput}
           setUserInput={setUserInput}
         />
@@ -88,7 +88,7 @@ const Gallery = () => {
               currentPage={response.page}
               prevPageUrl={response.prev_page}
               nextPageUrl={response.next_page}
-              setNextUrl={setNextUrl}
+              setNewUrl={setNewUrl}
             />
             <div className="galleryPhotos">
               <Photo photoData={response.photos[0]} />
@@ -107,7 +107,7 @@ const Gallery = () => {
               currentPage={response.page}
               prevPageUrl={response.prev_page}
               nextPageUrl={response.next_page}
-              setNextUrl={setNextUrl}
+              setNewUrl={setNewUrl}
             />
           </div>
         )}
