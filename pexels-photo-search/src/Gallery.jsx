@@ -6,10 +6,11 @@ import SearchForPhotos from "./SearchForPhotos";
 
 const Gallery = () => {
   const [displayedUrl, setDisplayedUrl] = useState(null);
-  
   const [nextUrl, setNextUrl] = useState(
     `https://api.pexels.com/v1/curated/?page=1&per_page=10`
   );
+  const [response, setResponse] = useState(null);
+  const [userInput, setUserInput] = useState(null);
 
   const fetchPhotos = (url) => {
     return fetch(url, {
@@ -34,7 +35,6 @@ const Gallery = () => {
       });
   };
 
-  const [response, setResponse] = useState(null);
 
   useEffect(() => {
     if (
@@ -52,7 +52,7 @@ const Gallery = () => {
   return (
     <div className="Gallery">
       <div className="SearchContainer">
-        <SearchForPhotos setNextUrl={setNextUrl} />
+        <SearchForPhotos setNextUrl={setNextUrl} userInput={userInput} setUserInput={setUserInput} />
       </div>
       <div className="galleryContainer">
         {!response ? (

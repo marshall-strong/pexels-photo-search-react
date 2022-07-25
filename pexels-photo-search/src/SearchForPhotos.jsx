@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SearchForPhotos.css";
 
-const SearchForPhotos = ({ setNextUrl }) => {
-  const [userInput, setUserInput] = useState("");
-  const [encodedURI, setEncodedURI] = useState("");
+const SearchForPhotos = ({ setNextUrl, userInput, setUserInput }) => {
+  // const [userInput, setUserInput] = useState("");
+  // const [encodedURI, setEncodedURI] = useState("");
   
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
-    const uri = `https://api.pexels.com/v1/search/?page=1&per_page=10&query=${userInput}`;
-    const encoded = encodeURI(uri);
-    setEncodedURI(encoded);
+
   };
   
   const handleSubmit = (event) => {
     event.preventDefault();
+    const uri = `https://api.pexels.com/v1/search/?page=1&per_page=10&query=${userInput}`;
+    const encodedURI = encodeURI(uri);
+    // setEncodedURI(encoded);
     setNextUrl(encodedURI);
     console.log('search form submitted');
   };
