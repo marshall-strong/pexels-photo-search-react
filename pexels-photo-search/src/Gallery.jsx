@@ -83,11 +83,13 @@ const Gallery = () => {
             </p>
             <p>
               Suggestions:
+            </p>
+            <div>
               <ul>Make sure all words are spelled correctly.</ul>
               <ul>Try different keywords.</ul>
               <ul>Try more general keywords.</ul>
               <ul>Try fewer keywords.</ul>
-            </p>
+            </div>
             <button onClick={returnToHomepage}>Return to Homepage</button>
           </div>
         ) : (
