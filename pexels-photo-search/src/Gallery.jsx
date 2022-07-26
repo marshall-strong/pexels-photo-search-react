@@ -3,6 +3,7 @@ import "./Gallery.css";
 import Photo from "./Photo";
 import Pagination from "./Pagination";
 import SearchForPhotos from "./SearchForPhotos";
+import PaginationBar from "./PaginationBar";
 
 const Gallery = () => {
   const homepageURL = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
@@ -11,6 +12,7 @@ const Gallery = () => {
   const [newUrl, setNewUrl] = useState(homepageURL);
   const [response, setResponse] = useState(null);
   const [userInput, setUserInput] = useState("");
+  const [userQuery, setUserQuery] = useState("");
 
   const fetchPhotos = (url) => {
     return fetch(url, {
@@ -26,6 +28,7 @@ const Gallery = () => {
         } else {
           setDisplayedUrl(url);
           setNewUrl(null);
+          setUserQuery(userInput);
           console.log(response);
           return response.json();
         }
@@ -62,6 +65,7 @@ const Gallery = () => {
           setUserInput={setUserInput}
         />
       </div>
+      <PaginationBar setNewUrl={setNewUrl} response={response} />
       <div className="galleryContainer">
         {!response ? (
           <div>
