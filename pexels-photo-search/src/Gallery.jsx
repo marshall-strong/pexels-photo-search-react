@@ -8,20 +8,28 @@ const Gallery = () => {
   const homepageURL = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
 
   const [displayedUrl, setDisplayedUrl] = useState(null);
-  const [newUrl, setNewUrl] = useState(homepageURL);
+  const [newUrl, setNewUrl] = useState(null);
   const [response, setResponse] = useState(null);
-  const [userInput, setUserInput] = useState(
-    window.localStorage.getItem("userInput")
-  );
+  const [userInput, setUserInput] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
+  // Get the value of `displayedUrl` from localStorage after every render,
+  //  then update the value of `displayedUrl` in state.
   useEffect(() => {
-    setUserInput(window.localStorage.getItem('userInput'));
+    setDisplayedUrl(window.localStorage.getItem("displayedUrl"));
   }, []);
 
+  // Update the value of `displayedUrl` in localStorage every time the value of 
+  //  `displayedUrl` in state changes.
   useEffect(() => {
-    window.localStorage.setItem('userInput', userInput);
-  }, [userInput]);
+    window.localStorage.setItem("displayedUrl", displayedUrl);
+  }, [displayedUrl]);
+
+  useEffect(() => {
+    if (!displayedUrl && !newUrl) {
+      setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
+    }
+  }, [displayedUrl, newUrl]);
 
   const fetchPhotos = (url) => {
     return fetch(url, {
@@ -90,9 +98,7 @@ const Gallery = () => {
             <p>
               Your search - <b>{userInput}</b> - did not match any photos.
             </p>
-            <p>
-              Suggestions:
-            </p>
+            <p>Suggestions:</p>
             <div>
               <ul>Make sure all words are spelled correctly.</ul>
               <ul>Try different keywords.</ul>
@@ -100,6 +106,12 @@ const Gallery = () => {
               <ul>Try fewer keywords.</ul>
             </div>
             <button onClick={returnToHomepage}>Return to Homepage</button>
+          </div>
+        ) : !response.photos ? (
+          <div className="paginationContainer">
+            <div className="galleryPhotos">
+              
+            </div>
           </div>
         ) : (
           <div className="paginationContainer">
