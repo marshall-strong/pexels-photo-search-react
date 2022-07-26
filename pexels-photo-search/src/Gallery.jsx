@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Gallery.css";
 import Photo from "./Photo";
-import Pagination from "./Pagination";
 import SearchForPhotos from "./SearchForPhotos";
 import PaginationBar from "./PaginationBar";
 
@@ -83,20 +82,17 @@ const Gallery = () => {
             </p>
             <p>
               Suggestions:
+            </p>
+            <div>
               <ul>Make sure all words are spelled correctly.</ul>
               <ul>Try different keywords.</ul>
               <ul>Try more general keywords.</ul>
               <ul>Try fewer keywords.</ul>
-            </p>
+            </div>
             <button onClick={returnToHomepage}>Return to Homepage</button>
           </div>
         ) : (
           <div className="paginationContainer">
-            <Pagination
-              prevOrNext={"prev"}
-              setNewUrl={setNewUrl}
-              pageUrl={response.prev_page}
-            />
             <div className="galleryPhotos">
               {response.photos.map((photoData, index) => (
                 <React.Fragment key={index}>
@@ -104,11 +100,6 @@ const Gallery = () => {
                 </React.Fragment>
               ))}
             </div>
-            <Pagination
-              prevOrNext={"next"}
-              setNewUrl={setNewUrl}
-              pageUrl={response.next_page}
-            />
           </div>
         )}
       </div>
