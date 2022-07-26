@@ -1,52 +1,43 @@
 import React from "react";
 import "./Pagination.css";
 
-const PrevPagePagination = ({ isDisabled, onClick }) => {
-  if (isDisabled) {
-    return (
-      <button type="button" disabled>
-        previous page
-      </button>
-    );
-  } else {
-    return (
-      <button type="button" onClick={onClick}>
-        previous page
-      </button>
-    );
-  }
-};
-
-const NextPagePagination = ({ onClick }) => {
-  return (
-    <button type="button" onClick={onClick}>
-      next page
-    </button>
-  );
-};
-
 const Pagination = ({
   prevOrNext,
-  currentPage,
-  prevPageUrl,
-  nextPageUrl,
-  setNextUrl,
+  setNewUrl,
+  pageUrl,
 }) => {
-  const setPrevPageAsNextUrl = () => setNextUrl(prevPageUrl);
-  const setNextPageAsNextUrl = () => setNextUrl(nextPageUrl);
-
   if (prevOrNext === "prev") {
-    if (currentPage === 1) {
-      return (<PrevPagePagination isDisabled={true} />);
-    } else {
+    const prevBtnText = "Previous Page <=";
+    if (!pageUrl) {
       return (
-        <PrevPagePagination isDisabled={false} onClick={setPrevPageAsNextUrl} />
+        <button type="button" disabled>
+          {prevBtnText}
+        </button>
+      );
+    } else {
+      const paginateToPrevPage = () => setNewUrl(pageUrl);
+      return (
+        <button type="button" onClick={paginateToPrevPage}>
+          {prevBtnText}
+        </button>
       );
     }
   } else if (prevOrNext === "next") {
-    return (
-      <NextPagePagination onClick={setNextPageAsNextUrl} />
-    );
+    const nextBtnText = "Next Page =>";
+    if (!pageUrl) {
+      return (
+        <button type="button" disabled>
+          {nextBtnText}
+        </button>
+      );
+    } else {
+      const paginateToNextPage = () => setNewUrl(pageUrl);
+      return (
+        <button type="button" onClick={paginateToNextPage}>
+          {nextBtnText}
+        </button>
+      );
+    }
   }
 };
 
