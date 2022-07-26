@@ -16,20 +16,24 @@ const Gallery = () => {
   // Get the value of `displayedUrl` from localStorage after every render,
   //  then update the value of `displayedUrl` in state.
   useEffect(() => {
-    setDisplayedUrl(window.localStorage.getItem("displayedUrl"));
+    setDisplayedUrl(JSON.parse(window.localStorage.getItem("displayedUrl")));
   }, []);
 
   // Update the value of `displayedUrl` in localStorage every time the value of
   //  `displayedUrl` in state changes.
   useEffect(() => {
-    window.localStorage.setItem("displayedUrl", displayedUrl);
+    window.localStorage.setItem("displayedUrl", JSON.stringify(displayedUrl));
   }, [displayedUrl]);
 
   // When the App loads for the first time and there is no `displayedUrl` value
   //  in localStorage, set `newUrl` equal to the homepage URL.
   useEffect(() => {
     if (!displayedUrl && !newUrl) {
-      setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
+      if (JSON.parse(window.localStorage.getItem("displayedUrl"))) {
+        setNewUrl(JSON.parse(window.localStorage.getItem("displayedUrl")));
+      } else {
+        setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
+      }
     }
   }, [displayedUrl, newUrl]);
 
@@ -51,20 +55,34 @@ const Gallery = () => {
       const json = await response.json();
       // set state with the result
       setResponse(json);
-
       setDisplayedUrl(newUrl);
       setNewUrl(null);
       setSearchQuery(userInput);
     };
 
-    // Call the data fetching function if `newUrl` is not equal to `displayedUrl`
-    if ((!!displayedUrl) && (!!newUrl) && (displayedUrl !== newUrl)) {
-      fetchPhotos()
-        .catch((e) => {
-          console.log(e.message);
-        });
+    // Call the data fetching function if `newUrl` is NOT null
+    if (newUrl) {
+      // if ((!!newUrl) && (displayedUrl !== newUrl)) {
+      fetchPhotos().catch((e) => {
+        console.log(e.message);
+      });
     }
-  }, [displayedUrl, newUrl, userInput]);
+
+    // // Call the data fetching function if `displayedUrl` is NOT null, 
+    // //  but `response` IS null.
+    // if (!!displayedUrl && !response) {
+    //   fetchPhotos().catch((e) => {
+    //     console.log(e.message);
+    //   });
+    // }
+  }, [displayedUrl, newUrl, userInput, response]);
+
+
+  const returnToHomepage = () => {
+    setNewUrl(homepageURL);
+    setUserInput("");
+    setSearchQuery("");
+  };
 
   // const fetchPhotos = (url) => {
   //   return fetch(url, {
@@ -103,13 +121,8 @@ const Gallery = () => {
   //   }
   // }, [displayedUrl, newUrl]);
 
-  const returnToHomepage = () => {
-    setNewUrl(homepageURL);
-    setUserInput("");
-    setSearchQuery("");
-  };
 
-  // debugger
+
 
   return (
     <div className="Gallery">
