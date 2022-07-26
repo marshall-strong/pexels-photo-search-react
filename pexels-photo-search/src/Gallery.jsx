@@ -19,17 +19,20 @@ const Gallery = () => {
     setDisplayedUrl(window.localStorage.getItem("displayedUrl"));
   }, []);
 
-  // Update the value of `displayedUrl` in localStorage every time the value of 
+  // Update the value of `displayedUrl` in localStorage every time the value of
   //  `displayedUrl` in state changes.
   useEffect(() => {
     window.localStorage.setItem("displayedUrl", displayedUrl);
   }, [displayedUrl]);
 
+  // When the App loads for the first time and there is no `displayedUrl` value
+  //  in localStorage, set `newUrl` equal to the homepage URL.
   useEffect(() => {
     if (!displayedUrl && !newUrl) {
       setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
     }
   }, [displayedUrl, newUrl]);
+  
 
   const fetchPhotos = (url) => {
     return fetch(url, {
@@ -58,7 +61,7 @@ const Gallery = () => {
   useEffect(() => {
     if (
       (!displayedUrl && newUrl) ||
-      (displayedUrl && newUrl && (displayedUrl !== newUrl))
+      (displayedUrl && newUrl && displayedUrl !== newUrl)
     ) {
       fetchPhotos(newUrl)
         .then((response) => {
@@ -109,9 +112,7 @@ const Gallery = () => {
           </div>
         ) : !response.photos ? (
           <div className="paginationContainer">
-            <div className="galleryPhotos">
-              
-            </div>
+            <div className="galleryPhotos"></div>
           </div>
         ) : (
           <div className="paginationContainer">
