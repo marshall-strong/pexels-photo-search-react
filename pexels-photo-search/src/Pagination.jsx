@@ -4,18 +4,18 @@ import "./Pagination.css";
 const Pagination = ({
   prevOrNext,
   setNewUrl,
-  response,
+  pageUrl,
 }) => {
   if (prevOrNext === "prev") {
     const prevBtnText = "Previous Page <="
-    if (!response.prev_page) {
+    if (!pageUrl) {
       return (
         <button type="button" isDisabled={true}>
           {prevBtnText}
         </button>
       );
     } else {
-      const paginateToPrevPage = () => setNewUrl(response.prev_page);
+      const paginateToPrevPage = () => setNewUrl(pageUrl);
       return (
         <button type="button" onClick={paginateToPrevPage}>
           {prevBtnText}
@@ -24,14 +24,14 @@ const Pagination = ({
     }
   } else if (prevOrNext === "next") {
     const nextBtnText = "Next Page =>";
-    if (!response.next_page) {
+    if (!pageUrl) {
       return (
         <button type="button" isDisabled={true}>
           {nextBtnText}
         </button>
       );
     } else {
-      const paginateToNextPage = () => setNewUrl(response.next_page);
+      const paginateToNextPage = () => setNewUrl(pageUrl);
       return (
         <button type="button" onClick={paginateToNextPage}>
           {nextBtnText}

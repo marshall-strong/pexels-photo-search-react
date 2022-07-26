@@ -86,7 +86,7 @@ const Gallery = () => {
             <Pagination
               prevOrNext={"prev"}
               setNewUrl={setNewUrl}
-              response={response}
+              pageUrl={response.prev_page}
             />
             <div className="galleryPhotos">
               <Photo photoData={response.photos[0]} />
@@ -103,7 +103,7 @@ const Gallery = () => {
             <Pagination
               prevOrNext={"next"}
               setNewUrl={setNewUrl}
-              response={response}
+              pageUrl={response.next_page}
             />
           </div>
         )}
