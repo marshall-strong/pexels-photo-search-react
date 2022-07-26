@@ -32,50 +32,84 @@ const Gallery = () => {
       setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
     }
   }, [displayedUrl, newUrl]);
-  
 
-  const fetchPhotos = (url) => {
-    return fetch(url, {
-      method: "GET",
-      headers: {
-        Authorization:
-          "563492ad6f91700001000001d3694f5f3f444938a2621cfc666c0cc4",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`response is not okay.`);
-        } else {
-          setDisplayedUrl(url);
-          setNewUrl(null);
-          setSearchQuery(userInput);
-          console.log(response);
-          return response.json();
-        }
-      })
-      .catch((e) => {
-        console.log(e.message);
-      });
-  };
-
+  // If `displayedUrl` and `newUrl` both exist and are not equal to eachother, 
+  //  submit a fetch request for `newUrl`. This occurs whenever a new photo  
+  //  search is submitted, and whenever a pagination button is clicked.
   useEffect(() => {
-    if (
-      (!displayedUrl && newUrl) ||
-      (displayedUrl && newUrl && displayedUrl !== newUrl)
-    ) {
-      fetchPhotos(newUrl)
-        .then((response) => {
-          setResponse(response);
-        })
-        .catch((e) => console.log(e.message));
+    // Declare the data fetching function INSIDE the `useEffect` code block:
+    const fetchPhotos = async () => {
+      // get the data from the api
+      const response = await fetch(newUrl, {
+        method: "GET",
+        headers: {
+          Authorization:
+            "563492ad6f91700001000001d3694f5f3f444938a2621cfc666c0cc4",
+        },
+      });
+      // convert the response data to json
+      const json = await response.json();
+      // set state with the result
+      setResponse(json);
+
+      setDisplayedUrl(newUrl);
+      setNewUrl(null);
+      setSearchQuery(userInput);
+    };
+
+    // Call the data fetching function if `newUrl` is not equal to `displayedUrl`
+    if ((!!displayedUrl) && (!!newUrl) && (displayedUrl !== newUrl)) {
+      fetchPhotos()
+        .catch((e) => {
+          console.log(e.message);
+        });
     }
-  }, [displayedUrl, newUrl]);
+  }, [displayedUrl, newUrl, userInput]);
+
+  // const fetchPhotos = (url) => {
+  //   return fetch(url, {
+  //     method: "GET",
+  //     headers: {
+  //       Authorization:
+  //         "563492ad6f91700001000001d3694f5f3f444938a2621cfc666c0cc4",
+  //     },
+  //   })
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error(`response is not okay.`);
+  //       } else {
+  //         setDisplayedUrl(url);
+  //         setNewUrl(null);
+  //         setSearchQuery(userInput);
+  //         console.log(response);
+  //         return response.json();
+  //       }
+  //     })
+  //     .catch((e) => {
+  //       console.log(e.message);
+  //     });
+  // };
+
+  // useEffect(() => {
+  //   if (
+  //     (!displayedUrl && newUrl) ||
+  //     (displayedUrl && newUrl && displayedUrl !== newUrl)
+  //   ) {
+  //     fetchPhotos(newUrl)
+  //       .then((response) => {
+  //         setResponse(response);
+  //       })
+  //       .catch((e) => console.log(e.message));
+  //   }
+  // }, [displayedUrl, newUrl]);
 
   const returnToHomepage = () => {
     setNewUrl(homepageURL);
     setUserInput("");
     setSearchQuery("");
   };
+
+  // debugger
 
   return (
     <div className="Gallery">
