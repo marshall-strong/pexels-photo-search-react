@@ -12,7 +12,7 @@ const Gallery = () => {
   const [newUrl, setNewUrl] = useState(homepageURL);
   const [response, setResponse] = useState(null);
   const [userInput, setUserInput] = useState("");
-  const [userQuery, setUserQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const fetchPhotos = (url) => {
     return fetch(url, {
@@ -28,7 +28,7 @@ const Gallery = () => {
         } else {
           setDisplayedUrl(url);
           setNewUrl(null);
-          setUserQuery(userInput);
+          setSearchQuery(userInput);
           console.log(response);
           return response.json();
         }
@@ -54,6 +54,7 @@ const Gallery = () => {
   const returnToHomepage = () => {
     setNewUrl(homepageURL);
     setUserInput("");
+    setSearchQuery("");
   };
 
   return (
@@ -65,7 +66,11 @@ const Gallery = () => {
           setUserInput={setUserInput}
         />
       </div>
-      <PaginationBar setNewUrl={setNewUrl} response={response} />
+      <PaginationBar
+        response={response}
+        searchQuery={searchQuery}
+        setNewUrl={setNewUrl}
+      />
       <div className="galleryContainer">
         {!response ? (
           <div>
@@ -107,7 +112,11 @@ const Gallery = () => {
           </div>
         )}
       </div>
-      <PaginationBar setNewUrl={setNewUrl} response={response} />
+      <PaginationBar
+        response={response}
+        searchQuery={searchQuery}
+        setNewUrl={setNewUrl}
+      />
     </div>
   );
 };

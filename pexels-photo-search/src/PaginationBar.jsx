@@ -1,10 +1,23 @@
 import React from "react";
 import Pagination from "./Pagination";
+import "./PaginationBar.css";
 
-const PaginationBar = ({ setNewUrl, response }) => {
+const PaginationBar = ({ response, searchQuery, setNewUrl }) => {
   if (!response) {
     return null;
   } else {
+    const aboutResults = searchQuery ? (
+      <p>
+        <span>
+          Your search for <b>{searchQuery}</b> returned{" "}
+          <b>{response.total_results}</b> results.
+        </span>
+      </p>
+    ) : (
+      <span>
+        Pexels Curated Photos Collection
+      </span>
+    );
     return (
       <div className="PaginationBar">
         <Pagination
@@ -12,7 +25,7 @@ const PaginationBar = ({ setNewUrl, response }) => {
           setNewUrl={setNewUrl}
           pageUrl={response.prev_page}
         />
-        <span>Pagination</span>
+        {aboutResults}
         <Pagination
           prevOrNext={"next"}
           setNewUrl={setNewUrl}
