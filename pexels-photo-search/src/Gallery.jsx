@@ -10,8 +10,18 @@ const Gallery = () => {
   const [displayedUrl, setDisplayedUrl] = useState(null);
   const [newUrl, setNewUrl] = useState(homepageURL);
   const [response, setResponse] = useState(null);
-  const [userInput, setUserInput] = useState("");
+  const [userInput, setUserInput] = useState(
+    window.localStorage.getItem("userInput")
+  );
   const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    setUserInput(window.localStorage.getItem('userInput'));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('userInput', userInput);
+  }, [userInput]);
 
   const fetchPhotos = (url) => {
     return fetch(url, {
