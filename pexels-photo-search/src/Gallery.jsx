@@ -16,7 +16,6 @@ const Gallery = () => {
   // When the App loads for the first time and there is no `displayedUrl` value
   //  in localStorage, set `newUrl` equal to the homepage URL.
   useEffect(() => {
-    // debugger
     const localStorageUrl = JSON.parse(
       window.localStorage.getItem("displayedUrl")
     );
@@ -32,7 +31,6 @@ const Gallery = () => {
   // When a user reloads the App, `displayedUrl` and `newUrl` are both `null`,
   //  but `localStorage` may have the previous URL
   useEffect(() => {
-    // debugger
     const localStorageUrl = JSON.parse(
       window.localStorage.getItem("displayedUrl")
     );
@@ -40,12 +38,6 @@ const Gallery = () => {
       setNewUrl(localStorageUrl);
     }
   }, [displayedUrl, newUrl]);
-
-  // // Get the value of `displayedUrl` from localStorage after every render,
-  // //  then update the value of `displayedUrl` in state.
-  // useEffect(() => {
-  //   setDisplayedUrl(JSON.parse(window.localStorage.getItem("displayedUrl")));
-  // }, []);
 
   // Update the value of `displayedUrl` in localStorage every time the value of
   //  `displayedUrl` in state changes.
@@ -85,14 +77,6 @@ const Gallery = () => {
         console.log(e.message);
       });
     }
-
-    // // Call the data fetching function if `displayedUrl` is NOT null,
-    // //  but `response` IS null.
-    // if (!!displayedUrl && !response) {
-    //   fetchPhotos().catch((e) => {
-    //     console.log(e.message);
-    //   });
-    // }
   }, [displayedUrl, newUrl, userInput, response]);
 
   const returnToHomepage = () => {
@@ -100,43 +84,6 @@ const Gallery = () => {
     setUserInput("");
     setSearchQuery("");
   };
-
-  // const fetchPhotos = (url) => {
-  //   return fetch(url, {
-  //     method: "GET",
-  //     headers: {
-  //       Authorization:
-  //         "563492ad6f91700001000001d3694f5f3f444938a2621cfc666c0cc4",
-  //     },
-  //   })
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error(`response is not okay.`);
-  //       } else {
-  //         setDisplayedUrl(url);
-  //         setNewUrl(null);
-  //         setSearchQuery(userInput);
-  //         console.log(response);
-  //         return response.json();
-  //       }
-  //     })
-  //     .catch((e) => {
-  //       console.log(e.message);
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   if (
-  //     (!displayedUrl && newUrl) ||
-  //     (displayedUrl && newUrl && displayedUrl !== newUrl)
-  //   ) {
-  //     fetchPhotos(newUrl)
-  //       .then((response) => {
-  //         setResponse(response);
-  //       })
-  //       .catch((e) => console.log(e.message));
-  //   }
-  // }, [displayedUrl, newUrl]);
 
   return (
     <div className="Gallery">
