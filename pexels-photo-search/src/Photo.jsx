@@ -20,6 +20,21 @@ const Photo = ({ photoData }) => {
               <img src={photoData.src.medium} alt="alt text" />
             </a>
           </div>
+          <div>
+            <p className="photoCredit">
+              <span>Photo by </span>
+              <span>
+                <a
+                  href={photoData.photographer_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <b>{photoData.photographer}</b>
+                </a>
+              </span>
+              <span> on Pexels</span>
+            </p>
+          </div>
         </div>
       );
   }
