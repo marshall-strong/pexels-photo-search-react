@@ -107,6 +107,7 @@ const Gallery = () => {
           </div>
         )}
       </div>
+      <PaginationBar setNewUrl={setNewUrl} response={response} />
     </div>
   );
 };
