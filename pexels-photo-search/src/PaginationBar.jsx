@@ -6,18 +6,29 @@ const PaginationBar = ({ response, searchQuery, setNewUrl }) => {
   if (!response) {
     return null;
   } else {
-    const aboutResults = searchQuery ? (
-      <p>
+    const resultsDescription = searchQuery ? (
+      <div className="resultsDescription">
         <span>
           Your search for <b>{searchQuery}</b> returned{" "}
           <b>{response.total_results}</b> results.
         </span>
-      </p>
+      </div>
     ) : (
       <span>
         Pexels Curated Photos Collection
       </span>
     );
+
+    const resultsPage = response.page ? (
+      <div className="resultsPage">
+        <span>
+          Page <b>{response.page}</b>
+        </span>
+      </div>
+    ) : (
+      <span>Pexels Curated Photos Collection</span>
+    );
+
     return (
       <div className="PaginationBar">
         <Pagination
@@ -25,7 +36,10 @@ const PaginationBar = ({ response, searchQuery, setNewUrl }) => {
           setNewUrl={setNewUrl}
           pageUrl={response.prev_page}
         />
-        {aboutResults}
+        <div className="paginationText">
+          {resultsDescription}
+          {resultsPage}
+        </div>
         <Pagination
           prevOrNext={"next"}
           setNewUrl={setNewUrl}

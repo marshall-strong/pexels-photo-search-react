@@ -7,7 +7,7 @@ const Pagination = ({
   pageUrl,
 }) => {
   if (prevOrNext === "prev") {
-    const prevBtnText = "Previous Page <=";
+    const prevBtnText = "<= Previous Page";
     if (!pageUrl) {
       return (
         <button type="button" disabled>
