@@ -13,32 +13,50 @@ const Gallery = () => {
   const [userInput, setUserInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Get the value of `displayedUrl` from localStorage after every render,
-  //  then update the value of `displayedUrl` in state.
+  // When the App loads for the first time and there is no `displayedUrl` value
+  //  in localStorage, set `newUrl` equal to the homepage URL.
   useEffect(() => {
-    setDisplayedUrl(JSON.parse(window.localStorage.getItem("displayedUrl")));
-  }, []);
+    // debugger
+    const localStorageUrl = JSON.parse(
+      window.localStorage.getItem("displayedUrl")
+    );
+    if (
+      !displayedUrl &&
+      !newUrl &&
+      !localStorageUrl
+    ) {
+      setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
+    }
+  }, [displayedUrl, newUrl]);
+
+  // When a user reloads the App, `displayedUrl` and `newUrl` are both `null`,
+  //  but `localStorage` may have the previous URL
+  useEffect(() => {
+    // debugger
+    const localStorageUrl = JSON.parse(
+      window.localStorage.getItem("displayedUrl")
+    );
+    if (!displayedUrl && !newUrl && !!localStorageUrl) {
+      setNewUrl(localStorageUrl);
+    }
+  }, [displayedUrl, newUrl]);
+
+  // // Get the value of `displayedUrl` from localStorage after every render,
+  // //  then update the value of `displayedUrl` in state.
+  // useEffect(() => {
+  //   setDisplayedUrl(JSON.parse(window.localStorage.getItem("displayedUrl")));
+  // }, []);
 
   // Update the value of `displayedUrl` in localStorage every time the value of
   //  `displayedUrl` in state changes.
   useEffect(() => {
-    window.localStorage.setItem("displayedUrl", JSON.stringify(displayedUrl));
+    if (!!displayedUrl){
+      window.localStorage.setItem("displayedUrl", JSON.stringify(displayedUrl));
+    }
   }, [displayedUrl]);
 
-  // When the App loads for the first time and there is no `displayedUrl` value
-  //  in localStorage, set `newUrl` equal to the homepage URL.
-  useEffect(() => {
-    if (!displayedUrl && !newUrl) {
-      if (JSON.parse(window.localStorage.getItem("displayedUrl"))) {
-        setNewUrl(JSON.parse(window.localStorage.getItem("displayedUrl")));
-      } else {
-        setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
-      }
-    }
-  }, [displayedUrl, newUrl]);
-
-  // If `displayedUrl` and `newUrl` both exist and are not equal to eachother, 
-  //  submit a fetch request for `newUrl`. This occurs whenever a new photo  
+  // If `displayedUrl` and `newUrl` both exist and are not equal to eachother,
+  //  submit a fetch request for `newUrl`. This occurs whenever a new photo
   //  search is submitted, and whenever a pagination button is clicked.
   useEffect(() => {
     // Declare the data fetching function INSIDE the `useEffect` code block:
@@ -68,7 +86,7 @@ const Gallery = () => {
       });
     }
 
-    // // Call the data fetching function if `displayedUrl` is NOT null, 
+    // // Call the data fetching function if `displayedUrl` is NOT null,
     // //  but `response` IS null.
     // if (!!displayedUrl && !response) {
     //   fetchPhotos().catch((e) => {
@@ -76,7 +94,6 @@ const Gallery = () => {
     //   });
     // }
   }, [displayedUrl, newUrl, userInput, response]);
-
 
   const returnToHomepage = () => {
     setNewUrl(homepageURL);
@@ -120,9 +137,6 @@ const Gallery = () => {
   //       .catch((e) => console.log(e.message));
   //   }
   // }, [displayedUrl, newUrl]);
-
-
-
 
   return (
     <div className="Gallery">
