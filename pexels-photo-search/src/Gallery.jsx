@@ -10,7 +10,7 @@ const Gallery = () => {
   const [displayedUrl, setDisplayedUrl] = useState(null);
   const [newUrl, setNewUrl] = useState(null);
   const [response, setResponse] = useState(null);
-  const [userInput, setUserInput] = useState(null);
+  const [userInput, setUserInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
   // Get the value of `displayedUrl` from localStorage after every render,
