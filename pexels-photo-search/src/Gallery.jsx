@@ -89,34 +89,11 @@ const Gallery = () => {
               pageUrl={response.prev_page}
             />
             <div className="galleryPhotos">
-              <Photo photoData={response.photos[0]} />
-              {response.photos[1] ? (
-                <Photo photoData={response.photos[1]} />
-              ) : null}
-              {response.photos[2] ? (
-                <Photo photoData={response.photos[2]} />
-              ) : null}
-              {response.photos[3] ? (
-                <Photo photoData={response.photos[3]} />
-              ) : null}
-              {response.photos[4] ? (
-                <Photo photoData={response.photos[4]} />
-              ) : null}
-              {response.photos[5] ? (
-                <Photo photoData={response.photos[5]} />
-              ) : null}
-              {response.photos[6] ? (
-                <Photo photoData={response.photos[6]} />
-              ) : null}
-              {response.photos[7] ? (
-                <Photo photoData={response.photos[7]} />
-              ) : null}
-              {response.photos[8] ? (
-                <Photo photoData={response.photos[8]} />
-              ) : null}
-              {response.photos[9] ? (
-                <Photo photoData={response.photos[9]} />
-              ) : null}
+              {response.photos.map((photoData, index) => (
+                <React.Fragment key={index}>
+                  <Photo photoData={photoData} />
+                </React.Fragment>
+              ))}
             </div>
             <Pagination
               prevOrNext={"next"}
