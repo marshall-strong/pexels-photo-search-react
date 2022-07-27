@@ -8,3 +8,7 @@
   align-items: center;
   width: 100%;
 }
+
+.PaginationBar > button {
+  margin: 2em;
+}
