@@ -39,7 +39,8 @@
 
 .PersonalLinks > ul > li > a > img {
   display: inherit;
-  width: 2rem;
+  height: 2rem;
+  margin: .5rem
 }
 
 /* .btn-rounded-white {
