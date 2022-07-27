@@ -92,12 +92,14 @@ const Gallery = () => {
           setNewUrl={setNewUrl}
           userInput={userInput}
           setUserInput={setUserInput}
+          returnToHomepage={returnToHomepage}
         />
       </div>
       <PaginationBar
         response={response}
         searchQuery={searchQuery}
         setNewUrl={setNewUrl}
+        displayedUrl={displayedUrl}
       />
       <div className="galleryContainer">
         {!response ? (
@@ -138,6 +140,7 @@ const Gallery = () => {
         response={response}
         searchQuery={searchQuery}
         setNewUrl={setNewUrl}
+        displayedUrl={displayedUrl}
       />
     </div>
   );

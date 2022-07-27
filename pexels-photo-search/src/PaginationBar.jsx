@@ -2,22 +2,38 @@ import React from "react";
 import Pagination from "./Pagination";
 import "./PaginationBar.css";
 
-const PaginationBar = ({ response, searchQuery, setNewUrl }) => {
+const PaginationBar = ({ response, searchQuery, setNewUrl, displayedUrl }) => {
   if (!response) {
     return null;
   } else {
-    const resultsDescription = searchQuery ? (
+    const decodedUri = decodeURI(displayedUrl);
+    const curatedSubstring = decodedUri.substring(26, 33);
+    console.log(curatedSubstring);
+    const isCurated = (curatedSubstring === "curated");
+    let querySubstring;
+    if (isCurated) {
+      querySubstring = "";
+    } else {
+      const substrings = decodedUri.split("=");
+      querySubstring = substrings[3];
+    }
+
+    const resultsDescription = isCurated ? (
       <div className="resultsDescription">
         <span>
-          Your search for <b>{searchQuery}</b> returned{" "}
+          <b>{"Pexels Curated Photos Collection"}</b> returned{" "}
           <b>{response.total_results}</b> results.
         </span>
       </div>
     ) : (
-      <span>
-        Pexels Curated Photos Collection
-      </span>
+      <div className="resultsDescription">
+        <span>
+          Your search for <b>{querySubstring}</b> returned{" "}
+          <b>{response.total_results}</b> results.
+        </span>
+      </div>
     );
+
 
     const resultsPage = response.page ? (
       <div className="resultsPage">
