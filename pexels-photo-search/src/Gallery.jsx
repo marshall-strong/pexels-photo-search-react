@@ -11,7 +11,6 @@ const Gallery = () => {
   const [newUrl, setNewUrl] = useState(null);
   const [response, setResponse] = useState(null);
   const [userInput, setUserInput] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
 
   // When the App loads for the first time and there is no `displayedUrl` value
   //  in localStorage, set `newUrl` equal to the homepage URL.
@@ -63,12 +62,10 @@ const Gallery = () => {
       setResponse(json);
       setDisplayedUrl(newUrl);
       setNewUrl(null);
-      setSearchQuery(userInput);
     };
 
     // Call the data fetching function if `newUrl` is NOT null
     if (newUrl) {
-      // if ((!!newUrl) && (displayedUrl !== newUrl)) {
       fetchPhotos().catch((e) => {
         console.log(e.message);
       });
@@ -78,7 +75,6 @@ const Gallery = () => {
   const returnToHomepage = () => {
     setNewUrl(homepageURL);
     setUserInput("");
-    setSearchQuery("");
   };
 
   return (
