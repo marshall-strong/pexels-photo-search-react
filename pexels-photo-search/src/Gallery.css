@@ -29,7 +29,7 @@
   align-items: inherit;
   justify-content: inherit;
   width: 100%;
-  height:max-content;
+  height: max-content;
 }
 
 .galleryPhotos {
@@ -37,7 +37,7 @@
   flex-direction: inherit;
   flex-wrap: wrap;
   align-items: inherit;
-  justify-content: inherit;
+  justify-content: space-evenly;
   width: 100%;
   height: 100%;
 }

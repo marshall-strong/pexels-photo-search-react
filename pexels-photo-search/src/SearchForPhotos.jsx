@@ -21,7 +21,6 @@ const SearchForPhotos = ({
 
   return (
     <div className="SearchForPhotos">
-      {/* <div>Search for Photos</div> */}
       <form onSubmit={handleSubmit} id="search-for-photos">
         <input
           type="text"

@@ -15,25 +15,23 @@ const Photo = ({ photoData }) => {
   } else {
     return (
       <div className="Photo">
-        <div>
+        <div className="photoImage">
           <a href={photoData.url} target="_blank" rel="noopener noreferrer">
             <img src={photoData.src.medium} alt="alt text" />
           </a>
         </div>
-        <div>
-          <p className="photoCredit">
-            <span>Photo by </span>
-            <span>
-              <a
-                href={photoData.photographer_url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <b>{photoData.photographer}</b>
-              </a>
-            </span>
-            <span> on Pexels</span>
-          </p>
+        <div className="photoCredit">
+          <span>Photo by </span>
+          <span>
+            <a
+              href={photoData.photographer_url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <b>{photoData.photographer}</b>
+            </a>
+          </span>
+          <span> on Pexels</span>
         </div>
       </div>
     );
