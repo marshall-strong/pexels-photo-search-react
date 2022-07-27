@@ -5,4 +5,30 @@
   width: 100%;
   height: 5rem;
   z-index: 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Footer > .leftNav {
+  display: inherit;
+}
+
+.Footer > .leftNav > .imgWrapper {
+  display: inherit;
+}
+
+.Footer > .leftNav > .imgWrapper > img {
+  display: inherit;
+  width: 6rem;
+}
+
+.Footer > .centerNav {
+  display: inherit;
+}
+
+.Footer > .rightNav {
+  display: inherit;
 }
