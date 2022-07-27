@@ -1,11 +1,11 @@
 import React from "react";
 import "./Footer.css";
-import logoPexels from "./logoPexels.svg"
+import pexelsLogo from "./img/pexelsLogo.svg"
 
 const Footer = () => {
   return (
     <div className="Footer">
-      <img src={logoPexels} className="logoPexels" alt="Pexels logo" />
+      <img src={pexelsLogo} className="pexelsLogo" alt="Powered by Pexels" />
       <div>Powered by Pexels</div>
     </div>
   );

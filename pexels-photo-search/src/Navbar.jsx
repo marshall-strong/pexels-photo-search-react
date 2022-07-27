@@ -7,7 +7,10 @@ const Navbar = () => {
       <div className="leftNav"></div>
       <div className="centerNav">
         <div className="navbarTitle">React Photo Search App</div>
-        <div className="navbarSubtitle">Powered by Pexels</div>
+        <div className="navbarSubtitle">
+          <span>Powered by </span>
+          Pexels
+        </div>
       </div>
       <div className="rightNav"></div>
     </div>
