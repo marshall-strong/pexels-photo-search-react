@@ -9,7 +9,7 @@ const PaginationBar = ({ response, setNewUrl, displayedUrl }) => {
     const decodedUri = decodeURI(displayedUrl);
     const curatedSubstring = decodedUri.substring(26, 33);
     console.log(curatedSubstring);
-    const isCurated = (curatedSubstring === "curated");
+    const isCurated = curatedSubstring === "curated";
     let querySubstring;
     if (isCurated) {
       querySubstring = "";
@@ -33,7 +33,6 @@ const PaginationBar = ({ response, setNewUrl, displayedUrl }) => {
         </span>
       </div>
     );
-
 
     const resultsPage = response.page ? (
       <div className="resultsPage">

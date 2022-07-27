@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from "react";
-import "./Gallery.css";
 import Photo from "./Photo";
 import SearchForPhotos from "./SearchForPhotos";
 import PaginationBar from "./PaginationBar";
+import "./Gallery.css";
 
 const Gallery = () => {
-  const homepageURL = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
-
   const [displayedUrl, setDisplayedUrl] = useState(null);
   const [newUrl, setNewUrl] = useState(null);
   const [response, setResponse] = useState(null);
   const [userInput, setUserInput] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
+  
+  const homepageURL = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
+
+  const returnToHomepage = () => {
+    setNewUrl(homepageURL);
+    setUserInput("");
+  };
 
   // When the App loads for the first time and there is no `displayedUrl` value
   //  in localStorage, set `newUrl` equal to the homepage URL.
@@ -19,11 +23,7 @@ const Gallery = () => {
     const localStorageUrl = JSON.parse(
       window.localStorage.getItem("displayedUrl")
     );
-    if (
-      !displayedUrl &&
-      !newUrl &&
-      !localStorageUrl
-    ) {
+    if (!displayedUrl && !newUrl && !localStorageUrl) {
       setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
     }
   }, [displayedUrl, newUrl]);
@@ -42,7 +42,7 @@ const Gallery = () => {
   // Update the value of `displayedUrl` in localStorage every time the value of
   //  `displayedUrl` in state changes.
   useEffect(() => {
-    if (!!displayedUrl){
+    if (!!displayedUrl) {
       window.localStorage.setItem("displayedUrl", JSON.stringify(displayedUrl));
     }
   }, [displayedUrl]);
@@ -67,23 +67,15 @@ const Gallery = () => {
       setResponse(json);
       setDisplayedUrl(newUrl);
       setNewUrl(null);
-      setSearchQuery(userInput);
     };
 
     // Call the data fetching function if `newUrl` is NOT null
     if (newUrl) {
-      // if ((!!newUrl) && (displayedUrl !== newUrl)) {
       fetchPhotos().catch((e) => {
         console.log(e.message);
       });
     }
   }, [displayedUrl, newUrl, userInput, response]);
-
-  const returnToHomepage = () => {
-    setNewUrl(homepageURL);
-    setUserInput("");
-    setSearchQuery("");
-  };
 
   return (
     <div className="Gallery">

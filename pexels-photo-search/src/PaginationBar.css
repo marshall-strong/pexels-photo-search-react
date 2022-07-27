@@ -7,4 +7,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  font-size: calc(6px + 1vmin);
+}
+
+.PaginationBar > button {
+  margin: 2em;
 }

@@ -2,7 +2,16 @@
   background-color: #ff0080;
   border: 2px solid red;
   margin: 5px;
-  max-width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.Photo > .photoImage {
+  display: inherit;
+}
+
+.Photo > .photoCredit {
+  font-size: calc(4px + 1vmin);
 }
 
 .loading {
