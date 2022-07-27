@@ -32,23 +32,26 @@
   display: inherit;
   flex-direction: row;
   flex-wrap: nowrap;
-  /* margin-top: .25rem; */
   font-size: calc(5px + 1vmin);
   color: black;
   align-items: center;
 }
 
-.Navbar > .centerNav > .navbarSubtitle > .textWrapper {
+.Navbar > .centerNav > .navbarSubtitle > a {
   display: inherit;
-  /* margin-top: .4rem; */
+  align-items: center;
+}
+
+.Navbar > .centerNav > .navbarSubtitle > a > .textWrapper {
+  display: inherit;
   font-weight: bold;
 }
 
-.Navbar > .centerNav > .navbarSubtitle > .imgWrapper {
+.Navbar > .centerNav > .navbarSubtitle > a > .imgWrapper {
   display: inherit;
 }
 
-.Navbar > .centerNav > .navbarSubtitle > .imgWrapper > img {
+.Navbar > .centerNav > .navbarSubtitle > a > .imgWrapper > img {
   display: inherit;
   width: 6rem;
 }
