@@ -5,15 +5,54 @@
   width: 100%;
   height: 5rem;
   z-index: 2;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar > .leftNav {
+  display: inherit;
+}
+
+.Navbar > .centerNav {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Navbar > .centerNav > .navbarTitle {
+  display: inherit;
   margin-top: .5rem;
   font-size: calc(20px + 1vmin);
 }
 
 .Navbar > .centerNav > .navbarSubtitle {
-  margin-top: .25rem;
-  font-size: calc(10px + 1vmin);
+  display: inherit;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* margin-top: .25rem; */
+  font-size: calc(5px + 1vmin);
+  color: black;
+  align-items: center;
+}
+
+.Navbar > .centerNav > .navbarSubtitle > .textWrapper {
+  display: inherit;
+  /* margin-top: .4rem; */
+  font-weight: bold;
+}
+
+.Navbar > .centerNav > .navbarSubtitle > .imgWrapper {
+  display: inherit;
+}
+
+.Navbar > .centerNav > .navbarSubtitle > .imgWrapper > img {
+  display: inherit;
+  width: 6rem;
+}
+
+.Navbar > .rightNav {
+  display: inherit;
 }
