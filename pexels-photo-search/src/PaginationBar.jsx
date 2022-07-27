@@ -2,7 +2,7 @@ import React from "react";
 import Pagination from "./Pagination";
 import "./PaginationBar.css";
 
-const PaginationBar = ({ response, searchQuery, setNewUrl, displayedUrl }) => {
+const PaginationBar = ({ response, setNewUrl, displayedUrl }) => {
   if (!response) {
     return null;
   } else {

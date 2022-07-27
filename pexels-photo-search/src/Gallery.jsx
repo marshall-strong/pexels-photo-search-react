@@ -97,7 +97,6 @@ const Gallery = () => {
       </div>
       <PaginationBar
         response={response}
-        searchQuery={searchQuery}
         setNewUrl={setNewUrl}
         displayedUrl={displayedUrl}
       />
@@ -138,7 +137,6 @@ const Gallery = () => {
       </div>
       <PaginationBar
         response={response}
-        searchQuery={searchQuery}
         setNewUrl={setNewUrl}
         displayedUrl={displayedUrl}
       />
