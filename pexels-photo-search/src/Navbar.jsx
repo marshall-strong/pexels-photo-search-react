@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="imgWrapper">
               <img
                 src={pexelsColoredLogo}
-                className="pexelsLogo"
+                className="pexelsIcon"
                 alt="Powered by Pexels"
               />
             </div>

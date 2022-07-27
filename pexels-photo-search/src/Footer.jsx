@@ -1,6 +1,7 @@
 import React from "react";
+import PersonalLinks from "./PersonalLinks";
 import "./Footer.css";
-import pexelsLogo from "./img/pexelsLogo.svg"
+import pexelsIcon from "./img/pexelsIcon.svg"
 import pexelsBlackLogo from "./img/pexelsBlackLogoOnTransparent.png";
 import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 import pexelsWhiteLogo from "./img/pexelsWhiteLogoOnTransparent.png";
@@ -12,17 +13,16 @@ const Footer = () => {
         <div className="imgWrapper">
           <img
             src={pexelsColoredLogo}
-            className="pexelsLogo"
+            className="pexelsIcon"
             alt="Powered by Pexels"
           />
         </div>
       </div>
       <div className="centerNav">
-        <div className="copyright">Copyright © 2022 Marshall Strong</div>
+        <div className="copyright">Copyright &copy; 2022 Marshall Strong</div>
       </div>
       <div className="rightNav">
-        <img src={pexelsLogo} className="pexelsLogo" alt="Powered by Pexels" />
-        <div>Powered by Pexels</div>
+        <PersonalLinks />
       </div>
     </div>
   );

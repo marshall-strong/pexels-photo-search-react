@@ -1,6 +1,6 @@
 import React from "react";
 import "./Photo.css";
-import reactLogo from "./img/reactLogo.svg";
+import reactIcon from "./img/reactIcon.svg";
 
 const Photo = ({ photoData }) => {
   if (!photoData) {
@@ -8,7 +8,7 @@ const Photo = ({ photoData }) => {
       <div className="Photo">
         <div className="loading">
           <p>Loading...</p>
-          <img src={reactLogo} className="spinningLogo" alt="react logo" />
+          <img src={reactIcon} className="spinningLogo" alt="react logo" />
         </div>
       </div>
     );

@@ -1,3 +1,49 @@
 .PersonalLinks {
   background-color: #f827d5;
+  display: inherit;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* .col-sm-5 {
+  display: inherit;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+} */
+
+/* @media (min-width: 768px) {
+  .col-sm-5 {
+    float: left;
+    width: 41.66666667%;
   }
+} */
+
+.PersonalLinks > ul {
+  display: inherit;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.PersonalLinks > ul > li {
+  display: inline-block;
+  font-size: calc(10px + 1vmin);
+  list-style: none;
+}
+
+.PersonalLinks > ul > li > a {
+  display: inherit;
+}
+
+.PersonalLinks > ul > li > a > img {
+  display: inherit;
+  width: 2rem;
+}
+
+/* .btn-rounded-white {
+  border: 3px solid #fff;
+  border-radius: 30px;
+  transition: 0.5s ease all;
+} */
