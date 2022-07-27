@@ -8,47 +8,76 @@ const Gallery = () => {
   const homepageURL = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
 
   const [displayedUrl, setDisplayedUrl] = useState(null);
-  const [newUrl, setNewUrl] = useState(homepageURL);
+  const [newUrl, setNewUrl] = useState(null);
   const [response, setResponse] = useState(null);
   const [userInput, setUserInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const fetchPhotos = (url) => {
-    return fetch(url, {
-      method: "GET",
-      headers: {
-        Authorization:
-          "563492ad6f91700001000001d3694f5f3f444938a2621cfc666c0cc4",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`response is not okay.`);
-        } else {
-          setDisplayedUrl(url);
-          setNewUrl(null);
-          setSearchQuery(userInput);
-          console.log(response);
-          return response.json();
-        }
-      })
-      .catch((e) => {
-        console.log(e.message);
-      });
-  };
-
+  // When the App loads for the first time and there is no `displayedUrl` value
+  //  in localStorage, set `newUrl` equal to the homepage URL.
   useEffect(() => {
+    const localStorageUrl = JSON.parse(
+      window.localStorage.getItem("displayedUrl")
+    );
     if (
-      (!displayedUrl && newUrl) ||
-      (displayedUrl && newUrl && (displayedUrl !== newUrl))
+      !displayedUrl &&
+      !newUrl &&
+      !localStorageUrl
     ) {
-      fetchPhotos(newUrl)
-        .then((response) => {
-          setResponse(response);
-        })
-        .catch((e) => console.log(e.message));
+      setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
     }
   }, [displayedUrl, newUrl]);
+
+  // When a user reloads the App, `displayedUrl` and `newUrl` are both `null`,
+  //  but `localStorage` may have the previous URL
+  useEffect(() => {
+    const localStorageUrl = JSON.parse(
+      window.localStorage.getItem("displayedUrl")
+    );
+    if (!displayedUrl && !newUrl && !!localStorageUrl) {
+      setNewUrl(localStorageUrl);
+    }
+  }, [displayedUrl, newUrl]);
+
+  // Update the value of `displayedUrl` in localStorage every time the value of
+  //  `displayedUrl` in state changes.
+  useEffect(() => {
+    if (!!displayedUrl){
+      window.localStorage.setItem("displayedUrl", JSON.stringify(displayedUrl));
+    }
+  }, [displayedUrl]);
+
+  // If `displayedUrl` and `newUrl` both exist and are not equal to eachother,
+  //  submit a fetch request for `newUrl`. This occurs whenever a new photo
+  //  search is submitted, and whenever a pagination button is clicked.
+  useEffect(() => {
+    // Declare the data fetching function INSIDE the `useEffect` code block:
+    const fetchPhotos = async () => {
+      // get the data from the api
+      const response = await fetch(newUrl, {
+        method: "GET",
+        headers: {
+          Authorization:
+            "563492ad6f91700001000001d3694f5f3f444938a2621cfc666c0cc4",
+        },
+      });
+      // convert the response data to json
+      const json = await response.json();
+      // set state with the result
+      setResponse(json);
+      setDisplayedUrl(newUrl);
+      setNewUrl(null);
+      setSearchQuery(userInput);
+    };
+
+    // Call the data fetching function if `newUrl` is NOT null
+    if (newUrl) {
+      // if ((!!newUrl) && (displayedUrl !== newUrl)) {
+      fetchPhotos().catch((e) => {
+        console.log(e.message);
+      });
+    }
+  }, [displayedUrl, newUrl, userInput, response]);
 
   const returnToHomepage = () => {
     setNewUrl(homepageURL);
@@ -63,12 +92,13 @@ const Gallery = () => {
           setNewUrl={setNewUrl}
           userInput={userInput}
           setUserInput={setUserInput}
+          returnToHomepage={returnToHomepage}
         />
       </div>
       <PaginationBar
         response={response}
-        searchQuery={searchQuery}
         setNewUrl={setNewUrl}
+        displayedUrl={displayedUrl}
       />
       <div className="galleryContainer">
         {!response ? (
@@ -80,9 +110,7 @@ const Gallery = () => {
             <p>
               Your search - <b>{userInput}</b> - did not match any photos.
             </p>
-            <p>
-              Suggestions:
-            </p>
+            <p>Suggestions:</p>
             <div>
               <ul>Make sure all words are spelled correctly.</ul>
               <ul>Try different keywords.</ul>
@@ -90,6 +118,10 @@ const Gallery = () => {
               <ul>Try fewer keywords.</ul>
             </div>
             <button onClick={returnToHomepage}>Return to Homepage</button>
+          </div>
+        ) : !response.photos ? (
+          <div className="paginationContainer">
+            <div className="galleryPhotos"></div>
           </div>
         ) : (
           <div className="paginationContainer">
@@ -105,8 +137,8 @@ const Gallery = () => {
       </div>
       <PaginationBar
         response={response}
-        searchQuery={searchQuery}
         setNewUrl={setNewUrl}
+        displayedUrl={displayedUrl}
       />
     </div>
   );

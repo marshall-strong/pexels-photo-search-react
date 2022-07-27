@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchForPhotos.css";
 
-const SearchForPhotos = ({ setNewUrl, userInput, setUserInput }) => {
+const SearchForPhotos = ({ setNewUrl, userInput, setUserInput, returnToHomepage }) => {
   // const [userInput, setUserInput] = useState("");
   // const [encodedURI, setEncodedURI] = useState("");
   
@@ -26,6 +26,7 @@ const SearchForPhotos = ({ setNewUrl, userInput, setUserInput }) => {
 
   return (
     <div className="SearchForPhotos">
+      <button onClick={returnToHomepage}>Return to Homepage</button>
       <p>Search for Photos</p>
       <form onSubmit={handleSubmit} id="search-for-photos">
         <input
