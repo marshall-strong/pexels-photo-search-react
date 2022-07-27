@@ -4,7 +4,7 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <div className="Navbar">
-      <p>Navbar</p>
+      <p>React Photo Search App</p>
     </div>
   );
 };
