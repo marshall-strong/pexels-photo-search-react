@@ -33,7 +33,7 @@ const SearchForPhotos = ({ setNewUrl, userInput, setUserInput, returnToHomepage 
           type="text"
           value={userInput}
           onChange={handleUserInput}
-          placeholder="Enter a topic to search Pexels for relevant photos (ex: 'elephants on parade')"
+          placeholder="Enter a topic or keywords to search Pexels for relevant photos (ex: 'lions tigers bears')"
         />
         <button type="submit" hidden>
           Search for Photos
