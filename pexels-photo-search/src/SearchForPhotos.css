@@ -1,6 +1,7 @@
 .SearchForPhotos {
   background-color: #51f827;
   width: 100%;
+  font-size: calc(5px + 2vmin);
 }
 
 .SearchForPhotos > form#search-for-photos {
@@ -9,4 +10,5 @@
 
 .SearchForPhotos > form#search-for-photos > input {
   width: 50vw;
+  text-align: center;
 }
