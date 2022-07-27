@@ -1,6 +1,6 @@
 import React from "react";
-import "./Photo.css";
 import reactIcon from "./img/reactIcon.svg";
+import "./Photo.css";
 
 const Photo = ({ photoData }) => {
   if (!photoData) {

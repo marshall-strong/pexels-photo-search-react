@@ -6,7 +6,9 @@
   flex-direction: column;
 }
 
-.Photo > .photoImage {}
+.Photo > .photoImage {
+  display: inherit;
+}
 
 .Photo > .photoCredit {
   font-size: calc(4px + 1vmin);

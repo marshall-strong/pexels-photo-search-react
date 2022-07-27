@@ -1,10 +1,10 @@
 import React from "react";
 import PersonalLinks from "./PersonalLinks";
-import "./Footer.css";
-import pexelsIcon from "./img/pexelsIcon.svg"
-import pexelsBlackLogo from "./img/pexelsBlackLogoOnTransparent.png";
 import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
-import pexelsWhiteLogo from "./img/pexelsWhiteLogoOnTransparent.png";
+// import pexelsIcon from "./img/pexelsIcon.svg"
+// import pexelsBlackLogo from "./img/pexelsBlackLogoOnTransparent.png";
+// import pexelsWhiteLogo from "./img/pexelsWhiteLogoOnTransparent.png";
+import "./Footer.css";
 
 const Footer = () => {
   return (

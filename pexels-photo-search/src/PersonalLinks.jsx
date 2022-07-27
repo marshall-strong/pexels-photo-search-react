@@ -1,9 +1,9 @@
 import React from "react";
 import headshotIcon from "./img/headshot-512.png";
-import emailIcon from "./img/emailIcon.svg"
 import githubIcon from "./img/githubIcon.svg"
 import linkedinIcon from "./img/linkedinIcon.svg";
 import resumeIcon from "./img/resumeIcon.svg"
+// import emailIcon from "./img/emailIcon.svg"
 import "./PersonalLinks.css";
 
 const PersonalLinks = () => {

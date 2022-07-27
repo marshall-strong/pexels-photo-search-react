@@ -1,12 +1,10 @@
 import React from "react";
-import "./App.css";
 import Navbar from "./Navbar";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
+import "./App.css";
 
-
-
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Navbar />
