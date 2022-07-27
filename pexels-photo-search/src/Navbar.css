@@ -13,7 +13,10 @@
 }
 
 .Navbar > .leftNav {
-  display: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: calc(4px + 1vmin);
 }
 
 .Navbar > .centerNav {
