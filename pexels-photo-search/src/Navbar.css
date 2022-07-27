@@ -5,11 +5,15 @@
   width: 100%;
   height: 5rem;
   z-index: 2;
+  text-align: center;
+}
+
+.Navbar > .navbarTitle {
+  margin-top: .5rem;
   font-size: calc(20px + 1vmin);
 }
 
-.Navbar > .navbarText {
-  height: 100%;
-  text-align: center;
-  margin-top: 1rem;
+.Navbar > .navbarSubtitle {
+  margin-top: .25rem;
+  font-size: calc(10px + 1vmin);
 }
