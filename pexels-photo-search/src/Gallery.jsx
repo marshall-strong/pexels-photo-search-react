@@ -57,8 +57,7 @@ const Gallery = () => {
       const response = await fetch(newUrl, {
         method: "GET",
         headers: {
-          Authorization:
-            "563492ad6f91700001000001d3694f5f3f444938a2621cfc666c0cc4",
+          Authorization: `${process.env.REACT_APP_EXPOSED_API_KEY}`,
         },
       });
       // convert the response data to json
