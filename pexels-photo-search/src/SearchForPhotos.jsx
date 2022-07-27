@@ -21,8 +21,7 @@ const SearchForPhotos = ({
 
   return (
     <div className="SearchForPhotos">
-      <button onClick={returnToHomepage}>Return to Homepage</button>
-      <p>Search for Photos</p>
+      {/* <div>Search for Photos</div> */}
       <form onSubmit={handleSubmit} id="search-for-photos">
         <input
           type="text"
@@ -35,6 +34,7 @@ const SearchForPhotos = ({
         </button>
       </form>
       <button onClick={handleSubmit}>Search for Photos</button>
+      <button onClick={returnToHomepage}>Return to Homepage</button>
     </div>
   );
 };
