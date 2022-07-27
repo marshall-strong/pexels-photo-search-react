@@ -19,11 +19,7 @@ const Gallery = () => {
     const localStorageUrl = JSON.parse(
       window.localStorage.getItem("displayedUrl")
     );
-    if (
-      !displayedUrl &&
-      !newUrl &&
-      !localStorageUrl
-    ) {
+    if (!displayedUrl && !newUrl && !localStorageUrl) {
       setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
     }
   }, [displayedUrl, newUrl]);
@@ -42,7 +38,7 @@ const Gallery = () => {
   // Update the value of `displayedUrl` in localStorage every time the value of
   //  `displayedUrl` in state changes.
   useEffect(() => {
-    if (!!displayedUrl){
+    if (!!displayedUrl) {
       window.localStorage.setItem("displayedUrl", JSON.stringify(displayedUrl));
     }
   }, [displayedUrl]);

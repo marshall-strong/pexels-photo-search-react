@@ -1,17 +1,22 @@
 import React from "react";
 import "./SearchForPhotos.css";
 
-const SearchForPhotos = ({ setNewUrl, userInput, setUserInput, returnToHomepage }) => {
+const SearchForPhotos = ({
+  setNewUrl,
+  userInput,
+  setUserInput,
+  returnToHomepage,
+}) => {
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
   };
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const uri = `https://api.pexels.com/v1/search/?page=1&per_page=10&query=${userInput}`;
     const encodedURI = encodeURI(uri);
     setNewUrl(encodedURI);
-    console.log('search form submitted');
+    console.log("search form submitted");
   };
 
   return (

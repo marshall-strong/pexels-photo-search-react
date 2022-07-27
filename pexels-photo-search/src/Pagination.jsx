@@ -1,11 +1,7 @@
 import React from "react";
 import "./Pagination.css";
 
-const Pagination = ({
-  prevOrNext,
-  setNewUrl,
-  pageUrl,
-}) => {
+const Pagination = ({ prevOrNext, setNewUrl, pageUrl }) => {
   if (prevOrNext === "prev") {
     const prevBtnText = "<= Previous Page";
     if (!pageUrl) {
