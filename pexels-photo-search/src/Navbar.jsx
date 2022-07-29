@@ -7,18 +7,12 @@ import "./Navbar.css";
 const pexelsUrl = "https://www.pexels.com/api/";
 
 const Navbar = () => {
-  debugger
   return (
     <div className="Navbar">
       <div className="leftNav">
         <span>
           This App is currently running in <b>{process.env.NODE_ENV}</b> mode.
         </span>
-        <span>
-          The Pexels API key is currently <b>exposed</b>, and has a value of{" "}
-          <b>{process.env.REACT_APP_EXPOSED_API_KEY}</b>.
-        </span>
-        <span>Please resolve...</span>
       </div>
       <div className="centerNav">
         <div className="navbarTitle">React Photo Search App</div>
