@@ -22,7 +22,7 @@ exports.handler = async (event, _context) => {
       method: "get",
       url: requestUrl,
       headers: {
-        Authorization: `${process.env.REACT_APP_EXPOSED_API_KEY}`,
+        Authorization: `${process.env.PEXELS_API_KEY}`,
       },
     });
 
