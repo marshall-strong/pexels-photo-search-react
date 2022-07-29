@@ -1,14 +1,21 @@
 const axios = require("axios");
+const SECRET = process.env.PEXELS_API_KEY;
+
+// This Netlify function hides the Pexels API key from client-side users.
+// If the API request were sent from inside the React app, the key would appear in the request header
 
 exports.handler = async (event, _context) => {
   try {
-    // uses the query string parameters to construct the url for the API request
+    const baseUrl = `https://api.pexels.com/v1/`;
+
+    // the React component deconstructs the url for the API request
+    // the API endpoint is converted to a query string parameter
+    // all query string parameters are available through `event`
+    const { endpoint, page, per_page, query } = event.queryStringParameters;
+    
+    // reconstructs the url for the API request
     // ex: `https://api.pexels.com/v1/curated/?page=1&per_page=10`
     // ex: `https://api.pexels.com/v1/search/?page=1&per_page=10&query=${userInput}`
-
-    const baseUrl = `https://api.pexels.com/v1/`;
-    const { endpoint, page, per_page, query } = event.queryStringParameters;
-
     const constructUrl = (baseUrl, endpoint, page, perPage, query) => {
       let url = baseUrl + endpoint + `/?page=${page}&per_page=${perPage}`;
       const requestUrl = !query ? url : url + `&query=${query}`;
@@ -22,7 +29,7 @@ exports.handler = async (event, _context) => {
       method: "get",
       url: requestUrl,
       headers: {
-        Authorization: `${process.env.PEXELS_API_KEY}`,
+        Authorization: `${SECRET}`,
       },
     });
 
