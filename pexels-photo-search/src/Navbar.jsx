@@ -7,11 +7,12 @@ import "./Navbar.css";
 const pexelsUrl = "https://www.pexels.com/api/";
 
 const Navbar = () => {
+  console.log(
+    `This App is currently running in ${process.env.NODE_ENV} mode.`
+  );
   return (
     <div className="Navbar">
-      <div className="leftNav">
-        {/* left nav */}
-      </div>
+      <div className="leftNav"></div>
       <div className="centerNav">
         <div className="navbarTitle">React Photo Search App</div>
         <div className="navbarSubtitle">
@@ -27,9 +28,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <div className="rightNav">
-        {/* right nav */}
-      </div>
+      <div className="rightNav"></div>
     </div>
   );
 };

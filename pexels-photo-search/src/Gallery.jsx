@@ -9,11 +9,9 @@ const Gallery = () => {
   const [newUrl, setNewUrl] = useState(null);
   const [response, setResponse] = useState(null);
   const [userInput, setUserInput] = useState("");
-  
-  const homepageURL = `https://api.pexels.com/v1/curated/?page=1&per_page=10`;
 
   const returnToHomepage = () => {
-    setNewUrl(homepageURL);
+    setNewUrl(`https://api.pexels.com/v1/curated/?page=1&per_page=10`);
     setUserInput("");
   };
 
@@ -52,28 +50,30 @@ const Gallery = () => {
   //  search is submitted, and whenever a pagination button is clicked.
   useEffect(() => {
     // Declare the data fetching function INSIDE the `useEffect` code block:
-    const fetchPhotos = async () => {
-      // get the data from the api
-      const response = await fetch(newUrl, {
-        method: "GET",
-        headers: {
-          Authorization:
-            "563492ad6f91700001000001d3694f5f3f444938a2621cfc666c0cc4",
-        },
-      });
-      // convert the response data to json
-      const json = await response.json();
-      // set state with the result
-      setResponse(json);
-      setDisplayedUrl(newUrl);
-      setNewUrl(null);
-    };
+    const fetchPexelsPhotos = async () => {
+      // get substrings from `newUrl` to use as query string parameters when constructing `netlifyUrl`
+      const endpointSubstring =
+        newUrl.substring(26, 32) === "search"
+          ? "?endpoint=search&"
+          : "?endpoint=curated&";
+      const remainingParamsSubstring = newUrl.split('?')[1];
+      const netlifyUrl = `/.netlify/functions/fetchPexelsPhotos` + endpointSubstring + remainingParamsSubstring;
+      // send the Pexels API request using a Netlify function to avoid exposing the secret key
+      try {
+        // the Netlify function receives the API response as an object, but 
+        //  converts it to a string with `JSON.stringify` before returning
+        const netlifyResponse = await fetch(netlifyUrl).then((res) => res.json());
+        setResponse(netlifyResponse);
+        setDisplayedUrl(newUrl);
+        setNewUrl(null);
+      } catch(err) {
+        console.log(err);
+      } finally {}
+    }
 
-    // Call the data fetching function if `newUrl` is NOT null
+    // invoke the async fetch function declared above if the conditions are met
     if (newUrl) {
-      fetchPhotos().catch((e) => {
-        console.log(e.message);
-      });
+      fetchPexelsPhotos();
     }
   }, [displayedUrl, newUrl, userInput, response]);
 
