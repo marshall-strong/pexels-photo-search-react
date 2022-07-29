@@ -1,29 +1,4 @@
-# ROKT Frontend Engineering Take Home Project  
-
-## Photo search web applicaton  
-
-Thank you for taking the time to do our engineering recruitment project. Your time is valuable, and we appreciate that. We designed this exercise to be as realistic to day-to-day work as possible. Itʼs an opportunity for us to gain a deeper understanding of how you think and work. For you, itʼs a chance to show off your full range of experience and expertise in a comfortable setting.  
-
-You should approach this project in the same way you would a real project at work. This is a coding exercise, but itʼs also an exercise in communication and project management.  
-
-### How long should this take?  
-
-Thereʼs no exact time for how long this will take. Some engineers complete it in 2 hours, others
-take 4. You are not judged on speed of work. We encourage you to take the time that you need,
-but donʼt burn yourself out. While important, this is only one step in the interview process.
-
-### How to submit your solution  
-
-In an effort to prevent rejected or bounced emails due to zip files, we have a Google form for you
-to upload your solution.  
-
-Google form URL: <https://forms.gle/g58hyjNVYNyEa8PPA>  
-
-Complete the form with your email address and a single zip file containing your project. Please **do
-not** include any build artifacts, like node_modules, or sensitive information, like your API key, in the
-zip file. **Treat the zip file like you would a public GitHub repo.**  
-
-Please make this a single zip file named: `${yourName}-${roleAppliedFor}.zip`  
+# PEXELS-PHOTO-SEARCH
 
 ## Project Brief  
 
