@@ -63,10 +63,7 @@ const Gallery = () => {
         // the Netlify function receives the API response as an object, but 
         //  converts it to a string with `JSON.stringify` before returning
         const netlifyResponse = await fetch(netlifyUrl).then((res) => res.json());
-        console.log("setting `response` in state equal to `netlifyResponse`.");
         setResponse(netlifyResponse);
-        console.log("`response`: ");
-        console.log(response);
         setDisplayedUrl(newUrl);
         setNewUrl(null);
       } catch(err) {
