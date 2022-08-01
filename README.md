@@ -1,4 +1,4 @@
-# PEXELS-PHOTO-SEARCH
+# REACT-PHOTO-SEARCH
 
 ## Project Brief  
 
