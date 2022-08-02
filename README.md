@@ -1,5 +1,12 @@
 # REACT-PHOTO-SEARCH
 
+## To Start App in Development Mode
+
+`cd pexels-photo-search`  
+`netlify dev`
+
+Open site on `http://localhost:8888`.
+
 ## Project Brief  
 
 We need you to build a website to let users browse photos from [Pexels](https://www.pexels.com/) (see below notes on getting an API key). Thereʼs a ton of competition in the photo space online, so we need to stand out. We need a solution thatʼs lighting fast to load with a snappy, responsive UI. We need to greet site visitors with a selection of curated photos and give them the ability to search our extensive catalog of quality photos from professional photographers.  
