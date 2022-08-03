@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Photo from "./Photo";
 import SearchForPhotos from "./SearchForPhotos";
+import Results from "./Results";
 import PaginationBar from "./PaginationBar";
+import Photo from "./Photo";
 import "./Gallery.css";
 
 const Gallery = () => {
@@ -87,10 +88,13 @@ const Gallery = () => {
           returnToHomepage={returnToHomepage}
         />
       </div>
+      <Results
+        response={response}
+        displayedUrl={displayedUrl}
+      />
       <PaginationBar
         response={response}
         setNewUrl={setNewUrl}
-        displayedUrl={displayedUrl}
       />
       <div className="galleryContainer">
         {!response ? (

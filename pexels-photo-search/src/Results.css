@@ -1,0 +1,11 @@
+.Results {
+  background-color: #a1660e;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: calc(6px + 1vmin);
+}
