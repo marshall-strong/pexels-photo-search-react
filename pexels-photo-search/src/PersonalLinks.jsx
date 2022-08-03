@@ -16,8 +16,9 @@ const PersonalLinks = () => {
             target="_blank"
           >
             <img
-              src={headshotIcon}
               alt="Development Portfolio for Marshall Strong"
+              className="icon"
+              src={headshotIcon}
             />
           </a>
         </li>
@@ -28,9 +29,11 @@ const PersonalLinks = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
+            {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
             <img
+              alt="react-photo-search GitHub repository"
+              className="icon"
               src={githubIcon}
-              alt="GitHub repository"
             />
           </a>
         </li>
@@ -42,8 +45,9 @@ const PersonalLinks = () => {
             target="_blank"
           >
             <img
-              src={linkedinIcon}
               alt="LinkedIn Profile for Marshall Strong"
+              className="icon"
+              src={linkedinIcon}
             />
           </a>
         </li>

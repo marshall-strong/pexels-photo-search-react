@@ -10,3 +10,9 @@
   color: white;
   width: 100%;
 }
+
+.icon {
+  display: inherit;
+  height: 2rem;
+  margin: .5rem;
+}

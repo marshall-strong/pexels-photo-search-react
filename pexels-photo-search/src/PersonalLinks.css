@@ -21,9 +21,3 @@
 .PersonalLinks > ul > li > a {
   display: inherit;
 }
-
-.PersonalLinks > ul > li > a > img {
-  display: inherit;
-  height: 2rem;
-  margin: .5rem
-}
