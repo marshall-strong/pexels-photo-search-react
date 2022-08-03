@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 5rem;
+  height: 3rem;
   z-index: 2;
   display: flex;
   flex-direction: row;
@@ -14,23 +14,26 @@
 
 .Footer > .leftNav {
   display: inherit;
+  margin-left: 1rem;
 }
 
 .Footer > .leftNav > .imgWrapper {
   display: inherit;
 }
 
-.Footer > .leftNav > .imgWrapper > img {
+.Footer > .leftNav > a > .imgWrapper > img {
   display: inherit;
   width: 6rem;
 }
 
 .Footer > .centerNav {
   display: inherit;
+  font-size: calc(4px + 1vmin);
 }
 
 .Footer > .rightNav {
   display: flex;
+  margin-right: .5rem;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;

@@ -13,7 +13,7 @@ const PersonalLinks = () => {
       <ul>
         <li>
           <a
-            title="Portfolio Site"
+            title="Marshall Strong's Portfolio"
             className="btn-rounded-white"
             href="https://marshallstrong.com/"
             rel="noopener noreferrer"
@@ -28,7 +28,7 @@ const PersonalLinks = () => {
         </li>
         <li>
           <a
-            title="LinkedIn Profile"
+            title="Marshall Strong's LinkedIn profile"
             className="btn-rounded-white"
             href="https://www.linkedin.com/in/marshall-strong/"
             rel="noopener noreferrer"

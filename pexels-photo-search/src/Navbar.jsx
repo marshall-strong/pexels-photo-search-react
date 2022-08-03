@@ -16,7 +16,12 @@ const Navbar = () => {
       <div className="centerNav">
         <div className="navbarTitle">React Photo Search App</div>
         <div className="navbarSubtitle">
-          <a href={pexelsUrl} target="_blank" rel="noopener noreferrer">
+          <a
+            title="Powered by Pexels"
+            href={pexelsUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <div className="textWrapper">Powered by </div>
             <div className="imgWrapper">
               <img

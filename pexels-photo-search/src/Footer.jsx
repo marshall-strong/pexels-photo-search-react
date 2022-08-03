@@ -6,20 +6,40 @@ import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 // import pexelsWhiteLogo from "./img/pexelsWhiteLogoOnTransparent.png";
 import "./Footer.css";
 
+const pexelsUrl = "https://www.pexels.com/api/";
+
 const Footer = () => {
   return (
     <div className="Footer">
       <div className="leftNav">
-        <div className="imgWrapper">
-          <img
-            src={pexelsColoredLogo}
-            className="pexelsIcon"
-            alt="Powered by Pexels"
-          />
-        </div>
+        <a
+          title="Powered by Pexels"
+          href={pexelsUrl}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div className="imgWrapper">
+            <img
+              src={pexelsColoredLogo}
+              className="pexelsIcon"
+              alt="Powered by Pexels"
+            />
+          </div>
+        </a>
       </div>
       <div className="centerNav">
-        <div className="copyright">Copyright &copy; 2022 Marshall Strong</div>
+        <div className="copyright">
+          &copy;
+          {" 2022 by "}
+          <a
+            title="Marshall Strong's Portfolio"
+            href="https://marshallstrong.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Marshall Strong
+          </a>
+        </div>
       </div>
       <div className="rightNav">
         <PersonalLinks />
