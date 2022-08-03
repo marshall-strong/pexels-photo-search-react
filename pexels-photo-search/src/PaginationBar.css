@@ -11,5 +11,6 @@
 }
 
 .PaginationBar > button {
-  margin: 2em;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
