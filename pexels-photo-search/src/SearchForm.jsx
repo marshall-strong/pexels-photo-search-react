@@ -1,4 +1,5 @@
 import React from "react";
+import searchIcon from "./img/searchIcon.svg";
 import "./SearchForm.css";
 
 const SearchForm = ({
@@ -31,7 +32,14 @@ const SearchForm = ({
           Search for Photos
         </button>
       </form>
-      <button onClick={handleSubmit}>Search for Photos</button>
+      <img
+        alt="Search"
+        className="icon"
+        onClick={handleSubmit}
+        src={searchIcon}
+        title="Search for Photos"
+      />
+      {/* <button onClick={handleSubmit}>Search for Photos</button> */}
     </div>
   );
 };
