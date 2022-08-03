@@ -5,7 +5,6 @@ const SearchForm = ({
   setNewUrl,
   userInput,
   setUserInput,
-  returnToHomepage,
 }) => {
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
@@ -33,7 +32,6 @@ const SearchForm = ({
         </button>
       </form>
       <button onClick={handleSubmit}>Search for Photos</button>
-      <button onClick={returnToHomepage}>Return to Homepage</button>
     </div>
   );
 };
