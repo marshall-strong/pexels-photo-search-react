@@ -2,7 +2,6 @@
   "name": "react-photo-search",
   "dependencies": {},
   "scripts": {
-    "start": "cd pexels-photo-search && netlify dev",
-    "build": "cd pexels-photo-search && react-scripts build"
+    "start": "cd pexels-photo-search && netlify dev"
   }
 }
