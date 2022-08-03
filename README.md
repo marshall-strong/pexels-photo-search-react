@@ -8,6 +8,15 @@ The app is deployed directly from GitHub via Netlify, and the live site can be v
 
 `npm run start`  
 
+## Resources and Acknowledgments  
+
+- [Pexels](https://www.pexels.com/api)  
+  - Pexels provides access to their entire photo and video library for free via and API that powers this entire application
+- [Netlify](https://docs.netlify.com/)  
+  - Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.  
+- [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/)
+  - Provided excellent instruction on setting up Netlify functions
+
 ## Project Brief  
 
 We need you to build a website to let users browse photos from [Pexels](https://www.pexels.com/) (see below notes on getting an API key). Thereʼs a ton of competition in the photo space online, so we need to stand out. We need a solution thatʼs lighting fast to load with a snappy, responsive UI. We need to greet site visitors with a selection of curated photos and give them the ability to search our extensive catalog of quality photos from professional photographers.  
