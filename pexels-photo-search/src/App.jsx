@@ -96,6 +96,7 @@ const App = () => {
     <div className="App">
       <Navbar
         attributionUrl={attributionUrl}
+        returnToHomepage={returnToHomepage}
       />
       <div className="SearchContainer">
         <SearchForPhotos
