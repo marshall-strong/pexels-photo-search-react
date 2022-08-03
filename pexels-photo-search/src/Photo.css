@@ -18,6 +18,26 @@
 
 .Photo > .photoImage > a > img {
   display: inherit;
+
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+}
+
+.Photo > .photoImage > a > img:hover {
+  display: inherit;
+
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+  -moz-filter: grayscale(50%);
 }
 
 .Photo > .photoCredit {
