@@ -17,7 +17,7 @@ The app is deployed directly from GitHub via Netlify, and the live site can be v
 - [Create React App](https://create-react-app.dev/)  
   - Create React App takes care of setting up and configuring a new React application with useful defaults  
 - [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/)
-  - Provided excellent instruction on setting up Netlify functions
+- [Netlify Blog: How to deploy React Apps in less than 30 Seconds](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
 
 ## Project Brief  
 
