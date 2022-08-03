@@ -16,3 +16,6 @@
 
   # Default build command.
   command = "echo 'default context'"
+
+[dev]
+  base = "pexels-photo-search/"
