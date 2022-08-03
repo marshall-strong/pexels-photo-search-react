@@ -1,4 +1,5 @@
 import React from "react";
+import PersonalLinks from "./PersonalLinks";
 import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 // import pexelsBlackLogo from "./img/pexelsBlackLogoOnTransparent.png";
 // import pexelsWhiteLogo from "./img/pexelsWhiteLogoOnTransparent.png";
@@ -9,9 +10,6 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
   return (
     <div className="Navbar">
       <div className="leftNav">
-        <button onClick={returnToHomepage}>Return to Homepage</button>
-      </div>
-      <div className="centerNav">
         <div className="navbarTitle">React Photo Search App</div>
         <div className="navbarSubtitle">
           <a
@@ -31,7 +29,12 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
           </a>
         </div>
       </div>
-      <div className="rightNav"></div>
+      <div className="centerNav">
+        <button onClick={returnToHomepage}>Return to Homepage</button>
+      </div>
+      <div className="rightNav">
+        <PersonalLinks />
+      </div>
     </div>
   );
 };
