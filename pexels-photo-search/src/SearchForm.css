@@ -1,19 +1,19 @@
-.SearchForPhotos {
+.SearchForm {
   background-color: #51f827;
   width: 100%;
   font-size: calc(10px + 1vmin);
   margin-top: 5rem;
 }
 
-.SearchForPhotos > form#search-for-photos {
+.SearchForm > form#search-for-photos {
   width: 75vw;
 }
 
-.SearchForPhotos > form#search-for-photos > input {
+.SearchForm > form#search-for-photos > input {
   width: 50vw;
   text-align: center;
 }
 
-.SearchForPhotos > button {
+.SearchForm > button {
   margin: .5em;
 }

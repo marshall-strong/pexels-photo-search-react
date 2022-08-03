@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import SearchForPhotos from "./SearchForPhotos";
+import SearchForm from "./SearchForm";
 import Results from "./Results";
 import PaginationBar from "./PaginationBar";
 import Gallery from "./Gallery";
@@ -98,14 +98,12 @@ const App = () => {
         attributionUrl={attributionUrl}
         returnToHomepage={returnToHomepage}
       />
-      <div className="SearchContainer">
-        <SearchForPhotos
-          setNewUrl={setNewUrl}
-          userInput={userInput}
-          setUserInput={setUserInput}
-          returnToHomepage={returnToHomepage}
-        />
-      </div>
+      <SearchForm
+        setNewUrl={setNewUrl}
+        userInput={userInput}
+        setUserInput={setUserInput}
+        returnToHomepage={returnToHomepage}
+      />
       <Results response={response} displayedUrl={displayedUrl} />
       <PaginationBar response={response} setNewUrl={setNewUrl} />
       <Gallery

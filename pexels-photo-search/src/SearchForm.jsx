@@ -1,7 +1,7 @@
 import React from "react";
-import "./SearchForPhotos.css";
+import "./SearchForm.css";
 
-const SearchForPhotos = ({
+const SearchForm = ({
   setNewUrl,
   userInput,
   setUserInput,
@@ -20,7 +20,7 @@ const SearchForPhotos = ({
   };
 
   return (
-    <div className="SearchForPhotos">
+    <div className="SearchForm">
       <form onSubmit={handleSubmit} id="search-for-photos">
         <input
           type="text"
@@ -38,4 +38,4 @@ const SearchForPhotos = ({
   );
 };
 
-export default SearchForPhotos;
+export default SearchForm;
