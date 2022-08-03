@@ -22,3 +22,23 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* scrollbar */
+html {
+  --scrollbarBG: #CFD8DC;
+  --thumbBG: #90A4AE;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 1px solid var(--scrollbarBG); 
+  visibility: visible;
+  /* visibility: hidden; */
+}
