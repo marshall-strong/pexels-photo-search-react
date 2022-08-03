@@ -15,7 +15,7 @@
 #   publish = "public/"
 
   # Default build command.
-  command = "echo 'default context'"
+  command = "npm run build"
 
 [dev]
   base = "pexels-photo-search/"
