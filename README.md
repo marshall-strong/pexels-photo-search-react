@@ -14,6 +14,8 @@ The app is deployed directly from GitHub via Netlify, and the live site can be v
   - Pexels provides access to their entire photo and video library for free via and API that powers this entire application
 - [Netlify](https://docs.netlify.com/)  
   - Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.  
+- [Create React App](https://create-react-app.dev/)  
+  - Create React App takes care of setting up and configuring a new React application with useful defaults  
 - [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/)
   - Provided excellent instruction on setting up Netlify functions
 
