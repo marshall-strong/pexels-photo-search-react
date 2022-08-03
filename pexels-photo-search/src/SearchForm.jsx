@@ -1,11 +1,11 @@
 import React from "react";
-import "./SearchForPhotos.css";
+import searchIcon from "./img/searchIcon.svg";
+import "./SearchForm.css";
 
-const SearchForPhotos = ({
+const SearchForm = ({
   setNewUrl,
   userInput,
   setUserInput,
-  returnToHomepage,
 }) => {
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
@@ -20,7 +20,7 @@ const SearchForPhotos = ({
   };
 
   return (
-    <div className="SearchForPhotos">
+    <div className="SearchForm">
       <form onSubmit={handleSubmit} id="search-for-photos">
         <input
           type="text"
@@ -32,10 +32,16 @@ const SearchForPhotos = ({
           Search for Photos
         </button>
       </form>
-      <button onClick={handleSubmit}>Search for Photos</button>
-      <button onClick={returnToHomepage}>Return to Homepage</button>
+      <img
+        alt="Search"
+        className="icon"
+        onClick={handleSubmit}
+        src={searchIcon}
+        title="Search for Photos"
+      />
+      {/* <button onClick={handleSubmit}>Search for Photos</button> */}
     </div>
   );
 };
 
-export default SearchForPhotos;
+export default SearchForm;

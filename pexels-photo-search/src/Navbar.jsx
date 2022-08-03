@@ -1,26 +1,23 @@
 import React from "react";
+import PersonalLinks from "./PersonalLinks";
+import homeIcon from "./img/homeIcon.svg";
 import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 // import pexelsBlackLogo from "./img/pexelsBlackLogoOnTransparent.png";
 // import pexelsWhiteLogo from "./img/pexelsWhiteLogoOnTransparent.png";
 import "./Navbar.css";
 
-const pexelsUrl = "https://www.pexels.com/api/";
-
-const Navbar = () => {
-  console.log(
-    `This App is currently running in ${process.env.NODE_ENV} mode.`
-  );
+const Navbar = ({ attributionUrl, returnToHomepage }) => {
+  console.log(`This App is currently running in ${process.env.NODE_ENV} mode.`);
   return (
     <div className="Navbar">
-      <div className="leftNav"></div>
-      <div className="centerNav">
+      <div className="leftNav">
         <div className="navbarTitle">React Photo Search App</div>
         <div className="navbarSubtitle">
           <a
-            title="Powered by Pexels"
-            href={pexelsUrl}
+            href={attributionUrl}
             rel="noopener noreferrer"
             target="_blank"
+            title="Powered by Pexels"
           >
             <div className="textWrapper">Powered by </div>
             <div className="imgWrapper">
@@ -33,7 +30,18 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <div className="rightNav"></div>
+      <div className="centerNav">
+        <img
+          alt="Return to Homepage"
+          className="icon"
+          onClick={returnToHomepage}
+          src={homeIcon}
+          title="Return to Homepage"
+        />
+      </div>
+      <div className="rightNav">
+        <PersonalLinks />
+      </div>
     </div>
   );
 };

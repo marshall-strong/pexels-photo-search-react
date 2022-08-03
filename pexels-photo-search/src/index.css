@@ -42,3 +42,21 @@ body::-webkit-scrollbar-thumb {
   visibility: visible;
   /* visibility: hidden; */
 }
+
+
+/* color palettes */
+
+/* Pexels logo */
+html {
+  --pexelsLogo: #07A081;
+}
+
+/* Cool and Fresh */
+/* https://visme.co/blog/website-color-schemes/#attachment_13239 */
+html {
+  --darkest: #05396B;
+  --darker: #389583;
+  --base: #5CDB94;
+  --lighter: #8DE4AF;
+  --lightest: #EDF4E0;
+}
