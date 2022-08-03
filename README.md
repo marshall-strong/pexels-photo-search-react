@@ -1,11 +1,12 @@
 # REACT-PHOTO-SEARCH
 
+## Live Site (Production Mode)
+
+The app is deployed directly from GitHub via Netlify, and the live site can be viewed here: [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).  
+
 ## To Start App in Development Mode
 
-`cd pexels-photo-search`  
-`netlify dev`
-
-Open site on `http://localhost:8888`.
+`npm run start`  
 
 ## Project Brief  
 
