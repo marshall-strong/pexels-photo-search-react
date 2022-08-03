@@ -4,12 +4,8 @@ import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 // import pexelsWhiteLogo from "./img/pexelsWhiteLogoOnTransparent.png";
 import "./Navbar.css";
 
-const pexelsUrl = "https://www.pexels.com/api/";
-
-const Navbar = () => {
-  console.log(
-    `This App is currently running in ${process.env.NODE_ENV} mode.`
-  );
+const Navbar = ({ attributionUrl }) => {
+  console.log(`This App is currently running in ${process.env.NODE_ENV} mode.`);
   return (
     <div className="Navbar">
       <div className="leftNav"></div>
@@ -18,7 +14,7 @@ const Navbar = () => {
         <div className="navbarSubtitle">
           <a
             title="Powered by Pexels"
-            href={pexelsUrl}
+            href={attributionUrl}
             rel="noopener noreferrer"
             target="_blank"
           >
