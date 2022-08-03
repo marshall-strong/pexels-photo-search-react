@@ -7,6 +7,16 @@
 }
 
 .Photo > .photoImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Photo > .photoImage > a {
+  display: inherit;
+}
+
+.Photo > .photoImage > a > img {
   display: inherit;
 }
 
