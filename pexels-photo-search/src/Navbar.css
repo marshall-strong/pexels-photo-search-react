@@ -15,23 +15,28 @@
 .Navbar > .leftNav {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  font-size: calc(4px + 1vmin);
+  align-items: center;
 }
 
 .Navbar > .centerNav {
-  display: inherit;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.Navbar > .centerNav > .navbarTitle {
+.Navbar > .rightNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbarTitle {
   display: inherit;
   margin-top: .5rem;
   font-size: calc(20px + 1vmin);
 }
 
-.Navbar > .centerNav > .navbarSubtitle {
+.navbarSubtitle {
   display: inherit;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -40,25 +45,21 @@
   align-items: center;
 }
 
-.Navbar > .centerNav > .navbarSubtitle > a {
+.navbarSubtitle > a {
   display: inherit;
   align-items: center;
 }
 
-.Navbar > .centerNav > .navbarSubtitle > a > .textWrapper {
+.navbarSubtitle > a > .textWrapper {
   display: inherit;
   font-weight: bold;
 }
 
-.Navbar > .centerNav > .navbarSubtitle > a > .imgWrapper {
+.navbarSubtitle > a > .imgWrapper {
   display: inherit;
 }
 
-.Navbar > .centerNav > .navbarSubtitle > a > .imgWrapper > img {
+.navbarSubtitle > a > .imgWrapper > img {
   display: inherit;
   width: 6rem;
-}
-
-.Navbar > .rightNav {
-  display: inherit;
 }
