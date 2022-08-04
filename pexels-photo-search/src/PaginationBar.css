@@ -8,6 +8,7 @@
   align-items: center;
   width: 100%;
   font-size: calc(6px + 1vmin);
+  margin-top: 10rem;
 }
 
 .PaginationBar > button {

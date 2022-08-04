@@ -7,6 +7,7 @@
   flex-direction: row;
   position: absolute;
   top: 0;
+  height: 3rem;
 }
 
 form#search-for-photos {
