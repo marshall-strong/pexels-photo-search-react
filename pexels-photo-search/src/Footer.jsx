@@ -47,8 +47,8 @@ const Footer = ({ attributionUrl }) => {
           title="GitHub README"
         >
           <div className="textContainer">
-            <div>Wanna find out how this site was made? &#129488;</div>
-            <div>Check out the README on GitHub &#128064;</div>
+            <div>Wanna find out how this site was made? &#129488;&#128161;</div>
+            <div>Check out the README on GitHub &#128433;&#128073;</div>
             <div>Thanks for visiting! &#129505;</div>
           </div>
           <img
