@@ -1,24 +1,14 @@
 .App {
+  background-color: var(--base);
+  /* background-color: #e93017; */
   text-align: center;
-  background-color: #e93017;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 1vmin);
-  color: white;
+  color: var(--darkest);
   width: 100%;
   position: relative;
-}
-
-.icon {
-  display: inherit;
-  height: 2rem;
-  width: 2rem;
-  margin: .5rem;
-}
-
-.icon:hover {
-  cursor: pointer;
 }

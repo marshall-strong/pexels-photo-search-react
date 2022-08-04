@@ -23,10 +23,26 @@ a:hover {
   cursor: pointer;
 }
 
+/* Color Palettes */
+
+/* Pexels logo */
+html {
+  --pexelsLogo: #07A081;
+}
+
+/* https://visme.co/blog/website-color-schemes/#attachment_13239 */
+html {
+  --darkest: #05396B;
+  --darker: #389583;
+  --base: #5CDB94;
+  --lighter: #8DE4AF;
+  --lightest: #EDF4E0;
+}
+
 /* scrollbar */
 html {
-  --scrollbarBG: #CFD8DC;
-  --thumbBG: #90A4AE;
+  --scrollbarBG: var(--base);
+  --thumbBG: var(--darker);
 }
 body::-webkit-scrollbar {
   width: 10px;
@@ -43,20 +59,21 @@ body::-webkit-scrollbar-thumb {
   /* visibility: hidden; */
 }
 
-
-/* color palettes */
-
-/* Pexels logo */
-html {
-  --pexelsLogo: #07A081;
+.icon {
+  display: inherit;
+  height: 2rem;
+  width: 2rem;
+  margin: .5rem;
 }
 
-/* Cool and Fresh */
-/* https://visme.co/blog/website-color-schemes/#attachment_13239 */
-html {
-  --darkest: #05396B;
-  --darker: #389583;
-  --base: #5CDB94;
-  --lighter: #8DE4AF;
-  --lightest: #EDF4E0;
+svg.icon > path {
+  fill: var(--darkest);
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+svg.icon.enabled:hover > path {
+  fill: var(--lightest);
 }
