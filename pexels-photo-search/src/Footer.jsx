@@ -3,6 +3,7 @@ import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 // import pexelsIcon from "./img/pexelsIcon.svg"
 // import pexelsBlackLogo from "./img/pexelsBlackLogoOnTransparent.png";
 // import pexelsWhiteLogo from "./img/pexelsWhiteLogoOnTransparent.png";
+import githubIcon from "./img/githubIcon.svg";
 import "./Footer.css";
 
 const Footer = ({ attributionUrl }) => {
@@ -38,7 +39,26 @@ const Footer = ({ attributionUrl }) => {
           </a>
         </div>
       </div>
-      <div className="rightNav"></div>
+      <div className="rightNav">
+        <a
+          href="https://github.com/marshall-strong/react-photo-search"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Marshall Strong"
+        >
+          <div className="textContainer">
+            <div>Wanna find out how this site was made? &#129488;</div>
+            <div>Check out the README on GitHub &#128064;</div>
+            <div>Thanks for visiting! &#129505;</div>
+          </div>
+          <img
+            alt="GitHub Readme"
+            className="icon"
+            src={githubIcon}
+            title="GitHub Readme"
+          />
+        </a>
+      </div>
     </div>
   );
 };
