@@ -23,3 +23,7 @@
 .icon:hover {
   cursor: pointer;
 }
+
+svg.icon > path {
+  fill: var(--darkest);
+}
