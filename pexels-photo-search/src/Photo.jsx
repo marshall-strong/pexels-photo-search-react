@@ -31,7 +31,6 @@ const Photo = ({ photoData }) => {
               <b>{photoData.photographer}</b>
             </a>
           </span>
-          <span> on Pexels</span>
         </div>
       </div>
     );
