@@ -44,7 +44,7 @@ const Footer = ({ attributionUrl }) => {
           href="https://github.com/marshall-strong/react-photo-search"
           rel="noopener noreferrer"
           target="_blank"
-          title="Marshall Strong"
+          title="GitHub README"
         >
           <div className="textContainer">
             <div>Wanna find out how this site was made? &#129488;</div>
