@@ -1,7 +1,6 @@
 .Photo {
   background-color: #ff0080;
-  border: 2px solid red;
-  margin: 5px;
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -22,10 +21,6 @@
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
-
-  filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
 }
 
 .Photo > .photoImage > a > img:hover {
@@ -35,13 +30,16 @@
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   
-  filter: grayscale(50%);
-  -webkit-filter: grayscale(50%);
-  -moz-filter: grayscale(50%);
+  filter: contrast(50%);
+  -webkit-filter: contrast(50%);
+  -moz-filter: constrast(50%);
 }
 
 .Photo > .photoCredit {
   font-size: calc(4px + 1vmin);
+  color: black;
+  z-index: 2;
+  margin-top: -1rem;
 }
 
 .loading {

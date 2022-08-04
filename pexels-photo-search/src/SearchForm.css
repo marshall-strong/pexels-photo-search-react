@@ -3,19 +3,23 @@
   width: 100%;
   font-size: calc(10px + 1vmin);
   margin-top: 5rem;
-  margin-bottom: .5rem;
   display: flex;
   flex-direction: row;
+  position: absolute;
+  top: 0;
+  height: 3rem;
 }
 
 form#search-for-photos {
   display: flex;
   width: 100%;
   align-items: center;
+  position: relative;
 }
 
 form#search-for-photos > input {
   height: 2rem;
   width: 100%;
   text-align: center;
+  position: relative;
 }
