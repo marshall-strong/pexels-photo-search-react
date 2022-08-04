@@ -6,6 +6,8 @@
   margin-bottom: .5rem;
   display: flex;
   flex-direction: row;
+  position: absolute;
+  top: 0;
 }
 
 form#search-for-photos {
