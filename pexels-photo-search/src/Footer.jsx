@@ -1,5 +1,5 @@
 import React from "react";
-import PersonalLinks from "./PersonalLinks";
+// import PersonalLinks from "./PersonalLinks";
 import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 // import pexelsIcon from "./img/pexelsIcon.svg"
 // import pexelsBlackLogo from "./img/pexelsBlackLogoOnTransparent.png";
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="rightNav">
-        <PersonalLinks />
+        {/* <PersonalLinks /> */}
       </div>
     </div>
   );
