@@ -59,4 +59,17 @@ body::-webkit-scrollbar-thumb {
   /* visibility: hidden; */
 }
 
+.icon {
+  display: inherit;
+  height: 2rem;
+  width: 2rem;
+  margin: .5rem;
+}
 
+.icon:hover {
+  cursor: pointer;
+}
+
+svg.icon > path {
+  fill: var(--darkest);
+}

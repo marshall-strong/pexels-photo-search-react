@@ -12,18 +12,3 @@
   width: 100%;
   position: relative;
 }
-
-.icon {
-  display: inherit;
-  height: 2rem;
-  width: 2rem;
-  margin: .5rem;
-}
-
-.icon:hover {
-  cursor: pointer;
-}
-
-svg.icon > path {
-  fill: var(--darkest);
-}
