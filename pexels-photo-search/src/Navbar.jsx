@@ -8,7 +8,7 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
-      className="icon"
+      className="icon enabled"
       onClick={returnToHomepage}
       alt="Return to Homepage"
       title="Return to Homepage"

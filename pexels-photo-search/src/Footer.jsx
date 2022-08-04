@@ -7,7 +7,7 @@ const Footer = ({ attributionUrl }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 496 512"
-      className="icon"
+      className="icon enabled"
       alt="GitHub repository"
       title="GitHub repository"
     >

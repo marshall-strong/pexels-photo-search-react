@@ -9,7 +9,7 @@ const PrevPagePagination = ({ pageUrl, setNewUrl }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
-      className="icon"
+      className="icon disabled"
       alt="Previous Page"
       title="Previous Page"
     >
@@ -22,7 +22,7 @@ const PrevPagePagination = ({ pageUrl, setNewUrl }) => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
-        className="icon"
+        className="icon enabled"
         onClick={paginateToPrevPage}
         alt="Previous Page"
         title="Previous Page"
@@ -55,7 +55,7 @@ const NextPagePagination = ({ pageUrl, setNewUrl }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
-      className="icon"
+      className="icon disabled"
       alt="Next Page"
       title="Next Page"
     >
@@ -67,7 +67,7 @@ const NextPagePagination = ({ pageUrl, setNewUrl }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      className="icon"
+      className="icon enabled"
       onClick={paginateToNextPage}
       alt="Next Page"
       title="Next Page"

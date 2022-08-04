@@ -66,10 +66,14 @@ body::-webkit-scrollbar-thumb {
   margin: .5rem;
 }
 
+svg.icon > path {
+  fill: var(--darkest);
+}
+
 .icon:hover {
   cursor: pointer;
 }
 
-svg.icon > path {
-  fill: var(--darkest);
+svg.icon.enabled:hover > path {
+  fill: var(--lightest);
 }
