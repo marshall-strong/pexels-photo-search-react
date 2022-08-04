@@ -23,14 +23,13 @@ a:hover {
   cursor: pointer;
 }
 
-/* color palettes */
+/* Color Palettes */
 
 /* Pexels logo */
 html {
   --pexelsLogo: #07A081;
 }
 
-/* Cool and Fresh */
 /* https://visme.co/blog/website-color-schemes/#attachment_13239 */
 html {
   --darkest: #05396B;
