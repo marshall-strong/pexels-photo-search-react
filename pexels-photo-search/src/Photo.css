@@ -25,25 +25,28 @@ li.Photo > a > img {
   -moz-transition: all 0.2s;
 }
 
-.Photo > a > img:hover {
-  display: inherit;
+div.photoCredit {
+  font-size: calc(4px + 1vmin);
+  color: var(--lightest);
+  margin-top: -3rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 1;
+  visibility: hidden;
+}
 
-  filter: contrast(50%);
-  -webkit-filter: contrast(50%);
-  -moz-filter: constrast(50%);
+.Photo:hover {
+  filter: contrast(80%);
+  -webkit-filter: contrast(80%);
+  -moz-filter: constrast(80%);
   /*  transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);   */
 }
 
-.Photo > .photoCredit {
-  font-size: calc(4px + 1vmin);
-  color: black;
-  z-index: 2;
-  margin-top: -2rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+.Photo:hover div.photoCredit {
+  visibility: visible;
 }
 
 .loading {

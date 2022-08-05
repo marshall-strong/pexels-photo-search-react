@@ -15,12 +15,10 @@ const Photo = ({ photoData }) => {
   } else {
     return (
       <li className="Photo">
-        {/* <div className="photoImage"> */}
-          <a href={photoData.url} target="_blank" rel="noopener noreferrer">
-            <img src={photoData.src.medium} alt="alt text" />
-          </a>
-        {/* </div> */}
-        {/* <div className="photoCredit">
+        <a href={photoData.url} target="_blank" rel="noopener noreferrer">
+          <img src={photoData.src.medium} alt="alt text" />
+        </a>
+        <div className="photoCredit">
           <span>Photo by </span>
           <span>
             <a
@@ -31,7 +29,7 @@ const Photo = ({ photoData }) => {
               <b>{photoData.photographer}</b>
             </a>
           </span>
-        </div> */}
+        </div>
       </li>
     );
   }
