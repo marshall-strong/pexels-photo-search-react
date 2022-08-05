@@ -48,3 +48,7 @@ div.photoCredit {
 .Photo:hover div.photoCredit {
   visibility: visible;
 }
+
+.photographerUrl:hover {
+  color: var(--yellow);
+}

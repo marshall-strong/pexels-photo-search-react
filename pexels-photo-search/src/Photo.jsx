@@ -22,6 +22,7 @@ const Photo = ({ photoData }) => {
               href={photoData.photographer_url}
               target="_blank"
               rel="noopener noreferrer"
+              className="photographerUrl"
             >
               <b>{photoData.photographer}</b>
             </a>
