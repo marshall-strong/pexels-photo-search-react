@@ -35,7 +35,7 @@ const PrevPagePagination = ({ pageUrl, setNewUrl }) => {
   if (!pageUrl) { 
       return (
         <div className="PrevPagePagination">
-          {iconPrevPageDisabled}
+          {/* {iconPrevPageDisabled} */}
         </div>
       );
     } else {
@@ -77,7 +77,9 @@ const NextPagePagination = ({ pageUrl, setNewUrl }) => {
   );
 
   if (!pageUrl) {
-    return <div className="NextPagePagination">{iconPrevPageDisabled}</div>;
+    return <div className="NextPagePagination">
+      {/* {iconPrevPageDisabled} */}
+    </div>;
   } else {
     return <div className="NextPagePagination">{iconPrevPageEnabled}</div>;
   }
