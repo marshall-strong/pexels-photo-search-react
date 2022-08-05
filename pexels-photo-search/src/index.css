@@ -45,6 +45,12 @@ html {
   --lightest: #EDF4E0;
 }
 
+html {
+  --white: #FFFFFF;
+  --yellow: #E4EF40;
+  --blue: #00ACD8;
+}
+
 /* scrollbar */
 html {
   --scrollbarBG: var(--base);
