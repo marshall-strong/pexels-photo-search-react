@@ -7,7 +7,7 @@ const SpinningIcon = () => {
   return (
     <div className="SpinningIcon">
       <img src={reactIcon} className="spinEffect reactIcon" alt="React logo" />
-      <div class="pulsar"></div>
+      <div className="pulsar"></div>
       <img src={pexelsIcon} className="pulseEffect pexelsIcon" alt="Pexels logo" />
     </div>
   );
