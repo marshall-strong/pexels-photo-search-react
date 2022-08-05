@@ -48,30 +48,3 @@ div.photoCredit {
 .Photo:hover div.photoCredit {
   visibility: visible;
 }
-
-.loading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: wait;
-}
-
-.spinningLogo {
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .spinningLogo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

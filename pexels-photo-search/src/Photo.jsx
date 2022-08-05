@@ -1,15 +1,12 @@
 import React from "react";
-import reactIcon from "./img/reactIcon.svg";
+import LoadingIcon from "./LoadingIcon";
 import "./Photo.css";
 
 const Photo = ({ photoData }) => {
   if (!photoData) {
     return (
       <li className="Photo">
-        <div className="loading">
-          <p>Loading...</p>
-          <img src={reactIcon} className="spinningLogo" alt="react logo" />
-        </div>
+        <LoadingIcon />
       </li>
     );
   } else {
@@ -20,7 +17,7 @@ const Photo = ({ photoData }) => {
         </a>
         <div className="photoCredit">
           <span>Photo by </span>
-          <span>
+          <span className="photographer">
             <a
               href={photoData.photographer_url}
               target="_blank"
