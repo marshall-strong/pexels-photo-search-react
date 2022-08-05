@@ -1,65 +1,30 @@
-.Navbar {
+.Splash {
   background-color: inherit;
-  position: fixed;
-  top: 0;
+  position: relative;
   width: 100%;
-  height: 5rem;
-  z-index: 3;
+  height: 20rem;
   display: flex;
-  flex-direction: row;
+  z-index: 1;
+}
+
+.matrixLayout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
 }
 
-.Navbar > .leftNav {
+.matrixLayout > .row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Navbar > .centerNav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Navbar > .rightNav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.navbarTitle {
-  display: inherit;
-  margin-top: .5rem;
-  font-size: calc(20px + 1vmin);
-}
-
-.navbarSubtitle {
-  display: inherit;
   flex-direction: row;
-  flex-wrap: nowrap;
-  font-size: calc(5px + 1vmin);
-  color: black;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
 }
 
-.navbarSubtitle > a {
-  display: inherit;
-  align-items: center;
-}
-
-.navbarSubtitle > a > .textWrapper {
-  display: inherit;
-  font-weight: bold;
-}
-
-.navbarSubtitle > a > .imgWrapper {
-  display: inherit;
-}
-
-.navbarSubtitle > a > .imgWrapper > img {
-  display: inherit;
-  width: 6rem;
+.matrixLayout > .row > .col {
+  width: 100%;
 }

@@ -1,6 +1,7 @@
 import React from "react";
-import reactIcon from "./img/reactIcon.svg";
-import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
+import SpinningIcon from "./SpinningIcon";
+// import reactIcon from "./img/reactIcon.svg";
+// import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 import "./Splash.css";
 
 const Splash = ({ attributionUrl, returnToHomepage }) => {  
@@ -18,30 +19,42 @@ const Splash = ({ attributionUrl, returnToHomepage }) => {
   );
 
   return (
-    <div className="Navbar">
-      <div className="leftNav"></div>
-      <div className="centerNav">
-        <div className="navbarTitle">React Photo Search App</div>
-        <div className="navbarSubtitle">
-          <a
-            href={attributionUrl}
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Powered by Pexels"
-          >
-            <div className="textWrapper">Powered by </div>
-            <div className="imgWrapper">
-              <img
-                src={pexelsColoredLogo}
-                className="pexelsIcon"
-                alt="Powered by Pexels"
-              />
-            </div>
-          </a>
-        </div>
-        <img src={reactIcon} className="spinningLogo" alt="react logo" />
+    <div className="Splash">
+      <div className="matrixLayout">
+        <ul className="row topRow">
+          <li className="col leftCol">
+            <span>&#x2196;</span>
+          </li>
+          <li className="col centerCol">
+            <span>&#x2191;</span>
+          </li>
+          <li className="col rightCol">
+            <span>&#x2197;</span>
+          </li>
+        </ul>
+        <ul className="row middleRow">
+          <li className="col leftCol">
+            <span>&#x2190;</span>
+          </li>
+          <li className="col centerCol">
+            <SpinningIcon />
+          </li>
+          <li className="col rightCol">
+            <span>&#x2192;</span>
+          </li>
+        </ul>
+        <ul className="row bottomRow">
+          <li className="col leftCol">
+            <span>&#x2199;</span>
+          </li>
+          <li className="col centerCol">
+            <span>&#x2193;</span>
+          </li>
+          <li className="col rightCol">
+            <span>&#x2198;</span>
+          </li>
+        </ul>
       </div>
-      <div className="rightNav">{iconHome}</div>
     </div>
   );
 };
