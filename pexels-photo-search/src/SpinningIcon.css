@@ -1,0 +1,27 @@
+.SpinningIcon {
+  background-color: #342928;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: wait;
+}
+
+.spinEffect {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spinEffect {
+    animation: spin-effect infinite 4s linear;
+  }
+}
+
+@keyframes spin-effect {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

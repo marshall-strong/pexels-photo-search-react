@@ -1,0 +1,65 @@
+.Navbar {
+  background-color: inherit;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar > .leftNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Navbar > .centerNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Navbar > .rightNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbarTitle {
+  display: inherit;
+  margin-top: .5rem;
+  font-size: calc(20px + 1vmin);
+}
+
+.navbarSubtitle {
+  display: inherit;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: calc(5px + 1vmin);
+  color: black;
+  align-items: center;
+}
+
+.navbarSubtitle > a {
+  display: inherit;
+  align-items: center;
+}
+
+.navbarSubtitle > a > .textWrapper {
+  display: inherit;
+  font-weight: bold;
+}
+
+.navbarSubtitle > a > .imgWrapper {
+  display: inherit;
+}
+
+.navbarSubtitle > a > .imgWrapper > img {
+  display: inherit;
+  width: 6rem;
+}
