@@ -23,6 +23,12 @@ a:hover {
   cursor: pointer;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Color Palettes */
 
 /* Pexels logo */
