@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   background-color: #0a0a0a0e;
 }
 
@@ -30,7 +30,12 @@
   height: max-content;
 }
 
-.galleryPhotos {
+ul.galleryPhotos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .galleryPhotos {
   display: inherit;
   flex-direction: inherit;
   flex-wrap: wrap;
@@ -38,4 +43,4 @@
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-}
+} */

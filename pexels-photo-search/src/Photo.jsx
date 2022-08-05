@@ -5,22 +5,22 @@ import "./Photo.css";
 const Photo = ({ photoData }) => {
   if (!photoData) {
     return (
-      <div className="Photo">
+      <li className="Photo">
         <div className="loading">
           <p>Loading...</p>
           <img src={reactIcon} className="spinningLogo" alt="react logo" />
         </div>
-      </div>
+      </li>
     );
   } else {
     return (
-      <div className="Photo">
-        <div className="photoImage">
+      <li className="Photo">
+        {/* <div className="photoImage"> */}
           <a href={photoData.url} target="_blank" rel="noopener noreferrer">
             <img src={photoData.src.medium} alt="alt text" />
           </a>
-        </div>
-        <div className="photoCredit">
+        {/* </div> */}
+        {/* <div className="photoCredit">
           <span>Photo by </span>
           <span>
             <a
@@ -31,8 +31,8 @@ const Photo = ({ photoData }) => {
               <b>{photoData.photographer}</b>
             </a>
           </span>
-        </div>
-      </div>
+        </div> */}
+      </li>
     );
   }
 };

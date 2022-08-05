@@ -26,17 +26,20 @@ const Gallery = ({ response, userInput, returnToHomepage }) => {
           </div>
         ) : !response.photos ? (
           <div className="paginationContainer">
-            <div className="galleryPhotos"></div>
+            <ul className="galleryPhotos">
+              <li className="Photo"></li>
+            </ul>
           </div>
         ) : (
           <div className="paginationContainer">
-            <div className="galleryPhotos">
+            <ul className="galleryPhotos">
               {response.photos.map((photoData, index) => (
                 <React.Fragment key={index}>
                   <Photo photoData={photoData} />
                 </React.Fragment>
               ))}
-            </div>
+              <li className="Photo"></li>
+            </ul>
           </div>
         )}
       </div>
