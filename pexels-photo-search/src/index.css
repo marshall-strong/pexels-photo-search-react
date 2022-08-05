@@ -33,7 +33,9 @@ ul {
 
 /* Pexels logo */
 html {
-  --pexelsLogo: #07A081;
+  --pexelsColor: #07A081;
+  --pexelsColor70: #08a182b3;
+  --pexelsColor00: #08a18200;
 }
 
 /* https://visme.co/blog/website-color-schemes/#attachment_13239 */
