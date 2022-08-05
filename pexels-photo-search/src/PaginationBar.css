@@ -1,5 +1,4 @@
 .PaginationBar {
-  /* background-color: #f8a527; */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -8,7 +7,7 @@
   align-items: center;
   width: 100%;
   font-size: calc(6px + 1vmin);
-  margin-top: 10rem;
+  margin-top: 14rem;
 }
 
 .PaginationBar > button {

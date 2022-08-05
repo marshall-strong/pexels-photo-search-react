@@ -1,4 +1,5 @@
 import React from "react";
+import PersonalLinks from "./PersonalLinks";
 import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 import "./Footer.css";
 
@@ -18,7 +19,8 @@ const Footer = ({ attributionUrl }) => {
   return (
     <div className="Footer">
       <div className="leftNav">
-        <a
+        <PersonalLinks />
+        {/* <a
           href={attributionUrl}
           rel="noopener noreferrer"
           target="_blank"
@@ -31,7 +33,7 @@ const Footer = ({ attributionUrl }) => {
               alt="Powered by Pexels"
             />
           </div>
-        </a>
+        </a> */}
       </div>
       <div className="centerNav">
         <div className="copyright">

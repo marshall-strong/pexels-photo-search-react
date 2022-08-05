@@ -16,6 +16,8 @@ The app is deployed directly from GitHub via Netlify, and the live site can be v
   - Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.  
 - [Create React App](https://create-react-app.dev/)  
   - Create React App takes care of setting up and configuring a new React application with useful defaults  
+- [Boxy SVG](https://boxy-svg.com/)  
+  - Free, browser-based tool for editing SVG elements
 
 ### How-Tos
 

@@ -1,38 +1,34 @@
 import React from "react";
-import reactIcon from "./img/reactIcon.svg";
+import LoadingIcon from "./LoadingIcon";
 import "./Photo.css";
 
 const Photo = ({ photoData }) => {
   if (!photoData) {
     return (
-      <div className="Photo">
-        <div className="loading">
-          <p>Loading...</p>
-          <img src={reactIcon} className="spinningLogo" alt="react logo" />
-        </div>
-      </div>
+      <li className="Photo">
+        <LoadingIcon />
+      </li>
     );
   } else {
     return (
-      <div className="Photo">
-        <div className="photoImage">
-          <a href={photoData.url} target="_blank" rel="noopener noreferrer">
-            <img src={photoData.src.medium} alt="alt text" />
-          </a>
-        </div>
+      <li className="Photo">
+        <a href={photoData.url} target="_blank" rel="noopener noreferrer">
+          <img src={photoData.src.medium} alt="alt text" />
+        </a>
         <div className="photoCredit">
           <span>Photo by </span>
-          <span>
+          <span className="photographer">
             <a
               href={photoData.photographer_url}
               target="_blank"
               rel="noopener noreferrer"
+              className="photographerUrl"
             >
               <b>{photoData.photographer}</b>
             </a>
           </span>
         </div>
-      </div>
+      </li>
     );
   }
 };

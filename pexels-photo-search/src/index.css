@@ -23,11 +23,19 @@ a:hover {
   cursor: pointer;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Color Palettes */
 
 /* Pexels logo */
 html {
-  --pexelsLogo: #07A081;
+  --pexelsColor: #07A081;
+  --pexelsColor70: #08a182b3;
+  --pexelsColor00: #08a18200;
 }
 
 /* https://visme.co/blog/website-color-schemes/#attachment_13239 */
@@ -37,6 +45,12 @@ html {
   --base: #5CDB94;
   --lighter: #8DE4AF;
   --lightest: #EDF4E0;
+}
+
+html {
+  --white: #FFFFFF;
+  --yellow: #E4EF40;
+  --blue: #00ACD8;
 }
 
 /* scrollbar */

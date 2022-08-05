@@ -1,21 +1,23 @@
-.Photo {
-  background-color: #ff0080;
-  margin: 0.5rem;
-  display: flex;
-  flex-direction: column;
+li.Photo {
+  height: 35vh;
+  flex-grow: 1;
 }
 
-.Photo > .photoImage {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+li.Photo:last-child {
+  flex-grow: 10;
 }
 
-.Photo > .photoImage > a {
+li.Photo > a {
+  height: 100%;
+  width: 100%;
   display: inherit;
 }
 
-.Photo > .photoImage > a > img {
+li.Photo > a > img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
   display: inherit;
 
   transition: all 0.2s;
@@ -23,51 +25,30 @@
   -moz-transition: all 0.2s;
 }
 
-.Photo > .photoImage > a > img:hover {
-  display: inherit;
-
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  
-  filter: contrast(50%);
-  -webkit-filter: contrast(50%);
-  -moz-filter: constrast(50%);
-}
-
-.Photo > .photoCredit {
+div.photoCredit {
   font-size: calc(4px + 1vmin);
-  color: black;
-  z-index: 2;
-  margin-top: -2rem;
+  color: var(--lightest);
+  margin-top: -3rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  z-index: 1;
+  visibility: hidden;
 }
 
-.loading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: wait;
+.Photo:hover {
+  filter: contrast(80%);
+  -webkit-filter: contrast(80%);
+  -moz-filter: constrast(80%);
+  /*  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);   */
 }
 
-.spinningLogo {
-  pointer-events: none;
+.Photo:hover div.photoCredit {
+  visibility: visible;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .spinningLogo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.photographerUrl:hover {
+  color: var(--yellow);
 }
