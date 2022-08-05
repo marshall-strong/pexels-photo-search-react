@@ -1,5 +1,6 @@
 import React from "react";
 import PersonalLinks from "./PersonalLinks";
+import SpinningIcon from "./SpinningIcon";
 import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 import "./Navbar.css";
 
@@ -28,21 +29,23 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
             target="_blank"
             title="Powered by Pexels"
           >
-            <div className="textWrapper">Powered by </div>
+            <div className="textWrapper">Powered by Pexels</div>
+            {/* <div className="textWrapper">Powered by </div>
             <div className="imgWrapper">
               <img
                 src={pexelsColoredLogo}
                 className="pexelsIcon"
                 alt="Powered by Pexels"
               />
-            </div>
+            </div> */}
           </a>
         </div>
       </div>
       <div className="centerNav">
-        {iconHome}
+        <SpinningIcon />
       </div>
       <div className="rightNav">
+        {iconHome}
         <PersonalLinks />
       </div>
     </div>
