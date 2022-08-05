@@ -1,22 +1,26 @@
 .SpinningIcon {
-  background-color: #342928;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  cursor: wait;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  /* background-color: white; */
 }
 
-.spinEffect {
-  pointer-events: none;
+.reactIcon {
+  position: absolute;
+  height: 15rem;
+  z-index: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .spinEffect {
-    animation: spin-effect infinite 4s linear;
+    animation: spin-effect infinite 6s linear;
   }
 }
-
 @keyframes spin-effect {
   from {
     transform: rotate(0deg);
@@ -24,4 +28,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.pulsar {
+  background: var(--pexelsColor);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 var(--pexelsColor);
+  margin: 10px;
+  height: 45px;
+  width: 45px;
+  transform: scale(1);
+  animation: pulse-pexels 2s infinite;
+  z-index: 2;
+}
+
+@keyframes pulse-pexels {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 var(--pexelsColor70);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px var(--pexelsColor00);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 var(--pexelsColor00);
+  }
+}
+
+.pexelsIcon {
+  position: absolute;
+  height: 2.5rem;
+  z-index: 2;
 }
