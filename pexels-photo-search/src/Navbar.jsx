@@ -1,7 +1,7 @@
 import React from "react";
 import PersonalLinks from "./PersonalLinks";
 import SpinningIcon from "./SpinningIcon";
-import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
+// import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 import "./Navbar.css";
 
 const Navbar = ({ attributionUrl, returnToHomepage }) => {  

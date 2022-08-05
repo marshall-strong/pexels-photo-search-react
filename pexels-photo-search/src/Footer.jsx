@@ -1,6 +1,6 @@
 import React from "react";
 import PersonalLinks from "./PersonalLinks";
-import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
+// import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 import "./Footer.css";
 
 const Footer = ({ attributionUrl }) => {
