@@ -27,3 +27,4 @@ The app is deployed directly from GitHub via Netlify, and the live site can be v
 - [Emoji Unicode Reference](https://www.w3schools.com/charsets/ref_emoji.asp)  
 - [the position property](https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position2)
 - ["Cool and Fresh" color palette](https://visme.co/blog/website-color-schemes/#attachment_13239)
+- [CSS Pulse Effect](https://www.florin-pop.com/blog/2019/03/css-pulse-effect/)
