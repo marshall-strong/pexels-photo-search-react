@@ -9,7 +9,7 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
-      className="icon enabled"
+      className="icon enabled iconHome"
       onClick={returnToHomepage}
       alt="Return to Homepage"
       title="Return to Homepage"
@@ -21,16 +21,23 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
   return (
     <div className="Navbar">
       <div className="leftNav">
-        <div className="navbarTitle">React Photo Search App</div>
-        <div className="navbarSubtitle">
-          <a
-            href={attributionUrl}
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Powered by Pexels"
-          >
-            <div className="textWrapper">Powered by Pexels</div>
-            {/* <div className="textWrapper">Powered by </div>
+        <SpinningIcon />
+      </div>
+      <div className="centerNav">
+        <div className="titleContainer">
+          <div className="navbarTitle">React Photo Search App</div>
+          <div className="navbarSubtitle">
+            <a
+              href={attributionUrl}
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Powered by Pexels"
+            >
+              <div className="textWrapper">
+                <p>Powered by Pexels</p>
+                <div>Created by Marshall Strong</div>
+              </div>
+              {/* <div className="textWrapper">Powered by </div>
             <div className="imgWrapper">
               <img
                 src={pexelsColoredLogo}
@@ -38,15 +45,13 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
                 alt="Powered by Pexels"
               />
             </div> */}
-          </a>
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="centerNav">
-        <SpinningIcon />
       </div>
       <div className="rightNav">
         {iconHome}
-        <PersonalLinks />
+        {/* <PersonalLinks /> */}
       </div>
     </div>
   );
