@@ -17,7 +17,7 @@ const Footer = ({ attributionUrl }) => {
   );
 
   return (
-    <div className="Footer">
+    <div className="Footer" id="Footer">
       <div className="leftNav">
         <PersonalLinks />
         {/* <a

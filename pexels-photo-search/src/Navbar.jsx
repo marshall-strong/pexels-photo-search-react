@@ -1,10 +1,8 @@
 import React from "react";
-import PersonalLinks from "./PersonalLinks";
 import SpinningIcon from "./SpinningIcon";
-// import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 import "./Navbar.css";
 
-const Navbar = ({ attributionUrl, returnToHomepage }) => {  
+const Navbar = ({ attributionUrl, returnToHomepage }) => {
   const iconHome = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,6 +16,8 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
     </svg>
   );
 
+  // const linkToFooter = "";
+
   return (
     <div className="Navbar">
       <div className="leftNav">
@@ -27,31 +27,24 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
         <div className="titleContainer">
           <div className="navbarTitle">React Photo Search App</div>
           <div className="navbarSubtitle">
-            <a
-              href={attributionUrl}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="Powered by Pexels"
-            >
-              <div className="textWrapper">
+            <div className="textWrapper">
+              <a
+                href={attributionUrl}
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Powered by Pexels"
+              >
                 <p>Powered by Pexels</p>
+              </a>
+              <a href="#Footer">
                 <div>Created by Marshall Strong</div>
-              </div>
-              {/* <div className="textWrapper">Powered by </div>
-            <div className="imgWrapper">
-              <img
-                src={pexelsColoredLogo}
-                className="pexelsIcon"
-                alt="Powered by Pexels"
-              />
-            </div> */}
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <div className="rightNav">
         {iconHome}
-        {/* <PersonalLinks /> */}
       </div>
     </div>
   );
