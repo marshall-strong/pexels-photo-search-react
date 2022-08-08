@@ -53,6 +53,10 @@ html {
   --blue: #00ACD8;
 }
 
+html {
+  --reactIcon: #61DAFB;
+}
+
 /* scrollbar */
 html {
   --scrollbarBG: var(--base);
