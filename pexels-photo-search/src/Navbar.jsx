@@ -40,6 +40,7 @@ const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setN
               <div className="textWrapper">
                 <a
                   href={attributionUrl}
+                  className="poweredByPexels"
                   rel="noopener noreferrer"
                   target="_blank"
                   alt="Powered by Pexels"
@@ -47,7 +48,9 @@ const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setN
                 >
                   Powered by Pexels
                 </a>
-                <a href="#Footer">Created by Marshall Strong</a>
+                <a href="#Footer">
+                  Created by Marshall Strong
+                </a>
               </div>
             </div>
           </div>

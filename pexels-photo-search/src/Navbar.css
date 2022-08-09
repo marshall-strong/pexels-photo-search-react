@@ -37,6 +37,7 @@
   width: 100%;
   max-width: 70vw;
   justify-content: center;
+  margin-top: 0.75rem;
 }
 
 .rightNav {
@@ -97,6 +98,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.navbarSubtitle > .textWrapper > .poweredByPexels {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  margin-bottom: 0.25rem;
 }
 
 .navbarSubtitle > .textWrapper > a:hover {
