@@ -48,6 +48,10 @@ html {
 }
 
 html {
+  --translucentBlackMask: rgba(0, 0, 0, 0.055);
+}
+
+html {
   --white: #FFFFFF;
   --yellow: #E4EF40;
   --blue: #00ACD8;
