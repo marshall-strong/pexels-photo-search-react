@@ -23,12 +23,12 @@
 .leftNav {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
   max-width: 15vw;
   margin-left: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .centerNav {
@@ -42,12 +42,12 @@
 .rightNav {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
   width: 100%;
   max-width: 15vw;
   margin-right: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .spinningIconContainer {
