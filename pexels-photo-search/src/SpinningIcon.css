@@ -9,6 +9,10 @@
   z-index: 1;
 }
 
+.SpinningIcon:hover {
+  cursor: pointer;
+}
+
 svg.reactIcon {
   position: absolute;
   height: 10rem;
@@ -32,11 +36,15 @@ svg.pexelsCircle > path {
   fill: var(--white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.spinEffect {
+  animation: spin-effect infinite 6s linear;
+}
+/* @media (prefers-reduced-motion: no-preference) {
   .spinEffect {
     animation: spin-effect infinite 6s linear;
   }
-}
+} */
+
 @keyframes spin-effect {
   from {
     transform: rotate(0deg);
