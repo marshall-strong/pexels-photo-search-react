@@ -78,7 +78,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 1px solid var(--scrollbarBG); 
   visibility: visible;
-  /* visibility: hidden; */
 }
 
 .icon {
