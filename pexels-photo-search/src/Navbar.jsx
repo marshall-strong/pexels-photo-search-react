@@ -21,7 +21,11 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
   return (
     <div className="Navbar">
       <div className="leftNav">
-        <SpinningIcon />
+        <SpinningIcon
+          onClick={returnToHomepage}
+          alt="SpinningIcon"
+          title="Return to Homepage"
+        />
       </div>
       <div className="centerNav">
         <div className="titleContainer">
@@ -32,7 +36,8 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
                 href={attributionUrl}
                 rel="noopener noreferrer"
                 target="_blank"
-                title="Powered by Pexels"
+                alt="Powered by Pexels"
+                title="Pexels: The best free stock photos, royalty free images & videos shared by creators"
               >
                 <p>Powered by Pexels</p>
               </a>
@@ -43,9 +48,7 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
           </div>
         </div>
       </div>
-      <div className="rightNav">
-        {iconHome}
-      </div>
+      <div className="rightNav">{iconHome}</div>
     </div>
   );
 };
