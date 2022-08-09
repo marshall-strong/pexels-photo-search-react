@@ -25,7 +25,7 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
       </div>
       <div className="centerNav">
         <div className="titleContainer">
-          <div className="navbarTitle">React Photo Search App</div>
+          <div className="navbarTitle">React Photo Search</div>
           <div className="navbarSubtitle">
             <div className="textWrapper">
               <a

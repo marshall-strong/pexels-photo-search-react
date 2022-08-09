@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-  color: inherit;
+  color: var(--lightest);
   text-decoration: none;
   cursor: pointer;
 }
@@ -85,7 +85,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 svg.icon > path {
-  fill: var(--darkest);
+  fill: var(--darker);
 }
 
 .icon:hover {

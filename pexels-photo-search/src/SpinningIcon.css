@@ -18,7 +18,7 @@ svg.reactIcon {
   z-index: 1;
 }
 svg.reactIcon > g {
-  fill: var(--reactIcon);
+  fill: var(--lightest);
 }
 svg.pexelsCircle {
   position: absolute;

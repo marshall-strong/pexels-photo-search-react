@@ -8,6 +8,7 @@
   width: 100%;
   font-size: calc(6px + 1vmin);
   margin-top: 14rem;
+  color: var(--darker);
 }
 
 .PaginationBar > button {

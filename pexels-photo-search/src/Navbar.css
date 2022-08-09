@@ -56,15 +56,16 @@
 .navbarTitle {
   display: inherit;
   margin-top: .5rem;
-  font-size: calc(20px + 1vmin);
+  font-size: calc(18px + 1vmin);
 }
 
 .navbarSubtitle {
   display: inherit;
   flex-direction: row;
   flex-wrap: nowrap;
+  font-weight: bold;
   font-size: calc(5px + 1vmin);
-  color: black;
+  color: var(--darker);
   align-items: center;
 }
 
@@ -73,10 +74,8 @@
   align-items: center;
 }
 
-.navbarSubtitle > a > .textWrapper {
-  display: flex;
-  flex-direction: column;
-  /* font-weight: bold; */
+.navbarSubtitle > .textWrapper > a:hover {
+  color: var(--lightest);
 }
 
 .navbarSubtitle > a > .imgWrapper {
