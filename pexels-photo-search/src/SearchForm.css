@@ -1,13 +1,15 @@
 .SearchForm {
-  /* background-color: #51f827; */
   width: 100%;
-  font-size: calc(10px + 1vmin);
-  margin-top: 9rem;
+  max-width: 40rem;
+  font-size: calc(5px + 1vmin);
+  margin-top: 4rem;
   display: flex;
   flex-direction: row;
   position: absolute;
   top: 0;
   height: 3rem;
+  border-color: var(--darker);
+  border-width: 0.2rem;
 }
 
 form#search-for-photos {
@@ -22,4 +24,6 @@ form#search-for-photos > input {
   width: 100%;
   text-align: center;
   position: relative;
+  margin-left: 0.5rem;
+  font-size: inherit;
 }

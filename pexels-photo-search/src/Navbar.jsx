@@ -1,15 +1,15 @@
 import React from "react";
-import PersonalLinks from "./PersonalLinks";
 import SpinningIcon from "./SpinningIcon";
-// import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
+import SearchForm from "./SearchForm";
+import Results from "./Results";
 import "./Navbar.css";
 
-const Navbar = ({ attributionUrl, returnToHomepage }) => {  
+const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setNewUrl, userInput, setUserInput }) => {
   const iconHome = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
-      className="icon enabled"
+      className="icon enabled iconHome"
       onClick={returnToHomepage}
       alt="Return to Homepage"
       title="Return to Homepage"
@@ -18,36 +18,44 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
     </svg>
   );
 
+  // const linkToFooter = "";
+
   return (
     <div className="Navbar">
       <div className="leftNav">
-        <div className="navbarTitle">React Photo Search App</div>
-        <div className="navbarSubtitle">
-          <a
-            href={attributionUrl}
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Powered by Pexels"
-          >
-            <div className="textWrapper">Powered by Pexels</div>
-            {/* <div className="textWrapper">Powered by </div>
-            <div className="imgWrapper">
-              <img
-                src={pexelsColoredLogo}
-                className="pexelsIcon"
-                alt="Powered by Pexels"
-              />
-            </div> */}
-          </a>
-        </div>
+        <SpinningIcon
+          onClick={returnToHomepage}
+          alt="SpinningIcon"
+          title="Return to Homepage"
+        />
       </div>
       <div className="centerNav">
-        <SpinningIcon />
+        <div className="titleContainer">
+          <div className="navbarTitle">React Photo Search</div>
+          <div className="navbarSubtitle">
+            <div className="textWrapper">
+              <a
+                href={attributionUrl}
+                rel="noopener noreferrer"
+                target="_blank"
+                alt="Powered by Pexels"
+                title="Pexels: The best free stock photos, royalty free images & videos shared by creators"
+              >
+                Powered by Pexels
+              </a>
+              <a href="#Footer">Created by Marshall Strong</a>
+            </div>
+          </div>
+        </div>
+        <SearchForm
+          setNewUrl={setNewUrl}
+          userInput={userInput}
+          setUserInput={setUserInput}
+          returnToHomepage={returnToHomepage}
+        />
+        <Results response={response} displayedUrl={displayedUrl} />
       </div>
-      <div className="rightNav">
-        {iconHome}
-        <PersonalLinks />
-      </div>
+      <div className="rightNav">{iconHome}</div>
     </div>
   );
 };

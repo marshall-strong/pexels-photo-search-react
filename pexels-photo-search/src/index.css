@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-  color: inherit;
+  color: var(--lightest);
   text-decoration: none;
   cursor: pointer;
 }
@@ -48,9 +48,17 @@ html {
 }
 
 html {
+  --translucentBlackMask: rgba(0, 0, 0, 0.055);
+}
+
+html {
   --white: #FFFFFF;
   --yellow: #E4EF40;
   --blue: #00ACD8;
+}
+
+html {
+  --reactIcon: #61DAFB;
 }
 
 /* scrollbar */
@@ -70,7 +78,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 1px solid var(--scrollbarBG); 
   visibility: visible;
-  /* visibility: hidden; */
 }
 
 .icon {
@@ -78,13 +85,18 @@ body::-webkit-scrollbar-thumb {
   height: 2rem;
   width: 2rem;
   margin: .5rem;
+  z-index: 2;
 }
 
 svg.icon > path {
-  fill: var(--darkest);
+  fill: var(--darker);
 }
 
-.icon:hover {
+svg.icon.disabled > path {
+  fill: var(--base);
+}
+
+.icon.enabled:hover {
   cursor: pointer;
 }
 

@@ -1,6 +1,5 @@
 .App {
   background-color: var(--base);
-  /* background-color: #e93017; */
   text-align: center;
   min-height: 100vh;
   display: flex;
