@@ -1,6 +1,6 @@
 .SearchForm {
   width: 100%;
-  max-width: 40rem;
+  max-width: 70vw;
   font-size: calc(5px + 1vmin);
   margin-top: 4rem;
   display: flex;
