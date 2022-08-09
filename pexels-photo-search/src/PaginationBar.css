@@ -6,8 +6,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  font-size: calc(6px + 1vmin);
-  margin-top: 14rem;
+  font-size: calc(5px + 1vmin);
+  margin-top: 12rem;
   color: var(--darker);
 }
 

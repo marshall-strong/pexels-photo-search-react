@@ -39,10 +39,10 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
                 alt="Powered by Pexels"
                 title="Pexels: The best free stock photos, royalty free images & videos shared by creators"
               >
-                <p>Powered by Pexels</p>
+                Powered by Pexels
               </a>
               <a href="#Footer">
-                <div>Created by Marshall Strong</div>
+                Created by Marshall Strong
               </a>
             </div>
           </div>
