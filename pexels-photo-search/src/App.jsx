@@ -97,14 +97,19 @@ const App = () => {
       <Navbar
         attributionUrl={attributionUrl}
         returnToHomepage={returnToHomepage}
+        response={response}
+        displayedUrl={displayedUrl}
+        setNewUrl={setNewUrl}
+        userInput={userInput}
+        setUserInput={setUserInput}
       />
-      <SearchForm
+      {/* <SearchForm
         setNewUrl={setNewUrl}
         userInput={userInput}
         setUserInput={setUserInput}
         returnToHomepage={returnToHomepage}
       />
-      <Results response={response} displayedUrl={displayedUrl} />
+      <Results response={response} displayedUrl={displayedUrl} /> */}
       <PaginationBar response={response} setNewUrl={setNewUrl} />
       <Gallery
         response={response}

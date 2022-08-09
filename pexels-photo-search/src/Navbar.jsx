@@ -1,8 +1,10 @@
 import React from "react";
 import SpinningIcon from "./SpinningIcon";
+import SearchForm from "./SearchForm";
+import Results from "./Results";
 import "./Navbar.css";
 
-const Navbar = ({ attributionUrl, returnToHomepage }) => {
+const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setNewUrl, userInput, setUserInput }) => {
   const iconHome = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -41,12 +43,17 @@ const Navbar = ({ attributionUrl, returnToHomepage }) => {
               >
                 Powered by Pexels
               </a>
-              <a href="#Footer">
-                Created by Marshall Strong
-              </a>
+              <a href="#Footer">Created by Marshall Strong</a>
             </div>
           </div>
         </div>
+        <SearchForm
+          setNewUrl={setNewUrl}
+          userInput={userInput}
+          setUserInput={setUserInput}
+          returnToHomepage={returnToHomepage}
+        />
+        <Results response={response} displayedUrl={displayedUrl} />
       </div>
       <div className="rightNav">{iconHome}</div>
     </div>
