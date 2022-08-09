@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import SearchForm from "./SearchForm";
-import Results from "./Results";
+// import SearchForm from "./SearchForm";
+// import Results from "./Results";
 import PaginationBar from "./PaginationBar";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
