@@ -2,6 +2,7 @@ import React from "react";
 import SpinningIcon from "./SpinningIcon";
 import SearchForm from "./SearchForm";
 import Results from "./Results";
+import PaginationBar from "./PaginationBar";
 import "./Navbar.css";
 
 const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setNewUrl, userInput, setUserInput }) => {
@@ -22,40 +23,47 @@ const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setN
 
   return (
     <div className="Navbar">
-      <div className="leftNav">
-        <SpinningIcon
-          onClick={returnToHomepage}
-          alt="SpinningIcon"
-          title="Return to Homepage"
-        />
-      </div>
-      <div className="centerNav">
-        <div className="titleContainer">
-          <div className="navbarTitle">React Photo Search</div>
-          <div className="navbarSubtitle">
-            <div className="textWrapper">
-              <a
-                href={attributionUrl}
-                rel="noopener noreferrer"
-                target="_blank"
-                alt="Powered by Pexels"
-                title="Pexels: The best free stock photos, royalty free images & videos shared by creators"
-              >
-                Powered by Pexels
-              </a>
-              <a href="#Footer">Created by Marshall Strong</a>
+      <div className="navbarRow">
+        <div className="leftNav">
+          <SpinningIcon
+            onClick={returnToHomepage}
+            alt="SpinningIcon"
+            title="Return to Homepage"
+          />
+        </div>
+        <div className="centerNav">
+          <div className="titleContainer">
+            <div className="navbarTitle" onClick={returnToHomepage}>
+              React Photo Search
+            </div>
+            <div className="navbarSubtitle">
+              <div className="textWrapper">
+                <a
+                  href={attributionUrl}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  alt="Powered by Pexels"
+                  title="Pexels: The best free stock photos, royalty free images & videos shared by creators"
+                >
+                  Powered by Pexels
+                </a>
+                <a href="#Footer">Created by Marshall Strong</a>
+              </div>
             </div>
           </div>
+          <SearchForm
+            setNewUrl={setNewUrl}
+            userInput={userInput}
+            setUserInput={setUserInput}
+            returnToHomepage={returnToHomepage}
+          />
+          <Results response={response} displayedUrl={displayedUrl} />
         </div>
-        <SearchForm
-          setNewUrl={setNewUrl}
-          userInput={userInput}
-          setUserInput={setUserInput}
-          returnToHomepage={returnToHomepage}
-        />
-        <Results response={response} displayedUrl={displayedUrl} />
+        <div className="rightNav">{iconHome}</div>
       </div>
-      <div className="rightNav">{iconHome}</div>
+      <div className="navbarRow">
+        <PaginationBar response={response} setNewUrl={setNewUrl} />
+      </div>
     </div>
   );
 };

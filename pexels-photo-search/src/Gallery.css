@@ -4,6 +4,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 11rem;
   margin-bottom: 4rem;
   width: 100%;
 }
