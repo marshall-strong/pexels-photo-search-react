@@ -92,7 +92,11 @@ svg.icon > path {
   fill: var(--darker);
 }
 
-.icon:hover {
+svg.icon.disabled > path {
+  fill: var(--base);
+}
+
+.icon.enabled:hover {
   cursor: pointer;
 }
 
