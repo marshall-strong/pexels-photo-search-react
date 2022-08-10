@@ -5,9 +5,64 @@
 ### MVP Features
 
 - Display 10 curated photos on the home screen. Use the Pexels curated photos resource to render these photos.
-  - `Gallery` component displays 10 photos in a simple masonry layout where photos fill out rows while respecting each photo's aspect ratio
-    - `code snippet`
   - Retrieve homepage photos from the Pexels Curated Photos Resource
+
+file: `pexels-photo-search/netlify/functions/fetchPexelsPhotos.js`  
+
+```js
+const axios = require("axios");
+const SECRET = process.env.PEXELS_API_KEY;
+
+exports.handler = async (event, _context) => {
+  try {
+    const { apiEndpoint, page, per_page, query } = event.queryStringParameters;
+    const baseUrl = `https://api.pexels.com/v1/`;
+    
+    const constructRequestUrl = (baseUrl, endpoint, page, perPage, query) => {
+      let url = baseUrl + endpoint + `/?page=${page}&per_page=${perPage}`;
+      const requestUrl = !query ? url : url + `&query=${query}`;
+      return requestUrl;
+    };
+
+    const requestUrl = constructRequestUrl(baseUrl, apiEndpoint, page, per_page, query);
+
+    // requestUrl: `https://api.pexels.com/v1/curated/?page=1&per_page=10`
+
+    const response = await axios({
+      method: "get",
+      url: requestUrl,
+      headers: {
+        Authorization: `${SECRET}`,
+      },
+    });
+
+    const netlifyResponse = {
+      statusCode: response.status,
+      body: JSON.stringify({
+        statusCode: response.status,
+        statusText: response.statusText,
+        request_url: response.config.url,
+        page: response.data.page,
+        per_page: response.data.per_page,
+        photos: response.data.photos,
+        total_results: response.data.total_results,
+        prev_page: response.data.prev_page,
+        next_page: response.data.next_page,
+      }),
+    };
+
+    return netlifyResponse;
+  } catch (err) {
+    return {
+      statusCode: 404,
+      body: err.toString(),
+    };
+  }
+};
+
+```
+
+  - `Gallery` component displays 10 photos in a simple masonry layout where photos fill out rows while respecting each photo's aspect ratio
     - `code snippet`
 
 - Provide pagination for Curated photos. Paging should not cause a page refresh. From the client side initiate the needed requests to allow the user to go forward and backward 10 photos at a time.
@@ -118,9 +173,7 @@ cd pexels-photo-search
 echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
 ```
 
-Example .env file:  
-
-`react-photo-search/pexels-photo-search/.env`  
+file: `pexels-photo-search/.env`  
 
 ```node
 PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
