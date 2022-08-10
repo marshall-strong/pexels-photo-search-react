@@ -57,7 +57,12 @@ const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setN
                 >
                   Powered by Pexels
                 </a>
-                <a href="#Footer">
+                <a
+                  href="https://marshallstrong.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Marshall Strong's Portfolio"
+                >
                   Created by Marshall Strong
                 </a>
               </div>
