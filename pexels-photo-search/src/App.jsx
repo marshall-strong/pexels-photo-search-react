@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 // import SearchForm from "./SearchForm";
 // import Results from "./Results";
-import PaginationBar from "./PaginationBar";
+// import PaginationBar from "./PaginationBar";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
 import "./App.css";
@@ -110,7 +110,7 @@ const App = () => {
         returnToHomepage={returnToHomepage}
       />
       <Results response={response} displayedUrl={displayedUrl} /> */}
-      <PaginationBar response={response} setNewUrl={setNewUrl} />
+      {/* <PaginationBar response={response} setNewUrl={setNewUrl} /> */}
       <Gallery
         response={response}
         userInput={userInput}
