@@ -18,9 +18,16 @@ const Footer = ({ attributionUrl }) => {
 
   return (
     <div className="Footer" id="Footer">
-      <div className="leftNav">
+      <div className="footerColumn">
+        <div className="copyright">
+          &copy;
+          {" 2022 by Marshall Strong"}
+        </div>
         <PersonalLinks />
-        {/* <a
+      </div>
+      {/* <div className="leftNav">
+        <PersonalLinks />
+        <a
           href={attributionUrl}
           rel="noopener noreferrer"
           target="_blank"
@@ -33,7 +40,7 @@ const Footer = ({ attributionUrl }) => {
               alt="Powered by Pexels"
             />
           </div>
-        </a> */}
+        </a>
       </div>
       <div className="centerNav">
         <div className="copyright">
@@ -63,7 +70,7 @@ const Footer = ({ attributionUrl }) => {
           </div>
           {iconGitHubRepo}
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
