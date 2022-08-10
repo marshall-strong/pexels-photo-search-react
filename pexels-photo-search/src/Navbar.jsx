@@ -33,9 +33,18 @@ const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setN
         </div>
         <div className="centerNav">
           <div className="titleContainer">
-            <div className="navbarTitle" onClick={returnToHomepage}>
+            <a
+              href="https://github.com/marshall-strong/react-photo-search"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="GitHub Repository"
+              className="navbarTitle"
+            >
               React Photo Search
-            </div>
+            </a>
+            {/* <div className="navbarTitle" onClick={returnToHomepage}>
+              React Photo Search
+            </div> */}
             <div className="navbarSubtitle">
               <div className="textWrapper">
                 <a
@@ -48,7 +57,12 @@ const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setN
                 >
                   Powered by Pexels
                 </a>
-                <a href="#Footer">
+                <a
+                  href="https://marshallstrong.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Marshall Strong's Portfolio"
+                >
                   Created by Marshall Strong
                 </a>
               </div>
