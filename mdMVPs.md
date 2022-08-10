@@ -16,7 +16,7 @@
 - Write tests however you see fit
 - Placeholder content for images before they're loaded
 
-### User stories  
+### User Stories  
 
 Your solution needs to satisfy all of these.  
 
