@@ -5,34 +5,36 @@
 ### MVP Features
 
 - Display 10 curated photos on the home screen. Use the Pexels curated photos resource to render these photos.
-
-Placeholder and Code Snippet(s).  
+  - `Gallery` component displays 10 photos in a simple masonry layout where photos fill out rows while respecting each photo's aspect ratio
+    - `code snippet`
+  - Retrieve homepage photos from the Pexels Curated Photos Resource
+    - `code snippet`
 
 - Provide pagination for Curated photos. Paging should not cause a page refresh. From the client side initiate the needed requests to allow the user to go forward and backward 10 photos at a time.
-
-Placeholder and Code Snippet(s).  
+  - `Pagination` and `PaginationBar` components
+    - `code snippet`
 
 - Provide a photo search. Searching should not cause a page refresh. Consume the photo search resource and display the results to the user, along with pagination, if needed.
-
-Placeholder and Code Snippet(s).  
+  - `SearchForm` component
+    - `code snippet`
 
 ### MVP Extra Features
 
 - Wrap the Pexels API in a server and implement server-side rendering
-
-Description of React and server-side rendering.  
+  - Single-Page, React Application with server-side rendering
+    - `code snippet`
 
 - Maintain the application API key on the server in order to avoid exposing it to the client
-
-Placeholder and Code Snippet(s).  
+  - Use Netlify functions to hide the Pexels API Key from the end user
+    - `code snippet`
 
 - Placeholder content for images before they are loaded
-
-Placeholder and Code Snippet(s).  
+  - *NOT YET IMPLEMENTED*
+    - `code snippet`
 
 - Write tests however you see fit
-
-Placeholder and Code Snippet(s).  
+  - *NOT YET IMPLEMENTED*
+    - `code snippet`
 
 ### User Stories
 
