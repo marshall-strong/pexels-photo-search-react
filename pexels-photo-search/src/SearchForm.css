@@ -8,9 +8,9 @@
   /* position: absolute; */
   /* top: 0; */
   height: 3rem;
-  border-color: var(--darker);
-  border-width: 0.2rem;
-  background-color: var(--white);
+  /* border-color: var(--darker); */
+  /* border-width: 0.2rem; */
+  background-color: var(--lightest);
 }
 
 form#search-for-photos {
@@ -27,4 +27,38 @@ form#search-for-photos > input {
   position: relative;
   margin-left: 0.5rem;
   font-size: inherit;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* form#search-for-photos > input[type="text"]:focus {
+  border: 3px solid #555;
+} */
+
+form#search-for-photos > input[type="text"]:focus::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--lightest);
+  opacity: 1; /* Firefox */
+}
+
+form#search-for-photos > input[type="text"]:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--lightest);
+}
+
+form#search-for-photos > input[type="text"]:focus::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--lightest);
+}
+
+form#search-for-photos > input[type="text"], textarea {
+  color: var(--darkest);
+  background-color: var(--lightest);
+}
+
+svg.icon.enabled.iconSearch > path {
+  fill: var(--darker);
+}
+
+svg.icon.enabled.iconSearch:hover > path {
+  fill: var(--darkest);
 }
