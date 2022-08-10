@@ -75,3 +75,60 @@ Placeholder and Code Snippet(s).
 - I have access to all project-specific local setup instructions I need to run the project.
 - I can install any required dependencies with npm or yarn.
 - I can compile and run the project in one step.
+
+## Local Setup Instructions for Developers
+
+### Clone GitHub Repository Locally
+
+[react-photo-search GitHub repository](https://github.com/marshall-strong/react-photo-search)  
+`gh repo clone marshall-strong/react-photo-search`
+`cd react-photo-search`  
+
+### Pexels API Key
+
+**Note**: to get photos from the Pexels API, an API key is required.  
+
+#### Getting a Pexels API Key
+
+- Create a free Pexels account
+  - <https://www.pexels.com/onboarding>
+  - Follow “I want to download”
+  - Complete the form. Make sure you use a valid email address
+- Confirm your email
+- Visit the Image & Video API section of your account
+- Provide a description and a URL. These can be fake, feel free to use the examples below or write your own
+  - Example description: “Iʼm using the API for programming practice projects”
+  - Example URL: <https://example.com>
+- The API key should be a 56 character string of numbers and lowercase letters
+  - Example Pexels API Key: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
+- If you ever lose your key, you can always retrieve it by logging into your Pexels account.
+
+#### Setting Up a `.env` File
+
+In Development Mode, the application reads the Pexels API key from a `.env` file.  
+
+To create a `.env` file from a console window:  
+
+```bash
+#!/bin/bash
+cd react-photo-search
+cd pexels-photo-search
+echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
+```
+
+Example .env file:  
+
+`react-photo-search/pexels-photo-search/.env`  
+
+```node
+PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
+
+```
+
+### Install Project Dependencies
+
+`npm install`
+
+### Compile and Run the Project in Development Mode
+
+`npm start`
