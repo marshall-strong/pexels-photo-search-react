@@ -5,7 +5,8 @@
 ### MVP Features
 
 - Display 10 curated photos on the home screen. Use the Pexels curated photos resource to render these photos.
-  - Retrieve homepage photos from the Pexels Curated Photos Resource
+
+Retrieve home screen photos from the Pexels Curated Photos Resource:  
 
 file: `pexels-photo-search/netlify/functions/fetchPexelsPhotos.js`  
 
@@ -62,8 +63,98 @@ exports.handler = async (event, _context) => {
 
 ```
 
-  - `Gallery` component displays 10 photos in a simple masonry layout where photos fill out rows while respecting each photo's aspect ratio
-    - `code snippet`
+The `Gallery` component displays 10 photos in a simple masonry layout where photos fill out rows while respecting each photo's aspect ratio
+
+file: `pexels-photo-search/src/Gallery.jsx`  
+
+```jsx
+const Gallery = ({ response }) => (
+  <div class="Gallery">
+      <div class="galleryContainer">
+        <div class="paginationContainer">
+          <ul class="galleryPhotos">
+            <li class="Photo">
+              <a
+                href="https://www.pexels.com/photo/a-carry-on-suitcase-sits-on-minimal-steps-13145853/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://images.pexels.com/photos/13145853/pexels-photo-13145853.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350"
+                  alt="alt text"
+                />
+              </a>
+              <div class="photoCredit">
+                <span>Photo by </span>
+                <span class="photographer">
+                  <a
+                    href="https://www.pexels.com/@andrew"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="photographerUrl"
+                  >
+                    <b>Andrew Neel</b>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li class="Photo"></li>
+            <li class="Photo"></li>
+            <li class="Photo"></li>
+            <li class="Photo"></li>
+            <li class="Photo"></li>
+            <li class="Photo"></li>
+            <li class="Photo"></li>
+            <li class="Photo"></li>
+            <li class="Photo"></li>
+            <li class="Photo"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+);
+```
+
+file: `pexels-photo-search/src/Gallery.css`  
+
+```css
+.Gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 11rem;
+  margin-bottom: 10rem;
+  width: 100%;
+}
+
+.galleryContainer {
+  display: inherit;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: var(--translucentBlackMask);
+}
+
+.paginationContainer {
+  display: inherit;
+  flex-direction: inherit;
+  flex-wrap: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  width: 100%;
+  height: max-content;
+}
+
+ul.galleryPhotos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+```
 
 - Provide pagination for Curated photos. Paging should not cause a page refresh. From the client side initiate the needed requests to allow the user to go forward and backward 10 photos at a time.
   - `Pagination` and `PaginationBar` components
@@ -187,3 +278,13 @@ PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
 ### Compile and Run the Project in Development Mode
 
 `npm start`
+
+## Production Deployment
+
+[react-photo-search.netlify.app](https://react-photo-search.netlify.app/)
+
+### Netlify
+
+Leverage continuous deployment in Netlify to kick off an *automated build process* that generates site assets.  
+
+Visit your demo project’s URL after Netlify uploads site assets to a content delivery network (CDN) and makes your demo site available.  
