@@ -6,23 +6,31 @@ const SECRET = process.env.PEXELS_API_KEY;
 
 exports.handler = async (event, _context) => {
   try {
-    const baseUrl = `https://api.pexels.com/v1/`;
-
     // the React component deconstructs the url for the API request
     // the API endpoint is converted to a query string parameter
     // all query string parameters are available through `event`
-    const { endpoint, page, per_page, query } = event.queryStringParameters;
+    const { apiEndpoint, page, per_page, query } = event.queryStringParameters;
+    
+    const baseUrl = `https://api.pexels.com/v1/`;
     
     // reconstructs the url for the API request
-    // ex: `https://api.pexels.com/v1/curated/?page=1&per_page=10`
-    // ex: `https://api.pexels.com/v1/search/?page=1&per_page=10&query=${userInput}`
-    const constructUrl = (baseUrl, endpoint, page, perPage, query) => {
+    // request url for homepage photos from the Pexels Curated Photos Resource:
+    // `https://api.pexels.com/v1/curated/?page=1&per_page=10`
+    // request url for photo search:
+    // `https://api.pexels.com/v1/search/?page=1&per_page=10&query=${userInput}`
+    const constructRequestUrl = (baseUrl, endpoint, page, perPage, query) => {
       let url = baseUrl + endpoint + `/?page=${page}&per_page=${perPage}`;
       const requestUrl = !query ? url : url + `&query=${query}`;
       return requestUrl;
     };
 
-    const requestUrl = constructUrl(baseUrl, endpoint, page, per_page, query);
+    const requestUrl = constructRequestUrl(
+      baseUrl,
+      apiEndpoint,
+      page,
+      per_page,
+      query
+    );
 
     // fetch data from the the Pexels API endpoint
     const response = await axios({

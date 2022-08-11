@@ -61,14 +61,14 @@ const App = () => {
     // Declare the data fetching function INSIDE the `useEffect` code block:
     const fetchPexelsPhotos = async () => {
       // get substrings from `newUrl` to use as query string parameters when constructing `netlifyUrl`
-      const endpointSubstring =
+      const apiEndpointSubstring =
         newUrl.substring(26, 32) === "search"
           ? "?endpoint=search&"
           : "?endpoint=curated&";
       const remainingParamsSubstring = newUrl.split("?")[1];
       const netlifyUrl =
         `/.netlify/functions/fetchPexelsPhotos` +
-        endpointSubstring +
+        apiEndpointSubstring +
         remainingParamsSubstring;
       // send the Pexels API request using a Netlify function to avoid exposing the secret key
       try {
