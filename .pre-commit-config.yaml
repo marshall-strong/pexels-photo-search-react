@@ -15,4 +15,3 @@ repos:
     hooks:
       - id: prettier
         files: ^pexels-photo-search/
-        

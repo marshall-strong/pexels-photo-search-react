@@ -68,7 +68,7 @@ svg.pexelsCircle > path {
 
 @keyframes pulse-pexels {
   0% {
-    transform: scale(0.80);
+    transform: scale(0.8);
     box-shadow: 0 0 0 0 var(--pexelsColor70);
   }
   70% {
@@ -76,7 +76,7 @@ svg.pexelsCircle > path {
     box-shadow: 0 0 0 2.5rem var(--pexelsColor00);
   }
   100% {
-    transform: scale(0.80);
+    transform: scale(0.8);
     box-shadow: 0 0 0 0 var(--pexelsColor00);
   }
 }

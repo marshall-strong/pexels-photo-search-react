@@ -6,9 +6,9 @@
 
 - Display 10 curated photos on the home screen. Use the Pexels curated photos resource to render these photos.
 
-Retrieve home screen photos from the Pexels Curated Photos Resource:  
+Retrieve home screen photos from the Pexels Curated Photos Resource:
 
-file: `pexels-photo-search/netlify/functions/fetchPexelsPhotos.js`  
+file: `pexels-photo-search/netlify/functions/fetchPexelsPhotos.js`
 
 ```js
 const axios = require("axios");
@@ -18,7 +18,7 @@ exports.handler = async (event, _context) => {
   try {
     const { apiEndpoint, page, per_page, query } = event.queryStringParameters;
     const baseUrl = `https://api.pexels.com/v1/`;
-    
+
     const constructRequestUrl = (baseUrl, endpoint, page, perPage, query) => {
       let url = baseUrl + endpoint + `/?page=${page}&per_page=${perPage}`;
       const requestUrl = !query ? url : url + `&query=${query}`;
@@ -65,7 +65,7 @@ exports.handler = async (event, _context) => {
 
 The `Gallery` component displays 10 photos in a simple masonry layout where photos fill out rows while respecting each photo's aspect ratio
 
-file: `pexels-photo-search/src/Gallery.jsx`  
+file: `pexels-photo-search/src/Gallery.jsx`
 
 ```jsx
 const Gallery = ({ response }) => (
@@ -115,7 +115,7 @@ const Gallery = ({ response }) => (
 );
 ```
 
-file: `pexels-photo-search/src/Gallery.css`  
+file: `pexels-photo-search/src/Gallery.css`
 
 ```css
 .Gallery {
@@ -184,41 +184,41 @@ ul.galleryPhotos {
 
 ### User Stories
 
-**As a user visiting the website...**  
+**As a user visiting the website...**
 
 - I can see an initial set of curated photos on the home screen.
 
-Placeholder and Code Snippet(s).  
+Placeholder and Code Snippet(s).
 
 - I am able to access the the photographerʼs name and url if those details are available for every photo.
 
-Placeholder and Code Snippet(s).  
+Placeholder and Code Snippet(s).
 
 - I can paginate the list of curated photos.
 
-Placeholder and Code Snippet(s).  
+Placeholder and Code Snippet(s).
 
 - I can use a text input to search for photos Iʼm interested.
 
-Placeholder and Code Snippet(s).  
+Placeholder and Code Snippet(s).
 
 - I can see the results of my search in the photo viewing area.
 
-Placeholder and Code Snippet(s).  
+Placeholder and Code Snippet(s).
 
 - I can paginate search results if needed.
 
-Placeholder and Code Snippet(s).  
+Placeholder and Code Snippet(s).
 
 - I should not be shown the "previous" paginiation button when there is no previous page.
 
-Placeholder and Code Snippet(s).  
+Placeholder and Code Snippet(s).
 
 - I can refresh my browser and retain my search query and/or page.
 
-Placeholder and Code Snippet(s).  
+Placeholder and Code Snippet(s).
 
-**As a developer working on the project locally...**  
+**As a developer working on the project locally...**
 
 - I have access to all project-specific local setup instructions I need to run the project.
 - I can install any required dependencies with npm or yarn.
@@ -228,13 +228,13 @@ Placeholder and Code Snippet(s).
 
 ### Clone GitHub Repository Locally
 
-[react-photo-search GitHub repository](https://github.com/marshall-strong/react-photo-search)  
+[react-photo-search GitHub repository](https://github.com/marshall-strong/react-photo-search)
 `gh repo clone marshall-strong/react-photo-search`
-`cd react-photo-search`  
+`cd react-photo-search`
 
 ### Pexels API Key
 
-**Note**: to get photos from the Pexels API, an API key is required.  
+**Note**: to get photos from the Pexels API, an API key is required.
 
 #### Getting a Pexels API Key
 
@@ -253,9 +253,9 @@ Placeholder and Code Snippet(s).
 
 #### Setting Up a `.env` File
 
-In Development Mode, the application reads the Pexels API key from a `.env` file.  
+In Development Mode, the application reads the Pexels API key from a `.env` file.
 
-To create a `.env` file from a console window:  
+To create a `.env` file from a console window:
 
 ```bash
 #!/bin/bash
@@ -264,7 +264,7 @@ cd pexels-photo-search
 echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
 ```
 
-file: `pexels-photo-search/.env`  
+file: `pexels-photo-search/.env`
 
 ```node
 PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
@@ -285,22 +285,28 @@ PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
 
 ### Netlify
 
-Leverage continuous deployment in Netlify to kick off an *automated build process* that generates site assets.  
+Leverage continuous deployment in Netlify to kick off an *automated build process* that generates site assets.
 
-Visit your demo project’s URL after Netlify uploads site assets to a content delivery network (CDN) and makes your demo site available.  
+Visit your demo project’s URL after Netlify uploads site assets to a content delivery network (CDN) and makes your demo site available.
 
 ## Project Style
 
 ### pre-commit
 
-[pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks.  
-pre-commit runs Git hook scripts (like linters) before each Git commit and prompts the user to fix any issues that are found before the commit can be saved.  
-pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.  
+[pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks.
+pre-commit runs Git hook scripts (like linters) before each Git commit and prompts the user to fix any issues that are found before the commit can be saved.
+pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
 
-pre-commit requires [python](https://docs.python-guide.org/starting/install3/linux/) in order to run.  
+pre-commit requires [python](https://docs.python-guide.org/starting/install3/linux/) in order to run.
 
 ```bash
 marshall-strong@ideapad3:~$ pre-commit --version
 pre-commit 2.13.0
 marshall-strong@ideapad3:~$ pip install pre-commit --upgrade
+marshall-strong@ideapad3:~$ cd GitHub/react-photo-search
+marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit sample-config
+marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit run --all-files
+marshall-strong@ideapad3:~/GitHub/react-photo-search$
 ```

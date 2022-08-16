@@ -4,7 +4,7 @@ import SpinningIcon from "./SpinningIcon";
 // import pexelsColoredLogo from "./img/pexelsLogoOnTransparent.png";
 import "./Splash.css";
 
-const Splash = ({ attributionUrl, returnToHomepage }) => {  
+const Splash = ({ attributionUrl, returnToHomepage }) => {
   // const iconHome = (
   //   <svg
   //     xmlns="http://www.w3.org/2000/svg"

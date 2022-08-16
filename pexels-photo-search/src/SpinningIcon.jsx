@@ -3,7 +3,7 @@ import React from "react";
 // import pexelsIcon from "./img/pexelsCircle.svg"
 import "./SpinningIcon.css";
 
-const SpinningIcon = ({onClick, alt, title}) => {
+const SpinningIcon = ({ onClick, alt, title }) => {
   const reactIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -44,12 +44,7 @@ const SpinningIcon = ({onClick, alt, title}) => {
   );
 
   return (
-    <div
-      className="SpinningIcon"
-      onClick={onClick}
-      alt={alt}
-      title={title}
-    >
+    <div className="SpinningIcon" onClick={onClick} alt={alt} title={title}>
       {reactIcon}
       {/* <img src={reactIcon} className="spinEffect reactIcon" alt="React logo" /> */}
       <div className="pulsar"></div>

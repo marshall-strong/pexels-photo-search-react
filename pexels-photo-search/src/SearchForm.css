@@ -37,20 +37,24 @@ form#search-for-photos > input {
   border: 3px solid #555;
 } */
 
-form#search-for-photos > input[type="text"]:focus::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+form#search-for-photos > input[type="text"]:focus::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--lightest);
   opacity: 1; /* Firefox */
 }
 
-form#search-for-photos > input[type="text"]:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+form#search-for-photos > input[type="text"]:focus:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: var(--lightest);
 }
 
-form#search-for-photos > input[type="text"]:focus::-ms-input-placeholder { /* Microsoft Edge */
+form#search-for-photos > input[type="text"]:focus::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: var(--lightest);
 }
 
-form#search-for-photos > input[type="text"], textarea {
+form#search-for-photos > input[type="text"],
+textarea {
   color: var(--darkest);
   background-color: var(--lightest);
 }

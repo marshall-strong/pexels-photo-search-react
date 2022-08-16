@@ -1,11 +1,7 @@
 import React from "react";
 import "./SearchForm.css";
 
-const SearchForm = ({
-  setNewUrl,
-  userInput,
-  setUserInput,
-}) => {
+const SearchForm = ({ setNewUrl, userInput, setUserInput }) => {
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
   };

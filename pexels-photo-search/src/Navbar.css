@@ -63,14 +63,13 @@
   margin-top: 0.5rem;
 }
 
-
 .homeIcon {
   justify-content: flex-end;
 }
 
 .navbarTitle {
   display: inherit;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   font-size: calc(16px + 1vmin);
 }
 

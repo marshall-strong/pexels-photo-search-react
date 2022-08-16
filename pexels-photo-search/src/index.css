@@ -2,18 +2,18 @@
 
 /* Pexels logo */
 html {
-  --pexelsColor: #07A081;
+  --pexelsColor: #07a081;
   --pexelsColor70: #08a182b3;
   --pexelsColor00: #08a18200;
 }
 
 /* https://visme.co/blog/website-color-schemes/#attachment_13239 */
 html {
-  --darkest: #05396B;
+  --darkest: #05396b;
   --darker: #389583;
-  --base: #5CDB94;
-  --lighter: #8DE4AF;
-  --lightest: #EDF4E0;
+  --base: #5cdb94;
+  --lighter: #8de4af;
+  --lightest: #edf4e0;
 }
 
 html {
@@ -21,19 +21,19 @@ html {
 }
 
 html {
-  --white: #FFFFFF;
-  --yellow: #E4EF40;
-  --blue: #00ACD8;
+  --white: #ffffff;
+  --yellow: #e4ef40;
+  --blue: #00acd8;
 }
 
 html {
-  --reactIcon: #61DAFB;
+  --reactIcon: #61dafb;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,7 +51,7 @@ a:hover {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -66,19 +66,21 @@ ul {
 }
 
 /* input field placeholder text color */
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--darker);
   opacity: 1; /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: var(--darker);
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: var(--darker);
 }
-
 
 /* scrollbar */
 html {
@@ -93,9 +95,9 @@ body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
+  background-color: var(--thumbBG);
   border-radius: 6px;
-  border: 1px solid var(--scrollbarBG); 
+  border: 1px solid var(--scrollbarBG);
   visibility: visible;
 }
 
@@ -103,7 +105,7 @@ body::-webkit-scrollbar-thumb {
   display: inherit;
   height: 2rem;
   width: 2rem;
-  margin: .5rem;
+  margin: 0.5rem;
   z-index: 2;
 }
 
