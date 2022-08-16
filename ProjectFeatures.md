@@ -25,7 +25,13 @@ exports.handler = async (event, _context) => {
       return requestUrl;
     };
 
-    const requestUrl = constructRequestUrl(baseUrl, apiEndpoint, page, per_page, query);
+    const requestUrl = constructRequestUrl(
+      baseUrl,
+      apiEndpoint,
+      page,
+      per_page,
+      query
+    );
 
     // requestUrl: `https://api.pexels.com/v1/curated/?page=1&per_page=10`
 
@@ -60,7 +66,6 @@ exports.handler = async (event, _context) => {
     };
   }
 };
-
 ```
 
 The `Gallery` component displays 10 photos in a simple masonry layout where photos fill out rows while respecting each photo's aspect ratio
@@ -70,48 +75,48 @@ file: `pexels-photo-search/src/Gallery.jsx`
 ```jsx
 const Gallery = ({ response }) => (
   <div class="Gallery">
-      <div class="galleryContainer">
-        <div class="paginationContainer">
-          <ul class="galleryPhotos">
-            <li class="Photo">
-              <a
-                href="https://www.pexels.com/photo/a-carry-on-suitcase-sits-on-minimal-steps-13145853/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://images.pexels.com/photos/13145853/pexels-photo-13145853.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350"
-                  alt="alt text"
-                />
-              </a>
-              <div class="photoCredit">
-                <span>Photo by </span>
-                <span class="photographer">
-                  <a
-                    href="https://www.pexels.com/@andrew"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="photographerUrl"
-                  >
-                    <b>Andrew Neel</b>
-                  </a>
-                </span>
-              </div>
-            </li>
-            <li class="Photo"></li>
-            <li class="Photo"></li>
-            <li class="Photo"></li>
-            <li class="Photo"></li>
-            <li class="Photo"></li>
-            <li class="Photo"></li>
-            <li class="Photo"></li>
-            <li class="Photo"></li>
-            <li class="Photo"></li>
-            <li class="Photo"></li>
-          </ul>
-        </div>
+    <div class="galleryContainer">
+      <div class="paginationContainer">
+        <ul class="galleryPhotos">
+          <li class="Photo">
+            <a
+              href="https://www.pexels.com/photo/a-carry-on-suitcase-sits-on-minimal-steps-13145853/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://images.pexels.com/photos/13145853/pexels-photo-13145853.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350"
+                alt="alt text"
+              />
+            </a>
+            <div class="photoCredit">
+              <span>Photo by </span>
+              <span class="photographer">
+                <a
+                  href="https://www.pexels.com/@andrew"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="photographerUrl"
+                >
+                  <b>Andrew Neel</b>
+                </a>
+              </span>
+            </div>
+          </li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+        </ul>
       </div>
     </div>
+  </div>
 );
 ```
 
@@ -153,10 +158,10 @@ ul.galleryPhotos {
   display: flex;
   flex-wrap: wrap;
 }
-
 ```
 
 - Provide pagination for Curated photos. Paging should not cause a page refresh. From the client side initiate the needed requests to allow the user to go forward and backward 10 photos at a time.
+
   - `Pagination` and `PaginationBar` components
     - `code snippet`
 
@@ -167,19 +172,22 @@ ul.galleryPhotos {
 ### MVP Extra Features
 
 - Wrap the Pexels API in a server and implement server-side rendering
+
   - Single-Page, React Application with server-side rendering
     - `code snippet`
 
 - Maintain the application API key on the server in order to avoid exposing it to the client
+
   - Use Netlify functions to hide the Pexels API Key from the end user
     - `code snippet`
 
 - Placeholder content for images before they are loaded
-  - *NOT YET IMPLEMENTED*
+
+  - _NOT YET IMPLEMENTED_
     - `code snippet`
 
 - Write tests however you see fit
-  - *NOT YET IMPLEMENTED*
+  - _NOT YET IMPLEMENTED_
     - `code snippet`
 
 ### User Stories
@@ -285,7 +293,7 @@ PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
 
 ### Netlify
 
-Leverage continuous deployment in Netlify to kick off an *automated build process* that generates site assets.
+Leverage continuous deployment in Netlify to kick off an _automated build process_ that generates site assets.
 
 Visit your demo project’s URL after Netlify uploads site assets to a content delivery network (CDN) and makes your demo site available.
 
