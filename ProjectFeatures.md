@@ -288,3 +288,19 @@ PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
 Leverage continuous deployment in Netlify to kick off an *automated build process* that generates site assets.  
 
 Visit your demo project’s URL after Netlify uploads site assets to a content delivery network (CDN) and makes your demo site available.  
+
+## Project Style
+
+### pre-commit
+
+[pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks.  
+pre-commit runs Git hook scripts (like linters) before each Git commit and prompts the user to fix any issues that are found before the commit can be saved.  
+pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.  
+
+pre-commit requires [python](https://docs.python-guide.org/starting/install3/linux/) in order to run.  
+
+```bash
+marshall-strong@ideapad3:~$ pre-commit --version
+pre-commit 2.13.0
+marshall-strong@ideapad3:~$ pip install pre-commit --upgrade
+```
