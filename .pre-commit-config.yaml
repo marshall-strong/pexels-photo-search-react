@@ -15,3 +15,17 @@ repos:
     hooks:
       - id: prettier
         files: ^pexels-photo-search/
+  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+    rev: "v14.10.0" # Use the sha / tag you want to point at
+    hooks:
+      - id: stylelint
+        # additional_dependencies: ['stylelint@13.2.1', 'stylelint-config-standard@20.0.0']
+        additional_dependencies:
+          # stylelint itself needs to be here when using additional_dependencies.
+          - stylelint@latest
+          # - stylelint-config-standard@latest
+          # - stylelint-order@latest
+          # - stylelint-config-prettier@latest
+          # Package names starting with `@` need to be quoted.
+          # - "@scope/my-awesome-plugin@0.12.0"
+        files: ^pexels-photo-search/

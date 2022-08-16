@@ -1,0 +1,11 @@
+{
+  // "extends": [
+  //   "stylelint-config-standard",
+  //   "stylelint-order",
+  //   "stylelint-config-prettier"
+  // ],
+  // "rules": {
+  //   "order/order": ["custom-properties", "declarations"],
+  //   "order/properties-order": ["width", "height"]
+  // }
+}
