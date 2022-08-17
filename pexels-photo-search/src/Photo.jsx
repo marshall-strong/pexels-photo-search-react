@@ -5,7 +5,7 @@ import "./Photo.css";
 const Photo = ({ photoData }) => {
   if (!photoData) {
     return (
-      <li className="Photo">
+      <li className="photo-component">
         <LoadingIcon />
       </li>
     );

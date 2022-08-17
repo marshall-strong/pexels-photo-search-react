@@ -38,7 +38,7 @@ const Gallery = ({ response, userInput, returnToHomepage }) => {
                   <Photo photoData={photoData} />
                 </React.Fragment>
               ))}
-              <li className="Photo"></li>
+              <li className="photo-component"></li>
             </ul>
           </div>
         )}
