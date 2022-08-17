@@ -2,7 +2,7 @@
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
   "rules": {
     "declaration-block-no-redundant-longhand-properties": null,
-    "color-hex-length": null,
+    "color-hex-length": "long",
     "declaration-empty-line-before": null
   }
 }
