@@ -27,8 +27,6 @@ const Navbar = ({
     </svg>
   );
 
-  // const linkToFooter = "";
-
   return (
     <div className="navbar-component">
       <div className="navbar-row">
@@ -50,9 +48,6 @@ const Navbar = ({
             >
               React Photo Search
             </a>
-            {/* <div className="navbar-title" onClick={returnToHomepage}>
-              React Photo Search
-            </div> */}
             <div className="navbar-subtitle">
               <div className="text-wrapper">
                 <a

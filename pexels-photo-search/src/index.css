@@ -61,6 +61,7 @@ ul {
 }
 
 /* input field placeholder text color */
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--darker);
