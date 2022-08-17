@@ -19,10 +19,7 @@ li.photo-component > a > img {
   object-fit: cover;
   vertical-align: bottom;
   display: inherit;
-
   transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
 }
 
 div.photo-credit {
@@ -38,7 +35,6 @@ div.photo-credit {
 
 .photo-component:hover {
   filter: contrast(80%);
-  -webkit-filter: contrast(80%);
 }
 
 .photo-component:hover div.photo-credit {
