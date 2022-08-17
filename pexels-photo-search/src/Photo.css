@@ -39,7 +39,6 @@ div.photoCredit {
 .Photo:hover {
   filter: contrast(80%);
   -webkit-filter: contrast(80%);
-  -moz-filter: constrast(80%);
   /* transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);   */

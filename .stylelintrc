@@ -17,7 +17,6 @@
     "color-function-notation": null,
     "alpha-value-notation": null,
     "color-hex-length": null,
-    "declaration-empty-line-before": null,
-    "function-no-unknown": null
+    "declaration-empty-line-before": null
   }
 }
