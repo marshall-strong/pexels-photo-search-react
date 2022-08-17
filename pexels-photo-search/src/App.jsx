@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-// import SearchForm from "./SearchForm";
-// import Results from "./Results";
-// import PaginationBar from "./PaginationBar";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
 import "./App.css";
@@ -14,10 +11,10 @@ const App = () => {
   const [userInput, setUserInput] = useState("");
 
   // Pexels URLs
+  // https://api.pexels.com/v1/curated/?page=1&per_page=10
   const attributionUrl = "https://www.pexels.com/api/";
   const baseUrl = "https://api.pexels.com/v1/";
   const homeUrl = baseUrl + "curated/?page=1&per_page=10";
-  // https://api.pexels.com/v1/curated/?page=1&per_page=10
 
   const returnToHomepage = () => {
     setNewUrl(homeUrl);
@@ -103,14 +100,6 @@ const App = () => {
         userInput={userInput}
         setUserInput={setUserInput}
       />
-      {/* <SearchForm
-        setNewUrl={setNewUrl}
-        userInput={userInput}
-        setUserInput={setUserInput}
-        returnToHomepage={returnToHomepage}
-      />
-      <Results response={response} displayedUrl={displayedUrl} /> */}
-      {/* <PaginationBar response={response} setNewUrl={setNewUrl} /> */}
       <Gallery
         response={response}
         userInput={userInput}
