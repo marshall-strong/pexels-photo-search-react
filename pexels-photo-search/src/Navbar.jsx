@@ -5,7 +5,15 @@ import Results from "./Results";
 import PaginationBar from "./PaginationBar";
 import "./Navbar.css";
 
-const Navbar = ({ attributionUrl, returnToHomepage, response, displayedUrl, setNewUrl, userInput, setUserInput }) => {
+const Navbar = ({
+  attributionUrl,
+  returnToHomepage,
+  response,
+  displayedUrl,
+  setNewUrl,
+  userInput,
+  setUserInput,
+}) => {
   const iconHome = (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -16,11 +16,11 @@
 - Write tests however you see fit
 - Placeholder content for images before they're loaded
 
-### User Stories  
+### User Stories
 
-Your solution needs to satisfy all of these.  
+Your solution needs to satisfy all of these.
 
-**As a user visiting the website...**  
+**As a user visiting the website...**
 
 - I can see an initial set of curated photos on the home screen
 - I am able to access the the photographerʼs name and url if those details are available for every photo
@@ -31,17 +31,17 @@ Your solution needs to satisfy all of these.
 - I should not be shown the "previous" paginiation button when there is no previous page
 - I can refresh my browser and retain my search query and/or page
 
-**As a developer working on the project locally...**  
+**As a developer working on the project locally...**
 
 - I have access to all project-specific local setup instructions I need to run the project
 - I can install any required dependencies with npm or yarn
 - I can compile and run the project in one step
 
-## How we evaluate your solution  
+## How we evaluate your solution
 
-While this is a basic web server and website, thereʼs a wide range of implementation possibilities. Weʼre not looking for specific implementation details. We want to see the choices you make. Your preference of tools. And how you approach project requirements.  
+While this is a basic web server and website, thereʼs a wide range of implementation possibilities. Weʼre not looking for specific implementation details. We want to see the choices you make. Your preference of tools. And how you approach project requirements.
 
-Here are a few questions we ask when reviewing solutions:  
+Here are a few questions we ask when reviewing solutions:
 
 - Did the candidate follow the instructions for submission?
 - Does the solution meet the minimum requirements?

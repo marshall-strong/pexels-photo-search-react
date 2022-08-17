@@ -34,9 +34,7 @@ const Results = ({ response, displayedUrl }) => {
 
     return (
       <div className="Results">
-        <div className="resultsText">
-          {resultsDescription}
-        </div>
+        <div className="resultsText">{resultsDescription}</div>
       </div>
     );
   }

@@ -1,22 +1,22 @@
 # REACT-PHOTO-SEARCH
 
-## Project Brief  
+## Project Brief
 
-We need you to build a website to let users browse photos from [Pexels](https://www.pexels.com/) (see below notes on getting an API key). Thereʼs a ton of competition in the photo space online, so we need to stand out. We need a solution thatʼs lighting fast to load with a snappy, responsive UI. We need to greet site visitors with a selection of curated photos and give them the ability to search our extensive catalog of quality photos from professional photographers.  
+We need you to build a website to let users browse photos from [Pexels](https://www.pexels.com/) (see below notes on getting an API key). Thereʼs a ton of competition in the photo space online, so we need to stand out. We need a solution thatʼs lighting fast to load with a snappy, responsive UI. We need to greet site visitors with a selection of curated photos and give them the ability to search our extensive catalog of quality photos from professional photographers.
 
-### Minimum Requirements  
+### Minimum Requirements
 
 Your solution needs to satisfy all of these. There are a couple specific server/client needs, but
 beyond those, the implementation is up to you. Use any tools, libraries, and frameworks you think
-best accomplish the task. See the user stories below for these requirements:  
+best accomplish the task. See the user stories below for these requirements:
 
 - Display 10 curated photos on the home screen. Use the Pexels curated photos resource to render these photos.
 - Provide pagination for Curated photos. Paging should not cause a page refresh. From the client side initiate the needed requests to allow the user to go forward and backward 10 photos at a time.
 - Provide a photo search. Searching should not cause a page refresh. Consume the photo search resource and display the results to the user, along with pagination, if needed.
 
-These are the requirements for an MVP. Beyond these, dig into any and all areas as deep as you like.  
+These are the requirements for an MVP. Beyond these, dig into any and all areas as deep as you like.
 
-### Suggested Extras  
+### Suggested Extras
 
 - Implement a server that wraps the Pexels API, providing one or more of the following features:
   - Maintain your application API key on the server, avoid exposing it to the client
@@ -24,9 +24,9 @@ These are the requirements for an MVP. Beyond these, dig into any and all areas 
 - Write tests however you see fit
 - Placeholder content for images before they're loaded
 
-### Getting a Pexels API Key  
+### Getting a Pexels API Key
 
-To work with the Pexels API, you need an API key. To get a key:  
+To work with the Pexels API, you need an API key. To get a key:
 
 - Create a free Pexels account
   - <https://www.pexels.com/onboarding>
@@ -38,11 +38,11 @@ To work with the Pexels API, you need an API key. To get a key:
   - Example description: “Iʼm using the API for programming practice projects”
   - Example URL: <https://example.com>
 
-### User stories  
+### User stories
 
-Your solution needs to satisfy all of these.  
+Your solution needs to satisfy all of these.
 
-**As a user visiting the website...**  
+**As a user visiting the website...**
 
 - I can see an initial set of curated photos on the home screen
 - I am able to access the the photographerʼs name and url if those details are available for every photo
@@ -53,17 +53,17 @@ Your solution needs to satisfy all of these.
 - I should not be shown the "previous" paginiation button when there is no previous page
 - I can refresh my browser and retain my search query and/or page
 
-**As a developer working on the project locally...**  
+**As a developer working on the project locally...**
 
 - I have access to all project-specific local setup instructions I need to run the project
 - I can install any required dependencies with npm or yarn
 - I can compile and run the project in one step
 
-## How we evaluate your solution  
+## How we evaluate your solution
 
-While this is a basic web server and website, thereʼs a wide range of implementation possibilities. Weʼre not looking for specific implementation details. We want to see the choices you make. Your preference of tools. And how you approach project requirements.  
+While this is a basic web server and website, thereʼs a wide range of implementation possibilities. Weʼre not looking for specific implementation details. We want to see the choices you make. Your preference of tools. And how you approach project requirements.
 
-Here are a few questions we ask when reviewing solutions:  
+Here are a few questions we ask when reviewing solutions:
 
 - Did the candidate follow the instructions for submission?
 - Does the solution meet the minimum requirements?

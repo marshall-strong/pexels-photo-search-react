@@ -10,9 +10,9 @@ exports.handler = async (event, _context) => {
     // the API endpoint is converted to a query string parameter
     // all query string parameters are available through `event`
     const { endpoint, page, per_page, query } = event.queryStringParameters;
-    
+
     const baseUrl = `https://api.pexels.com/v1/`;
-    
+
     // reconstructs the url for the API request
     // request url for homepage photos from the Pexels Curated Photos Resource:
     // `https://api.pexels.com/v1/curated/?page=1&per_page=10`
@@ -30,13 +30,7 @@ exports.handler = async (event, _context) => {
       return requestUrl;
     };
 
-    const url = constructRequestUrl(
-      baseUrl,
-      endpoint,
-      page,
-      per_page,
-      query
-    );
+    const url = constructRequestUrl(baseUrl, endpoint, page, per_page, query);
 
     // fetch data from the the Pexels API endpoint
     const response = await axios({
