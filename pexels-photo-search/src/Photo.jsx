@@ -11,18 +11,18 @@ const Photo = ({ photoData }) => {
     );
   } else {
     return (
-      <li className="Photo">
+      <li className="photo-component">
         <a href={photoData.url} target="_blank" rel="noopener noreferrer">
           <img src={photoData.src.medium} alt="alt text" />
         </a>
-        <div className="photoCredit">
+        <div className="photo-credit">
           <span>Photo by </span>
           <span className="photographer">
             <a
               href={photoData.photographer_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="photographerUrl"
+              className="photographer-url"
             >
               <b>{photoData.photographer}</b>
             </a>

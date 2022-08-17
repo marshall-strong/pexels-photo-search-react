@@ -3,7 +3,7 @@ import "./Metadata.css";
 
 const Metadata = () => {
   return (
-    <div className="Metadata">
+    <div className="metadata-component">
       <p>Metadata</p>
     </div>
   );

@@ -1,4 +1,4 @@
-.Navbar {
+.navbar-component {
   background-color: inherit;
   position: fixed;
   top: 0;
@@ -13,14 +13,14 @@
   font-size: calc(5px + 1vmin);
 }
 
-.navbarRow {
+.navbar-row {
   background-color: inherit;
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.leftNav {
+.left-nav {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -31,7 +31,7 @@
   margin-top: 2rem;
 }
 
-.centerNav {
+.center-nav {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -40,7 +40,7 @@
   margin-top: 0.75rem;
 }
 
-.rightNav {
+.right-nav {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -51,11 +51,11 @@
   margin-top: 2rem;
 }
 
-.spinningIconContainer {
+.spinning-icon-container {
   justify-content: flex-start;
 }
 
-.titleContainer {
+.title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,22 +63,22 @@
   margin-top: 0.5rem;
 }
 
-.homeIcon {
+.home-icon {
   justify-content: flex-end;
 }
 
-.navbarTitle {
+.navbar-title {
   display: inherit;
   margin-top: 0.5rem;
   font-size: calc(16px + 1vmin);
 }
 
-.navbarTitle:hover {
+.navbar-title:hover {
   color: var(--lightest);
   cursor: pointer;
 }
 
-.navbarSubtitle {
+.navbar-subtitle {
   display: inherit;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -88,12 +88,12 @@
   align-items: flex-start;
 }
 
-.navbarSubtitle > a {
+.navbar-subtitle > a {
   display: inherit;
   align-items: center;
 }
 
-.navbarSubtitle > .textWrapper {
+.navbar-subtitle > .text-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,22 +101,19 @@
   margin-bottom: 0.25rem;
 }
 
-.navbarSubtitle > .textWrapper > .poweredByPexels {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
+.navbar-subtitle > .text-wrapper > .powered-by-pexels {
   margin-bottom: 0.25rem;
 }
 
-.navbarSubtitle > .textWrapper > a:hover {
+.navbar-subtitle > .text-wrapper > a:hover {
   color: var(--lightest);
 }
 
-.navbarSubtitle > a > .imgWrapper {
+.navbar-subtitle > a > .img-wrapper {
   display: inherit;
 }
 
-.navbarSubtitle > a > .imgWrapper > img {
+.navbar-subtitle > a > .img-wrapper > img {
   display: inherit;
   width: 6rem;
 }

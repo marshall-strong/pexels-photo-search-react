@@ -30,34 +30,34 @@ const Navbar = ({
   // const linkToFooter = "";
 
   return (
-    <div className="Navbar">
-      <div className="navbarRow">
-        <div className="leftNav">
+    <div className="navbar-component">
+      <div className="navbar-row">
+        <div className="left-nav">
           <SpinningIcon
             onClick={returnToHomepage}
             alt="SpinningIcon"
             title="Return to Homepage"
           />
         </div>
-        <div className="centerNav">
-          <div className="titleContainer">
+        <div className="center-nav">
+          <div className="title-container">
             <a
               href="https://github.com/marshall-strong/react-photo-search"
               rel="noopener noreferrer"
               target="_blank"
               title="GitHub Repository"
-              className="navbarTitle"
+              className="navbar-title"
             >
               React Photo Search
             </a>
-            {/* <div className="navbarTitle" onClick={returnToHomepage}>
+            {/* <div className="navbar-title" onClick={returnToHomepage}>
               React Photo Search
             </div> */}
-            <div className="navbarSubtitle">
-              <div className="textWrapper">
+            <div className="navbar-subtitle">
+              <div className="text-wrapper">
                 <a
                   href={attributionUrl}
-                  className="poweredByPexels"
+                  className="powered-by-pexels"
                   rel="noopener noreferrer"
                   target="_blank"
                   alt="Powered by Pexels"
@@ -84,9 +84,9 @@ const Navbar = ({
           />
           <Results response={response} displayedUrl={displayedUrl} />
         </div>
-        <div className="rightNav">{iconHome}</div>
+        <div className="right-nav">{iconHome}</div>
       </div>
-      <div className="navbarRow">
+      <div className="navbar-row">
         <PaginationBar response={response} setNewUrl={setNewUrl} />
       </div>
     </div>

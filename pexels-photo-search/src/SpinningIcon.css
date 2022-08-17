@@ -1,4 +1,4 @@
-.SpinningIcon {
+.spinning-icon-component {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,36 +9,41 @@
   z-index: 1;
 }
 
-.SpinningIcon:hover {
+.spinning-icon-component:hover {
   cursor: pointer;
 }
 
-svg.reactIcon {
+svg.react-icon {
   position: absolute;
   height: 10rem;
   width: 10rem;
   z-index: 1;
 }
-svg.reactIcon > g {
+
+svg.react-icon > g {
   fill: var(--lightest);
 }
-svg.pexelsCircle {
+
+svg.pexels-circle {
   position: absolute;
   height: 1.5rem;
   width: 1.5rem;
   z-index: 2;
 }
-svg.pexelsCircle > circle {
-  fill: var(--pexelsColor);
-  stroke: var(--pexelsColor);
+
+svg.pexels-circle > circle {
+  fill: var(--pexels-color);
+  stroke: var(--pexels-color);
 }
-svg.pexelsCircle > path {
+
+svg.pexels-circle > path {
   fill: var(--white);
 }
 
-.spinEffect {
+.spin-effect {
   animation: spin-effect infinite 6s linear;
 }
+
 /* @media (prefers-reduced-motion: no-preference) {
   .spinEffect {
     animation: spin-effect infinite 6s linear;
@@ -49,15 +54,16 @@ svg.pexelsCircle > path {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 .pulsar {
-  background: var(--pexelsColor);
+  background: var(--pexels-color);
   border-radius: 50%;
-  box-shadow: 0 0 0 0 var(--pexelsColor);
+  box-shadow: 0 0 0 0 var(--pexels-color);
   margin: 1rem;
   height: 2rem;
   width: 2rem;
@@ -69,14 +75,16 @@ svg.pexelsCircle > path {
 @keyframes pulse-pexels {
   0% {
     transform: scale(0.8);
-    box-shadow: 0 0 0 0 var(--pexelsColor70);
+    box-shadow: 0 0 0 0 var(--pexels-color70);
   }
+
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 2.5rem var(--pexelsColor00);
+    box-shadow: 0 0 0 2.5rem var(--pexels-color00);
   }
+
   100% {
     transform: scale(0.8);
-    box-shadow: 0 0 0 0 var(--pexelsColor00);
+    box-shadow: 0 0 0 0 var(--pexels-color00);
   }
 }

@@ -75,9 +75,9 @@ file: `pexels-photo-search/src/Gallery.jsx`
 ```jsx
 const Gallery = ({ response }) => (
   <div class="Gallery">
-    <div class="galleryContainer">
-      <div class="paginationContainer">
-        <ul class="galleryPhotos">
+    <div class="gallery-container">
+      <div class="pagination-container">
+        <ul class="gallery-photos">
           <li class="Photo">
             <a
               href="https://www.pexels.com/photo/a-carry-on-suitcase-sits-on-minimal-steps-13145853/"
@@ -89,7 +89,7 @@ const Gallery = ({ response }) => (
                 alt="alt text"
               />
             </a>
-            <div class="photoCredit">
+            <div class="photo-credit">
               <span>Photo by </span>
               <span class="photographer">
                 <a
@@ -134,17 +134,17 @@ file: `pexels-photo-search/src/Gallery.css`
   width: 100%;
 }
 
-.galleryContainer {
+.gallery-container {
   display: inherit;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  background-color: var(--translucentBlackMask);
+  background-color: var(--translucent-black-mask);
 }
 
-.paginationContainer {
+.pagination-container {
   display: inherit;
   flex-direction: inherit;
   flex-wrap: inherit;
@@ -154,7 +154,7 @@ file: `pexels-photo-search/src/Gallery.css`
   height: max-content;
 }
 
-ul.galleryPhotos {
+ul.gallery-photos {
   display: flex;
   flex-wrap: wrap;
 }

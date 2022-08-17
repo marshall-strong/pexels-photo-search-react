@@ -1,4 +1,4 @@
-.Gallery {
+.gallery-component {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -9,17 +9,17 @@
   width: 100%;
 }
 
-.galleryContainer {
+.gallery-container {
   display: inherit;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  background-color: var(--translucentBlackMask);
+  background-color: var(--translucent-black-mask);
 }
 
-.paginationContainer {
+.pagination-container {
   display: inherit;
   flex-direction: inherit;
   flex-wrap: inherit;
@@ -29,7 +29,7 @@
   height: max-content;
 }
 
-ul.galleryPhotos {
+ul.gallery-photos {
   display: flex;
   flex-wrap: wrap;
 }

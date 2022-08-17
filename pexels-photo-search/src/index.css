@@ -1,40 +1,35 @@
 /* Color Palettes */
-
-/* Pexels logo */
 html {
-  --pexelsColor: #07a081;
-  --pexelsColor70: #08a182b3;
-  --pexelsColor00: #08a18200;
-}
+  /* Pexels logo */
+  --pexels-color: #07a081;
+  --pexels-color70: #08a182b3;
+  --pexels-color00: #08a18200;
 
-/* https://visme.co/blog/website-color-schemes/#attachment_13239 */
-html {
+  /* https://visme.co/blog/website-color-schemes/#attachment_13239 */
   --darkest: #05396b;
   --darker: #389583;
   --base: #5cdb94;
   --lighter: #8de4af;
   --lightest: #edf4e0;
-}
 
-html {
-  --translucentBlackMask: rgba(0, 0, 0, 0.055);
-}
+  /* scrollbar */
+  --scrollbar-background-color: var(--base);
+  --scrollbar-thumb-color: var(--darker);
 
-html {
+  /* darken photos on hover */
+  --translucent-black-mask: rgb(0 0 0 / 5.5%);
+
+  /* other colors */
   --white: #ffffff;
   --yellow: #e4ef40;
   --blue: #00acd8;
-}
-
-html {
-  --reactIcon: #61dafb;
+  --react-icon: #61dafb;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -72,32 +67,21 @@ ul {
   opacity: 1; /* Firefox */
 }
 
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: var(--darker);
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: var(--darker);
-}
-
 /* scrollbar */
-html {
-  --scrollbarBG: var(--base);
-  --thumbBG: var(--darker);
-}
+
 body::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+
 body::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
+  background: var(--scrollbar-background-color);
 }
+
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
+  background-color: var(--scrollbar-thumb-color);
   border-radius: 6px;
-  border: 1px solid var(--scrollbarBG);
+  border: 1px solid var(--scrollbar-background-color);
   visibility: visible;
 }
 

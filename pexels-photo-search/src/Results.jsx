@@ -33,7 +33,7 @@ const Results = ({ response, displayedUrl }) => {
     );
 
     return (
-      <div className="Results">
+      <div className="results-component">
         <div className="resultsText">{resultsDescription}</div>
       </div>
     );

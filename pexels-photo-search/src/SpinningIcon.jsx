@@ -8,7 +8,7 @@ const SpinningIcon = ({ onClick, alt, title }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 841.9 595.3"
-      className="reactIcon spinEffect"
+      className="react-icon spin-effect"
       alt="React logo"
     >
       <g>
@@ -44,9 +44,14 @@ const SpinningIcon = ({ onClick, alt, title }) => {
   );
 
   return (
-    <div className="SpinningIcon" onClick={onClick} alt={alt} title={title}>
+    <div
+      className="spinning-icon-component"
+      onClick={onClick}
+      alt={alt}
+      title={title}
+    >
       {reactIcon}
-      {/* <img src={reactIcon} className="spinEffect reactIcon" alt="React logo" /> */}
+      {/* <img src={reactIcon} className="spin-effect reactIcon" alt="React logo" /> */}
       <div className="pulsar"></div>
       {pexelsCircle}
       {/* <img src={pexelsCircle} className="pulseEffect pexelsIcon" alt="Pexels logo" /> */}

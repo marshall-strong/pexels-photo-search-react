@@ -1,22 +1,22 @@
-.PersonalLinks {
+.personal-links-component {
   display: inherit;
   flex-direction: row;
   width: 100%;
 }
 
-.PersonalLinks > ul {
+.personal-links-component > ul {
   display: inherit;
   flex-direction: row;
   margin: 0;
   padding: 0;
 }
 
-.PersonalLinks > ul > li {
+.personal-links-component > ul > li {
   display: inline-block;
   font-size: calc(10px + 1vmin);
   list-style: none;
 }
 
-.PersonalLinks > ul > li > a {
+.personal-links-component > ul > li > a {
   display: inherit;
 }

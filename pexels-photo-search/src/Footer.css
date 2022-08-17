@@ -1,4 +1,4 @@
-.Footer {
+.footer-component {
   width: 100%;
   height: 10rem;
   z-index: 2;
@@ -6,59 +6,58 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  /* justify-content: space-between; */
   align-items: center;
   position: absolute;
   bottom: 0;
   font-size: calc(5px + 1vmin);
 }
 
-.Footer > .footerColumn {
+.footer-component > .footer-column {
   display: flex;
   flex-direction: column;
   justify-items: center;
 }
 
-.Footer > .footerColumn > .copyright {
+.footer-component > .footer-column > .copyright {
   margin-top: 0.5rem;
   margin-bottom: 0.25rem;
 }
 
-.Footer > .footerColumn > .PersonalLinks {
+.footer-component > .footer-column > .personal-links-component {
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
 }
 
-.Footer > .leftNav {
+.footer-component > .left-nav {
   display: inherit;
   margin-left: 1rem;
 }
 
-.Footer > .leftNav > .imgWrapper {
+.footer-component > .left-nav > .img-wrapper {
   display: inherit;
 }
 
-.Footer > .leftNav > a > .imgWrapper > img {
+.footer-component > .left-nav > a > .img-wrapper > img {
   display: inherit;
   width: 6rem;
 }
 
-.Footer > .centerNav {
+.footer-component > .center-nav {
   display: inherit;
   font-size: calc(4px + 1vmin);
 }
 
-.Footer > .rightNav {
+.footer-component > .right-nav {
   display: inherit;
   font-size: calc(4px + 1vmin);
 }
 
-.Footer > .rightNav > a {
+.footer-component > .right-nav > a {
   display: flex;
   flex-direction: row;
 }
 
-.Footer > .rightNav > a > .textContainer {
+.footer-component > .right-nav > a > .text-container {
   display: flex;
   flex-direction: column;
 }

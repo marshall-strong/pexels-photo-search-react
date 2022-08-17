@@ -6,7 +6,7 @@ const PrevPagePagination = ({ pageUrl, setNewUrl }) => {
   const paginateToPrevPage = () => setNewUrl(pageUrl);
 
   const iconPrevPageDisabled = (
-    <div className="PrevPagePagination">
+    <div className="prev-page-pagination-component">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
@@ -33,7 +33,7 @@ const PrevPagePagination = ({ pageUrl, setNewUrl }) => {
   // );
 
   const iconPrevPageEnabled = (
-    <div className="PrevPagePagination">
+    <div className="prev-page-pagination-component">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
@@ -97,9 +97,17 @@ const NextPagePagination = ({ pageUrl, setNewUrl }) => {
   );
 
   if (!pageUrl) {
-    return <div className="NextPagePagination">{iconPrevPageDisabled}</div>;
+    return (
+      <div className="next-page-pagination-component">
+        {iconPrevPageDisabled}
+      </div>
+    );
   } else {
-    return <div className="NextPagePagination">{iconPrevPageEnabled}</div>;
+    return (
+      <div className="next-page-pagination-component">
+        {iconPrevPageEnabled}
+      </div>
+    );
   }
 };
 

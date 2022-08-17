@@ -28,7 +28,7 @@ const PersonalLinks = () => {
   );
 
   return (
-    <div className="PersonalLinks">
+    <div className="personal-links-component">
       <ul>
         <li>
           <a
