@@ -19,19 +19,23 @@ svg.react-icon {
   width: 10rem;
   z-index: 1;
 }
+
 svg.react-icon > g {
   fill: var(--lightest);
 }
+
 svg.pexels-circle {
   position: absolute;
   height: 1.5rem;
   width: 1.5rem;
   z-index: 2;
 }
+
 svg.pexels-circle > circle {
   fill: var(--pexelsColor);
   stroke: var(--pexelsColor);
 }
+
 svg.pexels-circle > path {
   fill: var(--white);
 }
@@ -39,6 +43,7 @@ svg.pexels-circle > path {
 .spin-effect {
   animation: spin-effect infinite 6s linear;
 }
+
 /* @media (prefers-reduced-motion: no-preference) {
   .spinEffect {
     animation: spin-effect infinite 6s linear;
@@ -49,6 +54,7 @@ svg.pexels-circle > path {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -71,10 +77,12 @@ svg.pexels-circle > path {
     transform: scale(0.8);
     box-shadow: 0 0 0 0 var(--pexelsColor70);
   }
+
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 2.5rem var(--pexelsColor00);
   }
+
   100% {
     transform: scale(0.8);
     box-shadow: 0 0 0 0 var(--pexelsColor00);

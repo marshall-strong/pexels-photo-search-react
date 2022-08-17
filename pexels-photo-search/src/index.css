@@ -87,13 +87,16 @@ html {
   --scrollbarBG: var(--base);
   --thumbBG: var(--darker);
 }
+
 body::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+
 body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
+
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
   border-radius: 6px;
