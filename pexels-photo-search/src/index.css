@@ -17,7 +17,7 @@ html {
   --scrollbar-thumb-color: var(--darker);
 
   /* darken photos on hover */
-  --translucent-black-mask: rgb(0 0 0 / 0.055);
+  --translucent-black-mask: rgb(0 0 0 / 5.5%);
 
   /* other colors */
   --white: #ffffff;
