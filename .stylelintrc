@@ -1,7 +1,6 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
   "rules": {
-    "comment-empty-line-before": null,
     "selector-no-vendor-prefix": null,
     "no-descending-specificity": null,
     "declaration-block-no-redundant-longhand-properties": null,

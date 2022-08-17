@@ -2,14 +2,9 @@
   width: 100%;
   max-width: 80vw;
   font-size: calc(5px + 1vmin);
-  /* margin-top: 4rem; */
   display: flex;
   flex-direction: row;
-  /* position: absolute; */
-  /* top: 0; */
   height: 3rem;
-  /* border-color: var(--darker); */
-  /* border-width: 0.2rem; */
   background-color: var(--lightest);
 }
 
@@ -32,10 +27,6 @@ form#search-for-photos > input {
   outline: none;
   box-sizing: border-box;
 }
-
-/* form#search-for-photos > input[type="text"]:focus {
-  border: 3px solid #555;
-} */
 
 form#search-for-photos > input[type="text"]:focus::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */

@@ -39,9 +39,6 @@ div.photo-credit {
 .photo-component:hover {
   filter: contrast(80%);
   -webkit-filter: contrast(80%);
-  /* transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);   */
 }
 
 .photo-component:hover div.photo-credit {
