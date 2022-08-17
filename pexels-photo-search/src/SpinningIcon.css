@@ -32,8 +32,8 @@ svg.pexels-circle {
 }
 
 svg.pexels-circle > circle {
-  fill: var(--pexelsColor);
-  stroke: var(--pexelsColor);
+  fill: var(--pexels-color);
+  stroke: var(--pexels-color);
 }
 
 svg.pexels-circle > path {
@@ -61,9 +61,9 @@ svg.pexels-circle > path {
 }
 
 .pulsar {
-  background: var(--pexelsColor);
+  background: var(--pexels-color);
   border-radius: 50%;
-  box-shadow: 0 0 0 0 var(--pexelsColor);
+  box-shadow: 0 0 0 0 var(--pexels-color);
   margin: 1rem;
   height: 2rem;
   width: 2rem;
@@ -75,16 +75,16 @@ svg.pexels-circle > path {
 @keyframes pulse-pexels {
   0% {
     transform: scale(0.8);
-    box-shadow: 0 0 0 0 var(--pexelsColor70);
+    box-shadow: 0 0 0 0 var(--pexels-color70);
   }
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 2.5rem var(--pexelsColor00);
+    box-shadow: 0 0 0 2.5rem var(--pexels-color00);
   }
 
   100% {
     transform: scale(0.8);
-    box-shadow: 0 0 0 0 var(--pexelsColor00);
+    box-shadow: 0 0 0 0 var(--pexels-color00);
   }
 }

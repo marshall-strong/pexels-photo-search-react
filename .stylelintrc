@@ -2,7 +2,6 @@
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
   "rules": {
     "declaration-block-no-redundant-longhand-properties": null,
-    "custom-property-pattern": null,
     "property-no-vendor-prefix": null,
     "no-duplicate-selectors": null,
     "color-function-notation": null,

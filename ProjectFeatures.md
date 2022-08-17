@@ -141,7 +141,7 @@ file: `pexels-photo-search/src/Gallery.css`
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  background-color: var(--translucentBlackMask);
+  background-color: var(--translucent-black-mask);
 }
 
 .pagination-container {

@@ -2,9 +2,9 @@
 
 /* Pexels logo */
 html {
-  --pexelsColor: #07a081;
-  --pexelsColor70: #08a182b3;
-  --pexelsColor00: #08a18200;
+  --pexels-color: #07a081;
+  --pexels-color70: #08a182b3;
+  --pexels-color00: #08a18200;
 }
 
 /* https://visme.co/blog/website-color-schemes/#attachment_13239 */
@@ -17,7 +17,7 @@ html {
 }
 
 html {
-  --translucentBlackMask: rgba(0, 0, 0, 0.055);
+  --translucent-black-mask: rgba(0, 0, 0, 0.055);
 }
 
 html {
@@ -27,7 +27,7 @@ html {
 }
 
 html {
-  --reactIcon: #61dafb;
+  --react-icon: #61dafb;
 }
 
 body {
@@ -73,8 +73,8 @@ ul {
 
 /* scrollbar */
 html {
-  --scrollbarBG: var(--base);
-  --thumbBG: var(--darker);
+  --scrollbar-background-color: var(--base);
+  --scrollbar-thumb-color: var(--darker);
 }
 
 body::-webkit-scrollbar {
@@ -83,13 +83,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
+  background: var(--scrollbar-background-color);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
+  background-color: var(--scrollbar-thumb-color);
   border-radius: 6px;
-  border: 1px solid var(--scrollbarBG);
+  border: 1px solid var(--scrollbar-background-color);
   visibility: visible;
 }
 
