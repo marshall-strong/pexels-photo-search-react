@@ -68,11 +68,11 @@ svg.pexels-circle > path {
   height: 2rem;
   width: 2rem;
   transform: scale(1);
-  animation: pulse-pexels 2s infinite;
+  animation: pulse-effect 2s infinite;
   z-index: 1;
 }
 
-@keyframes pulse-pexels {
+@keyframes pulse-effect {
   0% {
     transform: scale(0.8);
     box-shadow: 0 0 0 0 var(--pexels-color70);

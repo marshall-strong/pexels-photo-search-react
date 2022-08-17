@@ -26,7 +26,7 @@ const SpinningIcon = ({ onClick, alt, title }) => {
       width="32px"
       height="32px"
       viewBox="0 0 32 32"
-      className="pulseEffect pexelsCircle"
+      className="pulse-effect pexels-circle"
       alt="Pexels logo"
     >
       <circle
