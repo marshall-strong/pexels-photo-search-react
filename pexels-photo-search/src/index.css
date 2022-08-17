@@ -1,32 +1,28 @@
 /* Color Palettes */
-
-/* Pexels logo */
 html {
+  /* Pexels logo */
   --pexels-color: #07a081;
   --pexels-color70: #08a182b3;
   --pexels-color00: #08a18200;
-}
 
-/* https://visme.co/blog/website-color-schemes/#attachment_13239 */
-html {
+  /* https://visme.co/blog/website-color-schemes/#attachment_13239 */
   --darkest: #05396b;
   --darker: #389583;
   --base: #5cdb94;
   --lighter: #8de4af;
   --lightest: #edf4e0;
-}
 
-html {
+  /* scrollbar */
+  --scrollbar-background-color: var(--base);
+  --scrollbar-thumb-color: var(--darker);
+
+  /* darken photos on hover */
   --translucent-black-mask: rgba(0, 0, 0, 0.055);
-}
 
-html {
+  /* other colors */
   --white: #ffffff;
   --yellow: #e4ef40;
   --blue: #00acd8;
-}
-
-html {
   --react-icon: #61dafb;
 }
 
@@ -72,10 +68,6 @@ ul {
 }
 
 /* scrollbar */
-html {
-  --scrollbar-background-color: var(--base);
-  --scrollbar-thumb-color: var(--darker);
-}
 
 body::-webkit-scrollbar {
   width: 10px;
