@@ -34,16 +34,6 @@ form#search-for-photos > input[type="text"]:focus::placeholder {
   opacity: 1; /* Firefox */
 }
 
-form#search-for-photos > input[type="text"]:focus:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: var(--lightest);
-}
-
-form#search-for-photos > input[type="text"]:focus::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: var(--lightest);
-}
-
 form#search-for-photos > input[type="text"],
 textarea {
   color: var(--darkest);

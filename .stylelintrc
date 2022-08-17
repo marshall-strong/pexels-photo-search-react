@@ -1,7 +1,6 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
   "rules": {
-    "selector-no-vendor-prefix": null,
     "no-descending-specificity": null,
     "declaration-block-no-redundant-longhand-properties": null,
     "font-family-name-quotes": null,
