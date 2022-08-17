@@ -19,17 +19,17 @@ const Splash = ({ attributionUrl, returnToHomepage }) => {
   // );
 
   return (
-    <div className="Splash">
-      <div className="matrixLayout">
-        <ul className="row middleRow">
-          <li className="col leftCol">
+    <div className="splash-component">
+      <div className="matrix-layout">
+        <ul className="row middle-row">
+          <li className="col left-col">
             React Photo Search
             {/* <span>&#x2190;</span> */}
           </li>
-          <li className="col centerCol">
+          <li className="col center-col">
             <SpinningIcon />
           </li>
-          <li className="col rightCol">
+          <li className="col right-col">
             Powered by Pexels
             {/* <span>&#x2192;</span> */}
           </li>

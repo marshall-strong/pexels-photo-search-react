@@ -93,7 +93,7 @@ const App = () => {
   }, [displayedUrl, newUrl, userInput, response]);
 
   return (
-    <div className="App">
+    <div className="app-component">
       <Navbar
         attributionUrl={attributionUrl}
         returnToHomepage={returnToHomepage}

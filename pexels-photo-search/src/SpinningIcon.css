@@ -1,4 +1,4 @@
-.SpinningIcon {
+.spinning-icon-component {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,34 +9,34 @@
   z-index: 1;
 }
 
-.SpinningIcon:hover {
+.spinning-icon-component:hover {
   cursor: pointer;
 }
 
-svg.reactIcon {
+svg.react-icon {
   position: absolute;
   height: 10rem;
   width: 10rem;
   z-index: 1;
 }
-svg.reactIcon > g {
+svg.react-icon > g {
   fill: var(--lightest);
 }
-svg.pexelsCircle {
+svg.pexels-circle {
   position: absolute;
   height: 1.5rem;
   width: 1.5rem;
   z-index: 2;
 }
-svg.pexelsCircle > circle {
+svg.pexels-circle > circle {
   fill: var(--pexelsColor);
   stroke: var(--pexelsColor);
 }
-svg.pexelsCircle > path {
+svg.pexels-circle > path {
   fill: var(--white);
 }
 
-.spinEffect {
+.spin-effect {
   animation: spin-effect infinite 6s linear;
 }
 /* @media (prefers-reduced-motion: no-preference) {

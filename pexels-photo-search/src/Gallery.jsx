@@ -4,8 +4,8 @@ import "./Gallery.css";
 
 const Gallery = ({ response, userInput, returnToHomepage }) => {
   return (
-    <div className="Gallery">
-      <div className="galleryContainer">
+    <div className="gallery-component">
+      <div className="gallery-container">
         {!response ? (
           <div>
             <p>Waiting on Pexels API response...</p>
@@ -25,14 +25,14 @@ const Gallery = ({ response, userInput, returnToHomepage }) => {
             <button onClick={returnToHomepage}>Return to Homepage</button>
           </div>
         ) : !response.photos ? (
-          <div className="paginationContainer">
-            <ul className="galleryPhotos">
+          <div className="pagination-container">
+            <ul className="gallery-photos">
               <li className="Photo"></li>
             </ul>
           </div>
         ) : (
-          <div className="paginationContainer">
-            <ul className="galleryPhotos">
+          <div className="pagination-container">
+            <ul className="gallery-photos">
               {response.photos.map((photoData, index) => (
                 <React.Fragment key={index}>
                   <Photo photoData={photoData} />

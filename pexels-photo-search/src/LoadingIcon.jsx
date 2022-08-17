@@ -4,9 +4,9 @@ import "./LoadingIcon.css";
 
 const LoadingIcon = () => {
   return (
-    <div className="LoadingIcon">
+    <div className="loading-icon-component">
       <p>Loading...</p>
-      <img src={reactIcon} className="spinningLogo" alt="react logo" />
+      <img src={reactIcon} className="spinning-logo" alt="react logo" />
     </div>
   );
 };

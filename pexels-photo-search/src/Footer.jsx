@@ -17,15 +17,15 @@ const Footer = ({ attributionUrl }) => {
   // );
 
   return (
-    <div className="Footer" id="Footer">
-      <div className="footerColumn">
+    <div className=".footer-component" id="Footer">
+      <div className="footer-column">
         <div className="copyright">
           &copy;
           {" 2022 by Marshall Strong"}
         </div>
         <PersonalLinks />
       </div>
-      {/* <div className="leftNav">
+      {/* <div className="left-nav">
         <PersonalLinks />
         <a
           href={attributionUrl}
@@ -33,7 +33,7 @@ const Footer = ({ attributionUrl }) => {
           target="_blank"
           title="Start building with the power of Pexels!"
         >
-          <div className="imgWrapper">
+          <div className="img-wrapper">
             <img
               src={pexelsColoredLogo}
               className="pexelsIcon"
@@ -42,7 +42,7 @@ const Footer = ({ attributionUrl }) => {
           </div>
         </a>
       </div>
-      <div className="centerNav">
+      <div className="center-nav">
         <div className="copyright">
           &copy;
           {" 2022 by "}
@@ -56,14 +56,14 @@ const Footer = ({ attributionUrl }) => {
           </a>
         </div>
       </div>
-      <div className="rightNav">
+      <div className="right-nav">
         <a
           href="https://github.com/marshall-strong/react-photo-search"
           rel="noopener noreferrer"
           target="_blank"
           title="GitHub README"
         >
-          <div className="textContainer">
+          <div className="text-container">
             <div>Wanna find out how this site was made? &#129488;&#128161;</div>
             <div>Check out the README on GitHub &#128433;&#128073;</div>
             <div>Thanks for visiting! &#129505;</div>

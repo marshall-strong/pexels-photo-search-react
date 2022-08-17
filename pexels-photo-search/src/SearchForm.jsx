@@ -18,7 +18,7 @@ const SearchForm = ({ setNewUrl, userInput, setUserInput }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      className="icon enabled iconSearch"
+      className="icon enabled icon-search"
       onClick={handleSubmit}
       alt="Search"
       title="Search for Photos"
@@ -28,7 +28,7 @@ const SearchForm = ({ setNewUrl, userInput, setUserInput }) => {
   );
 
   return (
-    <div className="SearchForm">
+    <div className="search-form-component">
       <form onSubmit={handleSubmit} id="search-for-photos">
         <input
           type="text"

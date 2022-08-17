@@ -1,19 +1,19 @@
-li.Photo {
+li.photo-component {
   height: 35vh;
   flex-grow: 1;
 }
 
-li.Photo:last-child {
+li.photo-component:last-child {
   flex-grow: 10;
 }
 
-li.Photo > a {
+li.photo-component > a {
   height: 100%;
   width: 100%;
   display: inherit;
 }
 
-li.Photo > a > img {
+li.photo-component > a > img {
   max-height: 100%;
   min-width: 100%;
   object-fit: cover;
@@ -25,7 +25,7 @@ li.Photo > a > img {
   -moz-transition: all 0.2s;
 }
 
-div.photoCredit {
+div.photo-credit {
   font-size: calc(4px + 1vmin);
   color: var(--lightest);
   margin-top: -3rem;
@@ -36,7 +36,7 @@ div.photoCredit {
   visibility: hidden;
 }
 
-.Photo:hover {
+.photo-component:hover {
   filter: contrast(80%);
   -webkit-filter: contrast(80%);
   /* transform: scale(1.05);
@@ -44,10 +44,10 @@ div.photoCredit {
   -moz-transform: scale(1.05);   */
 }
 
-.Photo:hover div.photoCredit {
+.photo-component:hover div.photo-credit {
   visibility: visible;
 }
 
-.photographerUrl:hover {
+.photographer-url:hover {
   color: var(--yellow);
 }

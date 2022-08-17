@@ -17,7 +17,7 @@ const PaginationBar = ({ response, setNewUrl }) => {
     );
 
     return (
-      <div className="PaginationBar">
+      <div className="pagination-bar-component">
         <Pagination
           prevOrNext={"prev"}
           setNewUrl={setNewUrl}

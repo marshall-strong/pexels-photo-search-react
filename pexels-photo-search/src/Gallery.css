@@ -1,4 +1,4 @@
-.Gallery {
+.gallery-component {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.galleryContainer {
+.gallery-container {
   display: inherit;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -19,7 +19,7 @@
   background-color: var(--translucentBlackMask);
 }
 
-.paginationContainer {
+.pagination-container {
   display: inherit;
   flex-direction: inherit;
   flex-wrap: inherit;
@@ -29,7 +29,7 @@
   height: max-content;
 }
 
-ul.galleryPhotos {
+ul.gallery-photos {
   display: flex;
   flex-wrap: wrap;
 }
