@@ -34,8 +34,13 @@ The app is deployed directly from GitHub via Netlify, and the live site can be v
 
 [stylelint tabs](https://www.one-tab.com/page/DcZJXxmaQE2Sc1Ae6lrT5g)
 
+Run `stylelint` on all CSS files, fixing problems where possible:
+
+```bash
+npx stylelint "pexels-photo-search/src/**/*.css" --fix
+
+```
+
 ### Pre-commit
 
 [pre-commit tabs](https://www.one-tab.com/page/KgV3lUgYQ-CE0JRg4Yq74g)
-
-test
