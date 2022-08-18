@@ -41,8 +41,8 @@ a {
 
 a:hover {
   color: var(--lightest);
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 code {
@@ -55,9 +55,9 @@ div {
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 /* input field placeholder text color */
@@ -80,18 +80,18 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
+  border: 1px solid var(--scrollbar-background-color);
   background-color: var(--scrollbar-thumb-color);
   border-radius: 6px;
-  border: 1px solid var(--scrollbar-background-color);
   visibility: visible;
 }
 
 .icon {
-  display: inherit;
-  height: 2rem;
-  width: 2rem;
-  margin: 0.5rem;
   z-index: 2;
+  display: inherit;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem;
 }
 
 svg.icon > path {

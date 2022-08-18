@@ -1,12 +1,12 @@
 .results-component {
   display: flex;
+  width: 100%;
+  height: 2rem;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  font-size: calc(5px + 1vmin);
-  height: 2rem;
+  justify-content: center;
   color: var(--darker);
+  font-size: calc(5px + 1vmin);
 }
