@@ -1,16 +1,16 @@
 .pagination-bar-component {
   display: flex;
+  width: 100%;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  font-size: calc(5px + 1vmin);
+  justify-content: space-between;
   color: var(--darker);
+  font-size: calc(5px + 1vmin);
 }
 
 .pagination-bar-component > button {
-  margin-left: 1rem;
   margin-right: 1rem;
+  margin-left: 1rem;
 }

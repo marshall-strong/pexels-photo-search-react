@@ -1,14 +1,14 @@
 .personal-links-component {
   display: inherit;
-  flex-direction: row;
   width: 100%;
+  flex-direction: row;
 }
 
 .personal-links-component > ul {
   display: inherit;
   flex-direction: row;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .personal-links-component > ul > li {

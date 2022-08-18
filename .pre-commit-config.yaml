@@ -24,7 +24,7 @@ repos:
           # stylelint itself needs to be here when using additional_dependencies.
           - stylelint@latest
           - stylelint-config-standard@latest
-          - stylelint-order@latest
+          - stylelint-config-idiomatic-order@latest
           - stylelint-config-prettier@latest
           # Package names starting with `@` need to be quoted.
           # - "@scope/my-awesome-plugin@0.12.0"

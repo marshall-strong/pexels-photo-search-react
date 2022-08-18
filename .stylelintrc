@@ -1,5 +1,9 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-config-idiomatic-order"
+  ],
   "rules": {
     "declaration-block-no-redundant-longhand-properties": null,
     "color-hex-length": "long"
