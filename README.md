@@ -6,17 +6,15 @@
     - [User Stories](#user-stories)
     - [Extras](#extras)
   - [Project Features](#project-features)
-    - [the `Gallery` component displays photos in a masonry layout, where photos fill out rows while preserving aspect ratio](#the-gallery-component-displays-photos-in-a-masonry-layout-where-photos-fill-out-rows-while-preserving-aspect-ratio)
-    - [the home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`](#the-home-screen-retrieves-photographs-from-the-pexels-curated-photos-endpoint-then-displays-those-photos-in-the-gallery)
-    - [the `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`](#the-searchform-component-accepts-text-input-from-the-user-and-retrieves-relevent-photographs-from-the-pexels-search-for-photos-endpoing-then-displays-those-photos-in-the-gallery)
-    - [hovering over a `Photo` in the `Gallery` component brings up the photographer's name and a link to more of their work on Pexels](#hovering-over-a-photo-in-the-gallery-component-brings-up-the-photographers-name-and-a-link-to-more-of-their-work-on-pexels)
-    - [the `PaginationBar` component allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page](#the-paginationbar-component-allows-the-user-to-paginate-through-photos-10-at-a-time-with-no-page-refresh-and-contains-next-page-and-previous-page-buttons-that-are-automatically-disabled-if-there-is-no-next-or-previous-page)
-    - [LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed](#localstorage-retains-the-users-search-query-andor-page-number-so-that-the-gallery-photos-are-not-reset-if-the-page-is-refreshed)
-    - [Single-Page React Application with server-side rendering](#single-page-react-application-with-server-side-rendering)
+    - [Displays `Photo` components in the `Gallery` using a masonry layout](#displays-photo-components-in-the-gallery-using-a-masonry-layout)
+    - [Displays photos from the Pexels "Curated Photos" endpoint on the home screen](#displays-photos-from-the-pexels-curated-photos-endpoint-on-the-home-screen)
+    - [`SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint](#searchform-component-gets-a-query-string-from-the-user-and-displays-relevant-photos-from-the-pexels-search-for-photos-endpoint)
+    - [`Photo` components display photographer name and url on hover](#photo-components-display-photographer-name-and-url-on-hover)
+    - [Paginate through `Gallery` photos](#paginate-through-gallery-photos)
+    - [LocalStorage retains user's current page and search query on page refresh](#localstorage-retains-users-current-page-and-search-query-on-page-refresh)
+    - [Server-side rendering as a Single-Page React App](#server-side-rendering-as-a-single-page-react-app)
     - [Netlify Functions Conceal the API key from the end user](#netlify-functions-conceal-the-api-key-from-the-end-user)
-    - [fancy Spinning Logo using CSS animation](#fancy-spinning-logo-using-css-animation)
-    - [ToDo: add placeholdercontent for images before they are loaded](#todo-add-placeholdercontent-for-images-before-they-are-loaded)
-    - [ToDo: add tests, and instructions for running them in Development mode](#todo-add-tests-and-instructions-for-running-them-in-development-mode)
+    - [Logo with CSS animation](#logo-with-css-animation)
   - [Development Mode](#development-mode)
     - [Create Local Clone of GitHub Repository](#create-local-clone-of-github-repository)
       - [Cloning the Repository with GitHub CLI](#cloning-the-repository-with-github-cli)
@@ -28,9 +26,13 @@
     - [`pre-commit`](#pre-commit)
     - [`stylelint`](#stylelint)
   - [Production Deployment](#production-deployment)
-  - [References and Acknowledgments](#references-and-acknowledgments)
-    - [Resources](#resources)
+  - [Resources](#resources)
+    - [Pexels](#pexels)
+    - [Netlify](#netlify)
+    - [Create React App](#create-react-app)
+    - [Boxy SVG](#boxy-svg)
     - [How-Tos](#how-tos)
+  - [Future Development Work](#future-development-work)
 
 This project is a website that lets users browse and search for photos from [Pexels](https://www.pexels.com/), a free stock photo and video website that anyone can use or contribute to.
 
@@ -81,31 +83,37 @@ We need you to build a website to let users browse photos from [Pexels](https://
 
 ## Project Features
 
-### the `Gallery` component displays photos in a masonry layout, where photos fill out rows while preserving aspect ratio
+### Displays `Photo` components in the `Gallery` using a masonry layout
 
-### the home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`
+The `Gallery` component displays photos in a masonry layout, where photos fill out rows while preserving aspect ratio.
 
-### the `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`
+### Displays photos from the Pexels "Curated Photos" endpoint on the home screen
 
-### hovering over a `Photo` in the `Gallery` component brings up the photographer's name and a link to more of their work on Pexels
+The home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`.
 
-### the `PaginationBar` component allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page
+### `SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint
 
-### LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed
+The `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`
 
-### Single-Page React Application with server-side rendering
+### `Photo` components display photographer name and url on hover
+
+Hovering over a `Photo` in the `Gallery` component brings up the photographer's name and a link to more of their work on Pexels
+
+### Paginate through `Gallery` photos
+
+the `PaginationBar` component allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page
+
+### LocalStorage retains user's current page and search query on page refresh
+
+LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed
+
+### Server-side rendering as a Single-Page React App
 
 ### Netlify Functions Conceal the API key from the end user
 
 Leverage continuous deployment in Netlify to kick off an _automated build process_ that generates site assets.
 
-Visit your demo project’s URL after Netlify uploads site assets to a content delivery network (CDN) and makes your demo site available.
-
-### fancy Spinning Logo using CSS animation
-
-### ToDo: add placeholdercontent for images before they are loaded
-
-### ToDo: add tests, and instructions for running them in Development mode
+### Logo with CSS animation
 
 ## Development Mode
 
@@ -222,20 +230,25 @@ Run `stylelint` on all CSS files, fixing problems where possible:
 This project is deployed to Production directly from GitHub using Netlify.
 A live version of the site can be viewed here: [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).
 
-## References and Acknowledgments
+## Resources
 
-This project would not have been possible without assistance from the following resources and how-to articles:
+This project would not have been possible without assistance from the following:
 
-### Resources
+### [Pexels](https://www.pexels.com/api)
 
-- [Pexels](https://www.pexels.com/api)
-  - Pexels provides access to their entire photo and video library for free via and API that powers this entire application
-- [Netlify](https://docs.netlify.com/)
-  - Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.
-- [Create React App](https://create-react-app.dev/)
-  - Create React App takes care of setting up and configuring a new React application with useful defaults
-- [Boxy SVG](https://boxy-svg.com/)
-  - Free, browser-based tool for editing SVG elements
+Pexels provides access to their entire photo and video library for free. The Pexels API powers this entire application.
+
+### [Netlify](https://docs.netlify.com/)
+
+Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.
+
+### [Create React App](https://create-react-app.dev/)
+
+Create React App takes care of setting up and configuring a new React application with useful defaults
+
+### [Boxy SVG](https://boxy-svg.com/)
+
+Free, browser-based tool for editing SVG elements
 
 ### How-Tos
 
@@ -247,3 +260,15 @@ This project would not have been possible without assistance from the following 
 - ["Cool and Fresh" color palette](https://visme.co/blog/website-color-schemes/#attachment_13239)
 - [CSS Pulse Effect](https://www.florin-pop.com/blog/2019/03/css-pulse-effect/)
 - [Adaptive Photo Layout with Flexbox](https://css-tricks.com/adaptive-photo-layout-with-flexbox/)
+
+## Future Development Work
+
+The following features are not currently implemented, but will be added as time allows:
+
+- configure `pre-commit` so that `stylelint` tries automatically fixing errors (when possible)
+- add placeholdercontent for images before they are loaded
+- add tests, and instructions for running them in Development mode
+- add additional project information to the `Footer`
+- optimize website for mobile
+- add a hamburger icon to the `Navbar` that displays a dropdown menu when clicked
+- add options for a light mode and a dark mode
