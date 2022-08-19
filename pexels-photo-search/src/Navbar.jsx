@@ -18,7 +18,7 @@ const Navbar = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
-      className="icon enabled iconHome"
+      className="icon enabled home-icon"
       onClick={returnToHomepage}
       alt="Return to Homepage"
       title="Return to Homepage"
@@ -29,7 +29,7 @@ const Navbar = ({
 
   return (
     <div className="navbar-component">
-      <div className="navbar-row">
+      <div className="navbar-row top-row">
         <div className="left-nav">
           <SpinningIcon
             onClick={returnToHomepage}
@@ -71,6 +71,12 @@ const Navbar = ({
               </div>
             </div>
           </div>
+        </div>
+        <div className="right-nav">{iconHome}</div>
+      </div>
+      <div className="navbar-row">
+        <div className="left-nav"></div>
+        <div className="center-nav">
           <SearchForm
             setNewUrl={setNewUrl}
             userInput={userInput}
@@ -79,7 +85,7 @@ const Navbar = ({
           />
           <Results response={response} displayedUrl={displayedUrl} />
         </div>
-        <div className="right-nav">{iconHome}</div>
+        <div className="right-nav"></div>
       </div>
       <div className="navbar-row">
         <PaginationBar response={response} setNewUrl={setNewUrl} />
