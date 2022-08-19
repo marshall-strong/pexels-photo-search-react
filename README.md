@@ -7,24 +7,26 @@
     - [Extras](#extras)
   - [Project Features](#project-features)
     - [the `Gallery` component displays photos in a masonry layout, where photos fill out rows while preserving aspect ratio](#the-gallery-component-displays-photos-in-a-masonry-layout-where-photos-fill-out-rows-while-preserving-aspect-ratio)
-    - [absent a search query from the user, the home screen retrieves photographs from the Pexels "curated photos" resource, then displays the photos in the `Gallery`](#absent-a-search-query-from-the-user-the-home-screen-retrieves-photographs-from-the-pexels-curated-photos-resource-then-displays-the-photos-in-the-gallery)
-    - [the `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "photo search" resource, then displays the photos in the `Gallery`](#the-searchform-component-accepts-text-input-from-the-user-and-retrieves-relevent-photographs-from-the-pexels-photo-search-resource-then-displays-the-photos-in-the-gallery)
+    - [the home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`](#the-home-screen-retrieves-photographs-from-the-pexels-curated-photos-endpoint-then-displays-those-photos-in-the-gallery)
+    - [the `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`](#the-searchform-component-accepts-text-input-from-the-user-and-retrieves-relevent-photographs-from-the-pexels-search-for-photos-endpoing-then-displays-those-photos-in-the-gallery)
     - [hovering over a `Photo` in the `Gallery` component brings up the photographer's name and a link to more of their work on Pexels](#hovering-over-a-photo-in-the-gallery-component-brings-up-the-photographers-name-and-a-link-to-more-of-their-work-on-pexels)
     - [the `PaginationBar` component allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page](#the-paginationbar-component-allows-the-user-to-paginate-through-photos-10-at-a-time-with-no-page-refresh-and-contains-next-page-and-previous-page-buttons-that-are-automatically-disabled-if-there-is-no-next-or-previous-page)
     - [LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed](#localstorage-retains-the-users-search-query-andor-page-number-so-that-the-gallery-photos-are-not-reset-if-the-page-is-refreshed)
-    - [Server-Side rendering with React](#server-side-rendering-with-react)
-    - [Conceal the Pexels API key from the end user using Netlify](#conceal-the-pexels-api-key-from-the-end-user-using-netlify)
+    - [Single-Page React Application with server-side rendering](#single-page-react-application-with-server-side-rendering)
+    - [Netlify Functions Conceal the API key from the end user](#netlify-functions-conceal-the-api-key-from-the-end-user)
     - [fancy Spinning Logo using CSS animation](#fancy-spinning-logo-using-css-animation)
-    - [ToDo: add placeholder content for before an image loads](#todo-add-placeholder-content-for-before-an-image-loads)
+    - [ToDo: add placeholdercontent for images before they are loaded](#todo-add-placeholdercontent-for-images-before-they-are-loaded)
     - [ToDo: add tests, and instructions for running them in Development mode](#todo-add-tests-and-instructions-for-running-them-in-development-mode)
   - [Development Mode](#development-mode)
+    - [Create Local Clone of GitHub Repository](#create-local-clone-of-github-repository)
+      - [Cloning the Repository with GitHub CLI](#cloning-the-repository-with-github-cli)
     - [Getting a Pexels API key](#getting-a-pexels-api-key)
     - [Storing an API key in a `.env` file](#storing-an-api-key-in-a-env-file)
     - [Install Project Dependencies with `npm install`](#install-project-dependencies-with-npm-install)
     - [Run the Project with `npm start`](#run-the-project-with-npm-start)
   - [Project Style](#project-style)
-    - [Pre-commit](#pre-commit)
-    - [Stylelint](#stylelint)
+    - [`pre-commit`](#pre-commit)
+    - [`stylelint`](#stylelint)
   - [Production Deployment](#production-deployment)
   - [References and Acknowledgments](#references-and-acknowledgments)
     - [Resources](#resources)
@@ -81,9 +83,9 @@ We need you to build a website to let users browse photos from [Pexels](https://
 
 ### the `Gallery` component displays photos in a masonry layout, where photos fill out rows while preserving aspect ratio
 
-### absent a search query from the user, the home screen retrieves photographs from the Pexels "curated photos" resource, then displays the photos in the `Gallery`
+### the home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`
 
-### the `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "photo search" resource, then displays the photos in the `Gallery`
+### the `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`
 
 ### hovering over a `Photo` in the `Gallery` component brings up the photographer's name and a link to more of their work on Pexels
 
@@ -91,13 +93,17 @@ We need you to build a website to let users browse photos from [Pexels](https://
 
 ### LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed
 
-### Server-Side rendering with React
+### Single-Page React Application with server-side rendering
 
-### Conceal the Pexels API key from the end user using Netlify
+### Netlify Functions Conceal the API key from the end user
+
+Leverage continuous deployment in Netlify to kick off an _automated build process_ that generates site assets.
+
+Visit your demo project’s URL after Netlify uploads site assets to a content delivery network (CDN) and makes your demo site available.
 
 ### fancy Spinning Logo using CSS animation
 
-### ToDo: add placeholder content for before an image loads
+### ToDo: add placeholdercontent for images before they are loaded
 
 ### ToDo: add tests, and instructions for running them in Development mode
 
@@ -105,10 +111,21 @@ We need you to build a website to let users browse photos from [Pexels](https://
 
 Developers who wish to run this project locally can do so using the following steps, described in greater detail below:
 
+- Create a local clone of the `react-photo-search` GitHub repository
 - Get a Pexels API key
 - Store your API key as an environment variable in a `.env` file
 - Install project dependencies using `npm install`
 - Compile and run the project in Development mode using `npm start` to start Netlify Dev with Create React App
+
+### Create Local Clone of GitHub Repository
+
+The GitHub repository for this project can be found here: <https://github.com/marshall-strong/react-photo-search>
+
+Click the "Code" button and select which method you'd like to use to clone the repository: HTTPS, SSH, the GitHub CLI, or Download a ZIP file.
+
+#### Cloning the Repository with GitHub CLI
+
+`gh repo clone marshall-strong/react-photo-search`
 
 ### Getting a Pexels API key
 
@@ -147,7 +164,7 @@ In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz0123
 
 The result should be the following:
 
-file: `pexels-photo-search/.env`
+_file: `pexels-photo-search/.env`_
 
 ```node
 PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
@@ -166,11 +183,33 @@ In Development mode, Netlify Dev will get the API key from this `.env` configura
 
 ## Project Style
 
-### Pre-commit
+### `pre-commit`
 
 [pre-commit tabs](https://www.one-tab.com/page/KgV3lUgYQ-CE0JRg4Yq74g)
 
-### Stylelint
+[pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks.
+
+pre-commit runs Git hook scripts (like linters) before each Git commit and prompts the user to fix any issues that are found before the commit can be saved.
+
+pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
+
+pre-commit requires [python](https://docs.python-guide.org/starting/install3/linux/) in order to run.
+
+_Log files from installing and configuring `pre-commit`:_
+
+```bash
+marshall-strong@ideapad3:~$ pre-commit --version
+pre-commit 2.13.0
+marshall-strong@ideapad3:~$ pip install pre-commit --upgrade
+marshall-strong@ideapad3:~$ cd GitHub/react-photo-search
+marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit sample-config
+marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit run --all-files
+marshall-strong@ideapad3:~/GitHub/react-photo-search$
+```
+
+### `stylelint`
 
 [stylelint tabs](https://www.one-tab.com/page/DcZJXxmaQE2Sc1Ae6lrT5g)
 
