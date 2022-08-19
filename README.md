@@ -17,21 +17,17 @@
     - [&#9658; Logo with CSS animation](#-logo-with-css-animation)
   - [Development Mode](#development-mode)
     - [Create Local Clone of GitHub Repository](#create-local-clone-of-github-repository)
-      - [Cloning the Repository with GitHub CLI](#cloning-the-repository-with-github-cli)
     - [Getting a Pexels API key](#getting-a-pexels-api-key)
     - [Storing an API key in a `.env` file](#storing-an-api-key-in-a-env-file)
     - [Install Project Dependencies with `npm install`](#install-project-dependencies-with-npm-install)
     - [Run the Project with `npm start`](#run-the-project-with-npm-start)
   - [Project Style](#project-style)
     - [`pre-commit`](#pre-commit)
+    - [`Prettier`](#prettier)
     - [`stylelint`](#stylelint)
   - [Production Deployment](#production-deployment)
   - [Crucial Thanks](#crucial-thanks)
-    - [Pexels](#pexels)
-    - [Netlify](#netlify)
-    - [Create React App](#create-react-app)
-    - [Boxy SVG](#boxy-svg)
-    - [Resources and How-Tos](#resources-and-how-tos)
+  - [Resources and How-Tos](#resources-and-how-tos)
   - [Future Development Work](#future-development-work)
 
 This project is a website that lets users browse and search for photos from [Pexels](https://www.pexels.com/), a free stock photo and video website that anyone can use or contribute to.
@@ -131,7 +127,7 @@ The GitHub repository for this project can be found here: <https://github.com/ma
 
 Click the "Code" button and select which method you'd like to use to clone the repository: HTTPS, SSH, the GitHub CLI, or Download a ZIP file.
 
-#### Cloning the Repository with GitHub CLI
+_Cloning the Repository with GitHub CLI:_
 
 `gh repo clone marshall-strong/react-photo-search`
 
@@ -217,6 +213,8 @@ marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit run --all-files
 marshall-strong@ideapad3:~/GitHub/react-photo-search$
 ```
 
+### `Prettier`
+
 ### `stylelint`
 
 [stylelint tabs](https://www.one-tab.com/page/DcZJXxmaQE2Sc1Ae6lrT5g)
@@ -236,23 +234,23 @@ In Production mode, Netlify expects to recieve the Pexels API key as an environm
 
 This project would not have been possible without assistance from the following:
 
-### [Pexels](https://www.pexels.com/api)
+&#9658; [Pexels](https://www.pexels.com/api)
 
 Pexels provides access to their entire photo and video library for free. The Pexels API powers this entire application.
 
-### [Netlify](https://docs.netlify.com/)
+&#9658; [Netlify](https://docs.netlify.com/)
 
 Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.
 
-### [Create React App](https://create-react-app.dev/)
+&#9658; [Create React App](https://create-react-app.dev/)
 
 Create React App takes care of setting up and configuring a new React application with useful defaults
 
-### [Boxy SVG](https://boxy-svg.com/)
+&#9658; [Boxy SVG](https://boxy-svg.com/)
 
 A free, browser-based tool for editing SVG elements
 
-### Resources and How-Tos
+## Resources and How-Tos
 
 - [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/)
 - [Netlify Blog: How to deploy React Apps in less than 30 Seconds](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
