@@ -1,66 +1,60 @@
 # REACT-PHOTO-SEARCH
 
-## Live Site (Production Mode)
+- [REACT-PHOTO-SEARCH](#react-photo-search)
+  - [Project Prompt](#project-prompt)
+    - [MVP Requirements](#mvp-requirements)
+    - [User Stories](#user-stories)
+    - [Extras](#extras)
+  - [Project Features](#project-features)
+    - [Displays `Photo` components in the `Gallery` using a masonry layout](#displays-photo-components-in-the-gallery-using-a-masonry-layout)
+    - [Displays photos from the Pexels "Curated Photos" endpoint on the home screen](#displays-photos-from-the-pexels-curated-photos-endpoint-on-the-home-screen)
+    - [`SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint](#searchform-component-gets-a-query-string-from-the-user-and-displays-relevant-photos-from-the-pexels-search-for-photos-endpoint)
+    - [`Photo` components display photographer name and url on hover](#photo-components-display-photographer-name-and-url-on-hover)
+    - [Paginate through `Gallery` photos](#paginate-through-gallery-photos)
+    - [LocalStorage retains user's current page and search query on page refresh](#localstorage-retains-users-current-page-and-search-query-on-page-refresh)
+    - [Server-side rendering as a Single-Page React App](#server-side-rendering-as-a-single-page-react-app)
+    - [Netlify Functions Conceal the API key from the end user](#netlify-functions-conceal-the-api-key-from-the-end-user)
+    - [Logo with CSS animation](#logo-with-css-animation)
+  - [Development Mode](#development-mode)
+    - [Create Local Clone of GitHub Repository](#create-local-clone-of-github-repository)
+      - [Cloning the Repository with GitHub CLI](#cloning-the-repository-with-github-cli)
+    - [Getting a Pexels API key](#getting-a-pexels-api-key)
+    - [Storing an API key in a `.env` file](#storing-an-api-key-in-a-env-file)
+    - [Install Project Dependencies with `npm install`](#install-project-dependencies-with-npm-install)
+    - [Run the Project with `npm start`](#run-the-project-with-npm-start)
+  - [Project Style](#project-style)
+    - [`pre-commit`](#pre-commit)
+    - [`stylelint`](#stylelint)
+  - [Production Deployment](#production-deployment)
+  - [Crucial Thanks](#crucial-thanks)
+    - [Pexels](#pexels)
+    - [Netlify](#netlify)
+    - [Create React App](#create-react-app)
+    - [Boxy SVG](#boxy-svg)
+    - [Resources and How-Tos](#resources-and-how-tos)
+  - [Future Development Work](#future-development-work)
 
-The app is deployed directly from GitHub via Netlify, and the live site can be viewed here: [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).
+This project is a website that lets users browse and search for photos from [Pexels](https://www.pexels.com/), a free stock photo and video website that anyone can use or contribute to.
 
-## To Start App in Development Mode
+This project was originally a developed as part of a coding challenge. The original MVP requirements and User Stories from the challenge are included in the [**Project Prompt**](#project-prompt) section. For code snippets and descriptions of how the project's features fulfill the project requirements, see the [**Project Features**](#project-features) section.
 
-`npm run start`
+This project is shared publicly on GitHub. Developers can clone, run, and edit the repository locally by following the instructions in the [**Development Mode**](#development-mode) section.
 
-## Resources and Acknowledgments
+In order to enforce consistent syntax and styling across the entire code base, this project makes use of several different linters, which are managed by a framework called `pre-commit`. `pre-commit` runs linters as Git hook scripts before each Git commit, and prompts the user to fix any issues found before the commit can be saved. See the [**Project Style**](#project-style) section for more information.
 
-- [Pexels](https://www.pexels.com/api)
-  - Pexels provides access to their entire photo and video library for free via and API that powers this entire application
-- [Netlify](https://docs.netlify.com/)
-  - Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.
-- [Create React App](https://create-react-app.dev/)
-  - Create React App takes care of setting up and configuring a new React application with useful defaults
-- [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/)
-- [Netlify Blog: How to deploy React Apps in less than 30 Seconds](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
-- [Cool grayscale hover effect](https://codepen.io/AnthonyMoss/pen/RwwyQQ)
+A production deployment of this project can be viewed at [react-photo-search.netlify.app](https://react-photo-search.netlify.app/). See the [**Production Deployment**](#production-deployment) section for more information.
 
-## Project Brief
+## Project Prompt
 
 We need you to build a website to let users browse photos from [Pexels](https://www.pexels.com/) (see below notes on getting an API key). Thereʼs a ton of competition in the photo space online, so we need to stand out. We need a solution thatʼs lighting fast to load with a snappy, responsive UI. We need to greet site visitors with a selection of curated photos and give them the ability to search our extensive catalog of quality photos from professional photographers.
 
-### Minimum Requirements
-
-Your solution needs to satisfy all of these. There are a couple specific server/client needs, but
-beyond those, the implementation is up to you. Use any tools, libraries, and frameworks you think
-best accomplish the task. See the user stories below for these requirements:
+### MVP Requirements
 
 - Display 10 curated photos on the home screen. Use the Pexels curated photos resource to render these photos.
 - Provide pagination for Curated photos. Paging should not cause a page refresh. From the client side initiate the needed requests to allow the user to go forward and backward 10 photos at a time.
 - Provide a photo search. Searching should not cause a page refresh. Consume the photo search resource and display the results to the user, along with pagination, if needed.
 
-These are the requirements for an MVP. Beyond these, dig into any and all areas as deep as you like.
-
-### Suggested Extras
-
-- Implement a server that wraps the Pexels API, providing one or more of the following features:
-  - Maintain your application API key on the server, avoid exposing it to the client
-  - Server-side rendering
-- Write tests however you see fit
-- Placeholder content for images before they're loaded
-
-### Getting a Pexels API Key
-
-To work with the Pexels API, you need an API key. To get a key:
-
-- Create a free Pexels account
-  - <https://www.pexels.com/onboarding>
-  - Follow “I want to download”
-  - Complete the form. Make sure you use a valid email address
-- Confirm your email
-- Visit the Image & Video API section of your account
-- Provide a description and a URL. These can be fake, feel free to use the examples below or write your own
-  - Example description: “Iʼm using the API for programming practice projects”
-  - Example URL: <https://example.com>
-
-### User stories
-
-Your solution needs to satisfy all of these.
+### User Stories
 
 **As a user visiting the website...**
 
@@ -79,17 +73,204 @@ Your solution needs to satisfy all of these.
 - I can install any required dependencies with npm or yarn
 - I can compile and run the project in one step
 
-## How we evaluate your solution
+### Extras
 
-While this is a basic web server and website, thereʼs a wide range of implementation possibilities. Weʼre not looking for specific implementation details. We want to see the choices you make. Your preference of tools. And how you approach project requirements.
+- Implement a server that wraps the Pexels API, providing one or more of the following features:
+  - Maintain your application API key on the server, avoid exposing it to the client
+  - Server-side rendering
+- Placeholder content for images before they are loaded
+- Write tests however you see fit
 
-Here are a few questions we ask when reviewing solutions:
+## Project Features
 
-- Did the candidate follow the instructions for submission?
-- Does the solution meet the minimum requirements?
-- Does the solution satisfy all the user stories?
-- Is the project documentation clear?
-- Is code readable and concise? does it follow conventions for the chosen language, framework, and libraries?
-- Am I able to follow the documentation to get the project running locally without issue?
-- If tests are available, am I able to run them locally? Do they pass?
-- If we added this repo to our codebase, would other developers be able to work on it by reading the documentation alone?
+### Displays `Photo` components in the `Gallery` using a masonry layout
+
+The `Gallery` component displays photos in a masonry layout, where photos fill out rows while preserving aspect ratio.
+
+### Displays photos from the Pexels "Curated Photos" endpoint on the home screen
+
+The home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`.
+
+### `SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint
+
+The `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`
+
+### `Photo` components display photographer name and url on hover
+
+Hovering over a `Photo` in the `Gallery` component brings up the photographer's name and a link to more of their work on Pexels
+
+### Paginate through `Gallery` photos
+
+the `PaginationBar` component allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page
+
+### LocalStorage retains user's current page and search query on page refresh
+
+LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed
+
+### Server-side rendering as a Single-Page React App
+
+### Netlify Functions Conceal the API key from the end user
+
+Leverage continuous deployment in Netlify to kick off an _automated build process_ that generates site assets.
+
+### Logo with CSS animation
+
+## Development Mode
+
+Developers who wish to run this project locally can do so using the following steps, described in greater detail below:
+
+- Create a local clone of the `react-photo-search` GitHub repository
+- Get a Pexels API key
+- Store your API key as an environment variable in a `.env` file
+- Install project dependencies using `npm install`
+- Compile and run the project in Development mode using `npm start` to start Netlify Dev with Create React App
+
+### Create Local Clone of GitHub Repository
+
+The GitHub repository for this project can be found here: <https://github.com/marshall-strong/react-photo-search>
+
+Click the "Code" button and select which method you'd like to use to clone the repository: HTTPS, SSH, the GitHub CLI, or Download a ZIP file.
+
+#### Cloning the Repository with GitHub CLI
+
+`gh repo clone marshall-strong/react-photo-search`
+
+### Getting a Pexels API key
+
+A Pexels API Key (not included in the repository) is required in order for the project to run properly. Without a key, requests sent to the Pexels API will be denied, and the user will be unable to retrieve any images to display.
+
+To get a Pexels API key, do the following:
+
+- Create a free Pexels account
+  - <https://www.pexels.com/onboarding>
+  - Follow “I want to download”
+  - Complete the form (must use a valid email address)
+- Confirm your email to complete account setup
+- Visit the Image & Video API section of your account
+- Provide a description and a URL.
+  - Example description: “I am using the Pexels API in a practice programming projects”
+  - Example URL: <https://react-photo-search.netlify.app/>
+- The API key should be a 56 character string of numbers and lowercase letters
+  - Example Pexels API Key: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
+- If you ever lose your key, you can always retrieve it by logging into your Pexels account.
+
+### Storing an API key in a `.env` file
+
+In Development mode, the application reads the Pexels API key from a `.env` file located in the root directory of the React app (`pexels-photo-search/.env`).
+
+To create a `.env` file from a console window, do the following:
+
+```bash
+#!/bin/bash
+cd react-photo-search
+cd pexels-photo-search
+echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
+```
+
+Make sure to replace the sample API key with your own key.
+In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`.
+
+The result should be the following:
+
+_file: `pexels-photo-search/.env`_
+
+```node
+PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
+
+```
+
+In Development mode, Netlify Dev will get the API key from this `.env` configuration file as an environment variable. In a Production deployment, the API key is still stored as an environment variable, but it is configured in the settings of your Netlify site under "Settings" > "Build & deploy" > "Environment".
+
+### Install Project Dependencies with `npm install`
+
+`npm install`
+
+### Run the Project with `npm start`
+
+`npm start`
+
+## Project Style
+
+### `pre-commit`
+
+[pre-commit tabs](https://www.one-tab.com/page/KgV3lUgYQ-CE0JRg4Yq74g)
+
+[pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks.
+
+pre-commit runs Git hook scripts (like linters) before each Git commit and prompts the user to fix any issues that are found before the commit can be saved.
+
+pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
+
+pre-commit requires [python](https://docs.python-guide.org/starting/install3/linux/) in order to run.
+
+_Log files from installing and configuring `pre-commit`:_
+
+```bash
+marshall-strong@ideapad3:~$ pre-commit --version
+pre-commit 2.13.0
+marshall-strong@ideapad3:~$ pip install pre-commit --upgrade
+marshall-strong@ideapad3:~$ cd GitHub/react-photo-search
+marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit sample-config
+marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit run --all-files
+marshall-strong@ideapad3:~/GitHub/react-photo-search$
+```
+
+### `stylelint`
+
+[stylelint tabs](https://www.one-tab.com/page/DcZJXxmaQE2Sc1Ae6lrT5g)
+
+Run `stylelint` on all CSS files, fixing problems where possible:
+
+`npx stylelint "pexels-photo-search/src/**/*.css" --fix`
+
+## Production Deployment
+
+This project is deployed to Production directly from GitHub using Netlify.
+A live version of the site can be viewed here: [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).
+
+In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
+
+## Crucial Thanks
+
+This project would not have been possible without assistance from the following:
+
+### [Pexels](https://www.pexels.com/api)
+
+Pexels provides access to their entire photo and video library for free. The Pexels API powers this entire application.
+
+### [Netlify](https://docs.netlify.com/)
+
+Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.
+
+### [Create React App](https://create-react-app.dev/)
+
+Create React App takes care of setting up and configuring a new React application with useful defaults
+
+### [Boxy SVG](https://boxy-svg.com/)
+
+A free, browser-based tool for editing SVG elements
+
+### Resources and How-Tos
+
+- [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/)
+- [Netlify Blog: How to deploy React Apps in less than 30 Seconds](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
+- [Cool grayscale hover effect](https://codepen.io/AnthonyMoss/pen/RwwyQQ)
+- [Emoji Unicode Reference](https://www.w3schools.com/charsets/ref_emoji.asp)
+- [the position property](https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position2)
+- ["Cool and Fresh" color palette](https://visme.co/blog/website-color-schemes/#attachment_13239)
+- [CSS Pulse Effect](https://www.florin-pop.com/blog/2019/03/css-pulse-effect/)
+- [Adaptive Photo Layout with Flexbox](https://css-tricks.com/adaptive-photo-layout-with-flexbox/)
+
+## Future Development Work
+
+The following features are not currently implemented, but will be added as time allows:
+
+- configure `pre-commit` so that `stylelint` tries automatically fixing errors (when possible)
+- add placeholdercontent for images before they are loaded
+- add tests, and instructions for running them in Development mode
+- add additional project information to the `Footer`
+- optimize website for mobile
+- add a hamburger icon to the `Navbar` that displays a dropdown menu when clicked
+- add options for a light mode and a dark mode
