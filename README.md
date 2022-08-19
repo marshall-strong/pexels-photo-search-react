@@ -6,15 +6,15 @@
     - [User Stories](#user-stories)
     - [Extras](#extras)
   - [Project Features](#project-features)
-    - [Displays `Photo` components in the `Gallery` using a masonry layout](#displays-photo-components-in-the-gallery-using-a-masonry-layout)
-    - [Displays photos from the Pexels "Curated Photos" endpoint on the home screen](#displays-photos-from-the-pexels-curated-photos-endpoint-on-the-home-screen)
-    - [`SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint](#searchform-component-gets-a-query-string-from-the-user-and-displays-relevant-photos-from-the-pexels-search-for-photos-endpoint)
-    - [`Photo` components display photographer name and url on hover](#photo-components-display-photographer-name-and-url-on-hover)
-    - [Paginate through `Gallery` photos](#paginate-through-gallery-photos)
-    - [LocalStorage retains user's current page and search query on page refresh](#localstorage-retains-users-current-page-and-search-query-on-page-refresh)
-    - [Server-side rendering as a Single-Page React App](#server-side-rendering-as-a-single-page-react-app)
-    - [Netlify Functions Conceal the API key from the end user](#netlify-functions-conceal-the-api-key-from-the-end-user)
-    - [Logo with CSS animation](#logo-with-css-animation)
+    - [&#9658; Displays `Photo` components in the `Gallery` using a masonry layout](#-displays-photo-components-in-the-gallery-using-a-masonry-layout)
+    - [&#9658; Displays photos from the Pexels "Curated Photos" endpoint on the home screen](#-displays-photos-from-the-pexels-curated-photos-endpoint-on-the-home-screen)
+    - [&#9658; `SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint](#-searchform-component-gets-a-query-string-from-the-user-and-displays-relevant-photos-from-the-pexels-search-for-photos-endpoint)
+    - [&#9658; `Photo` components display photographer name and url on hover](#-photo-components-display-photographer-name-and-url-on-hover)
+    - [&#9658; Paginate through `Gallery` photos](#-paginate-through-gallery-photos)
+    - [&#9658; LocalStorage retains user's current page and search query on page refresh](#-localstorage-retains-users-current-page-and-search-query-on-page-refresh)
+    - [&#9658; Server-side rendering as a Single-Page React App](#-server-side-rendering-as-a-single-page-react-app)
+    - [&#9658; Netlify Functions Conceal the API key from the end user](#-netlify-functions-conceal-the-api-key-from-the-end-user)
+    - [&#9658; Logo with CSS animation](#-logo-with-css-animation)
   - [Development Mode](#development-mode)
     - [Create Local Clone of GitHub Repository](#create-local-clone-of-github-repository)
       - [Cloning the Repository with GitHub CLI](#cloning-the-repository-with-github-cli)
@@ -83,37 +83,37 @@ We need you to build a website to let users browse photos from [Pexels](https://
 
 ## Project Features
 
-### Displays `Photo` components in the `Gallery` using a masonry layout
+### &#9658; Displays `Photo` components in the `Gallery` using a masonry layout
 
 The `Gallery` component displays photos in a masonry layout, where photos fill out rows while preserving aspect ratio.
 
-### Displays photos from the Pexels "Curated Photos" endpoint on the home screen
+### &#9658; Displays photos from the Pexels "Curated Photos" endpoint on the home screen
 
 The home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`.
 
-### `SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint
+### &#9658; `SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint
 
 The `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`
 
-### `Photo` components display photographer name and url on hover
+### &#9658; `Photo` components display photographer name and url on hover
 
 Hovering over a `Photo` in the `Gallery` component brings up the photographer's name and a link to more of their work on Pexels
 
-### Paginate through `Gallery` photos
+### &#9658; Paginate through `Gallery` photos
 
 the `PaginationBar` component allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page
 
-### LocalStorage retains user's current page and search query on page refresh
+### &#9658; LocalStorage retains user's current page and search query on page refresh
 
 LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed
 
-### Server-side rendering as a Single-Page React App
+### &#9658; Server-side rendering as a Single-Page React App
 
-### Netlify Functions Conceal the API key from the end user
+### &#9658; Netlify Functions Conceal the API key from the end user
 
 Leverage continuous deployment in Netlify to kick off an _automated build process_ that generates site assets.
 
-### Logo with CSS animation
+### &#9658; Logo with CSS animation
 
 ## Development Mode
 
