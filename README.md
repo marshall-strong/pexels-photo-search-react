@@ -11,9 +11,9 @@
     - [Storing an API key in a `.env` file](#storing-an-api-key-in-a-env-file)
     - [Install Project Dependencies with `npm install`](#install-project-dependencies-with-npm-install)
     - [Run the Project with `npm start`](#run-the-project-with-npm-start)
-  - [Linters and Pre-Commit Hooks](#linters-and-pre-commit-hooks)
-    - [Stylelint](#stylelint)
+  - [Project Style](#project-style)
     - [Pre-commit](#pre-commit)
+    - [Stylelint](#stylelint)
   - [Production Deployment](#production-deployment)
   - [References and Acknowledgments](#references-and-acknowledgments)
     - [Resources](#resources)
@@ -24,6 +24,8 @@ This project is a website that lets users browse and search for photos from [Pex
 This project was originally a developed as part of a coding challenge. The original MVP requirements and User Stories from the challenge are included in the [**Project Prompt**](#project-prompt) section. For code snippets and descriptions of how the project's features fulfill the project requirements, see the [**Project Features**](#project-features) section.
 
 This project is shared publicly on GitHub. Developers can clone, run, and edit the repository locally by following the instructions in the [**Development Mode**](#development-mode) section.
+
+In order to enforce consistent syntax and styling across the entire code base, this project makes use of several different linters, which are managed by a framework called `pre-commit`. `pre-commit` runs linters as Git hook scripts before each Git commit, and prompts the user to fix any issues found before the commit can be saved. See the [**Project Style**](#project-style) section for more information.
 
 A production deployment of this project can be viewed at [react-photo-search.netlify.app](https://react-photo-search.netlify.app/). See the [**Production Deployment**](#production-deployment) section for more information.
 
@@ -141,7 +143,11 @@ In Development mode, Netlify Dev will get the API key from this `.env` configura
 
 `npm start`
 
-## Linters and Pre-Commit Hooks
+## Project Style
+
+### Pre-commit
+
+[pre-commit tabs](https://www.one-tab.com/page/KgV3lUgYQ-CE0JRg4Yq74g)
 
 ### Stylelint
 
@@ -150,10 +156,6 @@ In Development mode, Netlify Dev will get the API key from this `.env` configura
 Run `stylelint` on all CSS files, fixing problems where possible:
 
 `npx stylelint "pexels-photo-search/src/**/*.css" --fix`
-
-### Pre-commit
-
-[pre-commit tabs](https://www.one-tab.com/page/KgV3lUgYQ-CE0JRg4Yq74g)
 
 ## Production Deployment
 
