@@ -1,5 +1,24 @@
 # REACT-PHOTO-SEARCH
 
+- [REACT-PHOTO-SEARCH](#react-photo-search)
+  - [Project Prompt](#project-prompt)
+    - [MVP Requirements](#mvp-requirements)
+    - [User Stories](#user-stories)
+    - [Extras](#extras)
+  - [Project Features](#project-features)
+  - [Development Mode](#development-mode)
+    - [Getting a Pexels API key](#getting-a-pexels-api-key)
+    - [Storing an API key in a `.env` file](#storing-an-api-key-in-a-env-file)
+    - [Install Project Dependencies with `npm install`](#install-project-dependencies-with-npm-install)
+    - [Run the Project with `npm start`](#run-the-project-with-npm-start)
+  - [Linters and Pre-Commit Hooks](#linters-and-pre-commit-hooks)
+    - [Stylelint](#stylelint)
+    - [Pre-commit](#pre-commit)
+  - [Production Deployment](#production-deployment)
+  - [References and Acknowledgments](#references-and-acknowledgments)
+    - [Resources](#resources)
+    - [How-Tos](#how-tos)
+
 This project is a website that lets users browse and search for photos from [Pexels](https://www.pexels.com/), a free stock photo and video website that anyone can use or contribute to.
 
 This project was originally a developed as part of a coding challenge. The original MVP requirements and User Stories from the challenge are included in the **Project Prompt** section. For code snippets and descriptions of how the project's features fulfill the project requirements, see the **Project Features** section.
@@ -37,7 +56,7 @@ We need you to build a website to let users browse photos from [Pexels](https://
 - I can install any required dependencies with npm or yarn
 - I can compile and run the project in one step
 
-### Suggested Extras
+### Extras
 
 - Implement a server that wraps the Pexels API, providing one or more of the following features:
   - Maintain your application API key on the server, avoid exposing it to the client
@@ -49,41 +68,78 @@ We need you to build a website to let users browse photos from [Pexels](https://
 
 ## Development Mode
 
-Developers who wish to run this project locally can do so by cloning the project's repository on GitHub and following the instructions below.
-Note that a Pexels API Key (not included in the repository) is required in order for the project to run properly. Instructions for obtaining a Pexels API key can be found below.
-To
+Developers who wish to run this project locally can do so using the following steps, described in greater detail below:
 
-### Getting a Pexels API Key
+- Get a Pexels API key
+- Store your API key as an environment variable in a `.env` file
+- Install project dependencies using `npm install`
+- Compile and run the project in Development mode using `npm start` to start Netlify Dev with Create React App
 
-To work with the Pexels API, you need an API key. To get a key:
+### Getting a Pexels API key
+
+A Pexels API Key (not included in the repository) is required in order for the project to run properly. Without a key, requests sent to the Pexels API will be denied, and the user will be unable to retrieve any images to display.
+
+To get a Pexels API key, do the following:
 
 - Create a free Pexels account
   - <https://www.pexels.com/onboarding>
   - Follow “I want to download”
-  - Complete the form. Make sure you use a valid email address
-- Confirm your email
+  - Complete the form (must use a valid email address)
+- Confirm your email to complete account setup
 - Visit the Image & Video API section of your account
-- Provide a description and a URL. These can be fake, feel free to use the examples below or write your own
-  - Example description: “Iʼm using the API for programming practice projects”
-  - Example URL: <https://example.com>
+- Provide a description and a URL.
+  - Example description: “I am using the Pexels API in a practice programming projects”
+  - Example URL: <https://react-photo-search.netlify.app/>
+- The API key should be a 56 character string of numbers and lowercase letters
+  - Example Pexels API Key: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
+- If you ever lose your key, you can always retrieve it by logging into your Pexels account.
 
-### Local Setup
+### Storing an API key in a `.env` file
 
-`npm run start`
+In Development mode, the application reads the Pexels API key from a `.env` file located in the root directory of the React app (`pexels-photo-search/.env`).
 
-### Linters and Pre-Commit Hooks
+To create a `.env` file from a console window, do the following:
 
-#### Stylelint
+```bash
+#!/bin/bash
+cd react-photo-search
+cd pexels-photo-search
+echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
+```
+
+Make sure to replace the sample API key with your own key.
+In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`.
+
+The result should be the following:
+
+file: `pexels-photo-search/.env`
+
+```node
+PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
+
+```
+
+In Development mode, Netlify Dev will get the API key from this `.env` configuration file as an environment variable. In a Production deployment, the API key is still stored as an environment variable, but it is configured in the settings of your Netlify site under "Settings" > "Build & deploy" > "Environment".
+
+### Install Project Dependencies with `npm install`
+
+`npm install`
+
+### Run the Project with `npm start`
+
+`npm start`
+
+## Linters and Pre-Commit Hooks
+
+### Stylelint
 
 [stylelint tabs](https://www.one-tab.com/page/DcZJXxmaQE2Sc1Ae6lrT5g)
 
 Run `stylelint` on all CSS files, fixing problems where possible:
 
-```bash
-npx stylelint "pexels-photo-search/src/**/*.css" --fix
-```
+`npx stylelint "pexels-photo-search/src/**/*.css" --fix`
 
-#### Pre-commit
+### Pre-commit
 
 [pre-commit tabs](https://www.one-tab.com/page/KgV3lUgYQ-CE0JRg4Yq74g)
 
@@ -115,3 +171,4 @@ A live version of the site can be viewed here: [react-photo-search.netlify.app](
 - ["Cool and Fresh" color palette](https://visme.co/blog/website-color-schemes/#attachment_13239)
 - [CSS Pulse Effect](https://www.florin-pop.com/blog/2019/03/css-pulse-effect/)
 - [Adaptive Photo Layout with Flexbox](https://css-tricks.com/adaptive-photo-layout-with-flexbox/)
+  Production Deployment
