@@ -61,10 +61,22 @@ We need you to build a website to let users browse photos from [Pexels](https://
 - Implement a server that wraps the Pexels API, providing one or more of the following features:
   - Maintain your application API key on the server, avoid exposing it to the client
   - Server-side rendering
-- Write tests however you see fit
 - Placeholder content for images before they are loaded
+- Write tests however you see fit
 
 ## Project Features
+
+- the `Gallery` component displays photos in a masonry layout, where photos fill out rows while preserving aspect ratio
+- absent a search query from the user, the home screen retrieves photographs from the Pexels "curated photos" resource, then displays the photos in the `Gallery`
+- the `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "photo search" resource, then displays the photos in the `Gallery`
+- hovering over a photo in the `Gallery` brings up the photographer's name and a link to more of their work on Pexels
+- the `PaginationBar` component allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page
+- LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed
+- Server-Side rendering with React
+- Conceal the Pexels API key from the end user using Netlify
+- fancy Spinning Logo using CSS animation
+- ToDo: add placeholder content for before an image loads
+- ToDo: add tests, and instructions for running them in Development mode
 
 ## Development Mode
 
@@ -149,6 +161,8 @@ This project is deployed to Production directly from GitHub using Netlify.
 A live version of the site can be viewed here: [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).
 
 ## References and Acknowledgments
+
+This project would not have been possible without assistance from the following resources and how-to articles:
 
 ### Resources
 
