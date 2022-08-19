@@ -2,8 +2,55 @@ import React from "react";
 import SpinningIcon from "./SpinningIcon";
 import SearchForm from "./SearchForm";
 import Results from "./Results";
+import Pagination from "./Pagination";
 import PaginationBar from "./PaginationBar";
 import "./Navbar.css";
+
+const LeftPagination = ({ response, setNewUrl }) => {
+  if (!response) {
+    return null;
+  } else {
+    return (
+      <Pagination
+        prevOrNext={"prev"}
+        setNewUrl={setNewUrl}
+        pageUrl={response.prev_page}
+      />
+    );
+  }
+};
+
+const RightPagination = ({ response, setNewUrl }) => {
+  if (!response) {
+    return null;
+  } else {
+    return (
+      <Pagination
+        prevOrNext={"next"}
+        setNewUrl={setNewUrl}
+        pageUrl={response.next_page}
+      />
+    );
+  }
+};
+
+const PageNumber = ({ response }) => {
+  if (!response) {
+    return null;
+  } else if (!response.page) {
+    return (
+      <span>
+        Page <b>#</b>
+      </span>
+    );
+  } else {
+    return (
+      <span>
+        Page <b>{response.page}</b>
+      </span>
+    );
+  }
+};
 
 const Navbar = ({
   attributionUrl,
@@ -29,7 +76,7 @@ const Navbar = ({
 
   return (
     <div className="navbar-component">
-      <div className="navbar-row top-row">
+      <div className="navbar-row row-1">
         <div className="left-nav">
           <SpinningIcon
             onClick={returnToHomepage}
@@ -74,8 +121,10 @@ const Navbar = ({
         </div>
         <div className="right-nav">{iconHome}</div>
       </div>
-      <div className="navbar-row">
-        <div className="left-nav"></div>
+      <div className="navbar-row row-2">
+        <div className="left-nav">
+          <LeftPagination response={response} setNewUrl={setNewUrl} />
+        </div>
         <div className="center-nav">
           <SearchForm
             setNewUrl={setNewUrl}
@@ -83,12 +132,14 @@ const Navbar = ({
             setUserInput={setUserInput}
             returnToHomepage={returnToHomepage}
           />
-          <Results response={response} displayedUrl={displayedUrl} />
         </div>
-        <div className="right-nav"></div>
+        <div className="right-nav">
+          <RightPagination response={response} setNewUrl={setNewUrl} />
+        </div>
       </div>
-      <div className="navbar-row">
-        <PaginationBar response={response} setNewUrl={setNewUrl} />
+      <div className="navbar-row row-3">
+        <PageNumber response={response} />
+        {/* <Results response={response} displayedUrl={displayedUrl} /> */}
       </div>
     </div>
   );

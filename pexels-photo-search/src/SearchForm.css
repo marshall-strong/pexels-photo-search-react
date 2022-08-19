@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   max-width: 80vw;
-  height: 3rem;
+  height: 2.25rem;
   flex-direction: row;
   background-color: var(--lightest);
   font-size: calc(5px + 1vmin);
@@ -38,6 +38,12 @@ form#search-for-photos > input[type="text"],
 textarea {
   background-color: var(--lightest);
   color: var(--darkest);
+}
+
+svg.icon.enabled.icon-search {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0.25rem;
 }
 
 svg.icon.enabled.icon-search > path {
