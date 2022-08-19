@@ -21,11 +21,11 @@
 
 This project is a website that lets users browse and search for photos from [Pexels](https://www.pexels.com/), a free stock photo and video website that anyone can use or contribute to.
 
-This project was originally a developed as part of a coding challenge. The original MVP requirements and User Stories from the challenge are included in the **Project Prompt** section. For code snippets and descriptions of how the project's features fulfill the project requirements, see the **Project Features** section.
+This project was originally a developed as part of a coding challenge. The original MVP requirements and User Stories from the challenge are included in the [**Project Prompt**](#project-prompt) section. For code snippets and descriptions of how the project's features fulfill the project requirements, see the [**Project Features**](#project-features) section.
 
-This project is shared publicly on GitHub. Developers can clone, run, and edit the repository locally by following the instructions in the **Development Mode** section.
+This project is shared publicly on GitHub. Developers can clone, run, and edit the repository locally by following the instructions in the [**Development Mode**](#development-mode) section.
 
-A production deployment of this project can be viewed at [react-photo-search.netlify.app](https://react-photo-search.netlify.app/). See the **Production Deployment** section for more information.
+A production deployment of this project can be viewed at [react-photo-search.netlify.app](https://react-photo-search.netlify.app/). See the [**Production Deployment**](#production-deployment) section for more information.
 
 ## Project Prompt
 
@@ -171,4 +171,3 @@ A live version of the site can be viewed here: [react-photo-search.netlify.app](
 - ["Cool and Fresh" color palette](https://visme.co/blog/website-color-schemes/#attachment_13239)
 - [CSS Pulse Effect](https://www.florin-pop.com/blog/2019/03/css-pulse-effect/)
 - [Adaptive Photo Layout with Flexbox](https://css-tricks.com/adaptive-photo-layout-with-flexbox/)
-  Production Deployment
