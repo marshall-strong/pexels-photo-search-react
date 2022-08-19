@@ -3,7 +3,6 @@ import SpinningIcon from "./SpinningIcon";
 import SearchForm from "./SearchForm";
 import Results from "./Results";
 import Pagination from "./Pagination";
-import PaginationBar from "./PaginationBar";
 import "./Navbar.css";
 
 const LeftPagination = ({ response, setNewUrl }) => {
@@ -121,7 +120,11 @@ const Navbar = ({
         </div>
         <div className="right-nav">{iconHome}</div>
       </div>
-      <div className="navbar-row row-2">
+      {/* <div className="navbar-row row-2">
+        <PageNumber response={response} />
+        <Results response={response} displayedUrl={displayedUrl} />
+      </div> */}
+      <div className="navbar-row row-3">
         <div className="left-nav">
           <LeftPagination response={response} setNewUrl={setNewUrl} />
         </div>
@@ -137,9 +140,11 @@ const Navbar = ({
           <RightPagination response={response} setNewUrl={setNewUrl} />
         </div>
       </div>
-      <div className="navbar-row row-3">
+      <div className="navbar-row row-4">
+        <Results response={response} displayedUrl={displayedUrl} />
+      </div>
+      <div className="navbar-row row-5">
         <PageNumber response={response} />
-        {/* <Results response={response} displayedUrl={displayedUrl} /> */}
       </div>
     </div>
   );
