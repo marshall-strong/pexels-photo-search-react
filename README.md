@@ -26,12 +26,12 @@
     - [`pre-commit`](#pre-commit)
     - [`stylelint`](#stylelint)
   - [Production Deployment](#production-deployment)
-  - [Resources](#resources)
+  - [Crucial Thanks](#crucial-thanks)
     - [Pexels](#pexels)
     - [Netlify](#netlify)
     - [Create React App](#create-react-app)
     - [Boxy SVG](#boxy-svg)
-    - [How-Tos](#how-tos)
+    - [Resources and How-Tos](#resources-and-how-tos)
   - [Future Development Work](#future-development-work)
 
 This project is a website that lets users browse and search for photos from [Pexels](https://www.pexels.com/), a free stock photo and video website that anyone can use or contribute to.
@@ -230,7 +230,9 @@ Run `stylelint` on all CSS files, fixing problems where possible:
 This project is deployed to Production directly from GitHub using Netlify.
 A live version of the site can be viewed here: [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).
 
-## Resources
+In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
+
+## Crucial Thanks
 
 This project would not have been possible without assistance from the following:
 
@@ -248,9 +250,9 @@ Create React App takes care of setting up and configuring a new React applicatio
 
 ### [Boxy SVG](https://boxy-svg.com/)
 
-Free, browser-based tool for editing SVG elements
+A free, browser-based tool for editing SVG elements
 
-### How-Tos
+### Resources and How-Tos
 
 - [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/)
 - [Netlify Blog: How to deploy React Apps in less than 30 Seconds](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
