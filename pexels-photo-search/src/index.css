@@ -12,12 +12,16 @@ html {
   --lighter: #8de4af;
   --lightest: #edf4e0;
 
-  /* scrollbar */
-  --scrollbar-background-color: var(--base);
-  --scrollbar-thumb-color: var(--darker);
-
   /* darken photos on hover */
-  --translucent-black-mask: rgb(0 0 0 / 5.5%);
+  --black-mask-6-percent-opaque: rgb(0 0 0 / 6%);
+  --black-mask-25-percent-opaque: rgb(0 0 0 / 25%);
+
+  /* scrollbar */
+  --scrollbar-background-color: var(--darker);
+  --scrollbar-thumb-color: var(--lighter);
+
+  /* --scrollbar-background-color: var(--base);
+  --scrollbar-thumb-color: var(--darker); */
 
   /* other colors */
   --white: #ffffff;

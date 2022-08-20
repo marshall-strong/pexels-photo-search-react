@@ -5,8 +5,8 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 11rem;
-  margin-bottom: 2rem;
+  margin-top: 12.5rem;
+  margin-bottom: 5rem;
 }
 
 .gallery-container {
@@ -16,7 +16,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  background-color: var(--translucent-black-mask);
+  background-color: var(--black-mask-6-percent-opaque);
 }
 
 .pagination-container {

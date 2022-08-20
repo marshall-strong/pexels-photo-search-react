@@ -2,8 +2,54 @@ import React from "react";
 import SpinningIcon from "./SpinningIcon";
 import SearchForm from "./SearchForm";
 import Results from "./Results";
-import PaginationBar from "./PaginationBar";
+import Pagination from "./Pagination";
 import "./Navbar.css";
+
+const LeftPagination = ({ response, setNewUrl }) => {
+  if (!response) {
+    return null;
+  } else {
+    return (
+      <Pagination
+        prevOrNext={"prev"}
+        setNewUrl={setNewUrl}
+        pageUrl={response.prev_page}
+      />
+    );
+  }
+};
+
+const RightPagination = ({ response, setNewUrl }) => {
+  if (!response) {
+    return null;
+  } else {
+    return (
+      <Pagination
+        prevOrNext={"next"}
+        setNewUrl={setNewUrl}
+        pageUrl={response.next_page}
+      />
+    );
+  }
+};
+
+const PageNumber = ({ response }) => {
+  if (!response) {
+    return null;
+  } else if (!response.page) {
+    return (
+      <span>
+        Page <b>#</b>
+      </span>
+    );
+  } else {
+    return (
+      <span>
+        Page <b>{response.page}</b>
+      </span>
+    );
+  }
+};
 
 const Navbar = ({
   attributionUrl,
@@ -18,7 +64,7 @@ const Navbar = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
-      className="icon enabled iconHome"
+      className="icon enabled home-icon"
       onClick={returnToHomepage}
       alt="Return to Homepage"
       title="Return to Homepage"
@@ -29,7 +75,7 @@ const Navbar = ({
 
   return (
     <div className="navbar-component">
-      <div className="navbar-row">
+      <div className="navbar-row row-1">
         <div className="left-nav">
           <SpinningIcon
             onClick={returnToHomepage}
@@ -71,18 +117,34 @@ const Navbar = ({
               </div>
             </div>
           </div>
+        </div>
+        <div className="right-nav">{iconHome}</div>
+      </div>
+      {/* <div className="navbar-row row-2">
+        <PageNumber response={response} />
+        <Results response={response} displayedUrl={displayedUrl} />
+      </div> */}
+      <div className="navbar-row row-3">
+        <div className="left-nav">
+          <LeftPagination response={response} setNewUrl={setNewUrl} />
+        </div>
+        <div className="center-nav">
           <SearchForm
             setNewUrl={setNewUrl}
             userInput={userInput}
             setUserInput={setUserInput}
             returnToHomepage={returnToHomepage}
           />
-          <Results response={response} displayedUrl={displayedUrl} />
         </div>
-        <div className="right-nav">{iconHome}</div>
+        <div className="right-nav">
+          <RightPagination response={response} setNewUrl={setNewUrl} />
+        </div>
       </div>
-      <div className="navbar-row">
-        <PaginationBar response={response} setNewUrl={setNewUrl} />
+      <div className="navbar-row row-4">
+        <Results response={response} displayedUrl={displayedUrl} />
+      </div>
+      <div className="navbar-row row-5">
+        <PageNumber response={response} />
       </div>
     </div>
   );

@@ -17,13 +17,13 @@ const Footer = ({ attributionUrl }) => {
   // );
 
   return (
-    <div className=".footer-component" id="Footer">
+    <div className="footer-component" id="Footer">
       <div className="footer-column">
+        <PersonalLinks />
         <div className="copyright">
           &copy;
           {" 2022 by Marshall Strong"}
         </div>
-        <PersonalLinks />
       </div>
       {/* <div className="left-nav">
         <PersonalLinks />

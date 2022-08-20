@@ -158,9 +158,9 @@ To create a `.env` file from a console window, do the following:
 
 ```bash
 #!/bin/bash
-cd react-photo-search
-cd pexels-photo-search
-echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
+$ cd react-photo-search
+$ cd pexels-photo-search
+$ echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
 ```
 
 Make sure to replace the sample API key with your own key.
@@ -202,15 +202,15 @@ pre-commit requires [python](https://docs.python-guide.org/starting/install3/lin
 _Log files from installing and configuring `pre-commit`:_
 
 ```bash
-marshall-strong@ideapad3:~$ pre-commit --version
+#!/bin/bash
+$ pip install pre-commit --upgrade
+$ pre-commit --version
 pre-commit 2.13.0
-marshall-strong@ideapad3:~$ pip install pre-commit --upgrade
-marshall-strong@ideapad3:~$ cd GitHub/react-photo-search
-marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit sample-config
-marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit install
+$ cd react-photo-search
+$ pre-commit sample-config
+$ pre-commit install
 pre-commit installed at .git/hooks/pre-commit
-marshall-strong@ideapad3:~/GitHub/react-photo-search$ pre-commit run --all-files
-marshall-strong@ideapad3:~/GitHub/react-photo-search$
+$ pre-commit run --all-files
 ```
 
 ### `Prettier`

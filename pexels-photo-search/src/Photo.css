@@ -34,7 +34,7 @@ div.photo-credit {
 }
 
 .photo-component:hover {
-  filter: contrast(80%);
+  filter: contrast(120%);
 }
 
 .photo-component:hover div.photo-credit {
