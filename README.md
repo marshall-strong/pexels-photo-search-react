@@ -19,12 +19,12 @@
     - [Create Local Clone of GitHub Repository](#create-local-clone-of-github-repository)
     - [Getting a Pexels API key](#getting-a-pexels-api-key)
     - [Storing an API key in a `.env` file](#storing-an-api-key-in-a-env-file)
-    - [Install Project Dependencies with `npm install`](#install-project-dependencies-with-npm-install)
-    - [Run the Project with `npm start`](#run-the-project-with-npm-start)
+    - [Install Project Dependencies](#install-project-dependencies)
+    - [Start the Project](#start-the-project)
   - [Project Style](#project-style)
-    - [`pre-commit`](#pre-commit)
-    - [`Prettier`](#prettier)
-    - [`stylelint`](#stylelint)
+    - [**Pre-commit**](#pre-commit)
+    - [**Prettier**](#prettier)
+    - [**Stylelint**](#stylelint)
   - [Production Deployment](#production-deployment)
   - [Crucial Thanks](#crucial-thanks)
   - [Resources and How-Tos](#resources-and-how-tos)
@@ -177,29 +177,29 @@ PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
 
 In Development mode, Netlify Dev will get the API key from this `.env` configuration file as an environment variable. In a Production deployment, the API key is still stored as an environment variable, but it is configured in the settings of your Netlify site under "Settings" > "Build & deploy" > "Environment".
 
-### Install Project Dependencies with `npm install`
+### Install Project Dependencies
 
-`npm install`
+```bash
+npm install
+```
 
-### Run the Project with `npm start`
+### Start the Project
 
-`npm start`
+```bash
+npm start
+```
 
 ## Project Style
 
-### `pre-commit`
+### **Pre-commit**
 
-[pre-commit tabs](https://www.one-tab.com/page/KgV3lUgYQ-CE0JRg4Yq74g)
+[Pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks.
 
-[pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks.
+Pre-commit runs Git hook scripts (like linters) before each Git commit and prompts the user to fix any issues that are found before the commit can be saved.
 
-pre-commit runs Git hook scripts (like linters) before each Git commit and prompts the user to fix any issues that are found before the commit can be saved.
+Pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
 
-pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
-
-pre-commit requires [python](https://docs.python-guide.org/starting/install3/linux/) in order to run.
-
-_Log files from installing and configuring `pre-commit`:_
+_Log files from installing and configuring:_
 
 ```bash
 #!/bin/bash
@@ -213,15 +213,35 @@ pre-commit installed at .git/hooks/pre-commit
 $ pre-commit run --all-files
 ```
 
-### `Prettier`
+Pre-commit tabs:
+<https://www.one-tab.com/page/KgV3lUgYQ-CE0JRg4Yq74g>
 
-### `stylelint`
+### **Prettier**
 
-[stylelint tabs](https://www.one-tab.com/page/DcZJXxmaQE2Sc1Ae6lrT5g)
+[Prettier](https://prettier.io/) is an opinionated code formatter that enforces conventions automatically.
 
-Run `stylelint` on all CSS files, fixing problems where possible:
+Integrating Prettier with pre-commit:
+[https://prettier.io/docs/en/precommit.html](https://prettier.io/docs/en/precommit.html#option-3-pre-commithttpsgithubcompre-commitpre-commit)
 
-`npx stylelint "pexels-photo-search/src/**/*.css" --fix`
+Prettier mirror for integration with Pre-commit:
+<https://github.com/pre-commit/mirrors-prettier>
+
+### **Stylelint**
+
+[Stylelint](https://stylelint.io/) is a linter that identifies errors and enforces conventions in a project's stylesheets.
+
+To run `stylelint` at any time (not just when saving a commit), use `npx`.
+The following command runs `stylelint` on all CSS files, fixing problems when possible:
+
+```bash
+npx stylelint "pexels-photo-search/src/**/*.css" --fix
+```
+
+Stylelint mirror for integration with Pre-commit:
+<https://github.com/thibaudcolas/pre-commit-stylelint>
+
+Stylelint tabs:
+<https://www.one-tab.com/page/DcZJXxmaQE2Sc1Ae6lrT5g>
 
 ## Production Deployment
 
