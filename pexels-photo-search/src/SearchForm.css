@@ -3,8 +3,11 @@
   width: 100%;
   max-width: 80vw;
   height: 2.25rem;
+  box-sizing: content-box;
   flex-direction: row;
+  border: 0.2rem solid var(--darkest);
   background-color: var(--lightest);
+  border-radius: 2rem;
   font-size: calc(5px + 1vmin);
 }
 
@@ -13,15 +16,15 @@ form#search-for-photos {
   display: flex;
   width: 100%;
   align-items: center;
+  border-radius: 2rem;
 }
 
 form#search-for-photos > input {
   position: relative;
   width: 100%;
   height: 2rem;
-  box-sizing: border-box;
   border: none;
-  margin-left: 0.5rem;
+  border-radius: 2rem;
   font-size: inherit;
   font-weight: bold;
   outline: none;
@@ -40,16 +43,33 @@ textarea {
   color: var(--darkest);
 }
 
-svg.icon.enabled.icon-search {
-  width: 1.75rem;
-  height: 1.75rem;
-  margin: 0.25rem;
+div.search-icon-container {
+  width: 2.75rem;
+  height: 2.5rem;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: 0.2rem solid var(--darkest);
+  margin-top: -0.15rem;
+  margin-right: -0.1rem;
+  background-color: var(--darkest);
+  border-radius: 50%;
 }
 
-svg.icon.enabled.icon-search > path {
-  fill: var(--darker);
+div.search-icon-container > svg.icon.enabled.icon-search {
+  width: 1.5rem;
+  height: 1.5;
+  margin: 0;
 }
 
-svg.icon.enabled.icon-search:hover > path {
+div.search-icon-container > svg.icon.enabled.icon-search > path {
+  fill: var(--base);
+}
+
+div.search-icon-container:hover {
+  background-color: var(--base);
+}
+
+div.search-icon-container:hover > svg.icon.enabled.icon-search > path {
   fill: var(--darkest);
 }
