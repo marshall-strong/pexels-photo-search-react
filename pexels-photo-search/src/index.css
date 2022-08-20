@@ -103,7 +103,7 @@ svg.icon > path {
 }
 
 svg.icon.disabled > path {
-  fill: var(--base);
+  fill: var(--lighter);
 }
 
 .icon.enabled:hover {
