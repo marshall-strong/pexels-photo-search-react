@@ -39,13 +39,13 @@ const PageNumber = ({ response }) => {
   } else if (!response.page) {
     return (
       <span>
-        Page <b>#</b>
+        <b>Page #</b>
       </span>
     );
   } else {
     return (
-      <span>
-        Page <b>{response.page}</b>
+      <span className="page-number">
+        <b>Page {response.page}</b>
       </span>
     );
   }

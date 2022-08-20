@@ -176,3 +176,8 @@
   justify-content: center;
   margin-bottom: 1rem;
 }
+
+.navbar-row.row-5 > span.page-number {
+  margin-top: 0.25rem;
+  color: var(--darker);
+}
