@@ -46,8 +46,8 @@ const PersonalLinks = () => {
         </li>
         <li>
           <a
-            title="GitHub repository"
-            href="https://github.com/marshall-strong"
+            title="view this project on GitHub!"
+            href="https://github.com/marshall-strong/react-photo-search"
             rel="noopener noreferrer"
             target="_blank"
           >
