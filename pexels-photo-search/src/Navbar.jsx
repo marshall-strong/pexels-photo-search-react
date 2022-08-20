@@ -89,7 +89,7 @@ const Navbar = ({
               href="https://github.com/marshall-strong/react-photo-search"
               rel="noopener noreferrer"
               target="_blank"
-              title="GitHub Repository"
+              title="View GitHub repository"
               className="navbar-title"
             >
               React Photo Search
