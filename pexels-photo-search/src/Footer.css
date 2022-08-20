@@ -1,5 +1,5 @@
 .footer-component {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   bottom: 0;
   display: flex;
@@ -9,6 +9,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  background-color: var(--base);
 }
 
 .footer-component > .footer-column {
