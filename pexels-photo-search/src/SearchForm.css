@@ -40,16 +40,20 @@ textarea {
   color: var(--darkest);
 }
 
-svg.icon.enabled.icon-search {
+div.search-icon-container {
+  background-color: var(--darker);
+}
+
+div.search-icon-container > svg.icon.enabled.icon-search {
   width: 1.75rem;
   height: 1.75rem;
   margin: 0.25rem;
 }
 
-svg.icon.enabled.icon-search > path {
-  fill: var(--darker);
+div.search-icon-container > svg.icon.enabled.icon-search > path {
+  fill: var(--base);
 }
 
-svg.icon.enabled.icon-search:hover > path {
-  fill: var(--darkest);
+div.search-icon-container:hover > svg.icon.enabled.icon-search > path {
+  fill: var(--lightest);
 }

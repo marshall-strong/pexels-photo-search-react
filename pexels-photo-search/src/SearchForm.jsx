@@ -15,7 +15,7 @@ const SearchForm = ({ setNewUrl, userInput, setUserInput }) => {
   };
 
   const iconSearch = (
-    <div title="Search for Photos">
+    <div className="search-icon-container" title="Search for Photos">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
