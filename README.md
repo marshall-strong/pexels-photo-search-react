@@ -6,15 +6,15 @@
     - [User Stories](#user-stories)
     - [Extras](#extras)
   - [Project Features](#project-features)
-    - [&#9658; Displays `Photo` components in the `Gallery` using a masonry layout](#-displays-photo-components-in-the-gallery-using-a-masonry-layout)
-    - [&#9658; Displays photos from the Pexels "Curated Photos" endpoint on the home screen](#-displays-photos-from-the-pexels-curated-photos-endpoint-on-the-home-screen)
-    - [&#9658; `SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint](#-searchform-component-gets-a-query-string-from-the-user-and-displays-relevant-photos-from-the-pexels-search-for-photos-endpoint)
-    - [&#9658; `Photo` components display photographer name and url on hover](#-photo-components-display-photographer-name-and-url-on-hover)
-    - [&#9658; Paginate through `Gallery` photos](#-paginate-through-gallery-photos)
-    - [&#9658; LocalStorage retains user's current page and search query on page refresh](#-localstorage-retains-users-current-page-and-search-query-on-page-refresh)
-    - [&#9658; Server-side rendering as a Single-Page React App](#-server-side-rendering-as-a-single-page-react-app)
-    - [&#9658; Netlify Functions Conceal the API key from the end user](#-netlify-functions-conceal-the-api-key-from-the-end-user)
-    - [&#9658; Logo with CSS animation](#-logo-with-css-animation)
+    - [**Displays `Photo` components in the `Gallery` using a masonry layout**](#displays-photo-components-in-the-gallery-using-a-masonry-layout)
+    - [**Displays photos from the Pexels "Curated Photos" endpoint on the home screen**](#displays-photos-from-the-pexels-curated-photos-endpoint-on-the-home-screen)
+    - [**`SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint**](#searchform-component-gets-a-query-string-from-the-user-and-displays-relevant-photos-from-the-pexels-search-for-photos-endpoint)
+    - [**`Photo` components display photographer name and url on hover**](#photo-components-display-photographer-name-and-url-on-hover)
+    - [**Paginate through photos in the `Gallery`**](#paginate-through-photos-in-the-gallery)
+    - [**LocalStorage retains the user's current page and search query on page refresh**](#localstorage-retains-the-users-current-page-and-search-query-on-page-refresh)
+    - [**Server-side rendering as a Single-Page React App**](#server-side-rendering-as-a-single-page-react-app)
+    - [**Netlify Functions Conceal the API key from the end user**](#netlify-functions-conceal-the-api-key-from-the-end-user)
+    - [**Logo with CSS animation**](#logo-with-css-animation)
   - [Development Mode](#development-mode)
     - [Create Local Clone of GitHub Repository](#create-local-clone-of-github-repository)
     - [Getting a Pexels API key](#getting-a-pexels-api-key)
@@ -27,6 +27,9 @@
     - [**Stylelint**](#stylelint)
   - [Production Deployment](#production-deployment)
   - [Crucial Thanks](#crucial-thanks)
+    - [**Pexels**](#pexels)
+    - [**Netlify**](#netlify)
+    - [**Create React App**](#create-react-app)
   - [Resources and How-Tos](#resources-and-how-tos)
   - [Future Development Work](#future-development-work)
 
@@ -79,47 +82,49 @@ We need you to build a website to let users browse photos from [Pexels](https://
 
 ## Project Features
 
-### &#9658; Displays `Photo` components in the `Gallery` using a masonry layout
+### **Displays `Photo` components in the `Gallery` using a masonry layout**
 
-The `Gallery` component displays photos in a masonry layout, where photos fill out rows while preserving aspect ratio.
+The `Gallery` component displays photos in a masonry layout, where photos are arranged to completely fill out rows without compromising image aspect ratio.
 
-### &#9658; Displays photos from the Pexels "Curated Photos" endpoint on the home screen
+### **Displays photos from the Pexels "Curated Photos" endpoint on the home screen**
 
 The home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`.
 
-### &#9658; `SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint
+### **`SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint**
 
 The `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`
 
-### &#9658; `Photo` components display photographer name and url on hover
+### **`Photo` components display photographer name and url on hover**
 
-Hovering over a `Photo` in the `Gallery` component brings up the photographer's name and a link to more of their work on Pexels
+Hovering over a `Photo` in the `Gallery` component brings up the photographer's name, with a link to more of the photographer's work on Pexels
 
-### &#9658; Paginate through `Gallery` photos
+### **Paginate through photos in the `Gallery`**
 
-the `PaginationBar` component allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page
+The `Pagination` components allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page
 
-### &#9658; LocalStorage retains user's current page and search query on page refresh
+### **LocalStorage retains the user's current page and search query on page refresh**
 
 LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed
 
-### &#9658; Server-side rendering as a Single-Page React App
+### **Server-side rendering as a Single-Page React App**
 
-### &#9658; Netlify Functions Conceal the API key from the end user
+### **Netlify Functions Conceal the API key from the end user**
 
-Leverage continuous deployment in Netlify to kick off an _automated build process_ that generates site assets.
+Sending a request to the Pexels API requires a key, and if the request is created and sent from inside of the Create React App application, the API key will end up being exposed to any site users with access to Chrome DevTools. Fortunately for us, Netlify Functions provide a way around this vulnerability...
 
-### &#9658; Logo with CSS animation
+### **Logo with CSS animation**
+
+The animated site logo was inspired by the Create React App logo, and was a fun opportunity to play around with CSS animations and keyframes.
 
 ## Development Mode
 
 Developers who wish to run this project locally can do so using the following steps, described in greater detail below:
 
-- Create a local clone of the `react-photo-search` GitHub repository
-- Get a Pexels API key
-- Store your API key as an environment variable in a `.env` file
-- Install project dependencies using `npm install`
-- Compile and run the project in Development mode using `npm start` to start Netlify Dev with Create React App
+- [Create a local clone of the project's GitHub repository](#create-local-clone-of-github-repository)
+- [Get a Pexels API key](#getting-a-pexels-api-key)
+- [Store your API key as an environment variable by creating a `.env` file](#storing-an-api-key-in-a-env-file)
+- [Install project dependencies using `npm install`](#install-project-dependencies)
+- [Compile and run the project in Development mode using `npm start` to start Netlify Dev with Create React App](#start-the-project)
 
 ### Create Local Clone of GitHub Repository
 
@@ -127,9 +132,12 @@ The GitHub repository for this project can be found here: <https://github.com/ma
 
 Click the "Code" button and select which method you'd like to use to clone the repository: HTTPS, SSH, the GitHub CLI, or Download a ZIP file.
 
-_Cloning the Repository with GitHub CLI:_
+_Cloning the Repository using the GitHub CLI:_
 
-`gh repo clone marshall-strong/react-photo-search`
+```bash
+#!/bin/bash
+gh repo clone marshall-strong/react-photo-search
+```
 
 ### Getting a Pexels API key
 
@@ -154,40 +162,53 @@ To get a Pexels API key, do the following:
 
 In Development mode, the application reads the Pexels API key from a `.env` file located in the root directory of the React app (`pexels-photo-search/.env`).
 
-To create a `.env` file from a console window, do the following:
+Once you have your Pexels API key, create a new file named `.env` inside the root directory of the Create React App application (note that this is different from the root directory of the project).
 
-```bash
-#!/bin/bash
-$ cd react-photo-search
-$ cd pexels-photo-search
-$ echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
-```
+Open your new `.env` file. Environment variables are written in SCREAMING_SNAKE_CASE, are separated from their values by an equal sign `=`, and no quotation marks are required. The application is expecting an environment variable named `PEXELS_API_KEY`, so once you have copied and pasted your own API key into the `.env` file, it should look something like this:
 
-Make sure to replace the sample API key with your own key.
-In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`.
-
-The result should be the following:
-
-_file: `pexels-photo-search/.env`_
+_`react-photo-search/pexels-photo-search/.env`_
 
 ```node
 PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
 
 ```
 
-In Development mode, Netlify Dev will get the API key from this `.env` configuration file as an environment variable. In a Production deployment, the API key is still stored as an environment variable, but it is configured in the settings of your Netlify site under "Settings" > "Build & deploy" > "Environment".
+**Note:**
+Make sure to replace the sample API key with your own key.
+In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`.
+
+_Alternatively, you can just create and configure your `.env` file from the command line:_
+
+```bash
+#!/bin/bash
+$ cd react-photo-search/pexels-photo-search
+$ echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
+```
+
+**Note:**
+In Development mode, Netlify Dev will read the API key from this `.env` file as an environment variable. In a Production deployment, the API key is still stored as an environment variable, but it is not read from a file. Instead, the variable is configured in the settings of your Netlify site under "Settings" > "Build & deploy" > "Environment". See the [Production Deployment](#production-deployment) section for more information.
 
 ### Install Project Dependencies
 
+Navigate to the root directory of the project and use the `npm install` command to install the packages for all of the project's dependencies.
+
 ```bash
-npm install
+#!/bin/bash
+$ cd react-photo-search
+$ npm install
 ```
 
 ### Start the Project
 
+Navigate to the root directory of the project and use the `npm start` command to run the application in Development mode.
+
 ```bash
-npm start
+#!/bin/bash
+$ cd react-photo-search
+$ npm start
 ```
+
+This command is a shortcut that uses Create React App's built-in scripts to start the development server and compile the project using webpack. At the same time, Netlify Dev starts another, separate server to load the Netlify Functions onto, and it makes the environment variables defined in the `.env` file available to the Netlify Functions server (but NOT the Create React App server). Even in Development mode, this will hide the Pexels API key from users on the client side.
 
 ## Project Style
 
@@ -231,10 +252,12 @@ Prettier mirror for integration with Pre-commit:
 [Stylelint](https://stylelint.io/) is a linter that identifies errors and enforces conventions in a project's stylesheets.
 
 To run `stylelint` at any time (not just when saving a commit), use `npx`.
-The following command runs `stylelint` on all CSS files, fixing problems when possible:
+The following command runs `stylelint` on all CSS files inside the `src` subdirectory, fixing problems when possible:
 
 ```bash
-npx stylelint "pexels-photo-search/src/**/*.css" --fix
+#!/bin/bash
+$ cd react-photo-search
+$ npx stylelint "pexels-photo-search/src/**/*.css" --fix
 ```
 
 Stylelint mirror for integration with Pre-commit:
@@ -254,19 +277,17 @@ In Production mode, Netlify expects to recieve the Pexels API key as an environm
 
 This project would not have been possible without assistance from the following:
 
-&#9658; [Pexels](https://www.pexels.com/api)
+### **[Pexels](https://www.pexels.com/api)**
 
 Pexels provides access to their entire photo and video library for free. The Pexels API powers this entire application.
 
-&#9658; [Netlify](https://docs.netlify.com/)
+### **[Netlify](https://docs.netlify.com/)**
 
 Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.
 
-&#9658; [Create React App](https://create-react-app.dev/)
+### **[Create React App](https://create-react-app.dev/)**
 
 Create React App takes care of setting up and configuring a new React application with useful defaults
-
-&#9658; [Boxy SVG](https://boxy-svg.com/)
 
 A free, browser-based tool for editing SVG elements
 
@@ -280,13 +301,13 @@ A free, browser-based tool for editing SVG elements
 - ["Cool and Fresh" color palette](https://visme.co/blog/website-color-schemes/#attachment_13239)
 - [CSS Pulse Effect](https://www.florin-pop.com/blog/2019/03/css-pulse-effect/)
 - [Adaptive Photo Layout with Flexbox](https://css-tricks.com/adaptive-photo-layout-with-flexbox/)
-- <https://blog.spotibo.com/difference-between-alt-text-and-title-text/>
+- [Boxy SVG: A free, browser-based tool for editing SVG elements](https://boxy-svg.com/)
+- [the difference between ALT text and Title text](https://blog.spotibo.com/difference-between-alt-text-and-title-text/)
 
 ## Future Development Work
 
 The following features are not currently implemented, but will be added as time allows:
 
-- configure `pre-commit` so that `stylelint` tries automatically fixing errors (when possible)
 - add placeholdercontent for images before they are loaded
 - add tests, and instructions for running them in Development mode
 - add additional project information to the `Footer`
