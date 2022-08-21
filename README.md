@@ -16,11 +16,12 @@
     - [**Netlify Functions Conceal the API key from the end user**](#netlify-functions-conceal-the-api-key-from-the-end-user)
     - [**Logo with CSS animation**](#logo-with-css-animation)
   - [Development Mode](#development-mode)
-    - [Create Local Clone of GitHub Repository](#create-local-clone-of-github-repository)
-    - [Getting a Pexels API key](#getting-a-pexels-api-key)
-    - [Storing an API key in a `.env` file](#storing-an-api-key-in-a-env-file)
-    - [Install Project Dependencies](#install-project-dependencies)
-    - [Start the Project](#start-the-project)
+    - [**1. Create Local Clone of GitHub Repository**](#1-create-local-clone-of-github-repository)
+    - [**2. Register with Pexels for an API key**](#2-register-with-pexels-for-an-api-key)
+    - [**3. Store the API key in a `.env` file**](#3-store-the-api-key-in-a-env-file)
+      - [_Alternatively, you can just create and configure your `.env` file from the command line:_](#alternatively-you-can-just-create-and-configure-your-env-file-from-the-command-line)
+    - [**4. Install Project Dependencies with `npm install`**](#4-install-project-dependencies-with-npm-install)
+    - [**5. Start the Project with `npm start`**](#5-start-the-project-with-npm-start)
   - [Project Style](#project-style)
     - [**Pre-commit**](#pre-commit)
     - [**Prettier**](#prettier)
@@ -120,13 +121,13 @@ The animated site logo was inspired by the Create React App logo, and was a fun 
 
 Developers who wish to run this project locally can do so using the following steps, described in greater detail below:
 
-- [Create a local clone of the project's GitHub repository](#create-local-clone-of-github-repository)
-- [Get a Pexels API key](#getting-a-pexels-api-key)
-- [Store your API key as an environment variable by creating a `.env` file](#storing-an-api-key-in-a-env-file)
-- [Install project dependencies using `npm install`](#install-project-dependencies)
-- [Compile and run the project in Development mode using `npm start` to start Netlify Dev with Create React App](#start-the-project)
+1. [Create a local clone of the project's GitHub repository](#1-create-local-clone-of-github-repository)
+2. [Register with Pexels for an API key](#2-register-with-pexels-for-an-api-key)
+3. [Store the API key in a `.env` file](#3-store-the-api-key-in-a-env-file)
+4. [Install project dependencies using `npm install`](#4-install-project-dependencies-with-npm-install)
+5. [Compile and run the project in Development mode using `npm start` to start Netlify Dev with Create React App](#5-start-the-project-with-npm-start)
 
-### Create Local Clone of GitHub Repository
+### **1. Create Local Clone of GitHub Repository**
 
 The GitHub repository for this project can be found here: <https://github.com/marshall-strong/react-photo-search>
 
@@ -139,7 +140,7 @@ _Cloning the Repository using the GitHub CLI:_
 gh repo clone marshall-strong/react-photo-search
 ```
 
-### Getting a Pexels API key
+### **2. Register with Pexels for an API key**
 
 A Pexels API Key (not included in the repository) is required in order for the project to run properly. Without a key, requests sent to the Pexels API will be denied, and the user will be unable to retrieve any images to display.
 
@@ -158,7 +159,7 @@ To get a Pexels API key, do the following:
   - Example Pexels API Key: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
 - If you ever lose your key, you can always retrieve it by logging into your Pexels account.
 
-### Storing an API key in a `.env` file
+### **3. Store the API key in a `.env` file**
 
 In Development mode, the application reads the Pexels API key from a `.env` file located in the root directory of the React app (`pexels-photo-search/.env`).
 
@@ -177,7 +178,7 @@ PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
 Make sure to replace the sample API key with your own key.
 In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`.
 
-_Alternatively, you can just create and configure your `.env` file from the command line:_
+#### _Alternatively, you can just create and configure your `.env` file from the command line:_
 
 ```bash
 #!/bin/bash
@@ -187,7 +188,7 @@ $ echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789"
 
 **Note:** In Development mode, Netlify Dev will read the API key from this `.env` file as an environment variable. In a Production deployment, the API key is still stored as an environment variable, but it is not read from a file. Instead, the variable is configured in the settings of your Netlify site under "Settings" > "Build & deploy" > "Environment". See the [Production Deployment](#production-deployment) section for more information.
 
-### Install Project Dependencies
+### **4. Install Project Dependencies with `npm install`**
 
 Navigate to the root directory of the project and use the `npm install` command to install the packages for all of the project's dependencies.
 
@@ -197,7 +198,7 @@ $ cd react-photo-search
 $ npm install
 ```
 
-### Start the Project
+### **5. Start the Project with `npm start`**
 
 Navigate to the root directory of the project and use the `npm start` command to run the application in Development mode.
 
@@ -330,7 +331,7 @@ A live version of the site can be viewed [here](https://react-photo-search.netli
 
 ## Crucial Thanks
 
-This project would not have been possible without assistance from the following:
+This project would not have been possible without the following services:
 
 ### **[Pexels](https://www.pexels.com/api)**
 
