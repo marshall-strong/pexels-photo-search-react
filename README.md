@@ -362,6 +362,7 @@ Netlify is an all-in-one platform for automating modern web projects. For this p
 
 The following features are not currently implemented, but will be added as time allows:
 
+- add code snippets to the "Project Features" section of the README.md
 - add placeholdercontent for images before they are loaded
 - add tests, and instructions for running them in Development mode
 - add additional project information to the `Footer`
