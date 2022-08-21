@@ -11,19 +11,19 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v2.7.1" # Use the sha / tag you want to point at
+    rev: "v2.7.1" # Note: Use the sha / tag you want to point at
     hooks:
       - id: prettier
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: "v14.10.0" # Use the sha / tag you want to point at
+    rev: "v14.10.0" # Note: Use the sha / tag you want to point at
     hooks:
       - id: stylelint
         args: [--fix]
         additional_dependencies:
-          # stylelint itself (and not a mirror) needs to be used here when using additional_dependencies.
+          # Note: stylelint itself (and not a mirror) needs to be used here when using additional_dependencies.
           - stylelint@latest
           - stylelint-config-standard@latest
           - stylelint-config-idiomatic-order@latest
           - stylelint-config-prettier@latest
-          # Package names starting with `@` need to be quoted. For example:
+          # Note: Package names starting with `@` need to be quoted. For example:
           # - "@scope/my-awesome-plugin@0.12.0"
