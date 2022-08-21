@@ -215,7 +215,14 @@ This command is a shortcut that uses Create React App's built-in scripts to star
 
 [Pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks. It runs Git hook scripts (like linters) before each Git commit, and prompts the user to fix any issues that are found before the commit can be saved. Pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
 
-Pre-commit is configured with a `.yaml` file, reproduced here:
+Before using Pre-commit on your machine for the first time, the Pre-commit package manager must first be installed locally on your machine:
+
+```bash
+#!/bin/bash
+$ pip install pre-commit
+```
+
+Pre-commit hooks are configured using a file named `.pre-commit-config.yaml`. The file containing the Pre-commit configuration for this project is reproduced below:
 
 _`react-photo-search/.pre-commit-config.yaml`_
 
@@ -229,25 +236,35 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v2.7.1" # Use the sha / tag you want to point at
+    rev: "v2.7.1" # Note: Use the sha / tag you want to point at
     hooks:
       - id: prettier
-        # files: ^pexels-photo-search/
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: "v14.10.0" # Use the sha / tag you want to point at
+    rev: "v14.10.0" # Note: Use the sha / tag you want to point at
     hooks:
       - id: stylelint
         args: [--fix]
         additional_dependencies:
-          # stylelint itself needs to be here when using additional_dependencies.
+          # Note: stylelint itself (and not a mirror) needs to be used here when using additional_dependencies.
           - stylelint@latest
           - stylelint-config-standard@latest
           - stylelint-config-idiomatic-order@latest
           - stylelint-config-prettier@latest
-          # Package names starting with `@` need to be quoted. For example:
+          # Note: Package names starting with `@` need to be quoted. For example:
           # - "@scope/my-awesome-plugin@0.12.0"
-        # files: ^pexels-photo-search/
 ```
+
+**Note:** The `prettier` and `stylelint` hooks configured in the `.pre-commit-config.yaml` file above are described in greater detail in the next section.
+
+Once the configuration file is complete, run `pre-commit install` to set up the git hook scripts:
+
+```bash
+#!/bin/bash
+$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+```
+
+Once installed, Pre-commit will run automatically on every `git commit`!
 
 _Console output after installing and configuring pre-commit:_
 
@@ -262,6 +279,8 @@ $ pre-commit install
 pre-commit installed at .git/hooks/pre-commit
 $ pre-commit run --all-files
 ```
+
+[**pre-commit/pre-commit-hooks**](https://github.com/pre-commit/pre-commit-hooks) Some out-of-the-box hooks for pre-commit
 
 ### **Prettier**
 
