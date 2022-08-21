@@ -14,7 +14,6 @@ repos:
     rev: "v2.7.1" # Use the sha / tag you want to point at
     hooks:
       - id: prettier
-        # files: ^pexels-photo-search/
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
     rev: "v14.10.0" # Use the sha / tag you want to point at
     hooks:
@@ -28,4 +27,3 @@ repos:
           - stylelint-config-prettier@latest
           # Package names starting with `@` need to be quoted. For example:
           # - "@scope/my-awesome-plugin@0.12.0"
-        # files: ^pexels-photo-search/
