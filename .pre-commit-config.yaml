@@ -20,13 +20,12 @@ repos:
     hooks:
       - id: stylelint
         args: [--fix]
-        # additional_dependencies: ['stylelint@13.2.1', 'stylelint-config-standard@20.0.0']
         additional_dependencies:
-          # stylelint itself needs to be here when using additional_dependencies.
+          # stylelint itself (and not a mirror) needs to be used here when using additional_dependencies.
           - stylelint@latest
           - stylelint-config-standard@latest
           - stylelint-config-idiomatic-order@latest
           - stylelint-config-prettier@latest
-          # Package names starting with `@` need to be quoted.
+          # Package names starting with `@` need to be quoted. For example:
           # - "@scope/my-awesome-plugin@0.12.0"
         # files: ^pexels-photo-search/
