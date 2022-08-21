@@ -28,8 +28,8 @@
   - [Production Deployment](#production-deployment)
   - [Crucial Thanks](#crucial-thanks)
     - [**Pexels**](#pexels)
-    - [**Netlify**](#netlify)
     - [**Create React App**](#create-react-app)
+    - [**Netlify**](#netlify)
   - [Resources and How-Tos](#resources-and-how-tos)
   - [Future Development Work](#future-development-work)
 
@@ -185,8 +185,7 @@ $ cd react-photo-search/pexels-photo-search
 $ echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
 ```
 
-**Note:**
-In Development mode, Netlify Dev will read the API key from this `.env` file as an environment variable. In a Production deployment, the API key is still stored as an environment variable, but it is not read from a file. Instead, the variable is configured in the settings of your Netlify site under "Settings" > "Build & deploy" > "Environment". See the [Production Deployment](#production-deployment) section for more information.
+**Note:** In Development mode, Netlify Dev will read the API key from this `.env` file as an environment variable. In a Production deployment, the API key is still stored as an environment variable, but it is not read from a file. Instead, the variable is configured in the settings of your Netlify site under "Settings" > "Build & deploy" > "Environment". See the [Production Deployment](#production-deployment) section for more information.
 
 ### Install Project Dependencies
 
@@ -214,13 +213,43 @@ This command is a shortcut that uses Create React App's built-in scripts to star
 
 ### **Pre-commit**
 
-[Pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks.
+[Pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks. It runs Git hook scripts (like linters) before each Git commit, and prompts the user to fix any issues that are found before the commit can be saved. Pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
 
-Pre-commit runs Git hook scripts (like linters) before each Git commit and prompts the user to fix any issues that are found before the commit can be saved.
+Pre-commit is configured with a `.yaml` file, reproduced here:
 
-Pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
+_`react-photo-search/.pre-commit-config.yaml`_
 
-_Log files from installing and configuring:_
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v2.7.1" # Use the sha / tag you want to point at
+    hooks:
+      - id: prettier
+        # files: ^pexels-photo-search/
+  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+    rev: "v14.10.0" # Use the sha / tag you want to point at
+    hooks:
+      - id: stylelint
+        args: [--fix]
+        additional_dependencies:
+          # stylelint itself needs to be here when using additional_dependencies.
+          - stylelint@latest
+          - stylelint-config-standard@latest
+          - stylelint-config-idiomatic-order@latest
+          - stylelint-config-prettier@latest
+          # Package names starting with `@` need to be quoted. For example:
+          # - "@scope/my-awesome-plugin@0.12.0"
+        # files: ^pexels-photo-search/
+```
+
+_Console output after installing and configuring pre-commit:_
 
 ```bash
 #!/bin/bash
@@ -234,25 +263,21 @@ pre-commit installed at .git/hooks/pre-commit
 $ pre-commit run --all-files
 ```
 
-Pre-commit tabs:
-<https://www.one-tab.com/page/KgV3lUgYQ-CE0JRg4Yq74g>
-
 ### **Prettier**
 
 [Prettier](https://prettier.io/) is an opinionated code formatter that enforces conventions automatically.
 
-Integrating Prettier with pre-commit:
-[https://prettier.io/docs/en/precommit.html](https://prettier.io/docs/en/precommit.html#option-3-pre-commithttpsgithubcompre-commitpre-commit)
+[**prettier/prettier**](https://github.com/prettier/prettier)
+Official Prettier repository
 
-Prettier mirror for integration with Pre-commit:
-<https://github.com/pre-commit/mirrors-prettier>
+[**pre-commit/mirrors-prettier**](https://github.com/pre-commit/mirrors-prettier)
+Mirrors all **prettier/prettier** releases, used by Pre-commit to run the prettier hook
 
 ### **Stylelint**
 
 [Stylelint](https://stylelint.io/) is a linter that identifies errors and enforces conventions in a project's stylesheets.
 
-To run `stylelint` at any time (not just when saving a commit), use `npx`.
-The following command runs `stylelint` on all CSS files inside the `src` subdirectory, fixing problems when possible:
+_Use `npx` to run Stylelint at any time (not just when saving a commit):_
 
 ```bash
 #!/bin/bash
@@ -260,18 +285,29 @@ $ cd react-photo-search
 $ npx stylelint "pexels-photo-search/src/**/*.css" --fix
 ```
 
-Stylelint mirror for integration with Pre-commit:
-<https://github.com/thibaudcolas/pre-commit-stylelint>
+[**stylelint/stylelint**](https://github.com/stylelint/stylelint)
+Official Stylelint repository
 
-Stylelint tabs:
-<https://www.one-tab.com/page/DcZJXxmaQE2Sc1Ae6lrT5g>
+[**stylelint/stylelint-config-standard**](https://github.com/stylelint/stylelint-config-standard)
+The standard shareable config for Stylelint
+
+[**ream88/stylelint-config-idiomatic-order**](https://github.com/ream88/stylelint-config-idiomatic-order)
+Orders styles using consistent, idiomatic CSS
+
+[**prettier/stylelint-config-prettier**](https://github.com/prettier/stylelint-config-prettier)
+Turns off all rules that are unnecessary or might conflict with prettier
+
+[**thibaudcolas/pre-commit-stylelint**](https://github.com/thibaudcolas/pre-commit-stylelint)
+Mirrors all **stylelint/stylelint** releases, used by Pre-commit to run the stylelint hook
 
 ## Production Deployment
 
-This project is deployed to Production directly from GitHub using Netlify.
-A live version of the site can be viewed here: [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).
+**<https://react-photo-search.netlify.app/>**
 
-In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
+This project is deployed to Production directly from GitHub using Netlify.
+A live version of the site can be viewed [here](https://react-photo-search.netlify.app/).
+
+**Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
 
 ## Crucial Thanks
 
@@ -281,15 +317,13 @@ This project would not have been possible without assistance from the following:
 
 Pexels provides access to their entire photo and video library for free. The Pexels API powers this entire application.
 
-### **[Netlify](https://docs.netlify.com/)**
-
-Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely sent requests to the Pexels API without exposing the API key to the end user.
-
 ### **[Create React App](https://create-react-app.dev/)**
 
 Create React App takes care of setting up and configuring a new React application with useful defaults
 
-A free, browser-based tool for editing SVG elements
+### **[Netlify](https://docs.netlify.com/)**
+
+Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely send requests to the Pexels API without exposing the API key to the end user.
 
 ## Resources and How-Tos
 
@@ -302,7 +336,7 @@ A free, browser-based tool for editing SVG elements
 - [CSS Pulse Effect](https://www.florin-pop.com/blog/2019/03/css-pulse-effect/)
 - [Adaptive Photo Layout with Flexbox](https://css-tricks.com/adaptive-photo-layout-with-flexbox/)
 - [Boxy SVG: A free, browser-based tool for editing SVG elements](https://boxy-svg.com/)
-- [the difference between ALT text and Title text](https://blog.spotibo.com/difference-between-alt-text-and-title-text/)
+- [The Difference Between ALT text and Title text](https://blog.spotibo.com/difference-between-alt-text-and-title-text/)
 
 ## Future Development Work
 
