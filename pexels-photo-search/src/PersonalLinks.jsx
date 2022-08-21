@@ -1,5 +1,4 @@
 import React from "react";
-import headshotIcon from "./img/headshot-512.png";
 import "./PersonalLinks.css";
 
 const PersonalLinks = () => {
