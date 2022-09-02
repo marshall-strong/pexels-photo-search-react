@@ -28,6 +28,8 @@
     - [**Stylelint**](#stylelint)
   - [Production Deployment](#production-deployment)
   - [Testing with Jest](#testing-with-jest)
+    - [Running Unit Tests](#running-unit-tests)
+    - [Jest Setup](#jest-setup)
   - [Crucial Thanks](#crucial-thanks)
     - [**Pexels**](#pexels)
     - [**Create React App**](#create-react-app)
@@ -332,7 +334,20 @@ A live version of the site can be viewed [here](https://react-photo-search.netli
 
 ## Testing with Jest
 
-Jest is a JavaScript testing framework put out by Facebook and designed for React.
+Jest is a JavaScript testing framework put out by Facebook and designed for React unit testing.
+
+### Running Unit Tests
+
+To run this project's unit tests using Jest, run the following command:
+
+```node
+npm test
+```
+
+This project was built using Create React App, so Jest is already built into the app.
+When `npm test` is run from the root directory, Node navigates into the React project subdirectory and runs Jest using `react-scripts test`.
+
+### Jest Setup
 
 <https://jestjs.io/docs/tutorial-react>
 
