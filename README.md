@@ -27,6 +27,7 @@
     - [**Prettier**](#prettier)
     - [**Stylelint**](#stylelint)
   - [Production Deployment](#production-deployment)
+  - [Testing with Jest](#testing-with-jest)
   - [Crucial Thanks](#crucial-thanks)
     - [**Pexels**](#pexels)
     - [**Create React App**](#create-react-app)
@@ -328,6 +329,15 @@ This project is deployed to Production directly from GitHub using Netlify.
 A live version of the site can be viewed [here](https://react-photo-search.netlify.app/).
 
 **Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
+
+## Testing with Jest
+
+Jest is a JavaScript testing framework put out by Facebook and designed for React.
+
+<https://jestjs.io/docs/tutorial-react>
+
+Add `react-test-renderer` for rendering snapshots:
+`npm install --save-dev react-test-renderer`
 
 ## Crucial Thanks
 
