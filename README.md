@@ -27,9 +27,9 @@
     - [**Prettier**](#prettier)
     - [**Stylelint**](#stylelint)
   - [Production Deployment](#production-deployment)
-  - [Testing with Jest](#testing-with-jest)
-    - [Running Unit Tests](#running-unit-tests)
-    - [Jest Setup](#jest-setup)
+  - [Testing](#testing)
+    - [Running Unit Tests with Jest](#running-unit-tests-with-jest)
+      - [Jest Documentation](#jest-documentation)
   - [Crucial Thanks](#crucial-thanks)
     - [**Pexels**](#pexels)
     - [**Create React App**](#create-react-app)
@@ -332,11 +332,13 @@ A live version of the site can be viewed [here](https://react-photo-search.netli
 
 **Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
 
-## Testing with Jest
+## Testing
 
-Jest is a JavaScript testing framework put out by Facebook and designed for React unit testing.
+[**Jest**](https://jestjs.io/) is a JavaScript testing framework put out by Facebook and designed for unit testing React components.
 
-### Running Unit Tests
+[**Playwright**](https://playwright.dev/) is a framework by Microsoft that enables reliable end-to-end testing for modern web apps.
+
+### Running Unit Tests with Jest
 
 To run this project's unit tests using Jest, run the following command:
 
@@ -347,12 +349,11 @@ npm test
 This project was built using Create React App, so Jest is already built into the app.
 When `npm test` is run from the root directory, Node navigates into the React project subdirectory and runs Jest using `react-scripts test`.
 
-### Jest Setup
+#### Jest Documentation
 
 <https://jestjs.io/docs/tutorial-react>
-
-Add `react-test-renderer` for rendering snapshots:
-`npm install --save-dev react-test-renderer`
+<https://create-react-app.dev/docs/running-tests/#testing-components>
+<https://reactjs.org/docs/testing-recipes.html>
 
 ## Crucial Thanks
 
