@@ -1,5 +1,5 @@
 import React from "react";
-import reactIcon from "./img/reactIcon.svg";
+import reactIcon from "./../img/reactIcon.svg";
 import "./LoadingIcon.css";
 
 const LoadingIcon = () => {
