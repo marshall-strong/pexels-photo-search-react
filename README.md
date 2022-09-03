@@ -164,13 +164,13 @@ To get a Pexels API key, do the following:
 
 ### **3. Store the API key in a `.env` file**
 
-In Development mode, the application reads the Pexels API key from a `.env` file located in the root directory of the React app (`pexels-photo-search/.env`).
+In Development mode, the application reads the Pexels API key from a `.env` file located in the root directory of the React app (`react-frontend/.env`).
 
 Once you have your Pexels API key, create a new file named `.env` inside the root directory of the Create React App application (note that this is different from the root directory of the project).
 
 Open your new `.env` file. Environment variables are written in SCREAMING_SNAKE_CASE, are separated from their values by an equal sign `=`, and no quotation marks are required. The application is expecting an environment variable named `PEXELS_API_KEY`, so once you have copied and pasted your own API key into the `.env` file, it should look something like this:
 
-_`react-photo-search/pexels-photo-search/.env`_
+_`react-photo-search/react-frontend/.env`_
 
 ```node
 PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
@@ -185,7 +185,7 @@ In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz0123
 
 ```bash
 #!/bin/bash
-$ cd react-photo-search/pexels-photo-search
+$ cd react-photo-search/react-frontend
 $ echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
 ```
 
@@ -305,7 +305,7 @@ _Use `npx` to run Stylelint at any time (not just when saving a commit):_
 ```bash
 #!/bin/bash
 $ cd react-photo-search
-$ npx stylelint "pexels-photo-search/src/**/*.css" --fix
+$ npx stylelint "react-frontend/src/**/*.css" --fix
 ```
 
 [**stylelint/stylelint**](https://github.com/stylelint/stylelint)

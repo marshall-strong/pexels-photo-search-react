@@ -1,8 +1,8 @@
 {
   "name": "react-photo-search",
   "scripts": {
-    "start": "cd pexels-photo-search && netlify dev",
-    "test": "cd pexels-photo-search && npm test"
+    "start": "cd react-frontend && netlify dev",
+    "test": "cd react-frontend && npm test"
   },
   "devDependencies": {
     "react-test-renderer": "^18.2.0",
