@@ -1,17 +1,19 @@
 import React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
+import { unmountComponentAtNode } from "react-dom";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 
 // <https://reactjs.org/docs/testing-recipes.html>
 // <https://create-react-app.dev/docs/running-tests/#testing-components>
 
-// isolates each test by setting up before and cleaning up after
+// isolates tests by setting up before and cleaning up after each test
 let container = null;
+let root = null;
 
 beforeEach(() => {
   // setup a DOM element as the test's render target
   container = document.createElement("div");
-  document.body.appendChild(container);
+  root = createRoot(container);
 });
 
 afterEach(() => {
@@ -22,5 +24,5 @@ afterEach(() => {
 
 // basic "smoke test"
 it("renders without crashing", () => {
-  render(<App />, container);
+  root.render(<App />);
 });
