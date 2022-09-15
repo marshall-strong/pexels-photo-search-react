@@ -27,6 +27,9 @@
     - [**Prettier**](#prettier)
     - [**Stylelint**](#stylelint)
   - [Production Deployment](#production-deployment)
+  - [Testing](#testing)
+    - [Running Unit Tests with Jest](#running-unit-tests-with-jest)
+      - [Jest Documentation](#jest-documentation)
   - [Crucial Thanks](#crucial-thanks)
     - [**Pexels**](#pexels)
     - [**Create React App**](#create-react-app)
@@ -161,13 +164,13 @@ To get a Pexels API key, do the following:
 
 ### **3. Store the API key in a `.env` file**
 
-In Development mode, the application reads the Pexels API key from a `.env` file located in the root directory of the React app (`pexels-photo-search/.env`).
+In Development mode, the application reads the Pexels API key from a `.env` file located in the root directory of the React app (`react-frontend/.env`).
 
 Once you have your Pexels API key, create a new file named `.env` inside the root directory of the Create React App application (note that this is different from the root directory of the project).
 
 Open your new `.env` file. Environment variables are written in SCREAMING_SNAKE_CASE, are separated from their values by an equal sign `=`, and no quotation marks are required. The application is expecting an environment variable named `PEXELS_API_KEY`, so once you have copied and pasted your own API key into the `.env` file, it should look something like this:
 
-_`react-photo-search/pexels-photo-search/.env`_
+_`react-photo-search/react-frontend/.env`_
 
 ```node
 PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
@@ -182,7 +185,7 @@ In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz0123
 
 ```bash
 #!/bin/bash
-$ cd react-photo-search/pexels-photo-search
+$ cd react-photo-search/react-frontend
 $ echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
 ```
 
@@ -302,7 +305,7 @@ _Use `npx` to run Stylelint at any time (not just when saving a commit):_
 ```bash
 #!/bin/bash
 $ cd react-photo-search
-$ npx stylelint "pexels-photo-search/src/**/*.css" --fix
+$ npx stylelint "react-frontend/src/**/*.css" --fix
 ```
 
 [**stylelint/stylelint**](https://github.com/stylelint/stylelint)
@@ -328,6 +331,29 @@ This project is deployed to Production directly from GitHub using Netlify.
 A live version of the site can be viewed [here](https://react-photo-search.netlify.app/).
 
 **Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
+
+## Testing
+
+[**Jest**](https://jestjs.io/) is a JavaScript testing framework put out by Facebook and designed for unit testing React components.
+
+[**Playwright**](https://playwright.dev/) is a framework by Microsoft that enables reliable end-to-end testing for modern web apps.
+
+### Running Unit Tests with Jest
+
+To run this project's unit tests using Jest, run the following command:
+
+```node
+npm test
+```
+
+This project was built using Create React App, so Jest is already built into the app.
+When `npm test` is run from the root directory, Node navigates into the React project subdirectory and runs Jest using `react-scripts test`.
+
+#### Jest Documentation
+
+<https://jestjs.io/docs/tutorial-react>
+<https://create-react-app.dev/docs/running-tests/#testing-components>
+<https://reactjs.org/docs/testing-recipes.html>
 
 ## Crucial Thanks
 

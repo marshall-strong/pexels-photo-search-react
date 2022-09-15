@@ -1,9 +1,11 @@
 {
   "name": "react-photo-search",
   "scripts": {
-    "start": "cd pexels-photo-search && netlify dev"
+    "start": "cd react-frontend && netlify dev",
+    "test": "cd react-frontend && npm test"
   },
   "devDependencies": {
+    "react-test-renderer": "^18.2.0",
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^27.0.0"
