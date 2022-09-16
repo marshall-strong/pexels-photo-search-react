@@ -2,9 +2,10 @@
 
 - [REACT-PHOTO-SEARCH](#react-photo-search)
   - [Project Prompt](#project-prompt)
-    - [MVP Requirements](#mvp-requirements)
-    - [User Stories](#user-stories)
-    - [Extras](#extras)
+    - [Project Feature Requirements: MVPs and User Stories](#project-feature-requirements-mvps-and-user-stories)
+      - [**Minimum Viable Product (MVP) Requirements**](#minimum-viable-product-mvp-requirements)
+      - [**User Stories**](#user-stories)
+      - [**Extra Requirements**](#extra-requirements)
   - [Project Features](#project-features)
     - [**Displays `Photo` components in the `Gallery` using a masonry layout**](#displays-photo-components-in-the-gallery-using-a-masonry-layout)
     - [**Displays photos from the Pexels "Curated Photos" endpoint on the home screen**](#displays-photos-from-the-pexels-curated-photos-endpoint-on-the-home-screen)
@@ -49,20 +50,38 @@ A production deployment of this project can be viewed at [react-photo-search.net
 
 ## Project Prompt
 
-We need you to build a website to let users browse photos from [Pexels](https://www.pexels.com/) (see below notes on getting an API key). Thereʼs a ton of competition in the photo space online, so we need to stand out. We need a solution thatʼs lighting fast to load with a snappy, responsive UI. We need to greet site visitors with a selection of curated photos and give them the ability to search our extensive catalog of quality photos from professional photographers.
+This project started out as a coding challenge that I found online. Here is the challenge's original prompt:
 
-### MVP Requirements
+_"We need you to build a website to let users browse photos from [Pexels](https://www.pexels.com/) (see below notes on getting an API key). Thereʼs a ton of competition in the photo space online, so we need to stand out. We need a solution thatʼs lighting fast to load with a snappy, responsive UI. We need to greet site visitors with a selection of curated photos and give them the ability to search our extensive catalog of quality photos from professional photographers."_
 
-- Display 10 curated photos on the home screen. Use the Pexels curated photos resource to render these photos.
-- Provide pagination for Curated photos. Paging should not cause a page refresh. From the client side initiate the needed requests to allow the user to go forward and backward 10 photos at a time.
-- Provide a photo search. Searching should not cause a page refresh. Consume the photo search resource and display the results to the user, along with pagination, if needed.
+### Project Feature Requirements: MVPs and User Stories
 
-### User Stories
+A "minimum viable product" (or MVP) is a basic version of the product with _just_ enough features that it can be used and tested by its intended end users.
 
-**As a user visiting the website...**
+In this case, the product is a web application that retrieves photos from an API and displays them on the screen.
+
+#### **Minimum Viable Product (MVP) Requirements**
+
+Broadly, these are the basic requirements for the web application:
+
+- The app retrieves photos from the Pexels API and renders them on the page in a photo gallery, 10 photos at a time.
+- The app's home screen displays photos from the Pexels "Curated Photos" endpoint.
+- The app has a photo search feature that accepts a user's search query and displays relevant photos from the Pexels "Search for Photos" endpoint without triggering a page refresh.
+- The app allows users to paginate both forward and backward through displayed photos, 10 photos at a time, and without triggering a page refresh.
+
+#### **User Stories**
+
+User stories provide software developers with something critical -- descriptions of key project features, written from the perspective of the people who will be using those features.
+
+The user story below describes how this app's end users would like for it to behave in a production environment.
+The story brings up additional features that the users would like implemented (access to the photographer's name and URL), as well as edge cases that must be accounted for in the MVP features (pagination components should not display a "previous page" button on the very first page).
+
+Details from user stories can have huge impacts on how features are implemented -- since users want to be able to refresh their browser windows without losing their search query and pagination, that information needs to get stored locally in the users' browsers, and can't live solely in state in the React app.
+
+_As a user visiting the website..._
 
 - I can see an initial set of curated photos on the home screen
-- I am able to access the the photographerʼs name and url if those details are available for every photo
+- I am able to access the photographerʼs name and url if those details are available for every photo
 - I can paginate the list of curated photos
 - I can use a text input to search for photos Iʼm interested
 - I can see the results of my search in the photo viewing area
@@ -70,21 +89,32 @@ We need you to build a website to let users browse photos from [Pexels](https://
 - I should not be shown the "previous" paginiation button when there is no previous page
 - I can refresh my browser and retain my search query and/or page
 
-**As a developer working on the project locally...**
+User stories are not just for "end-users" who visit the website -- there are other user personas and other perspectives that also need to be accounted for.
+
+Stories from the perspective of another developer may describe stylistic conventions that all code must follow, or details about the various environments that the project will run in.
+Any code that will be added to a shared codebase must be able to be worked on by other people, so communication and documentation are key.
+
+_As a developer working on the project locally..._
 
 - I have access to all project-specific local setup instructions I need to run the project
 - I can install any required dependencies with npm or yarn
 - I can compile and run the project in one step
 
-### Extras
+#### **Extra Requirements**
+
+The following features were not included in the initial MVP requirements.
+They are not critical to how the application functions, and an average user may not even notice whether they were implemented or not.
+But these requirements each have a purpose, and implementing them was an excellent learning opportunity.
 
 - Implement a server that wraps the Pexels API, providing one or more of the following features:
-  - Maintain your application API key on the server, avoid exposing it to the client
+  - Maintain your application API key on the server to avoid exposing it to the client
   - Server-side rendering
 - Placeholder content for images before they are loaded
 - Write tests however you see fit
 
 ## Project Features
+
+The features listed below fulfill the **MVP Requirements**, **User Stories**, and **Extra Requirements** listed above.
 
 ### **Displays `Photo` components in the `Gallery` using a masonry layout**
 
