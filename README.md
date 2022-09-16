@@ -114,7 +114,7 @@ But these requirements each have a purpose, and implementing them was an excelle
 
 ## Project Features
 
-The **Project Features** listed below fulfill the **MVP Requirements**, **User Stories**, and **Extra Requirements** listed above.
+The features listed below fulfill the **MVP Requirements**, **User Stories**, and **Extra Requirements** listed above.
 
 ### **Displays `Photo` components in the `Gallery` using a masonry layout**
 
