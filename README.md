@@ -5,7 +5,7 @@
     - [Project Feature Requirements: MVPs and User Stories](#project-feature-requirements-mvps-and-user-stories)
       - [Minimum Viable Product (MVP) Requirements](#minimum-viable-product-mvp-requirements)
       - [User Stories](#user-stories)
-    - [Extra Requirements](#extra-requirements)
+      - [Extra Requirements](#extra-requirements)
   - [Project Features](#project-features)
     - [**Displays `Photo` components in the `Gallery` using a masonry layout**](#displays-photo-components-in-the-gallery-using-a-masonry-layout)
     - [**Displays photos from the Pexels "Curated Photos" endpoint on the home screen**](#displays-photos-from-the-pexels-curated-photos-endpoint-on-the-home-screen)
@@ -90,17 +90,21 @@ The "user stories" below were included in the project's prompt, and provide addi
 - I can install any required dependencies with npm or yarn
 - I can compile and run the project in one step
 
-### Extra Requirements
+#### Extra Requirements
+
+The following features were not included in the initial MVP requirements.
+They are not critical to how the application functions, and an average user may not even notice whether they were implemented or not.
+But these requirements each have a purpose, and implementing them was an excellent learning opportunity.
 
 - Implement a server that wraps the Pexels API, providing one or more of the following features:
-  - Maintain your application API key on the server, avoid exposing it to the client
+  - Maintain your application API key on the server to avoid exposing it to the client
   - Server-side rendering
 - Placeholder content for images before they are loaded
 - Write tests however you see fit
 
 ## Project Features
 
-The **Project Features** listed below fulfill the **MVP Requirements** and **User Stories** listed above.
+The **Project Features** listed below fulfill the **MVP Requirements**, **User Stories**, and **Extra Requirements** listed above.
 
 ### **Displays `Photo` components in the `Gallery` using a masonry layout**
 
