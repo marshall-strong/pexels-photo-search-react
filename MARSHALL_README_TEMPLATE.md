@@ -14,18 +14,18 @@
 <div align="center">
   <h1 align="center">REACT-PHOTO-SEARCH</h3>
 
-  <img src="images/pexelsIcon.svg" alt="Pexels" height="80">
-  <img src="images/xIcon.svg" alt="X" height="80">
-  <img src="images/reactIcon.svg" alt="React" height="80">
+  <img src="assets/icons/pexelsIcon.svg" alt="Pexels" height="80">
+  <img src="assets/icons/xIcon.svg" alt="X" height="80">
+  <img src="assets/icons/reactIcon.svg" alt="React" height="80">
 
   <p align="center">
     A React application that allows users to search for images using the Pexels photo library.
     <!-- <img src="images/pexelsLogoOnTransparent.png" alt="Logo" height="40"> -->
     <br />
     <!-- <a href="https://github.com/marshall-strong/react-photo-search"><strong>Explore the docs »</strong></a> -->
-    <!-- <b"r /> -->
     <!-- <br /> -->
-    <a href="https://react-photo-search.netlify.app/">View Demo Site</a>
+    <!-- <br /> -->
+    <a href="https://react-photo-search.netlify.app">View Demo Site</a>
     ·
     <a href="https://github.com/marshall-strong/react-photo-search/issues">Report Bug</a>
     ·
@@ -228,8 +228,8 @@ Interesting in checking out some of the other projects I've worked on? Visit [ma
 [license-url]: https://github.com/marshall-strong/react-photo-search/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/marshall-strong
-[project-screenshot]: ./images/screenshot.png
-[project-production-url]: https://example.com/
+[project-screenshot]: ./assets/screenshots/homepage.png
+[project-production-url]: https://react-photo-search.netlify.app
 [next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [next-url]: https://nextjs.org/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
