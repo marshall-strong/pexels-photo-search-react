@@ -12,14 +12,15 @@
 <!-- PROJECT TITLE & LOGO -->
 
 <div align="center">
-  <a href="https://github.com/marshall-strong/react-photo-search">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  <h1 align="center">REACT-PHOTO-SEARCH</h3>
 
-<h3 align="center">REACT-PHOTO-SEARCH</h3>
+  <img src="images/reactIcon.svg" alt="React" height="80">
+  <img src="images/xIcon.svg" alt="X" height="80">
+  <img src="images/pexelsIcon.svg" alt="Pexels" height="80">
 
   <p align="center">
     project_description
+    <img src="images/pexelsLogoOnTransparent.png" alt="Logo" height="40">
     <br />
     <a href="https://github.com/marshall-strong/react-photo-search"><strong>Explore the docs »</strong></a>
     <br />
