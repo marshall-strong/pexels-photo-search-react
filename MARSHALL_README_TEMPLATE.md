@@ -33,9 +33,24 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS (HTML, collapses) -->
+<!-- TABLE OF CONTENTS -->
 
-<details>
+<!-- While the README is still being updated, use the automatically generated ToC -->
+<!-- Once the README is ready to be published, update and use the collapsable HTML ToC -->
+
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+
+<!-- <details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -58,21 +73,7 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
-</details>
-
-<!-- TABLE OF CONTENTS (auto generated) -->
-
-- [About The Project](#about-the-project)
-  - [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
+</details> -->
 
 <!-- ABOUT THE PROJECT -->
 
