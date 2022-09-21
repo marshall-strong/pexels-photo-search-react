@@ -12,23 +12,23 @@
 <!-- PROJECT TITLE & LOGO -->
 
 <div align="center">
-  <a href="https://github.com/marshall-strong/repo_name">
+  <a href="https://github.com/marshall-strong/react-photo-search">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project title</h3>
+<h3 align="center">REACT-PHOTO-SEARCH</h3>
 
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/marshall-strong/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/marshall-strong/react-photo-search"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/marshall-strong/repo_name">View Demo</a>
+    <a href="https://github.com/marshall-strong/react-photo-search">View Demo</a>
     ·
-    <a href="https://github.com/marshall-strong/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/marshall-strong/react-photo-search/issues">Report Bug</a>
     ·
-    <a href="https://github.com/marshall-strong/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/marshall-strong/react-photo-search/issues">Request Feature</a>
   </p>
 </div>
 
@@ -83,7 +83,7 @@ Here's a blank template to get started.
 Personal information is already populated (name, contact info, etc).
 Every time this template is used in a new repository, the following placeholders must be populated:
 
-- `repo_name`
+- `react-photo-search`
 - `project_title`
 - `project_description`
 
@@ -125,7 +125,7 @@ This is an example of how to list things you need to use the software and how to
 2. Clone the repo
 
    ```sh
-   git clone https://github.com/marshall-strong/repo_name.git
+   git clone https://github.com/marshall-strong/react-photo-search.git
    ```
 
 3. Install NPM packages
@@ -161,7 +161,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
   - [ ] Nested Feature
 
-See the [open issues](https://github.com/marshall-strong/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/marshall-strong/react-photo-search/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -214,16 +214,16 @@ Interesting in checking out some of the other projects I've worked on? Visit [ma
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/marshall-strong/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/marshall-strong/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/marshall-strong/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/marshall-strong/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/marshall-strong/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/marshall-strong/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/marshall-strong/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/marshall-strong/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/marshall-strong/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/marshall-strong/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/marshall-strong/react-photo-search.svg?style=for-the-badge
+[contributors-url]: https://github.com/marshall-strong/react-photo-search/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/marshall-strong/react-photo-search.svg?style=for-the-badge
+[forks-url]: https://github.com/marshall-strong/react-photo-search/network/members
+[stars-shield]: https://img.shields.io/github/stars/marshall-strong/react-photo-search.svg?style=for-the-badge
+[stars-url]: https://github.com/marshall-strong/react-photo-search/stargazers
+[issues-shield]: https://img.shields.io/github/issues/marshall-strong/react-photo-search.svg?style=for-the-badge
+[issues-url]: https://github.com/marshall-strong/react-photo-search/issues
+[license-shield]: https://img.shields.io/github/license/marshall-strong/react-photo-search.svg?style=for-the-badge
+[license-url]: https://github.com/marshall-strong/react-photo-search/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/marshall-strong
 [project-screenshot]: ./images/screenshot.png
