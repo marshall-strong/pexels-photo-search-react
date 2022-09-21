@@ -14,18 +14,18 @@
 <div align="center">
   <h1 align="center">REACT-PHOTO-SEARCH</h3>
 
-  <img src="images/reactIcon.svg" alt="React" height="80">
-  <img src="images/xIcon.svg" alt="X" height="80">
   <img src="images/pexelsIcon.svg" alt="Pexels" height="80">
+  <img src="images/xIcon.svg" alt="X" height="80">
+  <img src="images/reactIcon.svg" alt="React" height="80">
 
   <p align="center">
-    project_description
-    <img src="images/pexelsLogoOnTransparent.png" alt="Logo" height="40">
+    A React application that allows users to search for images using the Pexels photo library.
+    <!-- <img src="images/pexelsLogoOnTransparent.png" alt="Logo" height="40"> -->
     <br />
-    <a href="https://github.com/marshall-strong/react-photo-search"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/marshall-strong/react-photo-search">View Demo</a>
+    <!-- <a href="https://github.com/marshall-strong/react-photo-search"><strong>Explore the docs »</strong></a> -->
+    <!-- <b"r /> -->
+    <!-- <br /> -->
+    <a href="https://react-photo-search.netlify.app/">View Demo Site</a>
     ·
     <a href="https://github.com/marshall-strong/react-photo-search/issues">Report Bug</a>
     ·
