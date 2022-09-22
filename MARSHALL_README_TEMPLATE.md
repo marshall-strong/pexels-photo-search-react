@@ -44,9 +44,8 @@
   - [Install Prerequisites](#install-prerequisites)
   - [Clone the GitHub Repository and Install Dependencies](#clone-the-github-repository-and-install-dependencies)
   - [Acquire an API Key](#acquire-an-api-key)
-  - [Configure the API Key](#configure-the-api-key)
+  - [Add the API Key to the Project](#add-the-api-key-to-the-project)
   - [Run the Project](#run-the-project)
-  - [Running the Project](#running-the-project)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
@@ -193,33 +192,40 @@ ex: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
 
 If you ever lose or misplace your API key, you can retrieve it by logging in to your Pexels account.
 
-### Configure the API Key
+### Add the API Key to the Project
+
+In development mode, the Pexels API Key is stored in a `.env` file and saved as an environment variable. This `.env` file should NOT be committed to GitHub, and is not a secure way to store API keys in a production environment.
+
+Create a new file named `.env` inside of the `react-frontend` sub-directory:
+
+```sh
+touch react-frontend/.env
+```
+
+Add your Pexels API Key to the `.env` file as an environmental variable named `PEXELS_API_KEY`:
+
+```sh
+echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > react-frontend/.env
+```
+
+Once you are done, your `.env` file should look like this:
+
+```js
+// react-photo-search/react-frontend/.env
+
+PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
+
+```
 
 ### Run the Project
 
-- Clone the GitHub repository
--
+Start the project by running the `npm start` command from the root directory of the GitHub repository:
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+```sh
+npm start
+```
 
-   ```sh
-   git clone https://github.com/marshall-strong/react-photo-search.git
-   ```
-
-3. Install NPM packages
-
-   ```sh
-   npm install
-   ```
-
-4. Enter your API in `config.js`
-
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
-
-### Running the Project
+This command is a shortcut that uses Create React App's built-in scripts to start the development server and compile the project using webpack. At the same time, Netlify Dev starts another, separate server to load the Netlify Functions onto, and it makes the environment variables defined in the `.env` file available to the Netlify Functions server (but NOT to the Create React App server). Even in Development mode, this will hide the Pexels API key from users on the client side.
 
 <p align="right">(<a href="#project_title">back to top</a>)</p>
 
