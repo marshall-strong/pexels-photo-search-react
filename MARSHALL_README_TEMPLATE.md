@@ -42,6 +42,7 @@
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
+  - [Acquire an API Key](#acquire-an-api-key)
   - [Installation](#installation)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
@@ -147,6 +148,23 @@ Node.js is a back-end runtime environment that executes JavaScript code outside 
   ```
 
 For additional information or help installing Node.js, npm, and Node version managers, consult the npm documentation on [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+### Acquire an API Key
+
+All images in this project are from Pexels, and are requested and received via the Pexels API. A API Key is required in order to use the Pexels API, and can be acquired for free by registering with Pexels.
+
+- Create a free Pexels account at <https://www.pexels.com/onboarding>
+- Click the "I want to download" button
+- Enter your personal information, then click the "Create New Account" button
+- Complete your account setup by opening the email sent to you by Pexels and clicking the "Confirm email" button
+- Go to <https://www.pexels.com/api/> and click the "Your API Key" button
+- Fill out the form, agree to the Terms of Service, and click the "Generate API Key" button
+- Copy the API key and save it somewhere safe -- you will need it in the next section
+
+The API key should be a 56 character string of numbers and lowercase letters.
+ex: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
+
+If you ever lose or misplace your API key, you can retrieve it by logging in to your Pexels account.
 
 ### Installation
 
