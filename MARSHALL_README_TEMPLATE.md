@@ -41,11 +41,11 @@
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
-  - [Install Prerequisites](#install-prerequisites)
-  - [Clone the GitHub Repository and Install Dependencies](#clone-the-github-repository-and-install-dependencies)
-  - [Acquire an API Key](#acquire-an-api-key)
-  - [Add the API Key to the Project](#add-the-api-key-to-the-project)
-  - [Run the Project](#run-the-project)
+  - [1. Install Prerequisites](#1-install-prerequisites)
+  - [2. Clone the GitHub Repository and Install Dependencies](#2-clone-the-github-repository-and-install-dependencies)
+  - [3. Acquire an API Key](#3-acquire-an-api-key)
+  - [4. Add the API Key to the Project](#4-add-the-api-key-to-the-project)
+  - [5. Run the Project](#5-run-the-project)
 - [Features](#features)
   - [the site fetches photos using the Pexels API without exposing the API key to end users](#the-site-fetches-photos-using-the-pexels-api-without-exposing-the-api-key-to-end-users)
   - [the site displays images using a "masonry" layout](#the-site-displays-images-using-a-masonry-layout)
@@ -119,7 +119,7 @@ A production deployment of this project can be viewed at [react-photo-search.net
 
 To set up and run a local copy of this project on your own machine, do the following:
 
-### Install Prerequisites
+### 1. Install Prerequisites
 
 Node.js is a back-end runtime environment that executes JavaScript code outside a web browser, and npm is its default package manager. Both must be installed locally in order to run this project.
 
@@ -162,7 +162,7 @@ Node.js is a back-end runtime environment that executes JavaScript code outside 
 
 For additional information or help installing Node.js, npm, and Node version managers, consult the official npm documentation on [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
-### Clone the GitHub Repository and Install Dependencies
+### 2. Clone the GitHub Repository and Install Dependencies
 
 The GitHub repository for this project can be found at <https://github.com/marshall-strong/react-photo-search>.
 
@@ -186,7 +186,7 @@ Install project dependencies:
 npm install
 ```
 
-### Acquire an API Key
+### 3. Acquire an API Key
 
 All images in this project are from Pexels, and are requested and received via the Pexels API. A API Key is required in order to use the Pexels API, and can be acquired for free by registering with Pexels.
 
@@ -203,7 +203,7 @@ ex: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
 
 If you ever lose or misplace your API key, you can retrieve it by logging in to your Pexels account.
 
-### Add the API Key to the Project
+### 4. Add the API Key to the Project
 
 In development mode, the Pexels API Key is stored in a `.env` file and saved as an environment variable. This `.env` file should NOT be committed to GitHub, and is not a secure way to store API keys in a production environment.
 
@@ -228,7 +228,7 @@ PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
 
 ```
 
-### Run the Project
+### 5. Run the Project
 
 Start the project by running the `npm start` command from the root directory of the GitHub repository:
 
@@ -306,7 +306,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Want to get in touch? Email me at <marshallstrong123@gmail.com> or reach out on [LinkedIn][linkedin-url].
 
-Interesting in checking out some of the other projects I've worked on? Visit [marshallstrong.com](https://marshallstrong.com/) for a full list, as well as my resume and work experience.
+Interesting in checking out some of the other projects I've worked on?
+
+Visit [marshallstrong.com](https://marshallstrong.com/) for a full list, as well as my resume and work experience.
 
 Thanks for reading!!!
 
@@ -316,7 +318,6 @@ Thanks for reading!!!
 
 ## Acknowledgments
 
-- []()
 - [pre-commit](https://pre-commit.com/)
 - [Prettier](https://prettier.io/)
 - [Stylelint](https://stylelint.io/)
