@@ -257,6 +257,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 - [ ] [Server-Side Rendering](https://github.com/marshall-strong/react-photo-search/issues/65)
 - [ ] [Mobile Responsiveness](https://github.com/marshall-strong/react-photo-search/issues/66)
+- [ ] [Unit Testing](https://github.com/marshall-strong/react-photo-search/issues/67)
 
 See the [open issues](https://github.com/marshall-strong/react-photo-search/issues) for a full list of proposed features (and known issues).
 
