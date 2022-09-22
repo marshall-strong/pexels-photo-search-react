@@ -319,8 +319,11 @@ Thanks for reading!!!
 ## Acknowledgments
 
 - [pre-commit](https://pre-commit.com/)
+  - runs Git hook scripts before each commit and prompts the user to fix any issues before the commit can be saved
 - [Prettier](https://prettier.io/)
+  - Automatically formats code and enforces style conventions
 - [Stylelint](https://stylelint.io/)
+  - Identifies errors and enforces conventions in a project's stylesheets
 - [Shields.io](https://shields.io/)
   - Concise, consistent, and legible badges in SVG and raster format
 
