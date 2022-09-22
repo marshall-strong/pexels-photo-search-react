@@ -41,9 +41,12 @@
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
+  - [Install Prerequisites](#install-prerequisites)
+  - [Clone the GitHub Repository and Install Dependencies](#clone-the-github-repository-and-install-dependencies)
   - [Acquire an API Key](#acquire-an-api-key)
-  - [Installation](#installation)
+  - [Configure the API Key](#configure-the-api-key)
+  - [Run the Project](#run-the-project)
+  - [Running the Project](#running-the-project)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
@@ -106,7 +109,7 @@ A production deployment of this project can be viewed at [react-photo-search.net
 
 To set up and run a local copy of this project on your own machine, do the following:
 
-### Prerequisites
+### Install Prerequisites
 
 Node.js is a back-end runtime environment that executes JavaScript code outside a web browser, and npm is its default package manager. Both must be installed locally in order to run this project.
 
@@ -147,7 +150,31 @@ Node.js is a back-end runtime environment that executes JavaScript code outside 
   npm -v
   ```
 
-For additional information or help installing Node.js, npm, and Node version managers, consult the npm documentation on [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+For additional information or help installing Node.js, npm, and Node version managers, consult the official npm documentation on [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+### Clone the GitHub Repository and Install Dependencies
+
+The GitHub repository for this project can be found at <https://github.com/marshall-strong/react-photo-search>.
+
+Click on the "Code" button and select which method to use to clone the repository: HTTPS, SSH, the GitHub CLI, or Download a ZIP file.
+
+To clone the repository using the GitHub CLI, run the following command from the command line:
+
+```sh
+gh repo clone marshall-strong/react-photo-search
+```
+
+Navigate into the project's root directory:
+
+```sh
+cd react-photo-search
+```
+
+Install project dependencies:
+
+```sh
+npm install
+```
 
 ### Acquire an API Key
 
@@ -166,7 +193,12 @@ ex: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
 
 If you ever lose or misplace your API key, you can retrieve it by logging in to your Pexels account.
 
-### Installation
+### Configure the API Key
+
+### Run the Project
+
+- Clone the GitHub repository
+-
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
@@ -186,6 +218,8 @@ If you ever lose or misplace your API key, you can retrieve it by logging in to 
    ```js
    const API_KEY = "ENTER YOUR API";
    ```
+
+### Running the Project
 
 <p align="right">(<a href="#project_title">back to top</a>)</p>
 
