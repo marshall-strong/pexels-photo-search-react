@@ -298,10 +298,12 @@ Thanks for reading!!!
 
 ## Acknowledgments
 
+- []()
+- [pre-commit](https://pre-commit.com/)
+- [Prettier](https://prettier.io/)
+- [Stylelint](https://stylelint.io/)
 - [Shields.io](https://shields.io/)
   - Concise, consistent, and legible badges in SVG and raster format
-- []()
-- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
