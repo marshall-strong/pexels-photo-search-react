@@ -205,7 +205,8 @@ Interesting in checking out some of the other projects I've worked on? Visit [ma
 
 ## Acknowledgments
 
-- []()
+- [Shields.io](https://shields.io/)
+  - Concise, consistent, and legible badges in SVG and raster format
 - []()
 - []()
 
@@ -229,32 +230,9 @@ Interesting in checking out some of the other projects I've worked on? Visit [ma
 [linkedin-url]: https://linkedin.com/in/marshall-strong
 [project-screenshot]: ./assets/screenshots/homepage.png
 [project-production-url]: https://react-photo-search.netlify.app
-
-<!-- [angular-shield]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white -->
-<!-- [angular-url]: https://angular.io/ -->
-<!-- [bootstrap-shield]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white -->
-<!-- [bootstrap-url]: https://getbootstrap.com -->
-
 [cra-shield]: https://img.shields.io/badge/Create%20React%20App-20232A?style=for-the-badge&logo=createreactapp&logoColor=09D3AC
 [cra-url]: https://create-react-app.dev/
-
-<!-- [jest-shield]: https://img.shields.io/badge/Jest-20232A?style=for-the-badge&logo=jest&logoColor=C21325 -->
-<!-- [jest-url]: https://jestjs.io/ -->
-<!-- [jquery-shield]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white -->
-<!-- [jquery-url]: https://jquery.com -->
-<!-- [laravel-shield]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white -->
-<!-- [laravel-url]: https://laravel.com -->
-
 [netlify-shield]: https://img.shields.io/badge/Netlify-20232A?style=for-the-badge&logo=netlify&logoColor=00C7B7
 [netlify-url]: https://www.netlify.com/
-
-<!-- [next-shield]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white -->
-<!-- [next-url]: https://nextjs.org/ -->
-
 [react-shield]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
-
-<!-- [svelte-shield]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00 -->
-<!-- [svelte-url]: https://svelte.dev/ -->
-<!-- [vue-shield]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D -->
-<!-- [vue-url]: https://vuejs.org/ -->
