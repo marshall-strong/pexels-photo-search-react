@@ -47,6 +47,7 @@
   - [Add the API Key to the Project](#add-the-api-key-to-the-project)
   - [Run the Project](#run-the-project)
 - [Usage](#usage)
+  - [Features](#features)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -233,9 +234,20 @@ This command is a shortcut that uses Create React App's built-in scripts to star
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://example.com)_ -->
+
+### Features
+
+- the site fetches photos using the Pexels API without exposing the API key to end users
+- the site displays images using a "masonry" layout
+- the site initially displays photos from the Pexels "Curated Photos" endpoint
+- the site accepts a query string from the user and returns relevent photos from the Pexels "Search for Photos" endpoint
+- on hovering over a photo, the photographer's name and website are displayed
+- clicking a photo opens a full-size version in a new tab
+- pagination buttons allow users to navigate search results 10 images at a time without refreshing the site
+- users' search query and current pagination are not lost if the site is refreshed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
