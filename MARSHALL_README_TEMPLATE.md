@@ -81,13 +81,9 @@
 
 [![Project Screenshot][project-screenshot]][project-production-url]
 
-Here's a blank template to get started.
-Personal information is already populated (name, contact info, etc).
-Every time this template is used in a new repository, the following placeholders must be populated:
+This project is a website that lets users browse and search for photos from [Pexels](https://www.pexels.com/), a free stock photo and video website that anyone can use or contribute to.
 
-- `react-photo-search`
-- `project_title`
-- `project_description`
+A production deployment of this project can be viewed at [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,18 +103,50 @@ Every time this template is used in a new repository, the following placeholders
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To set up and run a local copy of this project on your own machine, do the following:
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Node.js is a back-end runtime environment that executes JavaScript code outside a web browser, and npm is its default package manager. Both must be installed locally in order to run this project.
 
-- npm
+- `Node.js`
+
+  The recommended way of installing Node.js is with a Node version manager.
+  Different operating systems use different Node version managers:
+
+  _Node version managers for OSX and Linux:_
+
+  - `nvm` - [installation instructions](https://github.com/creationix/nvm)
+  - `n` - [installation instructions](https://github.com/tj/n)
+
+  _Node version managers for Windows:_
+
+  - `nodist` - [installation instructions](https://github.com/marcelklehr/nodist)
+  - `nvm-windows` - [installation instructions](https://github.com/coreybutler/nvm-windows)
+
+  Choose an appropriate Node version manager for your operating system and follow the installation instructions linked above to install both the version manager and Node.js.
+
+  To confirm that Node.js has been installed successfully, run the following command to check the installed version:
+
+  ```sh
+  node -v
+  ```
+
+- `npm`
+
+  Once Node.js is installed, download and install the latest version of npm by running the following command from the command line:
 
   ```sh
   npm install npm@latest -g
   ```
+
+  To confirm that npm has been installed successfully, run the following command to check the installed version:
+
+  ```sh
+  npm -v
+  ```
+
+For additional information or help installing Node.js, npm, and Node version managers, consult the npm documentation on [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
 ### Installation
 
