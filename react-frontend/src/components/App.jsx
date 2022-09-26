@@ -71,10 +71,8 @@ const App = () => {
       try {
         // the Netlify function receives the API response as an object, but
         //  converts it to a string with `JSON.stringify` before returning
-        const netlifyResponse = await fetch(netlifyUrl).then((res) =>
-          res.json()
-        );
-        setResponse(netlifyResponse);
+        const netlifyRes = await fetch(netlifyUrl).then((res) => res.json());
+        setResponse(netlifyRes);
         setDisplayedUrl(newUrl);
         setNewUrl(null);
       } catch (err) {
