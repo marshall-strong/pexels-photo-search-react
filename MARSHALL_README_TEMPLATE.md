@@ -55,6 +55,10 @@
   - [clicking a photo opens a full-size version in a new tab](#clicking-a-photo-opens-a-full-size-version-in-a-new-tab)
   - [pagination buttons allow users to navigate search results 10 images at a time without refreshing the site](#pagination-buttons-allow-users-to-navigate-search-results-10-images-at-a-time-without-refreshing-the-site)
   - [users' search query and current pagination are not lost if the site is refreshed](#users-search-query-and-current-pagination-are-not-lost-if-the-site-is-refreshed)
+- [Project Style](#project-style)
+  - [**Pre-commit**](#pre-commit)
+  - [**Prettier**](#prettier)
+  - [**Stylelint**](#stylelint)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -265,6 +269,118 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 ### pagination buttons allow users to navigate search results 10 images at a time without refreshing the site
 
 ### users' search query and current pagination are not lost if the site is refreshed
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Project Style
+
+### **Pre-commit**
+
+[Pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks. It runs Git hook scripts (like linters) before each Git commit, and prompts the user to fix any issues that are found before the commit can be saved. Pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
+
+Before using Pre-commit on your machine for the first time, the Pre-commit package manager must first be installed locally on your machine:
+
+```bash
+#!/bin/bash
+$ pip install pre-commit
+```
+
+Pre-commit hooks are configured using a file named `.pre-commit-config.yaml`. The file containing the Pre-commit configuration for this project is reproduced below:
+
+```yaml
+# react-photo-search/.pre-commit-config.yaml
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v2.7.1" # Note: Use the sha / tag you want to point at
+    hooks:
+      - id: prettier
+  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+    rev: "v14.10.0" # Note: Use the sha / tag you want to point at
+    hooks:
+      - id: stylelint
+        args: [--fix]
+        additional_dependencies:
+          # Note: stylelint itself (and not a mirror) needs to be used here when using additional_dependencies.
+          - stylelint@latest
+          - stylelint-config-standard@latest
+          - stylelint-config-idiomatic-order@latest
+          - stylelint-config-prettier@latest
+          # Note: Package names starting with `@` need to be quoted. For example:
+          # - "@scope/my-awesome-plugin@0.12.0"
+```
+
+**Note:** The `prettier` and `stylelint` hooks configured in the `.pre-commit-config.yaml` file above are described in greater detail in the next section.
+
+Once the configuration file is complete, run `pre-commit install` to set up the git hook scripts:
+
+```sh
+#!/bin/bash
+$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+```
+
+Once installed, Pre-commit will run automatically on every `git commit`!
+
+_Console output after installing and configuring pre-commit:_
+
+```bash
+#!/bin/bash
+$ pip install pre-commit --upgrade
+$ pre-commit --version
+pre-commit 2.13.0
+$ cd react-photo-search
+$ pre-commit sample-config
+$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+$ pre-commit run --all-files
+```
+
+[**pre-commit/pre-commit-hooks**](https://github.com/pre-commit/pre-commit-hooks) Some out-of-the-box hooks for pre-commit
+
+### **Prettier**
+
+[Prettier](https://prettier.io/) is an opinionated code formatter that enforces conventions automatically.
+
+[**prettier/prettier**](https://github.com/prettier/prettier)
+Official Prettier repository
+
+[**pre-commit/mirrors-prettier**](https://github.com/pre-commit/mirrors-prettier)
+Mirrors all **prettier/prettier** releases, used by Pre-commit to run the prettier hook
+
+### **Stylelint**
+
+[Stylelint](https://stylelint.io/) is a linter that identifies errors and enforces conventions in a project's stylesheets.
+
+_Use `npx` to run Stylelint at any time (not just when saving a commit):_
+
+```bash
+#!/bin/bash
+$ cd react-photo-search
+$ npx stylelint "react-frontend/src/**/*.css" --fix
+```
+
+[**stylelint/stylelint**](https://github.com/stylelint/stylelint)
+Official Stylelint repository
+
+[**stylelint/stylelint-config-standard**](https://github.com/stylelint/stylelint-config-standard)
+The standard shareable config for Stylelint
+
+[**ream88/stylelint-config-idiomatic-order**](https://github.com/ream88/stylelint-config-idiomatic-order)
+Orders styles using consistent, idiomatic CSS
+
+[**prettier/stylelint-config-prettier**](https://github.com/prettier/stylelint-config-prettier)
+Turns off all rules that are unnecessary or might conflict with prettier
+
+[**thibaudcolas/pre-commit-stylelint**](https://github.com/thibaudcolas/pre-commit-stylelint)
+Mirrors all **stylelint/stylelint** releases, used by Pre-commit to run the stylelint hook
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
