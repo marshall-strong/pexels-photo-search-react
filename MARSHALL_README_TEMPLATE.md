@@ -196,7 +196,9 @@ npm install
 
 ### 3. Acquire an API Key
 
-All images in this project are from Pexels, and are requested and received via the Pexels API. A API Key is required in order to use the Pexels API, and can be acquired for free by registering with Pexels.
+All of the images this site displays are retrieved from Pexels, and are requested and received via the Pexels API. An API key is required in order to interact with the Pexels API. **A Pexels API Key is NOT included in this repository -- you must get your own (free) API key from Pexels.**
+
+Follow these steps to register with Pexels and obtain a Pexels API Key:
 
 - Create a free Pexels account at <https://www.pexels.com/onboarding>
 - Click the "I want to download" button
@@ -207,7 +209,8 @@ All images in this project are from Pexels, and are requested and received via t
 - Copy the API key and save it somewhere safe -- you will need it in the next section
 
 The API key should be a 56 character string of numbers and lowercase letters.
-ex: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
+
+example: `sample0api0key123456789abcdefghijklmnopqrstuvwxyz0000000`
 
 If you ever lose or misplace your API key, you can retrieve it by logging in to your Pexels account.
 
@@ -224,7 +227,7 @@ touch react-frontend/.env
 Add your Pexels API Key to the `.env` file as an environmental variable named `PEXELS_API_KEY`:
 
 ```sh
-echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > react-frontend/.env
+echo "PEXELS_API_KEY=sample0api0key123456789abcdefghijklmnopqrstuvwxyz0000000" > react-frontend/.env
 ```
 
 Once you are done, your `.env` file should look like this:
@@ -232,9 +235,10 @@ Once you are done, your `.env` file should look like this:
 ```js
 // react-photo-search/react-frontend/.env
 
-PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
-
+PEXELS_API_KEY = sample0api0key123456789abcdefghijklmnopqrstuvwxyz0000000;
 ```
+
+The file `react-photo-search/react-frontend/example.env` is an example `.env` file with a fake API Key that you can use as a guide when creating your own `.env` file with your own API Key.
 
 ### 5. Run the Project
 
