@@ -108,15 +108,16 @@ A production deployment of this project can be viewed at [react-photo-search.net
 ### Built With
 
 [![React][react-shield]][react-url]
+
+- React is an open-source front-end JavaScript library for building user interfaces based on UI components.
+
 [![Create React App][cra-shield]][cra-url]
+
+- Create React App takes care of setting up and configuring a new React application with useful defaults, eliminating a lot of boilerplate code. It also integrates Jest and React-Testing-Library into the application, making it easy to setup unit tests down the road.
+
 [![Netlify][netlify-shield]][netlify-url]
 
-- React
-  - React is an open-source front-end JavaScript library for building user interfaces based on UI components.
-- Create React App
-  - Create React App takes care of setting up and configuring a new React application with useful defaults, eliminating a lot of boilerplate code. It also integrates Jest and React-Testing-Library into the application, making it easy to setup unit tests down the road.
-- Netlify
-  - Netlify is an all-in-one platform for automating modern web projects. On this project, I used it to securely send requests to the Pexels API without exposing the API key to the end user.
+- Netlify is an all-in-one platform for automating modern web projects. On this project, I used it to securely send requests to the Pexels API without exposing the API key to the end user.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
