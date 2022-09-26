@@ -59,6 +59,7 @@
   - [**Pre-commit**](#pre-commit)
   - [**Prettier**](#prettier)
   - [**Stylelint**](#stylelint)
+- [Production Deployment](#production-deployment)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -381,6 +382,17 @@ Turns off all rules that are unnecessary or might conflict with prettier
 
 [**thibaudcolas/pre-commit-stylelint**](https://github.com/thibaudcolas/pre-commit-stylelint)
 Mirrors all **stylelint/stylelint** releases, used by Pre-commit to run the stylelint hook
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Production Deployment
+
+**<https://react-photo-search.netlify.app/>**
+
+This project is deployed to Production directly from GitHub using Netlify.
+A live version of the site can be viewed [here](https://react-photo-search.netlify.app/).
+
+**Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
