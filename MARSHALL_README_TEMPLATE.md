@@ -329,9 +329,12 @@ Thanks for reading!!!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- MARKDOWN LINKS & IMAGES -->
+<!-- END OF README -->
 
+<!-- MARKDOWN REFERENCE STYLE IMAGE AND URL LINKS -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+<!-- PROJECT SHIELDS -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/marshall-strong/react-photo-search.svg?style=for-the-badge
 [contributors-url]: https://github.com/marshall-strong/react-photo-search/graphs/contributors
@@ -345,11 +348,27 @@ Thanks for reading!!!
 [license-url]: https://github.com/marshall-strong/react-photo-search/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/marshall-strong
+
+<!-- PROJECT TITLE & LOGO -->
+<!-- TABLE OF CONTENTS -->
+<!-- ABOUT THE PROJECT -->
+
 [project-screenshot]: ./assets/screenshots/homepage.png
 [project-production-url]: https://react-photo-search.netlify.app
+
+<!-- Built With -->
+
 [cra-shield]: https://img.shields.io/badge/Create%20React%20App-20232A?style=for-the-badge&logo=createreactapp&logoColor=09D3AC
 [cra-url]: https://create-react-app.dev/
 [netlify-shield]: https://img.shields.io/badge/Netlify-20232A?style=for-the-badge&logo=netlify&logoColor=00C7B7
 [netlify-url]: https://www.netlify.com/
 [react-shield]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
+
+<!-- GETTING STARTED -->
+<!-- USAGE EXAMPLES -->
+<!-- ROADMAP -->
+<!-- CONTRIBUTING -->
+<!-- LICENSE -->
+<!-- CONTACT -->
+<!-- ACKNOWLEDGMENTS -->
