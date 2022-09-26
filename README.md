@@ -1,247 +1,284 @@
-# REACT-PHOTO-SEARCH
+<a name="readme-top"></a>
 
-- [REACT-PHOTO-SEARCH](#react-photo-search)
-  - [Project Prompt](#project-prompt)
-    - [Project Feature Requirements: MVPs and User Stories](#project-feature-requirements-mvps-and-user-stories)
-      - [**Minimum Viable Product (MVP) Requirements**](#minimum-viable-product-mvp-requirements)
-      - [**User Stories**](#user-stories)
-      - [**Extra Requirements**](#extra-requirements)
-  - [Project Features](#project-features)
-    - [**Displays `Photo` components in the `Gallery` using a masonry layout**](#displays-photo-components-in-the-gallery-using-a-masonry-layout)
-    - [**Displays photos from the Pexels "Curated Photos" endpoint on the home screen**](#displays-photos-from-the-pexels-curated-photos-endpoint-on-the-home-screen)
-    - [**`SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint**](#searchform-component-gets-a-query-string-from-the-user-and-displays-relevant-photos-from-the-pexels-search-for-photos-endpoint)
-    - [**`Photo` components display photographer name and url on hover**](#photo-components-display-photographer-name-and-url-on-hover)
-    - [**Paginate through photos in the `Gallery`**](#paginate-through-photos-in-the-gallery)
-    - [**LocalStorage retains the user's current page and search query on page refresh**](#localstorage-retains-the-users-current-page-and-search-query-on-page-refresh)
-    - [**Server-side rendering as a Single-Page React App**](#server-side-rendering-as-a-single-page-react-app)
-    - [**Netlify Functions Conceal the API key from the end user**](#netlify-functions-conceal-the-api-key-from-the-end-user)
-    - [**Logo with CSS animation**](#logo-with-css-animation)
-  - [Development Mode](#development-mode)
-    - [**1. Create Local Clone of GitHub Repository**](#1-create-local-clone-of-github-repository)
-    - [**2. Register with Pexels for an API key**](#2-register-with-pexels-for-an-api-key)
-    - [**3. Store the API key in a `.env` file**](#3-store-the-api-key-in-a-env-file)
-      - [_Alternatively, you can just create and configure your `.env` file from the command line:_](#alternatively-you-can-just-create-and-configure-your-env-file-from-the-command-line)
-    - [**4. Install Project Dependencies with `npm install`**](#4-install-project-dependencies-with-npm-install)
-    - [**5. Start the Project with `npm start`**](#5-start-the-project-with-npm-start)
-  - [Project Style](#project-style)
-    - [**Pre-commit**](#pre-commit)
-    - [**Prettier**](#prettier)
-    - [**Stylelint**](#stylelint)
-  - [Production Deployment](#production-deployment)
-  - [Testing](#testing)
-    - [Running Unit Tests with Jest](#running-unit-tests-with-jest)
-      - [Jest Documentation](#jest-documentation)
-  - [Crucial Thanks](#crucial-thanks)
-    - [**Pexels**](#pexels)
-    - [**Create React App**](#create-react-app)
-    - [**Netlify**](#netlify)
-  - [Resources and How-Tos](#resources-and-how-tos)
-  - [Future Development Work](#future-development-work)
+<!-- PROJECT SHIELDS -->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<!-- PROJECT TITLE & LOGO -->
+
+<div align="center">
+  <h1 align="center">REACT-PHOTO-SEARCH</h3>
+
+  <img src="assets/icons/pexelsIcon.svg" alt="Pexels" height="80">
+  <img src="assets/icons/xIcon.svg" alt="X" height="80">
+  <img src="assets/icons/reactIcon.svg" alt="React" height="80">
+
+  <p align="center">
+    A React application that allows users to search for images using the Pexels photo library.
+    <!-- <img src="images/pexelsLogoOnTransparent.png" alt="Logo" height="40"> -->
+    <br />
+    <!-- <a href="https://github.com/marshall-strong/react-photo-search"><strong>Explore the docs »</strong></a> -->
+    <!-- <br /> -->
+    <!-- <br /> -->
+    <a href="https://react-photo-search.netlify.app">View Demo Site</a>
+    ·
+    <a href="https://github.com/marshall-strong/react-photo-search/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/marshall-strong/react-photo-search/issues">Request Feature</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+<!-- While the README is still being updated, use the automatically generated ToC -->
+<!-- Once the README is ready to be published, update and use the collapsable HTML ToC -->
+
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [1. Install Prerequisites](#1-install-prerequisites)
+  - [2. Clone the GitHub Repository and Install Dependencies](#2-clone-the-github-repository-and-install-dependencies)
+  - [3. Acquire an API Key](#3-acquire-an-api-key)
+  - [4. Add the API Key to the Project](#4-add-the-api-key-to-the-project)
+  - [5. Run the Project](#5-run-the-project)
+- [Features](#features)
+  - [the site fetches photos using the Pexels API without exposing the API key to end users](#the-site-fetches-photos-using-the-pexels-api-without-exposing-the-api-key-to-end-users)
+  - [the site displays images using a "masonry" layout](#the-site-displays-images-using-a-masonry-layout)
+  - [the site initially displays photos from the Pexels "Curated Photos" endpoint](#the-site-initially-displays-photos-from-the-pexels-curated-photos-endpoint)
+  - [the site accepts a query string from the user and returns relevent photos from the Pexels "Search for Photos" endpoint](#the-site-accepts-a-query-string-from-the-user-and-returns-relevent-photos-from-the-pexels-search-for-photos-endpoint)
+  - [on hovering over a photo, the photographer's name and website are displayed](#on-hovering-over-a-photo-the-photographers-name-and-website-are-displayed)
+  - [clicking a photo opens a full-size version in a new tab](#clicking-a-photo-opens-a-full-size-version-in-a-new-tab)
+  - [pagination buttons allow users to navigate search results 10 images at a time without refreshing the site](#pagination-buttons-allow-users-to-navigate-search-results-10-images-at-a-time-without-refreshing-the-site)
+  - [users' search query and current pagination are not lost if the site is refreshed](#users-search-query-and-current-pagination-are-not-lost-if-the-site-is-refreshed)
+- [Project Style](#project-style)
+  - [**Pre-commit**](#pre-commit)
+  - [**Prettier**](#prettier)
+  - [**Stylelint**](#stylelint)
+- [Testing](#testing)
+  - [Running Unit Tests with Jest](#running-unit-tests-with-jest)
+- [Production Deployment](#production-deployment)
+- [Project Roadmap](#project-roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+
+<!-- <details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details> -->
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+[![Project Screenshot][project-screenshot]][project-production-url]
 
 This project is a website that lets users browse and search for photos from [Pexels](https://www.pexels.com/), a free stock photo and video website that anyone can use or contribute to.
 
-This project was originally a developed as part of a coding challenge. The original MVP requirements and User Stories from the challenge are included in the [**Project Prompt**](#project-prompt) section. For code snippets and descriptions of how the project's features fulfill the project requirements, see the [**Project Features**](#project-features) section.
+A production deployment of this project can be viewed at [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).
 
-This project is shared publicly on GitHub. Developers can clone, run, and edit the repository locally by following the instructions in the [**Development Mode**](#development-mode) section.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-In order to enforce consistent syntax and styling across the entire code base, this project makes use of several different linters, which are managed by a framework called `pre-commit`. `pre-commit` runs linters as Git hook scripts before each Git commit, and prompts the user to fix any issues found before the commit can be saved. See the [**Project Style**](#project-style) section for more information.
+### Built With
 
-A production deployment of this project can be viewed at [react-photo-search.netlify.app](https://react-photo-search.netlify.app/). See the [**Production Deployment**](#production-deployment) section for more information.
+[![React][react-shield]][react-url]
 
-## Project Prompt
+- React is an open-source front-end JavaScript library for building user interfaces based on UI components.
 
-This project started out as a coding challenge that I found online. Here is the challenge's original prompt:
+[![Create React App][cra-shield]][cra-url]
 
-_"We need you to build a website to let users browse photos from [Pexels](https://www.pexels.com/) (see below notes on getting an API key). Thereʼs a ton of competition in the photo space online, so we need to stand out. We need a solution thatʼs lighting fast to load with a snappy, responsive UI. We need to greet site visitors with a selection of curated photos and give them the ability to search our extensive catalog of quality photos from professional photographers."_
+- Create React App takes care of setting up and configuring a new React application with useful defaults, eliminating a lot of boilerplate code. It also integrates Jest and React-Testing-Library into the application, making it easy to setup unit tests down the road.
 
-### Project Feature Requirements: MVPs and User Stories
+[![Netlify][netlify-shield]][netlify-url]
 
-A "minimum viable product" (or MVP) is a basic version of the product with _just_ enough features that it can be used and tested by its intended end users.
+- Netlify is an all-in-one platform for automating modern web projects. On this project, I used it to securely send requests to the Pexels API without exposing the API key to the end user.
 
-In this case, the product is a web application that retrieves photos from an API and displays them on the screen.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### **Minimum Viable Product (MVP) Requirements**
+<!-- GETTING STARTED -->
 
-Broadly, these are the basic requirements for the web application:
+## Getting Started
 
-- The app retrieves photos from the Pexels API and renders them on the page in a photo gallery, 10 photos at a time.
-- The app's home screen displays photos from the Pexels "Curated Photos" endpoint.
-- The app has a photo search feature that accepts a user's search query and displays relevant photos from the Pexels "Search for Photos" endpoint without triggering a page refresh.
-- The app allows users to paginate both forward and backward through displayed photos, 10 photos at a time, and without triggering a page refresh.
+To set up and run a local copy of this project on your own machine, do the following:
 
-#### **User Stories**
+### 1. Install Prerequisites
 
-User stories provide software developers with something critical -- descriptions of key project features, written from the perspective of the people who will be using those features.
+Node.js is a back-end runtime environment that executes JavaScript code outside a web browser, and npm is its default package manager. Both must be installed locally in order to run this project.
 
-The user story below describes how this app's end users would like for it to behave in a production environment.
-The story brings up additional features that the users would like implemented (access to the photographer's name and URL), as well as edge cases that must be accounted for in the MVP features (pagination components should not display a "previous page" button on the very first page).
+- `Node.js`
 
-Details from user stories can have huge impacts on how features are implemented -- since users want to be able to refresh their browser windows without losing their search query and pagination, that information needs to get stored locally in the users' browsers, and can't live solely in state in the React app.
+  The recommended way of installing Node.js is with a Node version manager.
+  Different operating systems use different Node version managers:
 
-_As a user visiting the website..._
+  _Node version managers for OSX and Linux:_
 
-- I can see an initial set of curated photos on the home screen
-- I am able to access the photographerʼs name and url if those details are available for every photo
-- I can paginate the list of curated photos
-- I can use a text input to search for photos Iʼm interested
-- I can see the results of my search in the photo viewing area
-- I can paginate search results if needed
-- I should not be shown the "previous" paginiation button when there is no previous page
-- I can refresh my browser and retain my search query and/or page
+  - `nvm` - [installation instructions](https://github.com/creationix/nvm)
+  - `n` - [installation instructions](https://github.com/tj/n)
 
-User stories are not just for "end-users" who visit the website -- there are other user personas and other perspectives that also need to be accounted for.
+  _Node version managers for Windows:_
 
-Stories from the perspective of another developer may describe stylistic conventions that all code must follow, or details about the various environments that the project will run in.
-Any code that will be added to a shared codebase must be able to be worked on by other people, so communication and documentation are key.
+  - `nodist` - [installation instructions](https://github.com/marcelklehr/nodist)
+  - `nvm-windows` - [installation instructions](https://github.com/coreybutler/nvm-windows)
 
-_As a developer working on the project locally..._
+  Choose an appropriate Node version manager for your operating system and follow the installation instructions linked above to install both the version manager and Node.js.
 
-- I have access to all project-specific local setup instructions I need to run the project
-- I can install any required dependencies with npm or yarn
-- I can compile and run the project in one step
+  To confirm that Node.js has been installed successfully, run the following command to check the installed version:
 
-#### **Extra Requirements**
+  ```sh
+  node -v
+  ```
 
-The following features were not included in the initial MVP requirements.
-They are not critical to how the application functions, and an average user may not even notice whether they were implemented or not.
-But these requirements each have a purpose, and implementing them was an excellent learning opportunity.
+- `npm`
 
-- Implement a server that wraps the Pexels API, providing one or more of the following features:
-  - Maintain your application API key on the server to avoid exposing it to the client
-  - Server-side rendering
-- Placeholder content for images before they are loaded
-- Write tests however you see fit
+  Once Node.js is installed, download and install the latest version of npm by running the following command from the command line:
 
-## Project Features
+  ```sh
+  npm install npm@latest -g
+  ```
 
-The features listed below fulfill the **MVP Requirements**, **User Stories**, and **Extra Requirements** listed above.
+  To confirm that npm has been installed successfully, run the following command to check the installed version:
 
-### **Displays `Photo` components in the `Gallery` using a masonry layout**
+  ```sh
+  npm -v
+  ```
 
-The `Gallery` component displays photos in a masonry layout, where photos are arranged to completely fill out rows without compromising image aspect ratio.
+For additional information or help installing Node.js, npm, and Node version managers, consult the official npm documentation on [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
-### **Displays photos from the Pexels "Curated Photos" endpoint on the home screen**
+### 2. Clone the GitHub Repository and Install Dependencies
 
-The home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`.
+The GitHub repository for this project can be found at <https://github.com/marshall-strong/react-photo-search>.
 
-### **`SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint**
+Click on the "Code" button and select which method to use to clone the repository: HTTPS, SSH, the GitHub CLI, or Download a ZIP file.
 
-The `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`
+To clone the repository using the GitHub CLI, run the following command from the command line:
 
-### **`Photo` components display photographer name and url on hover**
-
-Hovering over a `Photo` in the `Gallery` component brings up the photographer's name, with a link to more of the photographer's work on Pexels
-
-### **Paginate through photos in the `Gallery`**
-
-The `Pagination` components allows the user to paginate through photos 10 at a time with no page refresh, and contains "next page" and "previous page" buttons that are automatically disabled if there is no next or previous page
-
-### **LocalStorage retains the user's current page and search query on page refresh**
-
-LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed
-
-### **Server-side rendering as a Single-Page React App**
-
-### **Netlify Functions Conceal the API key from the end user**
-
-Sending a request to the Pexels API requires a key, and if the request is created and sent from inside of the Create React App application, the API key will end up being exposed to any site users with access to Chrome DevTools. Fortunately for us, Netlify Functions provide a way around this vulnerability...
-
-### **Logo with CSS animation**
-
-The animated site logo was inspired by the Create React App logo, and was a fun opportunity to play around with CSS animations and keyframes.
-
-## Development Mode
-
-Developers who wish to run this project locally can do so using the following steps, described in greater detail below:
-
-1. [Create a local clone of the project's GitHub repository](#1-create-local-clone-of-github-repository)
-2. [Register with Pexels for an API key](#2-register-with-pexels-for-an-api-key)
-3. [Store the API key in a `.env` file](#3-store-the-api-key-in-a-env-file)
-4. [Install project dependencies using `npm install`](#4-install-project-dependencies-with-npm-install)
-5. [Compile and run the project in Development mode using `npm start` to start Netlify Dev with Create React App](#5-start-the-project-with-npm-start)
-
-### **1. Create Local Clone of GitHub Repository**
-
-The GitHub repository for this project can be found here: <https://github.com/marshall-strong/react-photo-search>
-
-Click the "Code" button and select which method you'd like to use to clone the repository: HTTPS, SSH, the GitHub CLI, or Download a ZIP file.
-
-_Cloning the Repository using the GitHub CLI:_
-
-```bash
-#!/bin/bash
+```sh
 gh repo clone marshall-strong/react-photo-search
 ```
 
-### **2. Register with Pexels for an API key**
+Navigate into the project's root directory:
 
-A Pexels API Key (not included in the repository) is required in order for the project to run properly. Without a key, requests sent to the Pexels API will be denied, and the user will be unable to retrieve any images to display.
-
-To get a Pexels API key, do the following:
-
-- Create a free Pexels account
-  - <https://www.pexels.com/onboarding>
-  - Follow “I want to download”
-  - Complete the form (must use a valid email address)
-- Confirm your email to complete account setup
-- Visit the Image & Video API section of your account
-- Provide a description and a URL.
-  - Example description: “I am using the Pexels API in a practice programming projects”
-  - Example URL: <https://react-photo-search.netlify.app/>
-- The API key should be a 56 character string of numbers and lowercase letters
-  - Example Pexels API Key: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
-- If you ever lose your key, you can always retrieve it by logging into your Pexels account.
-
-### **3. Store the API key in a `.env` file**
-
-In Development mode, the application reads the Pexels API key from a `.env` file located in the root directory of the React app (`react-frontend/.env`).
-
-Once you have your Pexels API key, create a new file named `.env` inside the root directory of the Create React App application (note that this is different from the root directory of the project).
-
-Open your new `.env` file. Environment variables are written in SCREAMING_SNAKE_CASE, are separated from their values by an equal sign `=`, and no quotation marks are required. The application is expecting an environment variable named `PEXELS_API_KEY`, so once you have copied and pasted your own API key into the `.env` file, it should look something like this:
-
-_`react-photo-search/react-frontend/.env`_
-
-```node
-PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
-
+```sh
+cd react-photo-search
 ```
 
-**Note:**
-Make sure to replace the sample API key with your own key.
-In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`.
+Install project dependencies:
 
-#### _Alternatively, you can just create and configure your `.env` file from the command line:_
-
-```bash
-#!/bin/bash
-$ cd react-photo-search/react-frontend
-$ echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
+```sh
+npm install
 ```
 
-**Note:** In Development mode, Netlify Dev will read the API key from this `.env` file as an environment variable. In a Production deployment, the API key is still stored as an environment variable, but it is not read from a file. Instead, the variable is configured in the settings of your Netlify site under "Settings" > "Build & deploy" > "Environment". See the [Production Deployment](#production-deployment) section for more information.
+### 3. Acquire an API Key
 
-### **4. Install Project Dependencies with `npm install`**
+All of the images this site displays are retrieved from Pexels, and are requested and received via the Pexels API. An API key is required in order to interact with the Pexels API. **A Pexels API Key is NOT included in this repository -- you must get your own (free) API key from Pexels.**
 
-Navigate to the root directory of the project and use the `npm install` command to install the packages for all of the project's dependencies.
+Follow these steps to register with Pexels and obtain a Pexels API Key:
 
-```bash
-#!/bin/bash
-$ cd react-photo-search
-$ npm install
+- Create a free Pexels account at <https://www.pexels.com/onboarding>
+- Click the "I want to download" button
+- Enter your personal information, then click the "Create New Account" button
+- Complete your account setup by opening the email sent to you by Pexels and clicking the "Confirm email" button
+- Go to <https://www.pexels.com/api/> and click the "Your API Key" button
+- Fill out the form, agree to the Terms of Service, and click the "Generate API Key" button
+- Copy the API key and save it somewhere safe -- you will need it in the next section
+
+The API key should be a 56 character string of numbers and lowercase letters.
+
+example: `sample0api0key123456789abcdefghijklmnopqrstuvwxyz0000000`
+
+If you ever lose or misplace your API key, you can retrieve it by logging in to your Pexels account.
+
+### 4. Add the API Key to the Project
+
+In development mode, the Pexels API Key is stored in a `.env` file and saved as an environment variable. This `.env` file should NOT be committed to GitHub, and is not a secure way to store API keys in a production environment.
+
+Create a new file named `.env` inside of the `react-frontend` sub-directory:
+
+```sh
+touch react-frontend/.env
 ```
 
-### **5. Start the Project with `npm start`**
+Add your Pexels API Key to the `.env` file as an environmental variable named `PEXELS_API_KEY`:
 
-Navigate to the root directory of the project and use the `npm start` command to run the application in Development mode.
-
-```bash
-#!/bin/bash
-$ cd react-photo-search
-$ npm start
+```sh
+echo "PEXELS_API_KEY=sample0api0key123456789abcdefghijklmnopqrstuvwxyz0000000" > react-frontend/.env
 ```
 
-This command is a shortcut that uses Create React App's built-in scripts to start the development server and compile the project using webpack. At the same time, Netlify Dev starts another, separate server to load the Netlify Functions onto, and it makes the environment variables defined in the `.env` file available to the Netlify Functions server (but NOT the Create React App server). Even in Development mode, this will hide the Pexels API key from users on the client side.
+Once you are done, your `.env` file should look like this:
+
+```js
+// react-photo-search/react-frontend/.env
+
+PEXELS_API_KEY = sample0api0key123456789abcdefghijklmnopqrstuvwxyz0000000;
+```
+
+The file `react-photo-search/react-frontend/example.env` is an example `.env` file with a fake API Key that you can use as a guide when creating your own `.env` file with your own API Key.
+
+### 5. Run the Project
+
+Start the project by running the `npm start` command from the root directory of the GitHub repository:
+
+```sh
+npm start
+```
+
+This command is a shortcut that uses Create React App's built-in scripts to start the development server and compile the project using webpack. At the same time, Netlify Dev starts another, separate server to load the Netlify Functions onto, and it makes the environment variables defined in the `.env` file available to the Netlify Functions server (but NOT to the Create React App server). Even in Development mode, this will hide the Pexels API key from users on the client side.
+
+<p align="right">(<a href="#project_title">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+<!-- ## Usage -->
+
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_ -->
+
+## Features
+
+### the site fetches photos using the Pexels API without exposing the API key to end users
+
+### the site displays images using a "masonry" layout
+
+### the site initially displays photos from the Pexels "Curated Photos" endpoint
+
+### the site accepts a query string from the user and returns relevent photos from the Pexels "Search for Photos" endpoint
+
+### on hovering over a photo, the photographer's name and website are displayed
+
+### clicking a photo opens a full-size version in a new tab
+
+### pagination buttons allow users to navigate search results 10 images at a time without refreshing the site
+
+### users' search query and current pagination are not lost if the site is refreshed
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Project Style
 
@@ -258,9 +295,9 @@ $ pip install pre-commit
 
 Pre-commit hooks are configured using a file named `.pre-commit-config.yaml`. The file containing the Pre-commit configuration for this project is reproduced below:
 
-_`react-photo-search/.pre-commit-config.yaml`_
-
 ```yaml
+# react-photo-search/.pre-commit-config.yaml
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
@@ -292,7 +329,7 @@ repos:
 
 Once the configuration file is complete, run `pre-commit install` to set up the git hook scripts:
 
-```bash
+```sh
 #!/bin/bash
 $ pre-commit install
 pre-commit installed at .git/hooks/pre-commit
@@ -353,20 +390,17 @@ Turns off all rules that are unnecessary or might conflict with prettier
 [**thibaudcolas/pre-commit-stylelint**](https://github.com/thibaudcolas/pre-commit-stylelint)
 Mirrors all **stylelint/stylelint** releases, used by Pre-commit to run the stylelint hook
 
-## Production Deployment
-
-**<https://react-photo-search.netlify.app/>**
-
-This project is deployed to Production directly from GitHub using Netlify.
-A live version of the site can be viewed [here](https://react-photo-search.netlify.app/).
-
-**Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Testing
 
 [**Jest**](https://jestjs.io/) is a JavaScript testing framework put out by Facebook and designed for unit testing React components.
 
+This project has basic unit tests for each component -- [Add more Unit Testing with Jest](https://github.com/marshall-strong/react-photo-search/issues/67) for all React components is part of the [Project Roadmap](#project-roadmap) for future development.
+
 [**Playwright**](https://playwright.dev/) is a framework by Microsoft that enables reliable end-to-end testing for modern web apps.
+
+This project does not currently have any end-to-end tests -- [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/react-photo-search/issues/68) is part of the [Project Roadmap](#project-roadmap) for future development.
 
 ### Running Unit Tests with Jest
 
@@ -379,29 +413,90 @@ npm test
 This project was built using Create React App, so Jest is already built into the app.
 When `npm test` is run from the root directory, Node navigates into the React project subdirectory and runs Jest using `react-scripts test`.
 
-#### Jest Documentation
+At this point in time, the only Unit Tests for this project are basic smoke tests for each component. Part of the [Project Roadmap](#project-roadmap) for future development is to [add more robust unit testing](https://github.com/marshall-strong/react-photo-search/issues/67) for all React components.
+
+<!-- #### Jest Documentation
 
 <https://jestjs.io/docs/tutorial-react>
 <https://create-react-app.dev/docs/running-tests/#testing-components>
-<https://reactjs.org/docs/testing-recipes.html>
+<https://reactjs.org/docs/testing-recipes.html> -->
 
-## Crucial Thanks
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This project would not have been possible without the following services:
+## Production Deployment
 
-### **[Pexels](https://www.pexels.com/api)**
+**<https://react-photo-search.netlify.app/>**
 
-Pexels provides access to their entire photo and video library for free. The Pexels API powers this entire application.
+This project is deployed to Production directly from GitHub using Netlify.
+A live version of the site can be viewed [here](https://react-photo-search.netlify.app/).
 
-### **[Create React App](https://create-react-app.dev/)**
+**Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
 
-Create React App takes care of setting up and configuring a new React application with useful defaults
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### **[Netlify](https://docs.netlify.com/)**
+<!-- ROADMAP -->
 
-Netlify is an all-in-one platform for automating modern web projects. For this project in particular, I used it to securely send requests to the Pexels API without exposing the API key to the end user.
+## Project Roadmap
 
-## Resources and How-Tos
+Plans for future development, testing, and features:
+
+- [ ] [Add Server-Side Rendering with Next.js](https://github.com/marshall-strong/react-photo-search/issues/65)
+- [ ] [Add Mobile Responsiveness](https://github.com/marshall-strong/react-photo-search/issues/66)
+- [ ] [Add more Unit Testing with Jest](https://github.com/marshall-strong/react-photo-search/issues/67)
+- [ ] [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/react-photo-search/issues/68)
+
+See the [open issues](https://github.com/marshall-strong/react-photo-search/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**!
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue.
+
+If you found this project helpful, don't forget to give it a star!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Want to get in touch? Email me at <marshallstrong123@gmail.com> or reach out on [LinkedIn][linkedin-url].
+
+Interesting in checking out some of the other projects I've worked on?
+
+Visit [marshallstrong.com](https://marshallstrong.com/) for a full list, as well as my resume and work experience.
+
+Thanks for reading!!!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+- [pre-commit](https://pre-commit.com/)
+  - runs Git hook scripts before each commit and prompts the user to fix any issues before the commit can be saved
+- [Prettier](https://prettier.io/)
+  - Automatically formats code and enforces style conventions
+- [Stylelint](https://stylelint.io/)
+  - Identifies errors and enforces conventions in a project's stylesheets
+- [Shields.io](https://shields.io/)
+  - Concise, consistent, and legible badges in SVG and raster format
+
+Resources and How-Tos
 
 - [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/)
 - [Netlify Blog: How to deploy React Apps in less than 30 Seconds](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
@@ -414,15 +509,48 @@ Netlify is an all-in-one platform for automating modern web projects. For this p
 - [Boxy SVG: A free, browser-based tool for editing SVG elements](https://boxy-svg.com/)
 - [The Difference Between ALT text and Title text](https://blog.spotibo.com/difference-between-alt-text-and-title-text/)
 
-## Future Development Work
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The following features are not currently implemented, but will be added as time allows:
+<!-- END OF README -->
 
-- add Screenshots or GIFs to the "Project Features" section of the README.md
-- add code snippets to the "Project Features" section of the README.md
-- add placeholdercontent for images before they are loaded
-- add tests, and instructions for running them in Development mode
-- add additional project information to the `Footer`
-- optimize website for mobile
-- add a hamburger icon to the `Navbar` that displays a dropdown menu when clicked
-- add options for a light mode and a dark mode
+<!-- MARKDOWN REFERENCE STYLE IMAGE AND URL LINKS -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+<!-- PROJECT SHIELDS -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/marshall-strong/react-photo-search.svg?style=for-the-badge
+[contributors-url]: https://github.com/marshall-strong/react-photo-search/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/marshall-strong/react-photo-search.svg?style=for-the-badge
+[forks-url]: https://github.com/marshall-strong/react-photo-search/network/members
+[stars-shield]: https://img.shields.io/github/stars/marshall-strong/react-photo-search.svg?style=for-the-badge
+[stars-url]: https://github.com/marshall-strong/react-photo-search/stargazers
+[issues-shield]: https://img.shields.io/github/issues/marshall-strong/react-photo-search.svg?style=for-the-badge
+[issues-url]: https://github.com/marshall-strong/react-photo-search/issues
+[license-shield]: https://img.shields.io/github/license/marshall-strong/react-photo-search.svg?style=for-the-badge
+[license-url]: https://github.com/marshall-strong/react-photo-search/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/marshall-strong
+
+<!-- PROJECT TITLE & LOGO -->
+<!-- TABLE OF CONTENTS -->
+<!-- ABOUT THE PROJECT -->
+
+[project-screenshot]: ./assets/screenshots/homepage.png
+[project-production-url]: https://react-photo-search.netlify.app
+
+<!-- Built With -->
+
+[cra-shield]: https://img.shields.io/badge/Create%20React%20App-20232A?style=for-the-badge&logo=createreactapp&logoColor=09D3AC
+[cra-url]: https://create-react-app.dev/
+[netlify-shield]: https://img.shields.io/badge/Netlify-20232A?style=for-the-badge&logo=netlify&logoColor=00C7B7
+[netlify-url]: https://www.netlify.com/
+[react-shield]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+
+<!-- GETTING STARTED -->
+<!-- USAGE EXAMPLES -->
+<!-- ROADMAP -->
+<!-- CONTRIBUTING -->
+<!-- LICENSE -->
+<!-- CONTACT -->
+<!-- ACKNOWLEDGMENTS -->
