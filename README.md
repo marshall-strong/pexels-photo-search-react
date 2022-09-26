@@ -264,19 +264,35 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 ### the site fetches photos using the Pexels API without exposing the API key to end users
 
+Sending a request to the Pexels API requires a key, and if the request is created and sent from inside of the Create React App application, the API key will end up being exposed to any site users with access to Chrome DevTools. Fortunately for us, Netlify Functions provide a way around this vulnerability...
+
 ### the site displays images using a "masonry" layout
+
+The `Gallery` component displays photos in a masonry layout, where photos are arranged to completely fill out rows without compromising the images' aspect ratios.
 
 ### the site initially displays photos from the Pexels "Curated Photos" endpoint
 
+When the site loads for the first time, the photos it displays in the `Gallery` component are retrieved from Pexels' "Curated Photos" endpoint.
+
 ### the site accepts a query string from the user and returns relevent photos from the Pexels "Search for Photos" endpoint
+
+The `SearchForm` component accepts a search query from the user in the form of text input, then sends the user's query to the Pexels "Search for Photos" endpoint. Pexels responds with photos relevent to the user's search query, and those photos get displayed in the `Gallery` component.
 
 ### on hovering over a photo, the photographer's name and website are displayed
 
+Hovering over a `Photo` in the `Gallery` component brings up the name of the photographer who took the picture. Clicking on the photographer's name will open a link to the photographer's Pexels profile, where users can view more of the photographer's work.
+
 ### clicking a photo opens a full-size version in a new tab
+
+Clicking on one of the `Photo` components in the `Gallery` will open a new window where the user can view a full-size version of the image on the Pexels website.
 
 ### pagination buttons allow users to navigate search results 10 images at a time without refreshing the site
 
+The `Pagination` components contain "Previous Page" and "Next Page" buttons that allow users to paginate through the photos returned by the Pexels API 10 at a time, and without refreshing the page. If the user is on the first page and there is no previous page, the "Previous Page" button will be disabled. If the user is on the last page of their search results and there is not a next page, the "Next Page" button will be disabled.
+
 ### users' search query and current pagination are not lost if the site is refreshed
+
+LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -118,19 +118,19 @@ The features listed below fulfill the **MVP Requirements**, **User Stories**, an
 
 ### **Displays `Photo` components in the `Gallery` using a masonry layout**
 
-The `Gallery` component displays photos in a masonry layout, where photos are arranged to completely fill out rows without compromising image aspect ratio.
+The `Gallery` component displays photos in a masonry layout, where photos are arranged to completely fill out rows without compromising the images' aspect ratios.
 
 ### **Displays photos from the Pexels "Curated Photos" endpoint on the home screen**
 
-The home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery`.
+The home screen retrieves photographs from the Pexels "Curated Photos" endpoint, then displays those photos in the `Gallery` component.
 
 ### **`SearchForm` component gets a query string from the user and displays relevant photos from the Pexels "Search for Photos" endpoint**
 
-The `SearchForm` component accepts text input from the user and retrieves relevent photographs from the Pexels "Search for Photos" endpoing, then displays those photos in the `Gallery`
+The `SearchForm` component accepts a search query from the user in the form of text input, then sends the user's query to the Pexels "Search for Photos" endpoint. Pexels responds with photos relevent to the user's search query, and those photos get displayed in the `Gallery` component.
 
 ### **`Photo` components display photographer name and url on hover**
 
-Hovering over a `Photo` in the `Gallery` component brings up the photographer's name, with a link to more of the photographer's work on Pexels
+Hovering over a `Photo` in the `Gallery` component brings up the name of the photographer who took the picture. Clicking on the photographer's name will open a link to the photographer's Pexels profile, where users can view more of the photographer's work.
 
 ### **Paginate through photos in the `Gallery`**
 
@@ -138,7 +138,7 @@ The `Pagination` components allows the user to paginate through photos 10 at a t
 
 ### **LocalStorage retains the user's current page and search query on page refresh**
 
-LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed
+LocalStorage retains the user's search query and/or page number so that the `Gallery` photos are not reset if the page is refreshed.
 
 ### **Server-side rendering as a Single-Page React App**
 
