@@ -56,9 +56,9 @@
   - [Pagination buttons allow users to navigate search results 10 images at a time without refreshing the site](#pagination-buttons-allow-users-to-navigate-search-results-10-images-at-a-time-without-refreshing-the-site)
   - [Users' search query and current pagination are not lost if the site is refreshed](#users-search-query-and-current-pagination-are-not-lost-if-the-site-is-refreshed)
 - [Project Style](#project-style)
-  - [**Pre-commit**](#pre-commit)
-  - [**Prettier**](#prettier)
-  - [**Stylelint**](#stylelint)
+  - [Pre-commit](#pre-commit)
+  - [Prettier](#prettier)
+  - [Stylelint](#stylelint)
 - [Testing](#testing)
   - [Running Unit Tests with Jest](#running-unit-tests-with-jest)
 - [Production Deployment](#production-deployment)
@@ -298,7 +298,7 @@ LocalStorage retains the user's search query and/or page number so that the `Gal
 
 ## Project Style
 
-### **Pre-commit**
+### Pre-commit
 
 [Pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks. It runs Git hook scripts (like linters) before each Git commit, and prompts the user to fix any issues that are found before the commit can be saved. Pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
 
@@ -369,7 +369,7 @@ $ pre-commit run --all-files
 
 [**pre-commit/pre-commit-hooks**](https://github.com/pre-commit/pre-commit-hooks) Some out-of-the-box hooks for pre-commit
 
-### **Prettier**
+### Prettier
 
 [Prettier](https://prettier.io/) is an opinionated code formatter that enforces conventions automatically.
 
@@ -379,7 +379,7 @@ Official Prettier repository
 [**pre-commit/mirrors-prettier**](https://github.com/pre-commit/mirrors-prettier)
 Mirrors all **prettier/prettier** releases, used by Pre-commit to run the prettier hook
 
-### **Stylelint**
+### Stylelint
 
 [Stylelint](https://stylelint.io/) is a linter that identifies errors and enforces conventions in a project's stylesheets.
 
