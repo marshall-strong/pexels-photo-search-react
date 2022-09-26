@@ -59,8 +59,10 @@
   - [**Pre-commit**](#pre-commit)
   - [**Prettier**](#prettier)
   - [**Stylelint**](#stylelint)
+- [Testing](#testing)
+  - [Running Unit Tests with Jest](#running-unit-tests-with-jest)
 - [Production Deployment](#production-deployment)
-- [Roadmap](#roadmap)
+- [Project Roadmap](#project-roadmap)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -385,6 +387,37 @@ Mirrors all **stylelint/stylelint** releases, used by Pre-commit to run the styl
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Testing
+
+[**Jest**](https://jestjs.io/) is a JavaScript testing framework put out by Facebook and designed for unit testing React components.
+
+This project has basic unit tests for each component -- [Add more Unit Testing with Jest](https://github.com/marshall-strong/react-photo-search/issues/67) for all React components is part of the [Project Roadmap](#project-roadmap) for future development.
+
+[**Playwright**](https://playwright.dev/) is a framework by Microsoft that enables reliable end-to-end testing for modern web apps.
+
+This project does not currently have any end-to-end tests -- [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/react-photo-search/issues/68) is part of the [Project Roadmap](#project-roadmap) for future development.
+
+### Running Unit Tests with Jest
+
+To run this project's unit tests using Jest, run the following command:
+
+```node
+npm test
+```
+
+This project was built using Create React App, so Jest is already built into the app.
+When `npm test` is run from the root directory, Node navigates into the React project subdirectory and runs Jest using `react-scripts test`.
+
+At this point in time, the only Unit Tests for this project are basic smoke tests for each component. Part of the [Project Roadmap](#project-roadmap) for future development is to [add more robust unit testing](https://github.com/marshall-strong/react-photo-search/issues/67) for all React components.
+
+<!-- #### Jest Documentation
+
+<https://jestjs.io/docs/tutorial-react>
+<https://create-react-app.dev/docs/running-tests/#testing-components>
+<https://reactjs.org/docs/testing-recipes.html> -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Production Deployment
 
 **<https://react-photo-search.netlify.app/>**
@@ -398,11 +431,14 @@ A live version of the site can be viewed [here](https://react-photo-search.netli
 
 <!-- ROADMAP -->
 
-## Roadmap
+## Project Roadmap
 
-- [ ] [Server-Side Rendering](https://github.com/marshall-strong/react-photo-search/issues/65)
-- [ ] [Mobile Responsiveness](https://github.com/marshall-strong/react-photo-search/issues/66)
-- [ ] [Unit Testing](https://github.com/marshall-strong/react-photo-search/issues/67)
+Plans for future development, testing, and features:
+
+- [ ] [Add Server-Side Rendering with Next.js](https://github.com/marshall-strong/react-photo-search/issues/65)
+- [ ] [Add Mobile Responsiveness](https://github.com/marshall-strong/react-photo-search/issues/66)
+- [ ] [Add more Unit Testing with Jest](https://github.com/marshall-strong/react-photo-search/issues/67)
+- [ ] [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/react-photo-search/issues/68)
 
 See the [open issues](https://github.com/marshall-strong/react-photo-search/issues) for a full list of proposed features (and known issues).
 
