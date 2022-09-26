@@ -492,6 +492,19 @@ Thanks for reading!!!
 - [Shields.io](https://shields.io/)
   - Concise, consistent, and legible badges in SVG and raster format
 
+Resources and How-Tos
+
+- [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/)
+- [Netlify Blog: How to deploy React Apps in less than 30 Seconds](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
+- [Cool grayscale hover effect](https://codepen.io/AnthonyMoss/pen/RwwyQQ)
+- [Emoji Unicode Reference](https://www.w3schools.com/charsets/ref_emoji.asp)
+- [the position property](https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position2)
+- ["Cool and Fresh" color palette](https://visme.co/blog/website-color-schemes/#attachment_13239)
+- [CSS Pulse Effect](https://www.florin-pop.com/blog/2019/03/css-pulse-effect/)
+- [Adaptive Photo Layout with Flexbox](https://css-tricks.com/adaptive-photo-layout-with-flexbox/)
+- [Boxy SVG: A free, browser-based tool for editing SVG elements](https://boxy-svg.com/)
+- [The Difference Between ALT text and Title text](https://blog.spotibo.com/difference-between-alt-text-and-title-text/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- END OF README -->
