@@ -12,7 +12,7 @@
 <!-- PROJECT TITLE & LOGO -->
 
 <div align="center">
-  <h1 align="center">REACT-PHOTO-SEARCH</h3>
+  <h1 align="center">REACT-PHOTO-SEARCH</h1>
 
   <img src="assets/icons/pexelsIcon.svg" alt="Pexels" height="80">
   <img src="assets/icons/xIcon.svg" alt="X" height="80">
