@@ -556,11 +556,11 @@ Resources and How-Tos
 
 <!-- Built With -->
 
-[cra-shield]: https://img.shields.io/badge/Create%20React%20App-20232A?style=for-the-badge&logo=createreactapp&logoColor=09D3AC
+[cra-shield]: https://img.shields.io/badge/Create%20React%20App-09D3AC?style=for-the-badge&logo=createreactapp&logoColor=white
 [cra-url]: https://create-react-app.dev/
-[netlify-shield]: https://img.shields.io/badge/Netlify-20232A?style=for-the-badge&logo=netlify&logoColor=00C7B7
+[netlify-shield]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
 [netlify-url]: https://www.netlify.com/
-[react-shield]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-shield]: https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black
 [react-url]: https://reactjs.org/
 
 <!-- GETTING STARTED -->
