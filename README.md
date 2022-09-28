@@ -12,7 +12,7 @@
 <!-- PROJECT TITLE & LOGO -->
 
 <div align="center">
-  <h1 align="center">REACT-PHOTO-SEARCH</h1>
+  <h1 align="center">PEXELS-PHOTO-SEARCH-REACT</h1>
 
   <img src="assets/icons/pexelsIcon.svg" alt="Pexels" height="80">
   <img src="assets/icons/xIcon.svg" alt="X" height="80">
@@ -22,14 +22,14 @@
     A React application that allows users to search for images using the Pexels photo library.
     <!-- <img src="images/pexelsLogoOnTransparent.png" alt="Logo" height="40"> -->
     <br />
-    <!-- <a href="https://github.com/marshall-strong/react-photo-search"><strong>Explore the docs »</strong></a> -->
+    <!-- <a href="https://github.com/marshall-strong/pexels-photo-search-react"><strong>Explore the docs »</strong></a> -->
     <!-- <br /> -->
     <!-- <br /> -->
-    <a href="https://react-photo-search.netlify.app">View Demo Site</a>
+    <a href="https://pexels-photo-search-react.netlify.app">View Demo Site</a>
     ·
-    <a href="https://github.com/marshall-strong/react-photo-search/issues">Report Bug</a>
+    <a href="https://github.com/marshall-strong/pexels-photo-search-react/issues">Report Bug</a>
     ·
-    <a href="https://github.com/marshall-strong/react-photo-search/issues">Request Feature</a>
+    <a href="https://github.com/marshall-strong/pexels-photo-search-react/issues">Request Feature</a>
   </p>
 </div>
 
@@ -101,7 +101,7 @@
 
 This project is a website that lets users browse and search for photos from [Pexels](https://www.pexels.com/), a free stock photo and video website that anyone can use or contribute to.
 
-A production deployment of this project can be viewed at [react-photo-search.netlify.app](https://react-photo-search.netlify.app/).
+A production deployment of this project can be viewed at [pexels-photo-search-react.netlify.app](https://pexels-photo-search-react.netlify.app/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,20 +174,20 @@ For additional information or help installing Node.js, npm, and Node version man
 
 ### 2. Clone the GitHub Repository and Install Dependencies
 
-The GitHub repository for this project can be found at <https://github.com/marshall-strong/react-photo-search>.
+The GitHub repository for this project can be found at <https://github.com/marshall-strong/pexels-photo-search-react>.
 
 Click on the "Code" button and select which method to use to clone the repository: HTTPS, SSH, the GitHub CLI, or Download a ZIP file.
 
 To clone the repository using the GitHub CLI, run the following command from the command line:
 
 ```sh
-gh repo clone marshall-strong/react-photo-search
+gh repo clone marshall-strong/pexels-photo-search-react
 ```
 
 Navigate into the project's root directory:
 
 ```sh
-cd react-photo-search
+cd pexels-photo-search-react
 ```
 
 Install project dependencies:
@@ -235,12 +235,12 @@ echo "PEXELS_API_KEY=sample0api0key123456789abcdefghijklmnopqrstuvwxyz0000000" >
 Once you are done, your `.env` file should look like this:
 
 ```js
-// react-photo-search/react-frontend/.env
+// pexels-photo-search-react/react-frontend/.env
 
 PEXELS_API_KEY = sample0api0key123456789abcdefghijklmnopqrstuvwxyz0000000;
 ```
 
-The file `react-photo-search/react-frontend/example.env` is an example `.env` file with a fake API Key that you can use as a guide when creating your own `.env` file with your own API Key.
+The file `pexels-photo-search-react/react-frontend/example.env` is an example `.env` file with a fake API Key that you can use as a guide when creating your own `.env` file with your own API Key.
 
 ### 5. Run the Project
 
@@ -314,7 +314,7 @@ $ pip install pre-commit
 Pre-commit hooks are configured using a file named `.pre-commit-config.yaml`. The file containing the Pre-commit configuration for this project is reproduced below:
 
 ```yaml
-# react-photo-search/.pre-commit-config.yaml
+# pexels-photo-search-react/.pre-commit-config.yaml
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -362,7 +362,7 @@ _Console output after installing and configuring pre-commit:_
 $ pip install pre-commit --upgrade
 $ pre-commit --version
 pre-commit 2.13.0
-$ cd react-photo-search
+$ cd pexels-photo-search-react
 $ pre-commit sample-config
 $ pre-commit install
 pre-commit installed at .git/hooks/pre-commit
@@ -389,7 +389,7 @@ _Use `npx` to run Stylelint at any time (not just when saving a commit):_
 
 ```bash
 #!/bin/bash
-$ cd react-photo-search
+$ cd pexels-photo-search-react
 $ npx stylelint "react-frontend/src/**/*.css" --fix
 ```
 
@@ -414,11 +414,11 @@ Mirrors all stylelint/stylelint releases, used by Pre-commit to run the stylelin
 
 [Jest](https://jestjs.io/) is a JavaScript testing framework put out by Facebook and designed for unit testing React components.
 
-This project has basic unit tests for each component -- [Add more Unit Testing with Jest](https://github.com/marshall-strong/react-photo-search/issues/67) for all React components is part of the [Project Roadmap](#project-roadmap) for future development.
+This project has basic unit tests for each component -- [Add more Unit Testing with Jest](https://github.com/marshall-strong/pexels-photo-search-react/issues/67) for all React components is part of the [Project Roadmap](#project-roadmap) for future development.
 
 [Playwright](https://playwright.dev/) is a framework by Microsoft that enables reliable end-to-end testing for modern web apps.
 
-This project does not currently have any end-to-end tests -- [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/react-photo-search/issues/68) is part of the [Project Roadmap](#project-roadmap) for future development.
+This project does not currently have any end-to-end tests -- [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/pexels-photo-search-react/issues/68) is part of the [Project Roadmap](#project-roadmap) for future development.
 
 ### Running Unit Tests with Jest
 
@@ -431,7 +431,7 @@ npm test
 This project was built using Create React App, so Jest is already built into the app.
 When `npm test` is run from the root directory, Node navigates into the React project subdirectory and runs Jest using `react-scripts test`.
 
-At this point in time, the only Unit Tests for this project are basic smoke tests for each component. Part of the [Project Roadmap](#project-roadmap) for future development is to [add more robust unit testing](https://github.com/marshall-strong/react-photo-search/issues/67) for all React components.
+At this point in time, the only Unit Tests for this project are basic smoke tests for each component. Part of the [Project Roadmap](#project-roadmap) for future development is to [add more robust unit testing](https://github.com/marshall-strong/pexels-photo-search-react/issues/67) for all React components.
 
 <!-- #### Jest Documentation
 
@@ -443,12 +443,12 @@ At this point in time, the only Unit Tests for this project are basic smoke test
 
 ## Production Deployment
 
-**<https://react-photo-search.netlify.app/>**
+**<https://pexels-photo-search-react.netlify.app/>**
 
 This project is deployed to Production directly from GitHub using Netlify.
-A live version of the site can be viewed [here](https://react-photo-search.netlify.app/).
+A live version of the site can be viewed [here](https://pexels-photo-search-react.netlify.app/).
 
-**Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
+**Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/pexels-photo-search-react/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -458,12 +458,12 @@ A live version of the site can be viewed [here](https://react-photo-search.netli
 
 Plans for future development, testing, and features:
 
-- [ ] [Add Server-Side Rendering with Next.js](https://github.com/marshall-strong/react-photo-search/issues/65)
-- [ ] [Add Mobile Responsiveness](https://github.com/marshall-strong/react-photo-search/issues/66)
-- [ ] [Add more Unit Testing with Jest](https://github.com/marshall-strong/react-photo-search/issues/67)
-- [ ] [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/react-photo-search/issues/68)
+- [ ] [Add Server-Side Rendering with Next.js](https://github.com/marshall-strong/pexels-photo-search-react/issues/65)
+- [ ] [Add Mobile Responsiveness](https://github.com/marshall-strong/pexels-photo-search-react/issues/66)
+- [ ] [Add more Unit Testing with Jest](https://github.com/marshall-strong/pexels-photo-search-react/issues/67)
+- [ ] [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/pexels-photo-search-react/issues/68)
 
-See the [open issues](https://github.com/marshall-strong/react-photo-search/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/marshall-strong/pexels-photo-search-react/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -536,16 +536,16 @@ Resources and How-Tos
 
 <!-- PROJECT SHIELDS -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/marshall-strong/react-photo-search.svg?style=for-the-badge
-[contributors-url]: https://github.com/marshall-strong/react-photo-search/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/marshall-strong/react-photo-search.svg?style=for-the-badge
-[forks-url]: https://github.com/marshall-strong/react-photo-search/network/members
-[stars-shield]: https://img.shields.io/github/stars/marshall-strong/react-photo-search.svg?style=for-the-badge
-[stars-url]: https://github.com/marshall-strong/react-photo-search/stargazers
-[issues-shield]: https://img.shields.io/github/issues/marshall-strong/react-photo-search.svg?style=for-the-badge
-[issues-url]: https://github.com/marshall-strong/react-photo-search/issues
-[license-shield]: https://img.shields.io/github/license/marshall-strong/react-photo-search.svg?style=for-the-badge
-[license-url]: https://github.com/marshall-strong/react-photo-search/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/marshall-strong/pexels-photo-search-react.svg?style=for-the-badge
+[contributors-url]: https://github.com/marshall-strong/pexels-photo-search-react/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/marshall-strong/pexels-photo-search-react.svg?style=for-the-badge
+[forks-url]: https://github.com/marshall-strong/pexels-photo-search-react/network/members
+[stars-shield]: https://img.shields.io/github/stars/marshall-strong/pexels-photo-search-react.svg?style=for-the-badge
+[stars-url]: https://github.com/marshall-strong/pexels-photo-search-react/stargazers
+[issues-shield]: https://img.shields.io/github/issues/marshall-strong/pexels-photo-search-react.svg?style=for-the-badge
+[issues-url]: https://github.com/marshall-strong/pexels-photo-search-react/issues
+[license-shield]: https://img.shields.io/github/license/marshall-strong/pexels-photo-search-react.svg?style=for-the-badge
+[license-url]: https://github.com/marshall-strong/pexels-photo-search-react/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/marshall-strong
 
@@ -554,7 +554,7 @@ Resources and How-Tos
 <!-- ABOUT THE PROJECT -->
 
 [project-screenshot]: ./assets/screenshots/homepage.png
-[project-production-url]: https://react-photo-search.netlify.app
+[project-production-url]: https://pexels-photo-search-react.netlify.app
 
 <!-- Built With -->
 

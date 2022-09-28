@@ -1,5 +1,5 @@
 {
-  "name": "react-photo-search",
+  "name": "pexels-photo-search-react",
   "scripts": {
     "start": "cd react-frontend && netlify dev",
     "test": "cd react-frontend && npm test"

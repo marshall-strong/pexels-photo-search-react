@@ -58,7 +58,7 @@ const Footer = ({ attributionUrl }) => {
       </div>
       <div className="right-nav">
         <a
-          href="https://github.com/marshall-strong/react-photo-search"
+          href="https://github.com/marshall-strong/pexels-photo-search-react"
           rel="noopener noreferrer"
           target="_blank"
           title="GitHub README"

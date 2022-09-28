@@ -87,7 +87,7 @@ const Navbar = ({
         <div className="center-nav">
           <div className="title-container">
             <a
-              href="https://github.com/marshall-strong/react-photo-search"
+              href="https://github.com/marshall-strong/pexels-photo-search-react"
               rel="noopener noreferrer"
               target="_blank"
               title="View GitHub repository"
