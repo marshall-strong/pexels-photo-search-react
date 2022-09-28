@@ -12,7 +12,7 @@
 <!-- PROJECT TITLE & LOGO -->
 
 <div align="center">
-  <h1 align="center">REACT-PHOTO-SEARCH</h3>
+  <h1 align="center">REACT-PHOTO-SEARCH</h1>
 
   <img src="assets/icons/pexelsIcon.svg" alt="Pexels" height="80">
   <img src="assets/icons/xIcon.svg" alt="X" height="80">
@@ -106,6 +106,8 @@ A production deployment of this project can be viewed at [react-photo-search.net
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
+
+Babel, Create React App, CSS3, ES6, ESLint, GitHub, Google Chrome, HTML5, JavaScript, Jest, Markdown, Netlify, Node.js, npm, pre-commit, Prettier, React, stylelint, webpack
 
 [![React][react-shield]][react-url]
 
@@ -367,17 +369,17 @@ pre-commit installed at .git/hooks/pre-commit
 $ pre-commit run --all-files
 ```
 
-[**pre-commit/pre-commit-hooks**](https://github.com/pre-commit/pre-commit-hooks) Some out-of-the-box hooks for pre-commit
+[pre-commit/pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks) Some out-of-the-box hooks for pre-commit
 
 ### Prettier
 
 [Prettier](https://prettier.io/) is an opinionated code formatter that enforces conventions automatically.
 
-[**prettier/prettier**](https://github.com/prettier/prettier)
+[prettier/prettier](https://github.com/prettier/prettier)
 Official Prettier repository
 
-[**pre-commit/mirrors-prettier**](https://github.com/pre-commit/mirrors-prettier)
-Mirrors all **prettier/prettier** releases, used by Pre-commit to run the prettier hook
+[pre-commit/mirrors-prettier](https://github.com/pre-commit/mirrors-prettier)
+Mirrors all prettier/prettier releases, used by Pre-commit to run the prettier hook
 
 ### Stylelint
 
@@ -391,30 +393,30 @@ $ cd react-photo-search
 $ npx stylelint "react-frontend/src/**/*.css" --fix
 ```
 
-[**stylelint/stylelint**](https://github.com/stylelint/stylelint)
+[stylelint/stylelint](https://github.com/stylelint/stylelint)
 Official Stylelint repository
 
-[**stylelint/stylelint-config-standard**](https://github.com/stylelint/stylelint-config-standard)
+[stylelint/stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
 The standard shareable config for Stylelint
 
-[**ream88/stylelint-config-idiomatic-order**](https://github.com/ream88/stylelint-config-idiomatic-order)
+[ream88/stylelint-config-idiomatic-order](https://github.com/ream88/stylelint-config-idiomatic-order)
 Orders styles using consistent, idiomatic CSS
 
-[**prettier/stylelint-config-prettier**](https://github.com/prettier/stylelint-config-prettier)
+[prettier/stylelint-config-prettier](https://github.com/prettier/stylelint-config-prettier)
 Turns off all rules that are unnecessary or might conflict with prettier
 
-[**thibaudcolas/pre-commit-stylelint**](https://github.com/thibaudcolas/pre-commit-stylelint)
-Mirrors all **stylelint/stylelint** releases, used by Pre-commit to run the stylelint hook
+[thibaudcolas/pre-commit-stylelint](https://github.com/thibaudcolas/pre-commit-stylelint)
+Mirrors all stylelint/stylelint releases, used by Pre-commit to run the stylelint hook
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Testing
 
-[**Jest**](https://jestjs.io/) is a JavaScript testing framework put out by Facebook and designed for unit testing React components.
+[Jest](https://jestjs.io/) is a JavaScript testing framework put out by Facebook and designed for unit testing React components.
 
 This project has basic unit tests for each component -- [Add more Unit Testing with Jest](https://github.com/marshall-strong/react-photo-search/issues/67) for all React components is part of the [Project Roadmap](#project-roadmap) for future development.
 
-[**Playwright**](https://playwright.dev/) is a framework by Microsoft that enables reliable end-to-end testing for modern web apps.
+[Playwright](https://playwright.dev/) is a framework by Microsoft that enables reliable end-to-end testing for modern web apps.
 
 This project does not currently have any end-to-end tests -- [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/react-photo-search/issues/68) is part of the [Project Roadmap](#project-roadmap) for future development.
 
@@ -556,11 +558,11 @@ Resources and How-Tos
 
 <!-- Built With -->
 
-[cra-shield]: https://img.shields.io/badge/Create%20React%20App-20232A?style=for-the-badge&logo=createreactapp&logoColor=09D3AC
+[cra-shield]: https://img.shields.io/badge/Create%20React%20App-09D3AC?style=for-the-badge&logo=createreactapp&logoColor=white
 [cra-url]: https://create-react-app.dev/
-[netlify-shield]: https://img.shields.io/badge/Netlify-20232A?style=for-the-badge&logo=netlify&logoColor=00C7B7
+[netlify-shield]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
 [netlify-url]: https://www.netlify.com/
-[react-shield]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-shield]: https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black
 [react-url]: https://reactjs.org/
 
 <!-- GETTING STARTED -->
