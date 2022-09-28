@@ -57,6 +57,7 @@
   - [Users' search query and current pagination are not lost if the site is refreshed](#users-search-query-and-current-pagination-are-not-lost-if-the-site-is-refreshed)
 - [Project Style](#project-style)
   - [Pre-commit](#pre-commit)
+    - [Using `pre-commit`](#using-pre-commit)
   - [Prettier](#prettier)
   - [Stylelint](#stylelint)
 - [Testing](#testing)
@@ -300,18 +301,54 @@ LocalStorage retains the user's search query and/or page number so that the `Gal
 
 ## Project Style
 
+This project uses a variety of linters and code formatters to enforce a consistent code style and formatting across the entire project. Rather than constantly fiddling with style and formatting while writing code, linters and code formatters are setup as Git hook scripts that run before each Git commit is saved. If any problems are identified, the commit will not be saved, and the user will be prompted to resolve any errors before the changes can be committed to the repository.
+
 ### Pre-commit
 
-[Pre-commit](https://pre-commit.com/) is a framework for managing and maintaining multi-language pre-commit hooks. It runs Git hook scripts (like linters) before each Git commit, and prompts the user to fix any issues that are found before the commit can be saved. Pre-commit manages Git hooks for the user and allows them to use linters written in any language, regardless of which language the actual project is written in.
+[**Pre-commit**](https://pre-commit.com/) is a framework for managing a developer's Git hooks. It runs hook scripts (like linters) before each commit, and prompts the developer to fix any issues that are found before the commit can be saved. Pre-commit enables developers to use linters written in any language, regardless of which language the project itself is written in.
 
-Before using Pre-commit on your machine for the first time, the Pre-commit package manager must first be installed locally on your machine:
+#### Using `pre-commit`
+
+Instructions for installing, configuring, and using `pre-commit` can be found here: <https://pre-commit.com/#quick-start>
+
+Briefly, here is how the framework is set up and used:
+
+```sh
+# install `pre-commit` with pip
+pip install pre-commit
+
+# generate a sample configuration file named `pre-commit-config.yaml` (will end up getting modified)
+pre-commit sample-config > .pre-commit-config.yaml
+
+# install the git hook scripts in your repository
+pre-commit install
+
+# all `pre-commit` hooks will now run before each and every Git commit!
+
+# manually run `pre-commit` on all files in the repository
+pre-commit run --all-files
+
+# use the `--no-verify` flag to save a single commit WITHOUT running the `pre-commit` Git hooks
+git commit -m 'ignore any problems the hook scripts may find and just save the commit' --no-verify
+
+```
+
+_Example console output after installing and configuring `pre-commit`:_
 
 ```bash
 #!/bin/bash
-$ pip install pre-commit
+$ pip install pre-commit --upgrade
+$ pre-commit --version
+pre-commit 2.13.0
+$ cd pexels-photo-search-react
+$ pre-commit sample-config > .pre-commit-config.yaml
+$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+$ pre-commit run --all-files
 ```
 
-Pre-commit hooks are configured using a file named `.pre-commit-config.yaml`. The file containing the Pre-commit configuration for this project is reproduced below:
+Pre-commit hooks are configured using a file named `.pre-commit-config.yaml`.
+The file containing the Pre-commit configuration for this project is reproduced below:
 
 ```yaml
 # pexels-photo-search-react/.pre-commit-config.yaml
@@ -339,34 +376,6 @@ repos:
           - stylelint-config-standard@latest
           - stylelint-config-idiomatic-order@latest
           - stylelint-config-prettier@latest
-          # Note: Package names starting with `@` need to be quoted. For example:
-          # - "@scope/my-awesome-plugin@0.12.0"
-```
-
-**Note:** The `prettier` and `stylelint` hooks configured in the `.pre-commit-config.yaml` file above are described in greater detail in the next section.
-
-Once the configuration file is complete, run `pre-commit install` to set up the git hook scripts:
-
-```sh
-#!/bin/bash
-$ pre-commit install
-pre-commit installed at .git/hooks/pre-commit
-```
-
-Once installed, Pre-commit will run automatically on every `git commit`!
-
-_Console output after installing and configuring pre-commit:_
-
-```bash
-#!/bin/bash
-$ pip install pre-commit --upgrade
-$ pre-commit --version
-pre-commit 2.13.0
-$ cd pexels-photo-search-react
-$ pre-commit sample-config
-$ pre-commit install
-pre-commit installed at .git/hooks/pre-commit
-$ pre-commit run --all-files
 ```
 
 [pre-commit/pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks) Some out-of-the-box hooks for pre-commit
@@ -375,7 +384,7 @@ $ pre-commit run --all-files
 
 [Prettier](https://prettier.io/) is an opinionated code formatter that enforces conventions automatically.
 
-[prettier/prettier](https://github.com/prettier/prettier)
+The official [prettier/prettier](https://github.com/prettier/prettier)
 Official Prettier repository
 
 [pre-commit/mirrors-prettier](https://github.com/pre-commit/mirrors-prettier)
