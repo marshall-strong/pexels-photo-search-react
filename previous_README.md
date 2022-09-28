@@ -1,6 +1,6 @@
-# REACT-PHOTO-SEARCH
+# PEXELS-PHOTO-SEARCH-REACT
 
-- [REACT-PHOTO-SEARCH](#react-photo-search)
+- [PEXELS-PHOTO-SEARCH-REACT](#pexels-photo-search-react)
   - [Project Prompt](#project-prompt)
     - [Project Feature Requirements: MVPs and User Stories](#project-feature-requirements-mvps-and-user-stories)
       - [**Minimum Viable Product (MVP) Requirements**](#minimum-viable-product-mvp-requirements)
@@ -46,7 +46,7 @@ This project is shared publicly on GitHub. Developers can clone, run, and edit t
 
 In order to enforce consistent syntax and styling across the entire code base, this project makes use of several different linters, which are managed by a framework called `pre-commit`. `pre-commit` runs linters as Git hook scripts before each Git commit, and prompts the user to fix any issues found before the commit can be saved. See the [**Project Style**](#project-style) section for more information.
 
-A production deployment of this project can be viewed at [react-photo-search.netlify.app](https://react-photo-search.netlify.app/). See the [**Production Deployment**](#production-deployment) section for more information.
+A production deployment of this project can be viewed at [pexels-photo-search-react.netlify.app](https://pexels-photo-search-react.netlify.app/). See the [**Production Deployment**](#production-deployment) section for more information.
 
 ## Project Prompt
 
@@ -162,7 +162,7 @@ Developers who wish to run this project locally can do so using the following st
 
 ### **1. Create Local Clone of GitHub Repository**
 
-The GitHub repository for this project can be found here: <https://github.com/marshall-strong/react-photo-search>
+The GitHub repository for this project can be found here: <https://github.com/marshall-strong/pexels-photo-search-react>
 
 Click the "Code" button and select which method you'd like to use to clone the repository: HTTPS, SSH, the GitHub CLI, or Download a ZIP file.
 
@@ -170,7 +170,7 @@ _Cloning the Repository using the GitHub CLI:_
 
 ```bash
 #!/bin/bash
-gh repo clone marshall-strong/react-photo-search
+gh repo clone marshall-strong/pexels-photo-search-react
 ```
 
 ### **2. Register with Pexels for an API key**
@@ -187,7 +187,7 @@ To get a Pexels API key, do the following:
 - Visit the Image & Video API section of your account
 - Provide a description and a URL.
   - Example description: “I am using the Pexels API in a practice programming projects”
-  - Example URL: <https://react-photo-search.netlify.app/>
+  - Example URL: <https://pexels-photo-search-react.netlify.app/>
 - The API key should be a 56 character string of numbers and lowercase letters
   - Example Pexels API Key: `0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789`
 - If you ever lose your key, you can always retrieve it by logging into your Pexels account.
@@ -200,7 +200,7 @@ Once you have your Pexels API key, create a new file named `.env` inside the roo
 
 Open your new `.env` file. Environment variables are written in SCREAMING_SNAKE_CASE, are separated from their values by an equal sign `=`, and no quotation marks are required. The application is expecting an environment variable named `PEXELS_API_KEY`, so once you have copied and pasted your own API key into the `.env` file, it should look something like this:
 
-_`react-photo-search/react-frontend/.env`_
+_`pexels-photo-search-react/react-frontend/.env`_
 
 ```node
 PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789
@@ -215,7 +215,7 @@ In this example, the sample API key is `0123456789abcdefghijklmnopqrstuvwxyz0123
 
 ```bash
 #!/bin/bash
-$ cd react-photo-search/react-frontend
+$ cd pexels-photo-search-react/react-frontend
 $ echo "PEXELS_API_KEY=0123456789abcdefghijklmnopqrstuvwxyz01234567890123456789" > .env
 ```
 
@@ -227,7 +227,7 @@ Navigate to the root directory of the project and use the `npm install` command 
 
 ```bash
 #!/bin/bash
-$ cd react-photo-search
+$ cd pexels-photo-search-react
 $ npm install
 ```
 
@@ -237,7 +237,7 @@ Navigate to the root directory of the project and use the `npm start` command to
 
 ```bash
 #!/bin/bash
-$ cd react-photo-search
+$ cd pexels-photo-search-react
 $ npm start
 ```
 
@@ -258,7 +258,7 @@ $ pip install pre-commit
 
 Pre-commit hooks are configured using a file named `.pre-commit-config.yaml`. The file containing the Pre-commit configuration for this project is reproduced below:
 
-_`react-photo-search/.pre-commit-config.yaml`_
+_`pexels-photo-search-react/.pre-commit-config.yaml`_
 
 ```yaml
 repos:
@@ -307,7 +307,7 @@ _Console output after installing and configuring pre-commit:_
 $ pip install pre-commit --upgrade
 $ pre-commit --version
 pre-commit 2.13.0
-$ cd react-photo-search
+$ cd pexels-photo-search-react
 $ pre-commit sample-config
 $ pre-commit install
 pre-commit installed at .git/hooks/pre-commit
@@ -334,7 +334,7 @@ _Use `npx` to run Stylelint at any time (not just when saving a commit):_
 
 ```bash
 #!/bin/bash
-$ cd react-photo-search
+$ cd pexels-photo-search-react
 $ npx stylelint "react-frontend/src/**/*.css" --fix
 ```
 
@@ -355,12 +355,12 @@ Mirrors all **stylelint/stylelint** releases, used by Pre-commit to run the styl
 
 ## Production Deployment
 
-**<https://react-photo-search.netlify.app/>**
+**<https://pexels-photo-search-react.netlify.app/>**
 
 This project is deployed to Production directly from GitHub using Netlify.
-A live version of the site can be viewed [here](https://react-photo-search.netlify.app/).
+A live version of the site can be viewed [here](https://pexels-photo-search-react.netlify.app/).
 
-**Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/react-photo-search/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
+**Note:** In Production mode, Netlify expects to recieve the Pexels API key as an environment variable, just like in Development mode. The difference is where that environment variable is read from. In Development mode, Netlify Dev reads the key from the `.env` configuration file. In contrast, in Production, mode environment variables must be configured using the [Netlify dashboard](https://app.netlify.com/sites/pexels-photo-search-react/settings/deploys#environment). Go to "Site settings" > "Build & deploy" > "Environment".
 
 ## Testing
 
