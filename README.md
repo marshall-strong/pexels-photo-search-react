@@ -131,9 +131,9 @@ To set up and run a local copy of this project on your own machine, do the follo
 
 ### 1. Install Prerequisites
 
-Node.js is a back-end runtime environment that executes JavaScript code outside a web browser, and npm is its default package manager. Both must be installed locally in order to run this project.
+**Node.js** is a back-end runtime environment that executes JavaScript code outside a web browser, and **npm** is its default package manager. Both must be installed locally in order to run this project.
 
-- `Node.js`
+- **Node.js**
 
   The recommended way of installing Node.js is with a Node version manager.
   Different operating systems use different Node version managers:
@@ -156,7 +156,7 @@ Node.js is a back-end runtime environment that executes JavaScript code outside 
   node -v
   ```
 
-- `npm`
+- **npm**
 
   Once Node.js is installed, download and install the latest version of npm by running the following command from the command line:
 
