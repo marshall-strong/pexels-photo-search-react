@@ -347,8 +347,7 @@ pre-commit installed at .git/hooks/pre-commit
 $ pre-commit run --all-files
 ```
 
-Pre-commit hooks are configured using a file named `.pre-commit-config.yaml`.
-The file containing the Pre-commit configuration for this project is reproduced below:
+_Example `.pre-commit-config.yaml` configuration file:_
 
 ```yaml
 # pexels-photo-search-react/.pre-commit-config.yaml
