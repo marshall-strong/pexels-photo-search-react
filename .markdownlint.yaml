@@ -161,9 +161,11 @@ MD031:
 MD032: true
 
 # MD033/no-inline-html - Inline HTML
+# in this repo, Inline HTML elements are used to center elements in the README,
+#  as well as to create links back to the top of the README
 MD033:
   # Allowed elements
-  allowed_elements: []
+  allowed_elements: [a, br, div, h1, img, p]
 
 # MD034/no-bare-urls - Bare URL used
 MD034: true
