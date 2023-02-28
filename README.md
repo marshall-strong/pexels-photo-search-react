@@ -60,6 +60,7 @@
     - [Using `pre-commit`](#using-pre-commit)
   - [Prettier](#prettier)
   - [Stylelint](#stylelint)
+  - [Markdownlint](#markdownlint)
 - [Testing](#testing)
   - [Running Unit Tests with Jest](#running-unit-tests-with-jest)
 - [Production Deployment](#production-deployment)
@@ -415,6 +416,10 @@ Turns off all rules that are unnecessary or might conflict with prettier
 
 [thibaudcolas/pre-commit-stylelint](https://github.com/thibaudcolas/pre-commit-stylelint)
 Mirrors all stylelint/stylelint releases, used by Pre-commit to run the stylelint hook
+
+### Markdownlint
+
+[markdownlint](https://github.com/DavidAnson/markdownlint) is a Node.js linter that identifies errors and enforces conventions in a project's Markdown files.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
