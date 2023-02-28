@@ -161,8 +161,8 @@ MD031:
 MD032: true
 
 # MD033/no-inline-html - Inline HTML
-# in this repo, Inline HTML elements are used to center elements in the README,
-#  as well as to create links back to the top of the README
+## in this repo, Inline HTML elements are used to center elements in the README,
+##  as well as to create links back to the top of the README
 MD033:
   # Allowed elements
   allowed_elements: [a, br, div, h1, img, p]
@@ -197,11 +197,13 @@ MD040:
   language_only: false
 
 # MD041/first-line-heading/first-line-h1 - First line in a file should be a top-level heading
-MD041:
-  # Heading level
-  level: 1
-  # RegExp for matching title in front matter
-  front_matter_title: "^\\s*title\\s*[:=]"
+## in this repo, this rule is disabled so that the first line of the README file
+##  can be an anchor link back to the top of the file
+MD041: false
+  # # Heading level
+  # level: 1
+  # # RegExp for matching title in front matter
+  # front_matter_title: "^\\s*title\\s*[:=]"
 
 # MD042/no-empty-links - No empty links
 MD042: true
