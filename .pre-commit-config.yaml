@@ -14,10 +14,12 @@ repos:
     rev: "v2.7.1" # Note: Use the sha / tag you want to point at
     hooks:
       - id: prettier
+        exclude: .markdownlint.yaml
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
     rev: "v14.10.0" # Note: Use the sha / tag you want to point at
     hooks:
       - id: stylelint
+        exclude: .markdownlint.yaml
         args: [--fix]
         additional_dependencies:
           # Note: stylelint itself (and not a mirror) needs to be used here when using additional_dependencies.
