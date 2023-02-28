@@ -62,6 +62,7 @@
   - [Stylelint](#stylelint)
   - [Markdownlint](#markdownlint)
 - [Testing](#testing)
+  - [Installing Playwright](#installing-playwright)
   - [Running Unit Tests with Jest](#running-unit-tests-with-jest)
 - [Production Deployment](#production-deployment)
 - [Project Roadmap](#project-roadmap)
@@ -431,7 +432,19 @@ This project has basic unit tests for each component -- [Add more Unit Testing w
 
 [Playwright](https://playwright.dev/) is a framework by Microsoft that enables reliable end-to-end testing for modern web apps.
 
-This project does not currently have any end-to-end tests -- [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/pexels-photo-search-react/issues/68) is part of the [Project Roadmap](#project-roadmap) for future development.
+### Installing Playwright
+
+```node
+npm init playwright@latest
+```
+
+Tests are located in the `/tests` subdirectory.
+
+The `/tests-examples` subdirectory contains example end-to-end tests for a Demo "Todo" App.
+
+The Playwright Test configuration can be updated in `playwright.config.js`.
+
+<!-- This project does not currently have any end-to-end tests -- [Add End-to-End Testing with Playwright](https://github.com/marshall-strong/pexels-photo-search-react/issues/68) is part of the [Project Roadmap](#project-roadmap) for future development. -->
 
 ### Running Unit Tests with Jest
 
