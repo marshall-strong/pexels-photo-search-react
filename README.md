@@ -134,9 +134,9 @@ To set up and run a local copy of this project on your own machine, do the follo
 
 ### 1. Install Prerequisites
 
-**Node.js** is a back-end runtime environment that executes JavaScript code outside a web browser, and **npm** is its default package manager. Both must be installed locally in order to run this project.
-
 - **Node.js**
+
+  **Node.js** is a back-end runtime environment that executes JavaScript code outside a web browser, and **npm** is its default package manager. Both must be installed locally in order to run this project.
 
   The recommended way of installing Node.js is with a Node version manager.
   Different operating systems use different Node version managers:
@@ -173,7 +173,26 @@ To set up and run a local copy of this project on your own machine, do the follo
   npm -v
   ```
 
-For additional information or help installing Node.js, npm, and Node version managers, consult the official npm documentation on [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+  For additional information or help installing Node.js, npm, and Node version managers, consult the official npm documentation on [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+- **Netlify CLI**
+
+  Netlify’s command line interface (CLI) lets you configure continuous deployment straight from the command line.  
+  You can use Netlify CLI to run a local development server that you can share with others, run a local build and plugins, and deploy your site.  
+
+  To install Netlify CLI, run this command from any directory in your terminal:
+
+  ```sh
+  npm install netlify-cli -g
+  ```
+
+  This installs Netlify CLI globally, so you can run `netlify` commands from any directory.  
+
+  You can check the version and find out some basic information about the tool with the following command:  
+
+  ```sh
+  netlify
+  ```
 
 ### 2. Clone the GitHub Repository and Install Dependencies
 

@@ -11,5 +11,9 @@
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^27.0.0"
+  },
+  "dependencies": {
+    "netlify-cli": "^17.37.2",
+    "react-scripts": "^5.0.1"
   }
 }
